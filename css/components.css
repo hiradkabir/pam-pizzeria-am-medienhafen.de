@@ -364,7 +364,7 @@
    The video is intentionally larger than the section so the soft masked edges
    can fade into the background on every viewport instead of showing hard cuts. */
 #menu {
-  --fireplace-size: clamp(1180px, 148vw, 2850px);
+  --fireplace-size: clamp(374px, 46.8vw, 902px);
   --fireplace-x: 50%;
   --fireplace-y: 50%;
   --fireplace-opacity: 0.68;
@@ -390,7 +390,7 @@
 
 @media (min-width: 1440px) {
   #menu {
-    --fireplace-size: clamp(1800px, 132vw, 3150px);
+    --fireplace-size: clamp(570px, 41.75vw, 996px);
   }
 }
 
@@ -537,91 +537,54 @@
 }
 
 
-/* Contact order CTA: warmer, less aggressive 3D button */
+/* Contact order CTA: match the other “Bestellen” buttons */
 #contact .contact-order-cta {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
-  border: 1px solid rgba(217, 137, 90, 0.34);
-  background:
-    linear-gradient(145deg, rgba(255, 224, 186, 0.12) 0%, rgba(255, 224, 186, 0.02) 28%, rgba(13, 5, 0, 0.22) 100%),
-    linear-gradient(135deg, #8f3420 0%, #a13a24 46%, #6f2116 100%) !important;
-  color: var(--brand-cream) !important;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.36);
+  border: 0;
+  background: var(--brand-red) !important;
+  color: #fff !important;
+  text-shadow: none;
   box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.36),
-    0 7px 16px rgba(111, 33, 22, 0.26),
-    inset 0 1px 0 rgba(255, 224, 186, 0.22),
-    inset 0 -14px 24px rgba(13, 5, 0, 0.24);
-  transform: perspective(900px) translateY(0) rotateX(0deg) scale(1);
-  transform-style: preserve-3d;
+    0 14px 26px rgba(0, 0, 0, 0.28),
+    0 8px 18px rgba(220, 38, 38, 0.22);
+  transform: translateY(0) scale(1);
   transition:
-    transform .30s cubic-bezier(.16, 1, .3, 1),
-    box-shadow .30s ease,
-    border-color .30s ease,
-    background-color .30s ease,
-    filter .30s ease;
+    background-color .20s ease,
+    transform .20s ease,
+    box-shadow .20s ease;
 }
 
-#contact .contact-order-cta::before {
-  content: '';
-  position: absolute;
-  inset: 1px 1px auto 1px;
-  height: 46%;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255, 224, 186, 0.18), rgba(255, 224, 186, 0.02));
-  opacity: .72;
-  transition: opacity .30s ease;
-}
-
+#contact .contact-order-cta::before,
 #contact .contact-order-cta::after {
-  content: '';
-  position: absolute;
-  inset: auto 8% 0 8%;
-  height: 18px;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, rgba(13, 5, 0, 0.42), rgba(13, 5, 0, 0));
-  opacity: .42;
+  content: none;
 }
 
 #contact .contact-order-cta svg {
-  transition: transform .30s cubic-bezier(.16, 1, .3, 1), filter .30s ease;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.42));
+  transition: transform .20s ease;
+  filter: none;
 }
 
 #contact .contact-order-cta:hover,
 #contact .contact-order-cta:focus-visible {
-  border-color: rgba(217, 137, 90, 0.48);
-  background:
-    linear-gradient(145deg, rgba(255, 224, 186, 0.16) 0%, rgba(255, 224, 186, 0.03) 30%, rgba(13, 5, 0, 0.20) 100%),
-    linear-gradient(135deg, #9b3a23 0%, #aa4329 45%, #792618 100%) !important;
+  background: #B91C1C !important;
   box-shadow:
-    0 24px 46px rgba(0, 0, 0, 0.42),
-    0 10px 22px rgba(111, 33, 22, 0.30),
-    0 0 0 1px rgba(192, 94, 53, 0.12),
-    inset 0 1px 0 rgba(255, 224, 186, 0.28),
-    inset 0 -16px 26px rgba(13, 5, 0, 0.24);
-  filter: saturate(0.96);
-  transform: perspective(900px) translateY(-4px) rotateX(1.2deg) scale(1.01);
+    0 18px 34px rgba(0, 0, 0, 0.32),
+    0 10px 22px rgba(185, 28, 28, 0.24);
+  transform: translateY(-2px) scale(1.005);
   outline: none;
-}
-
-#contact .contact-order-cta:hover::before,
-#contact .contact-order-cta:focus-visible::before {
-  opacity: .95;
 }
 
 #contact .contact-order-cta:hover svg,
 #contact .contact-order-cta:focus-visible svg {
-  transform: translateY(-1px) translateZ(8px);
+  transform: translateY(-1px);
 }
 
 #contact .contact-order-cta:active {
+  background: #991B1B !important;
   box-shadow:
-    0 12px 24px rgba(0, 0, 0, 0.34),
-    0 5px 12px rgba(111, 33, 22, 0.22),
-    inset 0 2px 8px rgba(13, 5, 0, 0.30);
-  transform: perspective(900px) translateY(-1px) rotateX(0deg) scale(0.992);
+    0 10px 20px rgba(0, 0, 0, 0.28),
+    0 5px 12px rgba(153, 27, 27, 0.20);
+  transform: translateY(0) scale(0.992);
 }
+
