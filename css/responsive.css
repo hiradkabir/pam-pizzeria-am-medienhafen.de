@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Responsive
+   Breakpoint-specific overrides.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  #menu .tab-content:not(.hidden) {
+    min-height: 1600px; /* 2-column grids collapse to 1 column on tablet/mobile. */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile hero: keep video visible, but crop it deliberately. */
+  .hero-section {
+    min-height: 100svh;
+  }
+
+  #heroVideo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(13, 5, 0, 0.28) 0%,
+        rgba(13, 5, 0, 0.18) 30%,
+        rgba(13, 5, 0, 0.68) 66%,
+        rgba(13, 5, 0, 0.98) 100%
+      );
+  }
+
+  .hero-title-size {
+    font-size: clamp(1.85rem, 9vw, 4rem);
+    line-height: 0.95;
+  }
+
+  .hero-title-size + div,
+  .hero-title-size {
+    padding-right: 0;
+  }
+
+  /* Signature dish: show the video on mobile instead of hiding it. */
+  .signature-media-min-height {
+    display: block !important;
+    min-height: clamp(320px, 72vh, 560px);
+  }
+
+  .signature-media-min-height .signature-video {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  /* Menu fireplace: keep video visible, but make it calmer and darker on phones. */
+  #menuFireplaceVideo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1.04);
+    opacity: 0.85;
+    mix-blend-mode: screen;
+  }
+
+  .menu-fire-overlay {
+    background:
+      linear-gradient(to bottom, rgb(13, 5, 0) 0%, rgba(13, 5, 0, 0.18) 18%, rgba(13, 5, 0, 0.22) 82%, rgb(13, 5, 0) 100%),
+      radial-gradient(ellipse 115% 58% at 50% 54%, rgba(196, 82, 15, 0.24) 0%, rgba(13, 5, 0, 0) 66%),
+      rgba(13, 5, 0, 0.72);
+  }
+
+  /* Min-height lock is not needed on narrow screens; content should define height. */
+  #menu .tab-content:not(.hidden) {
+    min-height: auto !important;
+    display: block;
+  }
+
+  #modal-impressum,
+  #modal-datenschutz {
+    padding: 0 !important;
+  }
+
+  #modal-impressum > div.relative,
+  #modal-datenschutz > div.relative {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 4.5rem 1.5rem 2rem !important;
+    overflow-y: auto;
+  }
+
+  #modal-impressum-close,
+  #modal-datenschutz-close {
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+  }
+
+  .gallery-mobile-carousel {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 12px;
+    padding: 2px 1.5rem 14px;
+    margin: 0 -1.5rem;
+  }
+
+  .gallery-mobile-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-mobile-carousel > .gallery-item {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+    aspect-ratio: 1 / 1 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  #heroVideo {
+    object-position: center center;
+  }
+
+  .signature-media-min-height {
+    min-height: 340px;
+  }
+
+  #menuFireplaceVideo {
+    transform: scale(1.08);
+    object-position: center center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .fade-up {
+    transition: none;
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  #heroVideo,
+  #menuFireplaceVideo,
+  .signature-video {
+    animation: none;
+  }
+
+  .tab-content,
+  .tab-content.tab-fading-out,
+  .tab-content.tab-entering {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}

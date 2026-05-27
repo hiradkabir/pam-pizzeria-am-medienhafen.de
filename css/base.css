@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Base
+   Global defaults, theme variables and browser-level behavior.
+   ========================================================================== */
+
+:root {
+  --brand-red: #DC2626;
+  --brand-gold: #C05E35;
+  --brand-gold-light: #D9895A;
+  --brand-cream: #FEF2F2;
+  --brand-warm: #F5E6D0;
+  --brand-dark: #0D0500;
+  --brand-surface: #1A0A00;
+  --brand-surface-2: #2D1200;
+  --brand-muted: #C4A882;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 19px;
+  -webkit-tap-highlight-color: rgba(192, 94, 53, 0.3);
+}
+
+body {
+  background-color: var(--brand-dark);
+  color: var(--brand-cream);
+  font-family: 'Jost', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-gold);
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   Brand utility fallbacks
+   These mirror the original key colors from the single-file version. They make
+   the brand palette survive even if Tailwind's custom CDN classes are cached or
+   not generated correctly after deployment.
+   ========================================================================== */
+
+.bg-brand-red { background-color: var(--brand-red) !important; }
+.bg-brand-gold { background-color: var(--brand-gold) !important; }
+.bg-brand-dark { background-color: var(--brand-dark) !important; }
+.bg-brand-dark\/90 { background-color: rgba(13, 5, 0, 0.90) !important; }
+.bg-brand-surface { background-color: var(--brand-surface) !important; }
+.bg-brand-surface-2 { background-color: var(--brand-surface-2) !important; }
+.bg-brand-gold\/10 { background-color: rgba(192, 94, 53, 0.10) !important; }
+.bg-brand-gold\/25 { background-color: rgba(192, 94, 53, 0.25) !important; }
+.bg-brand-gold\/40 { background-color: rgba(192, 94, 53, 0.40) !important; }
+
+.text-brand-red { color: var(--brand-red) !important; }
+.text-brand-gold { color: var(--brand-gold) !important; }
+.text-brand-gold\/50 { color: rgba(192, 94, 53, 0.50) !important; }
+.text-brand-gold\/60 { color: rgba(192, 94, 53, 0.60) !important; }
+.text-brand-gold\/70 { color: rgba(192, 94, 53, 0.70) !important; }
+.text-brand-cream { color: var(--brand-cream) !important; }
+.text-brand-cream\/80 { color: rgba(254, 242, 242, 0.80) !important; }
+.text-brand-muted { color: var(--brand-muted) !important; }
+.text-brand-muted\/35 { color: rgba(196, 168, 130, 0.35) !important; }
+.text-brand-muted\/40 { color: rgba(196, 168, 130, 0.40) !important; }
+.text-brand-muted\/50 { color: rgba(196, 168, 130, 0.50) !important; }
+.text-brand-muted\/55 { color: rgba(196, 168, 130, 0.55) !important; }
+.text-brand-muted\/60 { color: rgba(196, 168, 130, 0.60) !important; }
+.text-brand-muted\/70 { color: rgba(196, 168, 130, 0.70) !important; }
+
+.border-brand-gold { border-color: var(--brand-gold) !important; }
+.border-brand-gold\/10 { border-color: rgba(192, 94, 53, 0.10) !important; }
+.border-brand-gold\/15 { border-color: rgba(192, 94, 53, 0.15) !important; }
+.border-brand-gold\/20 { border-color: rgba(192, 94, 53, 0.20) !important; }
+.border-brand-gold\/25 { border-color: rgba(192, 94, 53, 0.25) !important; }
+.border-brand-gold\/50 { border-color: rgba(192, 94, 53, 0.50) !important; }
+
+.hover\:bg-brand-gold:hover { background-color: var(--brand-gold) !important; }
+.hover\:text-brand-gold:hover { color: var(--brand-gold) !important; }
+.hover\:text-brand-dark:hover { color: var(--brand-dark) !important; }
+.hover\:border-brand-gold:hover { border-color: var(--brand-gold) !important; }
+.hover\:border-brand-gold\/25:hover { border-color: rgba(192, 94, 53, 0.25) !important; }
+.focus-visible\:ring-brand-gold:focus-visible {
+  --tw-ring-color: var(--brand-gold) !important;
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+}
+
+.from-brand-gold {
+  --tw-gradient-from: var(--brand-gold) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(192, 94, 53, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-brand-surface-2 {
+  --tw-gradient-to: var(--brand-surface-2) var(--tw-gradient-to-position);
+}
+

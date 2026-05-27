@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Layout
+   Structural helpers and section-level sizing.
+   ========================================================================== */
+
+.hero-title-size {
+  font-size: clamp(3.6rem, 9vw, 8rem);
+}
+
+.text-italic-custom {
+  font-style: italic;
+}
+
+.aspect-3-4 {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-2-1 {
+  aspect-ratio: 2 / 1;
+}
+
+.signature-media-min-height {
+  min-height: 750px;
+}
+
+.menu-section-bg {
+  background-color: var(--brand-surface);
+}
+
+.quote-text-size {
+  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  max-width: 38ch;
+}
+
+.legal-text-size {
+  font-size: 1.05rem;
+}
+
+/* Keep the fireplace frame stable while switching tabs. */
+#menu .tab-content:not(.hidden) {
+  min-height: 1180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
