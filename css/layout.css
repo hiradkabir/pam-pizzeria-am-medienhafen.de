@@ -31,14 +31,6 @@
   background-color: var(--brand-surface);
 }
 
-.quote-text-size {
-  font-size: clamp(1.55rem, 3vw, 2.4rem);
-  max-width: 38ch;
-}
-
-.legal-text-size {
-  font-size: 1.05rem;
-}
 
 /* Keep the fireplace frame stable while switching tabs. */
 #menu .tab-content:not(.hidden) {
