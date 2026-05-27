@@ -86,21 +86,28 @@
     object-position: center center;
   }
 
-  /* Menu fireplace: keep video visible, but much smaller and calmer on phones. */
+  /* Menu fireplace: viewport-aware sizing for phones and tablets. */
+  #menu {
+    --fireplace-size: clamp(860px, 270vw, 1500px);
+    --fireplace-x: 50%;
+    --fireplace-y: 48%;
+    --fireplace-opacity: 0.56;
+  }
+
   #menuFireplaceVideo {
     display: block;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    width: min(1466px, 293vw);
-    height: min(1466px, 293vw);
+    left: var(--fireplace-x);
+    top: var(--fireplace-y);
+    width: var(--fireplace-size);
+    height: var(--fireplace-size);
     object-fit: contain;
     object-position: center center;
     transform: translate(-50%, -50%);
-    opacity: 0.68;
+    opacity: var(--fireplace-opacity);
     mix-blend-mode: screen;
-    -webkit-mask-image: radial-gradient(ellipse 54% 52% at 50% 50%, #000 0%, #000 52%, rgba(0, 0, 0, 0.76) 66%, transparent 88%);
-    mask-image: radial-gradient(ellipse 54% 52% at 50% 50%, #000 0%, #000 52%, rgba(0, 0, 0, 0.76) 66%, transparent 88%);
+    -webkit-mask-image: radial-gradient(ellipse 58% 56% at 50% 50%, #000 0%, #000 50%, rgba(0, 0, 0, 0.74) 66%, transparent 90%);
+    mask-image: radial-gradient(ellipse 58% 56% at 50% 50%, #000 0%, #000 50%, rgba(0, 0, 0, 0.74) 66%, transparent 90%);
   }
 
   .menu-fire-overlay {
@@ -185,13 +192,17 @@
     min-height: 340px;
   }
 
+  #menu {
+    --fireplace-size: clamp(780px, 315vw, 1320px);
+    --fireplace-y: 47%;
+    --fireplace-opacity: 0.52;
+  }
+
   #menuFireplaceVideo {
-    width: min(1294px, 310.5vw);
-    height: min(1294px, 310.5vw);
     transform: translate(-50%, -50%);
     object-position: center center;
-    -webkit-mask-image: radial-gradient(ellipse 56% 54% at 50% 50%, #000 0%, #000 50%, rgba(0, 0, 0, 0.74) 66%, transparent 88%);
-    mask-image: radial-gradient(ellipse 56% 54% at 50% 50%, #000 0%, #000 50%, rgba(0, 0, 0, 0.74) 66%, transparent 88%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 58% at 50% 50%, #000 0%, #000 48%, rgba(0, 0, 0, 0.72) 66%, transparent 90%);
+    mask-image: radial-gradient(ellipse 60% 58% at 50% 50%, #000 0%, #000 48%, rgba(0, 0, 0, 0.72) 66%, transparent 90%);
   }
 }
 
