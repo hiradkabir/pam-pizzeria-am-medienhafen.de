@@ -31,6 +31,37 @@
   background-color: var(--brand-surface);
 }
 
+.gallery-section-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      var(--brand-dark) 0%,
+      rgba(13, 5, 0, 0.86) 15%,
+      rgba(13, 5, 0, 0.62) 48%,
+      rgba(13, 5, 0, 0.88) 84%,
+      var(--brand-dark) 100%),
+    radial-gradient(ellipse 80% 52% at 50% 42%, rgba(192, 94, 53, 0.20) 0%, rgba(13, 5, 0, 0) 68%),
+    url("../assets/images/Holzpalette.png") center center / cover no-repeat,
+    var(--brand-surface);
+}
+
+.gallery-section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(13, 5, 0, 0.62), rgba(13, 5, 0, 0.18) 45%, rgba(13, 5, 0, 0.62)),
+    rgba(26, 10, 0, 0.22);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gallery-section-bg > .max-w-6xl {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Keep the fireplace frame stable while switching tabs. */
 #menu .tab-content:not(.hidden) {
