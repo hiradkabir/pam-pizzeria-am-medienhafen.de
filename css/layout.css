@@ -37,31 +37,65 @@
   background:
     linear-gradient(to bottom,
       var(--brand-dark) 0%,
-      rgba(13, 5, 0, 0.86) 15%,
-      rgba(13, 5, 0, 0.62) 48%,
-      rgba(13, 5, 0, 0.88) 84%,
+      rgba(13, 5, 0, 0.94) 18%,
+      rgba(26, 10, 0, 0.74) 48%,
+      rgba(13, 5, 0, 0.94) 84%,
       var(--brand-dark) 100%),
-    radial-gradient(ellipse 58% 38% at 50% 42%, rgba(192, 94, 53, 0.14) 0%, rgba(13, 5, 0, 0) 68%),
-    url("../assets/images/Holzpalette.png") center center / min(760px, 54vw) auto no-repeat,
+    radial-gradient(ellipse 58% 38% at 50% 42%, rgba(192, 94, 53, 0.10) 0%, rgba(13, 5, 0, 0) 68%),
     var(--brand-surface);
 }
 
-.gallery-section-bg::before {
+.contact-section-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      var(--brand-dark) 0%,
+      rgba(13, 5, 0, 0.90) 16%,
+      rgba(26, 10, 0, 0.74) 50%,
+      rgba(13, 5, 0, 0.92) 86%,
+      var(--brand-dark) 100%),
+    radial-gradient(ellipse 62% 42% at 50% 50%, rgba(192, 94, 53, 0.12) 0%, rgba(13, 5, 0, 0) 70%),
+    var(--brand-surface);
+}
+
+/* Holzpalette is now only used in the Kontakt section. It is sized independently
+   and softly masked so its PNG edges do not form a hard rectangle. */
+.contact-section-bg::before {
+  content: '';
+  position: absolute;
+  inset: -4%;
+  background: url("../assets/images/Holzpalette.png") center center / min(2100px, 150vw) auto no-repeat;
+  opacity: 0.58;
+  filter: saturate(0.88) brightness(0.78) contrast(0.94);
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 13%, #000 87%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 13%, #000 87%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.contact-section-bg::after {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(13, 5, 0, 0.62), rgba(13, 5, 0, 0.18) 45%, rgba(13, 5, 0, 0.62)),
-    rgba(26, 10, 0, 0.22);
+    linear-gradient(to bottom, var(--brand-dark) 0%, rgba(13, 5, 0, 0) 22%, rgba(13, 5, 0, 0) 76%, var(--brand-dark) 100%),
+    linear-gradient(90deg, rgba(13, 5, 0, 0.76), rgba(13, 5, 0, 0.12) 48%, rgba(13, 5, 0, 0.76)),
+    rgba(26, 10, 0, 0.18);
   pointer-events: none;
-  z-index: 0;
-}
-
-.gallery-section-bg > .max-w-6xl {
-  position: relative;
   z-index: 1;
 }
 
+.contact-section-bg > .max-w-6xl {
+  position: relative;
+  z-index: 2;
+}
 
 /* Keep the fireplace frame stable while switching tabs. */
 #menu .tab-content:not(.hidden) {
