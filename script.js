@@ -45,14 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     // Menu tabs
+    let tabSwitchTimeout = null;
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
+        const targetTab = document.getElementById('tab-' + btn.dataset.tab);
+        const currentTab = document.querySelector('.tab-content:not(.hidden)');
+        if (currentTab === targetTab) return;
+
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
         btn.classList.add('active');
-        const tab = document.getElementById('tab-' + btn.dataset.tab);
-        tab.classList.remove('hidden');
-        tab.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+
+        if (tabSwitchTimeout) clearTimeout(tabSwitchTimeout);
+
+        const showNext = () => {
+          document.querySelectorAll('.tab-content').forEach(c => {
+            if (c !== targetTab) {
+              c.classList.add('hidden');
+              c.classList.remove('tab-fading-out', 'tab-entering');
+            }
+          });
+          targetTab.classList.remove('hidden', 'tab-entering');
+          void targetTab.offsetWidth;
+          targetTab.classList.add('tab-entering');
+          targetTab.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+        };
+
+        if (currentTab) {
+          currentTab.classList.add('tab-fading-out');
+          tabSwitchTimeout = setTimeout(showNext, 310);
+        } else {
+          showNext();
+        }
       });
     });
 

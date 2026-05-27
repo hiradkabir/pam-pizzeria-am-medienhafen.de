@@ -46,6 +46,22 @@ html { scroll-behavior: smooth; font-size: 19px; }
 
     .tab-btn.active { color: #C05E35; border-bottom-color: #C05E35; }
 
+    .tab-content {
+      transition: opacity .3s ease, transform .3s ease;
+    }
+    .tab-content.tab-fading-out {
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+    }
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .tab-content.tab-entering {
+      animation: tabFadeIn .9s cubic-bezier(.16,1,.3,1);
+    }
+
     .gallery-item { overflow: hidden; position: relative; }
     .gallery-item img { transition: transform .65s ease; }
     .gallery-item:hover img { transform: scale(1.07); }
@@ -83,11 +99,19 @@ html { scroll-behavior: smooth; font-size: 19px; }
     #menuFireplaceVideo {
       opacity: 1;
       mix-blend-mode: screen;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.15);
+      transform-origin: center;
     }
 
     @media (prefers-reduced-motion: reduce) {
       .reveal, .fade-up { transition: none; animation: none; opacity: 1; transform: none; }
       #menuFireplaceVideo { animation: none; opacity: 1; }
+      .tab-content,
+      .tab-content.tab-fading-out,
+      .tab-content.tab-entering { transition: none; transform: none; opacity: 1; }
     }
 
 /* Ausgelagerte ehemalige Inline-Styles */
@@ -96,6 +120,23 @@ html { scroll-behavior: smooth; font-size: 19px; }
 .aspect-3-4 { aspect-ratio: 3 / 4; }
 .signature-media-min-height { min-height: 750px; }
 .menu-section-bg { background-color: #1A0A00; }
+/* === Lock menu video frame across tabs ===
+   Each tab has different content length, which made the section (and therefore
+   the absolutely-positioned fireplace video) resize/reframe on every click.
+   Reserving the same min-height for every tab keeps the video rock-steady,
+   and centering content inside that block makes shorter tabs sit in the middle. */
+#menu .tab-content:not(.hidden) {
+  min-height: 1180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  #menu .tab-content:not(.hidden) {
+    min-height: 1600px;   /* 2-col grids collapse to 1 col on mobile */
+  }
+}
+
 .aspect-1-1 { aspect-ratio: 1 / 1; }
 .aspect-2-1 { aspect-ratio: 2 / 1; }
 .quote-text-size { font-size: clamp(1.55rem, 3vw, 2.4rem); max-width: 38ch; }
