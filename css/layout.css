@@ -41,8 +41,8 @@
       rgba(13, 5, 0, 0.62) 48%,
       rgba(13, 5, 0, 0.88) 84%,
       var(--brand-dark) 100%),
-    radial-gradient(ellipse 80% 52% at 50% 42%, rgba(192, 94, 53, 0.20) 0%, rgba(13, 5, 0, 0) 68%),
-    url("../assets/images/Holzpalette.png") center center / cover no-repeat,
+    radial-gradient(ellipse 58% 38% at 50% 42%, rgba(192, 94, 53, 0.14) 0%, rgba(13, 5, 0, 0) 68%),
+    url("../assets/images/Holzpalette.png") center center / min(760px, 54vw) auto no-repeat,
     var(--brand-surface);
 }
 
