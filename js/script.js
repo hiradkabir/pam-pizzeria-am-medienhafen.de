@@ -14,6 +14,36 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'))
     );
 
+
+    // Desktop-only back-to-top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    const desktopBackToTopQuery = window.matchMedia('(min-width: 768px)');
+    let backToTopTicking = false;
+
+    function updateBackToTopButton() {
+      if (!backToTopBtn) return;
+      const revealPoint = Math.min(window.innerHeight * 0.65, 620);
+      const shouldShow = desktopBackToTopQuery.matches && window.scrollY > revealPoint;
+      backToTopBtn.classList.toggle('is-visible', shouldShow);
+      backToTopTicking = false;
+    }
+
+    function requestBackToTopUpdate() {
+      if (backToTopTicking) return;
+      backToTopTicking = true;
+      window.requestAnimationFrame(updateBackToTopButton);
+    }
+
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      window.addEventListener('scroll', requestBackToTopUpdate, { passive: true });
+      window.addEventListener('resize', requestBackToTopUpdate, { passive: true });
+      desktopBackToTopQuery.addEventListener?.('change', updateBackToTopButton);
+      updateBackToTopButton();
+    }
+
     // Scroll reveal
     const revealObserver = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
