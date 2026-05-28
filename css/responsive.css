@@ -841,7 +841,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0.78rem 0.35rem !important;
+    padding: 0.9rem 0.35rem !important;
     text-align: center !important;
     white-space: nowrap !important;
     font-size: 0.62rem !important;
@@ -969,9 +969,147 @@
 
   #menu .tab-btn {
     font-size: 0.58rem !important;
-    padding: 0.72rem 0.25rem !important;
+    padding: 0.82rem 0.25rem !important;
   }
 }
+
+/* ==========================================================================
+   Mobile navigation strip
+   Appears in the navbar when scrolled. Hidden on desktop.
+   Three anchor links: Speisekarte · Galerie · Kontakt.
+   ========================================================================== */
+
+.mobile-nav-links {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* Non-scrolled: wordmark stays centered, links hidden */
+  .mobile-nav-links {
+    display: none;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  /* Scrolled: shift wordmark left, reveal links on the right */
+  #navbar.scrolled .mobile-nav-links {
+    display: flex;
+  }
+
+  #navbar.scrolled > div {
+    justify-content: space-between !important;
+  }
+
+  #navbar.scrolled a[href="#"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .mobile-nav-link {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(196, 168, 130, 0.72);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+    padding: 0.35rem 0;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link:focus-visible {
+    color: #D9895A;
+  }
+
+  .mobile-nav-link:focus-visible {
+    outline: 2px solid #D9895A;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+
+/* ==========================================================================
+   Highlights bar: compact 3-column layout on small screens
+   Default grid-cols-1 wastes vertical space; show all 3 horizontally.
+   ========================================================================== */
+
+@media (max-width: 639px) {
+  .highlights-bar-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .highlights-bar-grid > div {
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .highlights-bar-grid > div svg {
+    width: 1.375rem !important;
+    height: 1.375rem !important;
+    flex-shrink: 0;
+  }
+
+  .highlights-bar-grid > div > div {
+    text-align: center !important;
+  }
+
+  .highlights-bar-grid .text-sm {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Hide subtitle on very small screens — label alone is enough */
+  .highlights-bar-grid .text-xs {
+    display: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   Contact CTA: full-width on mobile
+   inline-flex at mobile widths can look orphaned and wastes tap area.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  #contact .mt-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #contact .contact-order-cta {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   Landscape orientation on mobile
+   Reduces hero title to scale with viewport height, shortens hero padding.
+   ========================================================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-title-size {
+    font-size: clamp(2rem, 5.5vw, 3.5rem) !important;
+  }
+
+  .hero-section .relative.z-10 {
+    padding-bottom: 1.5rem !important;
+  }
+}
+
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
