@@ -1178,3 +1178,23 @@
     transform: scale(0.87) !important;
   }
 }
+
+/* ========================================================================== 
+   Mobile-only title size reduction
+   Requested: make title text smaller for mobile users only.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hero-title-size {
+    font-size: clamp(1.55rem, 7.6vw, 3.2rem) !important;
+    line-height: 0.96 !important;
+  }
+
+  #about h2,
+  #menu h2,
+  #gallery h2,
+  #contact h2,
+  .signature-media-min-height + div h2 {
+    font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    line-height: 1.04 !important;
+  }
+}
