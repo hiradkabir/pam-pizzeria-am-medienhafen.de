@@ -37,9 +37,9 @@
   </script>
   <link rel="stylesheet" href="css/base.css?v=13">
   <link rel="stylesheet" href="css/layout.css?v=25">
-  <link rel="stylesheet" href="css/components.css?v=34">
-  <link rel="stylesheet" href="css/responsive.css?v=34">
-  <script defer src="js/script.js?v=14"></script>
+  <link rel="stylesheet" href="css/components.css?v=36">
+  <link rel="stylesheet" href="css/responsive.css?v=35">
+  <script defer src="js/script.js?v=35"></script>
 </head>
 <body class="bg-brand-dark text-brand-cream antialiased">
 
@@ -65,22 +65,6 @@
       </svg>
       Bestellen
     </a>
-
-    <button id="mobile-menu-btn" class="md:hidden text-brand-cream cursor-pointer" aria-label="Menü öffnen">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-      </svg>
-    </button>
-  </div>
-
-  <div id="mobile-menu" class="hidden md:hidden mt-3 pb-4 border-t border-brand-gold/20">
-    <ul class="flex flex-col gap-3 pt-4 text-[11px] font-sans tracking-widest uppercase text-brand-muted px-2">
-      <li><a href="#about"   class="hover:text-brand-gold transition-colors cursor-pointer block py-1">Über uns</a></li>
-      <li><a href="#menu"    class="hover:text-brand-gold transition-colors cursor-pointer block py-1">Speisekarte</a></li>
-      <li><a href="#gallery" class="hover:text-brand-gold transition-colors cursor-pointer block py-1">Galerie</a></li>
-      <li><a href="#contact" class="hover:text-brand-gold transition-colors cursor-pointer block py-1">Kontakt</a></li>
-      <li><a href="tel:+492113033852" class="text-brand-red hover:text-red-400 transition-colors cursor-pointer block py-1">Jetzt bestellen</a></li>
-    </ul>
   </div>
 </nav>
 
@@ -494,6 +478,14 @@
         <img src="assets/images/IMG-20200109-WA0015.jpg"
              alt="Atmosphäre" class="w-full h-full object-cover">
       </div>
+      <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
+        <img src="assets/images/glazed.JPG"
+             alt="Glasierte Details" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
+        <img src="assets/images/terasse.jpg"
+             alt="Terrasse der Pizzeria" class="w-full h-full object-cover">
+      </div>
       <div class="gallery-item col-span-2 rounded-sm overflow-hidden aspect-2-1">
         <img src="assets/images/slide-1.png"
              alt="Pizzeria am Medienhafen" class="w-full h-full object-cover">
@@ -525,17 +517,26 @@
         </a>
       </div>
 
-      <div class="text-center p-8 bg-brand-surface rounded-sm border border-brand-gold/10 reveal">
+      <div class="opening-hours-card text-center p-8 bg-brand-surface rounded-sm border border-brand-gold/10 reveal">
         <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center mx-auto mb-5">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-brand-gold">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
         <h3 class="font-display text-brand-gold text-base tracking-wider mb-3">Öffnungszeiten</h3>
-        <div class="font-sans text-brand-muted text-sm space-y-1.5">
-          <div class="flex justify-between gap-4"><span class="text-brand-cream/80">Mo – Fr</span><span>11:30–15:00 &amp; 17:30–22:00</span></div>
-          <div class="flex justify-between gap-4"><span class="text-brand-cream/80">Sa</span><span>16:00 – 22:00</span></div>
-          <div class="flex justify-between gap-4"><span class="text-brand-cream/80">So &amp; Feiertag</span><span>14:00 – 21:30</span></div>
+        <div class="opening-hours-list font-sans text-sm">
+          <div class="opening-hours-row">
+            <span class="opening-day">Mo – Fr</span>
+            <span class="opening-time">11:30 – 15:00<br>17:30 – 22:00</span>
+          </div>
+          <div class="opening-hours-row">
+            <span class="opening-day">Sa</span>
+            <span class="opening-time">16:00 – 22:00</span>
+          </div>
+          <div class="opening-hours-row">
+            <span class="opening-day">So &amp; Feiertag</span>
+            <span class="opening-time">14:00 – 21:30</span>
+          </div>
         </div>
       </div>
 

@@ -6,13 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
-    // Mobile menu
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    document.querySelectorAll('#mobile-menu a').forEach(a =>
-      a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'))
-    );
+    // Mobile hamburger navigation removed intentionally.
 
 
     // Desktop-only back-to-top button

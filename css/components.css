@@ -588,3 +588,107 @@
   transform: translateY(0) scale(0.992);
 }
 
+
+
+/* Opening hours card: smoother and more consistent formatting */
+.opening-hours-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.15rem;
+}
+
+.opening-hours-row {
+  display: grid;
+  grid-template-columns: minmax(74px, 0.72fr) 1fr;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.72rem 0.82rem;
+  border: 1px solid rgba(192, 94, 53, 0.13);
+  border-radius: 0.55rem;
+  background:
+    linear-gradient(145deg, rgba(45, 18, 0, 0.72), rgba(13, 5, 0, 0.34));
+  box-shadow:
+    inset 0 1px 0 rgba(254, 242, 242, 0.035),
+    0 9px 18px rgba(0, 0, 0, 0.16);
+}
+
+.opening-day {
+  color: rgba(254, 242, 242, 0.86);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.opening-time {
+  color: var(--brand-muted);
+  line-height: 1.45;
+  text-align: right;
+}
+
+
+/* ==========================================================================
+   Opening hours: centered text, outer card only
+   Keep the contact card as the only visible box; remove row-level visuals.
+   ========================================================================== */
+.opening-hours-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening-hours-card .opening-hours-list {
+  width: 100%;
+  max-width: 340px;
+  margin: 0.35rem auto 0;
+  display: grid;
+  gap: 0.9rem;
+  justify-items: stretch;
+}
+
+.opening-hours-card .opening-hours-row {
+  display: grid;
+  grid-template-columns: minmax(90px, max-content) minmax(128px, max-content);
+  justify-content: center;
+  align-items: start;
+  column-gap: 2rem;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.opening-hours-card .opening-day {
+  color: var(--brand-gold-light);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.opening-hours-card .opening-time {
+  color: var(--brand-muted);
+  line-height: 1.55;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .opening-hours-card .opening-hours-list {
+    max-width: 300px;
+    gap: 0.85rem;
+  }
+
+  .opening-hours-card .opening-hours-row {
+    grid-template-columns: minmax(82px, max-content) minmax(112px, max-content);
+    column-gap: 1.25rem;
+    padding: 0 !important;
+  }
+
+  .opening-hours-card .opening-day,
+  .opening-hours-card .opening-time {
+    text-align: left;
+  }
+}
