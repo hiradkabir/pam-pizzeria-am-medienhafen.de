@@ -28,10 +28,70 @@ document.addEventListener('DOMContentLoaded', () => {
       window.requestAnimationFrame(updateBackToTopButton);
     }
 
+    let backToTopAnimationFrame = null;
+
+    function easeInOutCubic(t) {
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function scrollSoftlyToTop() {
+      const startY = window.scrollY || document.documentElement.scrollTop || 0;
+      if (startY <= 0) return;
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        window.scrollTo(0, 0);
+        return;
+      }
+
+      if (backToTopAnimationFrame) {
+        window.cancelAnimationFrame(backToTopAnimationFrame);
+      }
+
+      backToTopBtn?.classList.add('is-scrolling-top');
+
+      const html = document.documentElement;
+      const body = document.body;
+      const previousHtmlScrollBehavior = html.style.scrollBehavior;
+      const previousBodyScrollBehavior = body.style.scrollBehavior;
+
+      /* Prevent CSS scroll-behavior: smooth from fighting the custom frame-by-frame scroll. */
+      html.style.scrollBehavior = 'auto';
+      body.style.scrollBehavior = 'auto';
+
+      const startTime = performance.now();
+      const duration = Math.min(18000, Math.max(5500, startY * 1.55));
+
+      function finishScroll() {
+        window.scrollTo(0, 0);
+        html.style.scrollBehavior = previousHtmlScrollBehavior;
+        body.style.scrollBehavior = previousBodyScrollBehavior;
+        backToTopBtn?.classList.remove('is-scrolling-top');
+        backToTopAnimationFrame = null;
+        updateBackToTopButton();
+      }
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = easeInOutCubic(progress);
+        const nextY = Math.max(0, startY * (1 - eased));
+
+        window.scrollTo(0, nextY);
+
+        if (progress < 1 && nextY > 0.5) {
+          backToTopAnimationFrame = window.requestAnimationFrame(step);
+        } else {
+          finishScroll();
+        }
+      }
+
+      backToTopAnimationFrame = window.requestAnimationFrame(step);
+    }
+
     if (backToTopBtn) {
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      backToTopBtn.addEventListener('click', scrollSoftlyToTop);
       window.addEventListener('scroll', requestBackToTopUpdate, { passive: true });
       window.addEventListener('resize', requestBackToTopUpdate, { passive: true });
       desktopBackToTopQuery.addEventListener?.('change', updateBackToTopButton);
