@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="css/base.css?v=13">
   <link rel="stylesheet" href="css/layout.css?v=25">
   <link rel="stylesheet" href="css/components.css?v=38">
-  <link rel="stylesheet" href="css/responsive.css?v=45">
+  <link rel="stylesheet" href="css/responsive.css?v=46">
   <script defer src="js/script.js?v=39"></script>
 </head>
 <body class="bg-brand-dark text-brand-cream antialiased">
@@ -50,6 +50,12 @@
       <span class="font-display text-brand-gold text-xl tracking-widest">PIZZERIA</span>
       <span class="font-display text-brand-cream text-[10px] tracking-[0.35em] mt-0.5">AM MEDIENHAFEN</span>
     </a>
+
+    <div class="mobile-nav-links" role="navigation" aria-label="Seitennavigation">
+      <a href="#menu" class="mobile-nav-link">Speisekarte</a>
+      <a href="#gallery" class="mobile-nav-link">Galerie</a>
+      <a href="#contact" class="mobile-nav-link">Kontakt</a>
+    </div>
 
     <ul class="hidden md:flex items-center gap-8 text-[11px] font-sans tracking-widest uppercase text-brand-muted">
       <li><a href="#about"   class="hover:text-brand-gold transition-colors duration-200 cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Über uns</a></li>
@@ -74,7 +80,7 @@
     <video id="heroVideo"
            class="site-video hero-video w-full h-full object-cover"
            data-autoplay-video
-           autoplay loop muted playsinline preload="auto"
+           autoplay loop muted playsinline preload="metadata"
            poster="assets/images/hero-poster.jpg"
            aria-hidden="true">
       <source src="assets/videos/hero-loop.mp4" type="video/mp4">
@@ -104,7 +110,7 @@
 
 <!-- ═══════════════  HIGHLIGHTS BAR  ═══════════════ -->
 <div class="bg-brand-surface-2 py-7 border-y border-brand-gold/10">
-  <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+  <div class="highlights-bar-grid max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
     <div class="flex items-center justify-center gap-4">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-brand-gold flex-shrink-0">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
