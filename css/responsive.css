@@ -1076,3 +1076,48 @@
     transform: scale(1.77) !important;
   }
 }
+
+
+/* ========================================================================== 
+   Mobile-only requested fix
+   - Use a clearly visible hero-loop.mp4 crop on mobile.
+   - Scale the Calzone MP4 down by 30% from the previous mobile value.
+   ========================================================================== */
+@media (max-width: 767px) {
+  #heroVideo {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.35) !important;
+    transform-origin: center center !important;
+    filter: brightness(0.96) contrast(1.04) saturate(1.04) !important;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(13, 5, 0, 0.08) 0%,
+        rgba(13, 5, 0, 0.03) 30%,
+        rgba(13, 5, 0, 0.34) 66%,
+        rgba(13, 5, 0, 0.86) 100%
+      ) !important;
+  }
+
+  .signature-media-min-height .signature-video {
+    transform: scale(1.31) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .signature-media-min-height .signature-video {
+    transform: scale(1.24) !important;
+  }
+}
