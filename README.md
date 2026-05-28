@@ -76,7 +76,8 @@ assets/videos/
 Required videos:
 
 ```txt
-assets/videos/hero-loop.mp4
+assets/videos/hero-loop.mp4        # desktop hero video
+assets/videos/hero-loop-mob.mp4    # mobile hero video
 assets/videos/Calzone.mp4
 assets/videos/Fireplace-dynamic5000px.mp4
 ```
@@ -164,6 +165,8 @@ The Tailwind config is defined inside `index.html`.
 Fallback CSS utility classes are included in `css/base.css` so key colors still work if Tailwind CDN classes are cached or generated late.
 
 ## Video notes
+
+- The hero video uses `hero-loop.mp4` on desktop and `hero-loop-mob.mp4` on mobile via `<source media="...">` rules.
 
 For reliable browser playback:
 
