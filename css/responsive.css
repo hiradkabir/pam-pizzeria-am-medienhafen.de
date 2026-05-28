@@ -710,7 +710,7 @@
     height: 100%;
     object-fit: contain !important;
     object-position: center center !important;
-    transform: scale(1.2) !important;
+    transform: scale(0.78) !important;
     transform-origin: center center;
     background-color: var(--brand-dark);
   }
@@ -867,7 +867,7 @@
     visibility: visible !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center center !important;
     transform: scale(3) !important;
     transform-origin: center center !important;
@@ -892,7 +892,7 @@
   /* Calzone MP4: roughly doubled from the previously reduced mobile scale. */
   .signature-media-min-height {
     display: block !important;
-    min-height: clamp(320px, 72vh, 560px) !important;
+    min-height: clamp(330px, 62vh, 560px) !important;
     overflow: hidden !important;
   }
 
@@ -900,10 +900,10 @@
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     object-position: center center !important;
-    transform: scale(1.2) !important;
-    transform-origin: center !important;
+    transform: scale(1.44) !important;
+    transform-origin: center center !important;
   }
 
   /* Galerie: dense 2-column layout, no oversized items, no horizontal carousel. */
@@ -1119,5 +1119,62 @@
 @media (max-width: 420px) {
   .signature-media-min-height .signature-video {
     transform: scale(1.24) !important;
+  }
+}
+
+
+/* ========================================================================== 
+   Mobile-only final hero visibility + Calzone scale correction
+   - Keep hero-loop.mp4 visibly active on mobile.
+   - Do not hide the hero video when browser autoplay fallback is triggered.
+   - Scale Calzone.mp4 down by 30% from the previous mobile size.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hero-section {
+    background-color: var(--brand-dark) !important;
+    overflow: hidden !important;
+  }
+
+  .hero-section .absolute.inset-0 {
+    background: transparent !important;
+  }
+
+  #heroVideo,
+  #heroVideo.is-video-fallback,
+  .hero-video.is-video-fallback {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.22) !important;
+    transform-origin: center center !important;
+    filter: brightness(1) contrast(1.04) saturate(1.04) !important;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(13, 5, 0, 0.04) 0%,
+        rgba(13, 5, 0, 0.02) 32%,
+        rgba(13, 5, 0, 0.28) 66%,
+        rgba(13, 5, 0, 0.78) 100%
+      ) !important;
+  }
+
+  .signature-media-min-height .signature-video {
+    transform: scale(0.92) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .signature-media-min-height .signature-video {
+    transform: scale(0.87) !important;
   }
 }
