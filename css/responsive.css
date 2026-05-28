@@ -692,115 +692,145 @@
   }
 }
 
-/* ========================================================================
-   Mobile-only requested media and layout refinements
-   ======================================================================== */
+/* ==========================================================================
+   Mobile layout and media overrides
+   Keep all phone-specific rules in one place to avoid cascade conflicts.
+   ========================================================================== */
 @media (max-width: 767px) {
-  /* Hero MP4: smaller and centered so it fits inside the phone frame better. */
-  .hero-section {
-    min-height: 100svh;
-    background-color: var(--brand-dark);
+  /* Mobile navigation */
+  #navbar > div {
+    justify-content: center !important;
   }
 
-  #heroVideo {
-    display: block !important;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: scale(0.78) !important;
-    transform-origin: center center;
-    background-color: var(--brand-dark);
+  #navbar a[href="#"] {
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .mobile-cta-fab {
+    transition:
+      opacity .22s ease,
+      visibility .22s ease,
+      transform .22s ease,
+      box-shadow .18s ease !important;
+  }
+
+  #navbar:not(.scrolled) ~ .mobile-cta-fab {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(110%) scale(0.98) !important;
+  }
+
+  /* Mobile hero title: 5% smaller than the desktop/base title scale. */
+  .hero-title-size {
+    font-size: clamp(3.42rem, 8.55vw, 7.6rem) !important;
+  }
+
+  /* Hero video */
+  .hero-section {
+    min-height: 100svh;
+    background-color: var(--brand-dark) !important;
+    overflow: hidden !important;
   }
 
   .hero-section .absolute.inset-0 {
-    background:
-      radial-gradient(ellipse 80% 58% at 50% 46%, rgba(192, 94, 53, 0.10), rgba(13, 5, 0, 0) 62%),
-      var(--brand-dark);
+    background: transparent !important;
+    background-size: 85% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #heroVideo,
+  #heroVideo.is-video-fallback,
+  .hero-video.is-video-fallback {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.04) !important;
+    transform-origin: center center !important;
+    filter: brightness(1) contrast(1.04) saturate(1.04) !important;
+    background-color: var(--brand-dark) !important;
   }
 
   .hero-overlay {
     background:
       linear-gradient(
         to bottom,
-        rgba(13, 5, 0, 0.34) 0%,
-        rgba(13, 5, 0, 0.18) 34%,
-        rgba(13, 5, 0, 0.66) 70%,
-        rgba(13, 5, 0, 0.98) 100%
-      );
+        rgba(13, 5, 0, 0.04) 0%,
+        rgba(13, 5, 0, 0.02) 32%,
+        rgba(13, 5, 0, 0.28) 66%,
+        rgba(13, 5, 0, 0.78) 100%
+      ) !important;
   }
 
-  /* Calzone MP4: same principle as hero, smaller and less cropped. */
+  /* Calzone video */
   .signature-media-min-height {
     display: block !important;
-    min-height: clamp(285px, 58vh, 430px) !important;
+    min-height: clamp(360px, 66vh, 620px) !important;
+    overflow: hidden !important;
     background: var(--brand-surface-2);
   }
 
   .signature-media-min-height .signature-video {
-    object-fit: contain !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: cover !important;
     object-position: center center !important;
-    transform: scale(0.72) !important;
-    transform-origin: center center;
+    transform: scale(0.92) !important;
+    transform-origin: center center !important;
     background-color: var(--brand-surface-2);
   }
 
-  /* Gallery: compact mobile order with terrace image visible. */
-  #gallery .gallery-mobile-carousel {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 0.65rem !important;
-    overflow: visible !important;
-    scroll-snap-type: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  /* Hide fireplace media on mobile */
+  #menuFireplaceVideo,
+  #menuFireplaceVideo.is-video-fallback,
+  .menu-fireplace-video.is-video-fallback {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
-  #gallery .gallery-mobile-carousel > .gallery-item {
-    flex: none !important;
-    width: auto !important;
-    min-width: 0 !important;
-    aspect-ratio: 1 / 1 !important;
-    grid-column: auto !important;
-    grid-row: auto !important;
-    scroll-snap-align: none !important;
+  #menu > .absolute.inset-0 {
+    background-image: none !important;
+    background-size: auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 
-  #gallery .gallery-mobile-carousel > .gallery-item:first-child,
-  #gallery .gallery-mobile-carousel > .gallery-item.col-span-2 {
-    grid-column: span 2 !important;
-    aspect-ratio: 16 / 9 !important;
+  #menu .tab-content:not(.hidden) {
+    min-height: auto !important;
+    display: block;
   }
 
-  #gallery .gallery-mobile-carousel > .mobile-gallery-terasse {
-    display: block !important;
-    order: 4;
-  }
-
-  #gallery .gallery-mobile-carousel > .mobile-gallery-terasse img {
-    display: block !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  /* Speisekarte tabs: 2 columns x 3 rows, centered, no horizontal spill. */
+  /* Speisekarte tabs: centered 2 columns x 3 rows */
+  #menu .overflow-x-auto:has(.tab-btn),
   #menu .overflow-x-auto {
     overflow-x: visible !important;
-    width: 100%;
+    width: 100% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
+  #menu .overflow-x-auto:has(.tab-btn) > .flex,
+  #menu .overflow-x-auto > .flex:has(.tab-btn),
   #menu .overflow-x-auto > .flex {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    width: min(100%, 330px) !important;
+    width: min(100%, 340px) !important;
     max-width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    flex-shrink: 1 !important;
     overflow: hidden !important;
   }
 
@@ -818,95 +848,7 @@
     letter-spacing: 0.12em !important;
   }
 
-  /* Kontakt wood texture: mobile only 90-degree rotation for stronger visual direction. */
-  .contact-section-bg::before {
-    inset: -38% -82%;
-    background-size: auto min(1120px, 142vh);
-    background-position: center center;
-    opacity: 0.54;
-    transform: rotate(90deg) scale(1.08);
-    transform-origin: center center;
-  }
-}
-
-@media (max-width: 420px) {
-  #heroVideo {
-    transform: scale(0.72) !important;
-  }
-
-  .signature-media-min-height {
-    min-height: clamp(260px, 52vh, 380px) !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    transform: scale(0.68) !important;
-  }
-
-  #menu .overflow-x-auto > .flex {
-    width: min(100%, 310px) !important;
-  }
-
-  #menu .tab-btn {
-    font-size: 0.58rem !important;
-    padding: 0.72rem 0.25rem !important;
-  }
-}
-
-/* ========================================================================== 
-   Mobile-only final media tuning
-   - Make hero video visible on mobile.
-   - Scale Calzone video up from the previous reduced state.
-   - Compact gallery into a dense 2-column grid with no large gaps.
-   - Keep mobile Speisekarte tabs as 2 columns x 3 rows.
-   ========================================================================== */
-@media (max-width: 767px) {
-  /* Hero MP4: significantly larger and visible inside the mobile frame. */
-  #heroVideo {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: scale(3) !important;
-    transform-origin: center center !important;
-    background-color: var(--brand-dark) !important;
-  }
-
-  .hero-section .absolute.inset-0 {
-    background: var(--brand-dark) !important;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(13, 5, 0, 0.20) 0%,
-        rgba(13, 5, 0, 0.10) 32%,
-        rgba(13, 5, 0, 0.42) 68%,
-        rgba(13, 5, 0, 0.92) 100%
-      ) !important;
-  }
-
-  /* Calzone MP4: roughly doubled from the previously reduced mobile scale. */
-  .signature-media-min-height {
-    display: block !important;
-    min-height: clamp(330px, 62vh, 560px) !important;
-    overflow: hidden !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: scale(1.44) !important;
-    transform-origin: center center !important;
-  }
-
-  /* Galerie: dense 2-column layout, no oversized items, no horizontal carousel. */
+  /* Gallery: compact 2-column grid */
   #gallery .gallery-mobile-carousel {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -947,296 +889,111 @@
     object-position: center center !important;
   }
 
-  /* Mobile Speisekarte: centered 2 columns x 3 rows. */
-  #menu .overflow-x-auto:has(.tab-btn),
-  #menu .overflow-x-auto {
-    overflow-x: visible !important;
-    width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  /* Contact section */
+  .contact-section-bg::before {
+    inset: -38% -82%;
+    background-size: auto min(1120px, 142vh);
+    background-position: center center;
+    opacity: 0.54;
+    transform: rotate(90deg) scale(1.08);
+    transform-origin: center center;
   }
 
-  #menu .overflow-x-auto:has(.tab-btn) > .flex,
-  #menu .overflow-x-auto > .flex:has(.tab-btn),
-  #menu .overflow-x-auto > .flex {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    width: min(100%, 340px) !important;
+  #contact .opening-hours-list {
+    gap: 0.42rem;
+    max-width: 17.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #contact .opening-hours-row {
+    grid-template-columns: minmax(5.5rem, 0.95fr) minmax(0, 1.05fr) !important;
+    gap: 0.55rem;
+    padding: 0.2rem 0 !important;
+  }
+
+  #contact .opening-day,
+  #contact .opening-time {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* Mobile modals and general spacing */
+  #modal-impressum,
+  #modal-datenschutz {
+    padding: 0 !important;
+  }
+
+  #modal-impressum > div.relative,
+  #modal-datenschutz > div.relative {
     max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: hidden !important;
+    width: 100% !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 4.5rem 1.5rem 2rem !important;
+    overflow-y: auto;
   }
 
-  #menu .tab-btn {
-    width: 100% !important;
-    min-width: 0 !important;
-    flex: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0.78rem 0.35rem !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    font-size: 0.62rem !important;
-    letter-spacing: 0.12em !important;
+  #modal-impressum-close,
+  #modal-datenschutz-close {
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+  }
+
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  body {
+    padding-bottom: 0;
   }
 }
 
+/* Very small phones */
 @media (max-width: 420px) {
-  #heroVideo {
-    transform: scale(3) !important;
-  }
-
   .signature-media-min-height {
-    min-height: clamp(310px, 58vh, 500px) !important;
+    min-height: clamp(330px, 61vh, 540px) !important;
   }
 
   .signature-media-min-height .signature-video {
-    transform: scale(1.36) !important;
+    transform: scale(0.87) !important;
   }
 
   #menu .overflow-x-auto > .flex,
   #menu .overflow-x-auto > .flex:has(.tab-btn) {
     width: min(100%, 320px) !important;
   }
-}
 
-
-/* ========================================================================== 
-   Mobile-only video refinement
-   - Calzone MP4 +30% from the current mobile scale.
-   - Hero MP4 forced visible and sized for a clean mobile crop.
-   ========================================================================== */
-@media (max-width: 767px) {
-  .hero-section {
-    background-color: var(--brand-dark) !important;
-    overflow: hidden !important;
-  }
-
-  .hero-section .absolute.inset-0 {
-    background:
-      radial-gradient(ellipse 90% 62% at 50% 42%, rgba(192, 94, 53, 0.10), rgba(13, 5, 0, 0) 64%),
-      var(--brand-dark) !important;
-  }
-
-  #heroVideo {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: scale(1.18) !important;
-    transform-origin: center center !important;
-    filter: brightness(0.88) contrast(1.04) saturate(1.04) !important;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(13, 5, 0, 0.18) 0%,
-        rgba(13, 5, 0, 0.08) 28%,
-        rgba(13, 5, 0, 0.44) 64%,
-        rgba(13, 5, 0, 0.94) 100%
-      ) !important;
-  }
-
-  .signature-media-min-height {
-    min-height: clamp(360px, 66vh, 620px) !important;
-    overflow: hidden !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: scale(1.87) !important;
-    transform-origin: center center !important;
+  #menu .tab-btn {
+    font-size: 0.58rem !important;
+    padding: 0.72rem 0.25rem !important;
   }
 }
 
-@media (max-width: 420px) {
-  #heroVideo {
-    transform: scale(1.24) !important;
-    object-position: center center !important;
-  }
-
-  .signature-media-min-height {
-    min-height: clamp(330px, 61vh, 540px) !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    transform: scale(1.77) !important;
-  }
-}
-
-
-/* ========================================================================== 
-   Mobile-only requested fix
-   - Use a clearly visible hero-loop.mp4 crop on mobile.
-   - Scale the Calzone MP4 down by 30% from the previous mobile value.
-   ========================================================================== */
-@media (max-width: 767px) {
-  #heroVideo {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 0 !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: scale(1.35) !important;
-    transform-origin: center center !important;
-    filter: brightness(0.96) contrast(1.04) saturate(1.04) !important;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(13, 5, 0, 0.08) 0%,
-        rgba(13, 5, 0, 0.03) 30%,
-        rgba(13, 5, 0, 0.34) 66%,
-        rgba(13, 5, 0, 0.86) 100%
-      ) !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    transform: scale(1.31) !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .signature-media-min-height .signature-video {
-    transform: scale(1.24) !important;
-  }
-}
-
-
-/* ========================================================================== 
-   Mobile-only final hero visibility + Calzone scale correction
-   - Keep hero-loop.mp4 visibly active on mobile.
-   - Do not hide the hero video when browser autoplay fallback is triggered.
-   - Scale Calzone.mp4 down by 30% from the previous mobile size.
-   ========================================================================== */
-@media (max-width: 767px) {
-  .hero-section {
-    background-color: var(--brand-dark) !important;
-    overflow: hidden !important;
-  }
-
-  .hero-section .absolute.inset-0 {
-    background: transparent !important;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .fade-up {
+    transition: none;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   #heroVideo,
-  #heroVideo.is-video-fallback,
-  .hero-video.is-video-fallback {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 0 !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: scale(1.22) !important;
-    transform-origin: center center !important;
-    filter: brightness(1) contrast(1.04) saturate(1.04) !important;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(13, 5, 0, 0.04) 0%,
-        rgba(13, 5, 0, 0.02) 32%,
-        rgba(13, 5, 0, 0.28) 66%,
-        rgba(13, 5, 0, 0.78) 100%
-      ) !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    transform: scale(0.92) !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .signature-media-min-height .signature-video {
-    transform: scale(0.87) !important;
-  }
-}
-
-/* ========================================================================== 
-   Mobile-only requested refinements
-   - Hide the phone button while the visitor is at the top of the page.
-   - Center the upper Pizzeria am Medienhafen logo on mobile.
-   - Scale the hero video/poster down by 15% on mobile.
-   - Remove the fireplace video/poster visually on mobile.
-   ========================================================================== */
-@media (max-width: 767px) {
-  #navbar > div {
-    justify-content: center !important;
-  }
-
-  #navbar a[href="#"] {
-    align-items: center !important;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .mobile-cta-fab {
-    transition:
-      opacity .22s ease,
-      visibility .22s ease,
-      transform .22s ease,
-      box-shadow .18s ease !important;
-  }
-
-  #navbar:not(.scrolled) ~ .mobile-cta-fab {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transform: translateY(110%) scale(0.98) !important;
-  }
-
-  #heroVideo,
-  #heroVideo.is-video-fallback,
-  .hero-video.is-video-fallback {
-    transform: scale(1.04) !important;
-  }
-
-  .hero-section .absolute.inset-0 {
-    background-size: 85% auto !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
   #menuFireplaceVideo,
-  #menuFireplaceVideo.is-video-fallback,
-  .menu-fireplace-video.is-video-fallback {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
+  .signature-video {
+    animation: none;
   }
 
-  #menu > .absolute.inset-0 {
-    background-image: none !important;
-    background-size: auto !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
+  .tab-content,
+  .tab-content.tab-fading-out,
+  .tab-content.tab-entering {
+    transition: none;
+    transform: none;
+    opacity: 1;
   }
 }
