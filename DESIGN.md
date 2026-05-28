@@ -1,5 +1,5 @@
 ---
-version: "1.0"
+version: "1.1"
 generated: "2026-05-29"
 project: "Pizzeria am Medienhafen"
 register: brand
@@ -128,12 +128,13 @@ components:
     perspective: "1400px"
     hoverTransform: "translateY(-8px) rotateX(1.6deg) rotateY(-1.6deg) scale(1.014)"
     transition: "0.7s cubic-bezier(.16,1,.3,1)"
-  - name: contact-card
-    element: div
-    background: "#2D1200"
-    borderRadius: "0"
-    hoverTransform: "translateY(-5px) rotateX(1deg) rotateY(-0.8deg) scale(1.006)"
-    transition: "0.6s cubic-bezier(.16,1,.3,1)"
+  - name: contact-map
+    element: figure
+    note: "OpenStreetMap embed; map-led Kontakt layout that replaced the former contact cards"
+    aspectRatio: "4 / 3"
+    borderRadius: "0.55rem"
+    filter: "invert(0.92) hue-rotate(180deg) brightness(0.96) contrast(0.92) saturate(0.72) sepia(0.16)"
+    interaction: "pointer-events: none (visual anchor); action via the address link"
   - name: mobile-fab
     element: button
     background: "#DC2626"
@@ -205,7 +206,11 @@ Base font size is 19px on `html`. Body line length caps at 72ch. Hero title scal
 
 **Scroll-reveal:** `.reveal` elements translate 36px down at opacity 0, transition to natural position over 0.75s. Stagger delays: 0.15s, 0.35s, 0.55s, 0.75s.
 
-**3D hover (gallery cards, contact cards):** `perspective: 1400px` on parent. Hover applies `rotateX` + `rotateY` (1–1.6deg) + `scale` (1.006–1.014) + `translateY(-5px to -8px)`. Inner image scales to `scale(1.076) translateZ(14px)`. Never exceeds these values.
+**3D hover (gallery cards):** `perspective: 1400px` on parent. Hover applies `rotateX` + `rotateY` (1–1.6deg) + `scale` (1.006–1.014) + `translateY(-5px to -8px)`. Inner image scales to `scale(1.076) translateZ(14px)`. Never exceeds these values.
+
+**Contact map:** the Kontakt section is map-led, not carded. An OpenStreetMap embed is inverted and warmed (`invert hue-rotate sepia`) so it sits in the dark ground, and `pointer-events: none` keeps it a visual anchor that never traps page scroll. The action lives in the "Auf Karte ansehen" link. Opening hours and phone sit alongside; address sits below the map. The former three contact cards (and their `.rounded-full` icon bubbles) are retired.
+
+**Entrance and ambient motion:** the hero video carries one signature beat, an ultra-slow Ken Burns drift (`scale 1.02 → 1.085`, ~42s, alternating, desktop only). Gold dividers draw in via `scaleX` (never width) as their `.reveal` block enters view. The highlights bar reveals its three pillars in a 0 / .12 / .24s stagger. Inline arrow links lead 4px on hover and focus. Every one of these is disabled under `prefers-reduced-motion`.
 
 **Primary CTA (Ember):** Sharp corners (radius 0), all-caps Jost label-caps, red background. The button does not grow or scale on hover — it deepens in color only.
 
@@ -224,7 +229,7 @@ Base font size is 19px on `html`. Body line length caps at 72ch. Hero title scal
 - Use `cubic-bezier(.16, 1, .3, 1)` for every transition with spatial movement
 - Apply warm-tinted multi-layer shadows — no cool-grey box-shadows anywhere
 - Use Ember sparingly — one moment of heat per section at most
-- Apply perspective-based 3D hover to gallery and contact cards
+- Apply perspective-based 3D hover to gallery cards; keep the Kontakt map flat (visual anchor, pointer-events off)
 - Layer dark overlay gradients over video and image backgrounds
 - Uppercase tracked Jost for every label, CTA, and tab
 - Respect `prefers-reduced-motion` by stripping transforms entirely

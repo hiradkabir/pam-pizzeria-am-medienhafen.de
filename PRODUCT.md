@@ -34,3 +34,7 @@ The voice is that of a place that has been here longer than most of its neighbou
 ## Accessibility & Inclusion
 
 WCAG AAA. Particular care on contrast over dark video/image backgrounds, focus visibility, and touch target sizing for mobile visitors in low-light contexts.
+
+## Privacy
+
+Privacy is treated as part of hospitality, not legal boilerplate. The site is fully static and sets no analytics or tracking cookies. The location map is embedded from OpenStreetMap rather than Google, so a first-time visitor can find the place without being handed to a third-party advertising tracker.

@@ -76,8 +76,7 @@ assets/videos/
 Required videos:
 
 ```txt
-assets/videos/hero-loop.mp4        # desktop hero video
-assets/videos/hero-loop-mob.mp4    # mobile hero video
+assets/videos/hero-loop.mp4               # hero video (desktop and mobile; mobile is scaled via CSS)
 assets/videos/Calzone.mp4
 assets/videos/Fireplace-dynamic5000px.mp4
 ```
@@ -100,13 +99,15 @@ Section-level layout, structural helpers, background sections, gallery/contact b
 css/components.css
 ```
 
-Reusable components, animations, navbar state, gallery effects, contact card effects, menu/fireplace styling, top button.
+Reusable components, entrance and ambient animations, navbar state, gallery 3D hover, the map-led Kontakt section, menu/fireplace styling, back-to-top button.
 
 ```txt
 css/responsive.css
 ```
 
 Desktop and mobile overrides, mobile media sizing, mobile menu tab layout, mobile gallery behavior, mobile contact background adjustments.
+
+> Maintenance note: `responsive.css` currently begins with a stale copy of most of `components.css` (roughly its first 690 lines) and is loaded after it, so on any shared selector the duplicated copy wins. When you change a shared component rule, check both files. A future cleanup should delete the duplicated block from `responsive.css` and keep only the genuinely responsive rules.
 
 ## JavaScript behavior
 
@@ -135,6 +136,7 @@ The mobile hamburger menu has intentionally been removed.
 - Desktop videos are enabled.
 - Speisekarte uses tab buttons in one horizontal row.
 - Back-to-top button appears only on desktop after scrolling.
+- Kontakt uses a two-column, map-led layout: map and address on the left, opening hours and phone on the right.
 
 ### Mobile
 
@@ -144,6 +146,7 @@ The mobile hamburger menu has intentionally been removed.
 - Galerie uses a compact mobile layout to reduce vertical space.
 - Speisekarte tabs use a centered **2 columns × 3 rows** layout.
 - `Holzpalette.png` is used in the Kontakt section and rotated on mobile for better visual fit.
+- Kontakt collapses the map-led layout to a single column, with the map on top.
 
 ## Brand color system
 
@@ -166,7 +169,7 @@ Fallback CSS utility classes are included in `css/base.css` so key colors still 
 
 ## Video notes
 
-- The hero video uses `hero-loop.mp4` on desktop and `hero-loop-mob.mp4` on mobile via `<source media="...">` rules.
+- The hero video uses a single source, `hero-loop.mp4`. Mobile sizing is handled in CSS (the video is scaled and centered in `responsive.css`), not via a separate mobile video source.
 
 For reliable browser playback:
 
@@ -178,6 +181,10 @@ For reliable browser playback:
 - Keep `muted`, `autoplay`, `loop`, and `playsinline` on background videos.
 
 If a video fails or is blocked by the browser, `script.js` applies the poster image as fallback.
+
+## Map embed (Kontakt)
+
+The Kontakt section embeds an **OpenStreetMap** map (no API key, no tracking cookies), dark-filtered in CSS to match the theme and set to `pointer-events: none` so it never traps page scroll. The marker is at `51.2146420, 6.7579140` (Wupperstraße 14). A short OpenStreetMap clause is included in the Datenschutz modal. To re-center the map, edit the `bbox` and `marker` values in the iframe `src` in `index.html`.
 
 ## Local testing
 
@@ -217,7 +224,10 @@ or test in a private/incognito browser window.
 The HTML uses version numbers like:
 
 ```html
-<link rel="stylesheet" href="css/responsive.css?v=41">
+<link rel="stylesheet" href="css/base.css?v=13">
+<link rel="stylesheet" href="css/layout.css?v=26">
+<link rel="stylesheet" href="css/components.css?v=40">
+<link rel="stylesheet" href="css/responsive.css?v=46">
 <script defer src="js/script.js?v=39"></script>
 ```
 
