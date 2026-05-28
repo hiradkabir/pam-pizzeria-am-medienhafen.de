@@ -691,3 +691,115 @@
     line-height: 1.5;
   }
 }
+
+/* ==========================================================================
+   Mobile-only final media, gallery and menu refinements
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Hero video: smaller, centered and fully visible inside the mobile frame. */
+  .hero-section {
+    min-height: 100svh;
+  }
+
+  .hero-section > .absolute.inset-0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(ellipse 78% 56% at 50% 46%, rgba(192, 94, 53, 0.12), rgba(13, 5, 0, 0) 64%),
+      var(--brand-dark);
+  }
+
+  #heroVideo {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: scale(0.78);
+    transform-origin: center center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(13, 5, 0, 0.34) 0%,
+        rgba(13, 5, 0, 0.18) 30%,
+        rgba(13, 5, 0, 0.68) 66%,
+        rgba(13, 5, 0, 0.98) 100%
+      );
+  }
+
+  /* Calzone video: reduce the visual weight and avoid aggressive cropping. */
+  .signature-media-min-height {
+    display: block !important;
+    min-height: clamp(300px, 58svh, 460px);
+    background:
+      radial-gradient(ellipse 70% 52% at 50% 50%, rgba(192, 94, 53, 0.10), rgba(45, 18, 0, 0) 68%),
+      var(--brand-surface-2);
+  }
+
+  .signature-media-min-height .signature-video {
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: scale(0.84);
+    transform-origin: center center;
+    background: transparent;
+  }
+
+  /* Make the terrace image appear earlier in the mobile gallery flow. */
+  #gallery .gallery-terasse {
+    display: block !important;
+    order: 3;
+  }
+
+  #gallery .gallery-terasse img {
+    display: block;
+  }
+
+  /* Mobile Speisekarte: 2 columns x 3 rows, centered without edge scrolling. */
+  #menu .overflow-x-auto {
+    overflow-x: visible !important;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #menu .overflow-x-auto > .flex {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 340px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    flex-shrink: 1 !important;
+  }
+
+  #menu .tab-btn {
+    width: 100%;
+    min-width: 0 !important;
+    flex: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.82rem 0.45rem !important;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.13em !important;
+    line-height: 1.1;
+  }
+
+  /* Kontakt Holzpalette: mobile-only 90-degree rotation for a more vertical visual. */
+  .contact-section-bg::before {
+    inset: -38% -86%;
+    background-size: auto min(1280px, 158svh);
+    background-position: center center;
+    opacity: 0.54;
+    transform: rotate(90deg) scale(1.16);
+    transform-origin: center center;
+  }
+}
+
