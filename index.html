@@ -7,6 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/pizzeria-am-medienhafen-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/hero-poster.jpg" fetchpriority="high" type="image/jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -36,7 +37,7 @@
     };
   </script>
   <link rel="stylesheet" href="css/base.css?v=13">
-  <link rel="stylesheet" href="css/layout.css?v=25">
+  <link rel="stylesheet" href="css/layout.css?v=26">
   <link rel="stylesheet" href="css/components.css?v=38">
   <link rel="stylesheet" href="css/responsive.css?v=46">
   <script defer src="js/script.js?v=39"></script>
@@ -149,11 +150,11 @@
       <div class="grid grid-cols-2 gap-3">
         <div class="gallery-item img-vignette rounded-sm overflow-hidden aspect-3-4">
           <img src="assets/images/am-ofen.jpg"
-               alt="Restaurant Atmosphäre" class="w-full h-full object-cover">
+               alt="Restaurant Atmosphäre" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="gallery-item img-vignette rounded-sm overflow-hidden mt-8 aspect-3-4">
           <img src="assets/images/IMG-20200109-WA0015.jpg"
-               alt="Pizzeria am Medienhafen" class="w-full h-full object-cover">
+               alt="Pizzeria am Medienhafen" class="w-full h-full object-cover" loading="lazy">
         </div>
       </div>
       <div class="absolute -bottom-5 -right-5 w-28 h-28 border-2 border-brand-gold/25 hidden lg:block pointer-events-none"></div>
@@ -228,7 +229,7 @@
     <video id="menuFireplaceVideo"
            class="site-video menu-fireplace-video w-full h-full object-cover"
            data-autoplay-video
-           autoplay loop muted playsinline preload="auto"
+           autoplay loop muted playsinline preload="metadata"
            poster="assets/images/Fireplace5000px.png">
       <source src="assets/videos/Fireplace-dynamic5000px.mp4" type="video/mp4">
     </video>
@@ -466,35 +467,35 @@
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 reveal gallery-mobile-carousel">
       <div class="gallery-item col-span-2 row-span-2 rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/IMG-20200109-WA0034_0.jpg"
-             alt="Pizzeria am Medienhafen" class="w-full h-full object-cover">
+             alt="Pizzeria am Medienhafen" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/IMG-20200105-WA0009.jpg"
-             alt="Frisch aus dem Holzofen" class="w-full h-full object-cover">
+             alt="Frisch aus dem Holzofen" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/am-ofen.jpg"
-             alt="Unser Holzofen" class="w-full h-full object-cover">
+             alt="Unser Holzofen" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/Calzone.png"
-             alt="Pizza frisch belegt" class="w-full h-full object-cover">
+             alt="Pizza frisch belegt" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/IMG-20200109-WA0015.jpg"
-             alt="Atmosphäre" class="w-full h-full object-cover">
+             alt="Atmosphäre" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/glazed.jpg"
-             alt="Glasierte Details" class="w-full h-full object-cover">
+             alt="Glasierte Details" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item mobile-gallery-terasse rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/terasse.jpg"
-             alt="Terrasse der Pizzeria" class="w-full h-full object-cover">
+             alt="Terrasse der Pizzeria" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="gallery-item col-span-2 rounded-sm overflow-hidden aspect-2-1">
         <img src="assets/images/slide-1.png"
-             alt="Pizzeria am Medienhafen" class="w-full h-full object-cover">
+             alt="Pizzeria am Medienhafen" class="w-full h-full object-cover" loading="lazy">
       </div>
     </div>
   </div>
