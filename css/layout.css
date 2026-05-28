@@ -97,6 +97,19 @@
   z-index: 2;
 }
 
+/* Defer render of off-screen sections until they approach the viewport.
+   Only applied to gallery and contact — the two furthest from the fold.
+   contain-intrinsic-block-size is a rough estimate; browsers clamp layout. */
+#gallery {
+  content-visibility: auto;
+  contain-intrinsic-block-size: 900px;
+}
+
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-block-size: 750px;
+}
+
 /* Keep the fireplace frame stable while switching tabs. */
 #menu .tab-content:not(.hidden) {
   min-height: 1180px;
