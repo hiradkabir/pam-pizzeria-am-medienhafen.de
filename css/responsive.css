@@ -710,7 +710,7 @@
     height: 100%;
     object-fit: contain !important;
     object-position: center center !important;
-    transform: scale(0.78) !important;
+    transform: scale(1.2) !important;
     transform-origin: center center;
     background-color: var(--brand-dark);
   }
@@ -867,7 +867,7 @@
     visibility: visible !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     object-position: center center !important;
     transform: scale(3) !important;
     transform-origin: center center !important;
@@ -892,7 +892,7 @@
   /* Calzone MP4: roughly doubled from the previously reduced mobile scale. */
   .signature-media-min-height {
     display: block !important;
-    min-height: clamp(330px, 62vh, 560px) !important;
+    min-height: clamp(320px, 72vh, 560px) !important;
     overflow: hidden !important;
   }
 
@@ -900,10 +900,10 @@
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center center !important;
-    transform: scale(1.44) !important;
-    transform-origin: center center !important;
+    transform: scale(1.2) !important;
+    transform-origin: center !important;
   }
 
   /* Galerie: dense 2-column layout, no oversized items, no horizontal carousel. */
