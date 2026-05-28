@@ -1180,21 +1180,63 @@
 }
 
 /* ========================================================================== 
-   Mobile-only title size reduction
-   Requested: make title text smaller for mobile users only.
+   Mobile-only requested refinements
+   - Hide the phone button while the visitor is at the top of the page.
+   - Center the upper Pizzeria am Medienhafen logo on mobile.
+   - Scale the hero video/poster down by 15% on mobile.
+   - Remove the fireplace video/poster visually on mobile.
    ========================================================================== */
 @media (max-width: 767px) {
-  .hero-title-size {
-    font-size: clamp(1.55rem, 7.6vw, 3.2rem) !important;
-    line-height: 1.5 !important;
+  #navbar > div {
+    justify-content: center !important;
   }
 
-  #about h2,
-  #menu h2,
-  #gallery h2,
-  #contact h2,
-  .signature-media-min-height + div h2 {
-    font-size: clamp(2rem, 9vw, 2.75rem) !important;
-    line-height: 1.04 !important;
+  #navbar a[href="#"] {
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .mobile-cta-fab {
+    transition:
+      opacity .22s ease,
+      visibility .22s ease,
+      transform .22s ease,
+      box-shadow .18s ease !important;
+  }
+
+  #navbar:not(.scrolled) ~ .mobile-cta-fab {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(110%) scale(0.98) !important;
+  }
+
+  #heroVideo,
+  #heroVideo.is-video-fallback,
+  .hero-video.is-video-fallback {
+    transform: scale(1.04) !important;
+  }
+
+  .hero-section .absolute.inset-0 {
+    background-size: 85% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #menuFireplaceVideo,
+  #menuFireplaceVideo.is-video-fallback,
+  .menu-fireplace-video.is-video-fallback {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  #menu > .absolute.inset-0 {
+    background-image: none !important;
+    background-size: auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 }
