@@ -1,5 +1,5 @@
 ---
-version: "1.2"
+version: "1.4"
 generated: "2026-05-29"
 project: "Pizzeria am Medienhafen"
 register: brand
@@ -39,7 +39,7 @@ an Italian flag template
 a neon food startup
 ```
 
-## Current implementation summary
+## Implementation summary
 
 The design is implemented as a static single-page site.
 
@@ -52,7 +52,7 @@ css/responsive.css      mobile/desktop overrides only
 js/script.js            interaction behavior and video fallback
 ```
 
-`responsive.css` is intentionally lean and should contain breakpoint-specific overrides, not duplicated component code.
+`responsive.css` should stay lean and should contain breakpoint-specific overrides only. Shared component styling belongs in `components.css`.
 
 ## Palette
 
@@ -62,7 +62,7 @@ The color system is defined in `:root` in `css/base.css` and mirrored in the Tai
 |---|---:|---|---|
 | `--brand-red` | `#DC2626` | Primary action | Order/call CTAs, mobile FAB |
 | `--brand-gold` | `#C05E35` | Main accent | Wordmark, dividers, borders, tabs |
-| `--brand-gold-light` | `#D9895A` | Warm highlight | Hover states, selected details |
+| `--brand-gold-light` | `#D9895A` | Warm highlight | Hover states and selected details |
 | `--brand-cream` | `#FEF2F2` | Main text | Headings and high-contrast text |
 | `--brand-warm` | `#F5E6D0` | Soft warm tone | Tints and secondary warmth |
 | `--brand-dark` | `#0D0500` | Deep base | Page background and dark fades |
@@ -80,18 +80,17 @@ Body/navigation:  Jost
 Base html size:   19px
 ```
 
-### Type hierarchy
+### Current type hierarchy
 
 ```txt
 Hero title:
-.hero-title-size → clamp(3.6rem, 9vw, 8rem)
+layout.css → .hero-title-size → clamp(3.6rem, 9vw, 8rem)
 
 Mobile hero title:
-responsive.css → clamp(3.42rem, 8.55vw, 7.6rem)
+responsive.css → .hero-title-size → clamp(1.8rem, 10.2vw, 7.6rem)
 
 Section headings:
-Tailwind classes in index.html:
-text-4xl md:text-5xl with Bodoni Moda
+index.html Tailwind classes → text-4xl md:text-5xl with Bodoni Moda
 
 Labels:
 Jost, uppercase, tracked, small size
@@ -101,7 +100,7 @@ Jost, muted warm text, relaxed line-height
 ```
 
 Use Bodoni Moda for emotional emphasis and section identity.  
-Use Jost for functional navigation, labels, prices, and paragraph text.
+Use Jost for functional navigation, labels, prices, buttons, and paragraph text.
 
 ## Layout principles
 
@@ -116,7 +115,7 @@ no separate mobile HTML
 ```
 
 Desktop allows more atmosphere and hover detail.  
-Mobile prioritizes speed, reduced vertical space, visible CTAs, and readable interaction.
+Mobile prioritizes speed, visible CTAs, reduced vertical space, and readable interaction.
 
 ## Section design
 
@@ -127,22 +126,26 @@ Purpose: immediate atmosphere and identity.
 Current behavior:
 
 ```txt
-hero-loop.mp4 as video background
-hero-poster.jpg as poster/fallback
+desktop hero video: hero-loop.mp4
+mobile hero video: hero-loop-mob.mp4
+hero poster/fallback: hero-poster.jpg
 dark gradient overlay
 large Bodoni title
-primary CTA to Speisekarte
+primary CTA to Speisekarte on desktop
 secondary desktop CTA to Kontakt
 ```
+
+The video element uses `data-src` and `data-src-mobile`; JavaScript selects one source depending on the current breakpoint.
 
 Mobile:
 
 ```txt
 wordmark centered at top
-mobile nav links appear after scroll
+hamburger menu opens a black dropdown
+menu links ordered Speisekarte, Kontakt, Über uns
 hero video remains visible
 hero overlay is reduced so the video is not hidden
-hero title is slightly smaller
+hero title, small label, and Speisekarte hero CTA are hidden
 ```
 
 ### Highlights bar
@@ -155,7 +158,7 @@ Frische Zutaten
 25+ Jahre
 ```
 
-Mobile compresses them into a 3-column row and hides secondary subtitles on very small screens.
+Mobile compresses the section so it does not dominate the screen.
 
 ### Über uns
 
@@ -163,7 +166,14 @@ Two real images and a text block. Use the existing warm dark palette. Avoid new 
 
 ### Signature dish
 
-Calzone video on one side and text on the other. On mobile, the video is scaled and contained by responsive rules.
+Calzone video on one side and text on the other.
+
+```txt
+video: assets/videos/Calzone.mp4
+poster/fallback: assets/images/Calzone.png
+```
+
+On mobile, responsive rules control the video size and crop.
 
 ### Speisekarte
 
@@ -187,58 +197,37 @@ tab content min-height is removed
 
 ### Galerie
 
+Gallery images should feel tactile and real.
+
 Desktop:
 
 ```txt
-grid layout
-larger lead image
-subtle 3D card hover
-warm shadows
-vignette treatment
+3D depth treatment
+subtle rotation
+hover lift
+image vignette
 ```
 
 Mobile:
 
 ```txt
 compact 2-column grid
-all images square
-terasse.jpg visible
-no horizontal overflow carousel
-```
-
-Current gallery images:
-
-```txt
-IMG-20200109-WA0034_0.jpg
-IMG-20200105-WA0009.jpg
-am-ofen.jpg
-Calzone.png
-IMG-20200109-WA0015.jpg
-glazed.jpg
-terasse.jpg
-slide-1.png
+no horizontal carousel
+dense use of space
 ```
 
 ### Kontakt
 
-Current layout is map-led.
-
-Desktop:
+Kontakt is map-led rather than card-led.
 
 ```txt
-OpenStreetMap map on the left
-contact details and opening hours on the right
-CTA below
+OpenStreetMap embed
+address and opening hours nearby
+phone/order CTA
+mobile single-column flow
 ```
 
-Mobile:
-
-```txt
-single-column layout
-full-width contact CTA
-Holzpalette.png rotated in background
-opening hours remain simple and readable
-```
+`Holzpalette.png` is used as a warm background layer in the Kontakt section and is adjusted in `responsive.css` for mobile.
 
 ## Components
 
@@ -247,141 +236,115 @@ opening hours remain simple and readable
 ```txt
 background: --brand-red
 text: --brand-cream / white
-shape: sharp, not pill
-style: direct and functional
-```
-
-Use red sparingly. It is the action color, not a decorative color.
-
-### Ghost CTA
-
-```txt
-transparent background
-gold border
-gold text
-dark hover contrast
+shape: rectangular, no rounded pill style
+tone: direct, not neon
 ```
 
 ### Mobile floating call button
 
 ```txt
-fixed circular button
-uses --brand-red
-hidden at top of page
-visible after navbar scroll state
-mobile only
+fixed circular phone button
+brand red
+hidden at the page top
+shown after scroll
+large enough for touch
 ```
 
 ### Desktop back-to-top button
 
 ```txt
 desktop only
-centered higher in viewport
-round warm glass-like treatment
-hidden on mobile
+brand-toned circular control
+appears after scrolling
+uses custom frame-by-frame scroll animation
 ```
 
-### Gallery cards
+### Menu tabs
 
 ```txt
-warm shadow
-small perspective
-restrained hover lift
-image scale on hover
-vignette overlay
+uppercase Jost
+muted default
+brand-gold active state
+desktop row
+mobile 2 × 3 grid
 ```
-
-Do not exaggerate 3D movement.
 
 ### Opening hours
 
-Opening hours should remain visually simple. The outer Kontakt card carries the visual weight. Inner rows should not feel like separate cards unless explicitly requested.
+The outer Kontakt block provides the visual surface. Inner rows should stay simple and readable.
 
-## Motion rules
+## Motion
+
+Motion should be warm and restrained.
 
 Allowed:
 
 ```txt
-subtle fade-up entrance
-scroll reveal
-slow gallery hover movement
-tab fade transitions
-desktop back-to-top movement
+fade-up entrance
+reveal on scroll
+tab fade
+subtle gallery depth
+desktop back-to-top animation
 ```
 
 Avoid:
 
 ```txt
-fast bouncing
-layout-shifting animation
-large mobile hover effects
-animation that hides content
+bouncy UI
+large rotating elements
+aggressive hover effects
+motion that blocks reading
 ```
 
-Respect `prefers-reduced-motion`.
+Honor `prefers-reduced-motion` where motion is decorative.
 
-## Media rules
+## Media direction
 
-Use exact paths and casing.
+Use real restaurant photos/videos only.
 
-Images:
+Current media assumptions:
 
 ```txt
-assets/images/pizzeria-am-medienhafen-logo.svg
-assets/images/hero-poster.jpg
-assets/images/am-ofen.jpg
-assets/images/IMG-20200109-WA0015.jpg
-assets/images/Calzone.png
-assets/images/Fireplace5000px.png
-assets/images/IMG-20200109-WA0034_0.jpg
-assets/images/IMG-20200105-WA0009.jpg
-assets/images/slide-1.png
-assets/images/Holzpalette.png
-assets/images/glazed.jpg
-assets/images/terasse.jpg
+hero video: oven/fire/food atmosphere
+Calzone video: signature dish
+fireplace video: desktop menu ambience
+gallery: actual restaurant and food images
+Holzpalette: background texture for Kontakt
 ```
 
-Videos:
+Assets are large and may not be included in every edit request, but the documented paths must remain stable.
+
+## Mobile design constraints
+
+Mobile is a primary use case.
+
+Mobile rules:
 
 ```txt
-assets/videos/hero-loop.mp4
-assets/videos/Calzone.mp4
-assets/videos/Fireplace-dynamic5000px.mp4
+hamburger menu with black dropdown
+centered wordmark
+menu links ordered Speisekarte, Kontakt, Über uns
+call button after scroll
+hero video visible
+compact gallery
+Speisekarte tabs in 2 × 3 layout
+fireplace background hidden
+Kontakt readable in one column
 ```
 
-Mobile-specific media behavior:
+## Design guardrails
+
+Do not introduce:
 
 ```txt
-hero-loop.mp4 still used on mobile
-Calzone.mp4 scaled in responsive.css
-Fireplace-dynamic5000px.mp4 hidden on mobile
-```
-
-## Anti-patterns
-
-Do not add:
-
-```txt
-Italian flag color schemes
-clipart food icons
+Italian-flag palette
+clipart pizza graphics
 neon delivery-app styling
-generic gradient text
-cool-grey shadows
-unused CSS blocks
-duplicate mobile override blocks
-dead JS handlers
-separate mobile HTML files
-new files without being asked
+generic SaaS gradients
+unrequested redesigns
+duplicate responsive blocks
+dead selectors
+unused media references
 ```
 
-## Editing rules for AI agents
-
-```txt
-Use the newest uploaded/current project files as source of truth.
-Only change what the user requested.
-Do not rename files.
-Do not edit README.md, DESIGN.md, or PRODUCT.md unless asked.
-Check project-wide plausibility before returning files.
-Remove obsolete code if a better implementation replaces it.
-Do not leave commented-out backup code in production files.
-```
+All design edits must stay consistent with `README.md` and `PRODUCT.md`.

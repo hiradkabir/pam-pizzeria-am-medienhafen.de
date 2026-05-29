@@ -32,11 +32,11 @@ project/
 
 ### Exact-scope rule
 
-Only change what was explicitly requested. Do not redesign, rename, refactor, restyle, reorder, or optimize unrelated parts.
+Only change what was explicitly requested. Do not redesign, rename, refactor, restyle, reorder, optimize, or update unrelated files.
 
 ### Whole-project consistency rule
 
-Always check the full project context before changing a file. Every edit must remain plausible across:
+Before editing, check the full project context. Every edit must remain plausible across:
 
 ```txt
 index.html
@@ -50,11 +50,11 @@ DESIGN.md
 PRODUCT.md
 ```
 
-If one file references a class, ID, media path, modal, button, script behavior, or CSS variable, check whether the related files still support it.
+If one file references a class, ID, media path, modal, button, script behavior, CSS variable, or breakpoint, confirm that the related files still support it.
 
 ### No unwanted filename changes
 
-Do **not** rename existing files unless the user explicitly asks for it and all references are changed at the same time.
+Do **not** rename existing files unless the user explicitly requests it and all references are changed at the same time.
 
 File names are case-sensitive on GitHub Pages and most web servers. These are different files:
 
@@ -70,6 +70,20 @@ calzone.mp4
 Avoid dead code. If a new implementation replaces an old code structure, remove the obsolete structure instead of leaving unused selectors, duplicate logic, inactive classes, old media references, or stale comments behind.
 
 Do not keep “backup code” inside production files. Use version control for history.
+
+## Current HTML/CSS/JS versions
+
+`index.html` currently loads:
+
+```html
+<link rel="stylesheet" href="css/base.css?v=13">
+<link rel="stylesheet" href="css/layout.css?v=27">
+<link rel="stylesheet" href="css/components.css?v=41">
+<link rel="stylesheet" href="css/responsive.css?v=51">
+<script defer src="js/script.js?v=42"></script>
+```
+
+Increase only the version number of a file that was actually changed.
 
 ## Required image files
 
@@ -90,7 +104,6 @@ assets/images/Calzone.png
 assets/images/Fireplace5000px.png
 assets/images/IMG-20200109-WA0034_0.jpg
 assets/images/IMG-20200105-WA0009.jpg
-assets/images/slide-1.png
 assets/images/Holzpalette.png
 assets/images/glazed.jpg
 assets/images/terasse.jpg
@@ -117,7 +130,7 @@ Current behavior:
 
 ```txt
 hero-loop.mp4                  desktop hero video
-hero-loop-mob.mp4              mobile hero video (better fit for portrait phones)
+hero-loop-mob.mp4              mobile hero video
 Calzone.mp4                    signature dish video
 Fireplace-dynamic5000px.mp4    desktop menu background video; hidden on mobile
 ```
@@ -131,7 +144,7 @@ Global foundation:
 ```txt
 theme variables
 brand colors
-fallback utility classes
+Tailwind fallback utility classes
 browser defaults
 body/html defaults
 scrollbar styling
@@ -142,7 +155,7 @@ scrollbar styling
 Structural and section-level layout:
 
 ```txt
-hero title size base
+base hero title size
 aspect-ratio helpers
 signature media min-height
 menu background
@@ -161,7 +174,7 @@ hero overlay
 fade/reveal animations
 navbar scrolled state
 gold divider
-menu cards and tabs
+menu cards and tab states
 gallery 3D styling
 Kontakt map-led layout
 OpenStreetMap styling
@@ -180,9 +193,9 @@ Responsive overrides only:
 
 ```txt
 mobile navbar centering
-mobile nav links after scroll
+mobile hamburger menu with black dropdown
 mobile call button visibility at top
-mobile hero title size
+mobile hero title sizing
 mobile hero video sizing
 mobile Calzone sizing
 mobile fireplace hiding
@@ -195,7 +208,7 @@ landscape corrections
 reduced-motion overrides
 ```
 
-`responsive.css` should remain lean. Shared reusable component styling belongs in `components.css`; only breakpoint-specific overrides belong in `responsive.css`.
+`responsive.css` should stay lean. Shared reusable component styling belongs in `components.css`; only breakpoint-specific overrides belong in `responsive.css`.
 
 ## JavaScript behavior
 
@@ -203,18 +216,37 @@ reduced-motion overrides
 
 ```txt
 navbar scroll state
+mobile hamburger menu open/close behavior
 desktop-only back-to-top button reveal and scroll animation
 scroll reveal animation
 Speisekarte tab switching
 mobile swipe between Speisekarte tabs
 smooth anchor scrolling
 Impressum and Datenschutz modals
-hero video: per-device source (desktop/mobile), eager load, swapped at the 768px breakpoint
-below-the-fold videos: loaded and played only as they near the viewport
-video autoplay, with poster fallback only if playback fails
+hero video source selection using data-src and data-src-mobile
+below-the-fold lazy video loading
+video autoplay handling and poster fallback on error
+resume of active videos after user gesture or tab refocus
 ```
 
-The mobile hamburger menu has intentionally been removed.
+The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte, Kontakt, and Über uns in that order.
+
+## Current page structure
+
+```txt
+Hero
+Highlights bar
+Über uns
+Signature dish / Calzone
+Speisekarte
+Galerie
+Kontakt & Öffnungszeiten
+Footer
+Impressum modal
+Datenschutz modal
+Desktop back-to-top button
+Mobile floating call button
+```
 
 ## Current responsive behavior
 
@@ -223,95 +255,83 @@ The mobile hamburger menu has intentionally been removed.
 ```txt
 full desktop navigation
 desktop hero video enabled
-desktop fireplace video visible in Speisekarte section
+desktop fireplace video visible in Speisekarte
 Speisekarte tabs in one horizontal row
-Galerie uses 3D hover depth
-Kontakt uses map-led two-column layout
-desktop-only back-to-top button appears after scrolling
+larger visual rhythm
+gallery depth effects
+map-led Kontakt layout
+desktop-only back-to-top button
 ```
 
 ### Mobile
 
 ```txt
-no hamburger menu
-wordmark centered at top
-mobile nav links appear after scroll
-floating phone button hidden at top and visible after scroll
-hero-loop-mob.mp4 plays as the hero video, with reduced overlay
-hero title is 5% smaller than the base title scale
-Calzone.mp4 is scaled for mobile
-Fireplace-dynamic5000px.mp4 and its poster are hidden
-Speisekarte tabs use centered 2 columns × 3 rows
-Galerie uses compact 2-column grid
-terasse.jpg remains visible in Galerie
-Holzpalette.png is rotated in Kontakt
-Kontakt CTA is full width
-modals become full-screen panels
+hamburger menu with black dropdown
+centered top wordmark
+menu links ordered Speisekarte, Kontakt, Über uns
+phone button hidden at page top and visible after scroll
+hero-loop-mob.mp4 selected by JavaScript when available
+reduced hero gradient so video remains visible
+mobile hero label and Speisekarte hero CTA hidden
+Calzone.mp4 sized for mobile
+fireplace video/poster hidden in Speisekarte
+Speisekarte tabs arranged 2 columns × 3 rows
+gallery arranged as compact 2-column grid
+Kontakt collapses into a single-column flow
+Holzpalette.png rotated/scaled for mobile background fit
 ```
 
 ## Brand color system
 
-The project uses this palette:
+The project uses these CSS variables in `css/base.css` and the same values in the Tailwind CDN config inside `index.html`:
 
 ```txt
-brand-red:        #DC2626
-brand-gold:       #C05E35
-brand-gold-light: #D9895A
-brand-cream:      #FEF2F2
-brand-warm:       #F5E6D0
-brand-dark:       #0D0500
-brand-surface:    #1A0A00
-brand-surface-2:  #2D1200
-brand-muted:      #C4A882
+--brand-red:        #DC2626
+--brand-gold:       #C05E35
+--brand-gold-light: #D9895A
+--brand-cream:      #FEF2F2
+--brand-warm:       #F5E6D0
+--brand-dark:       #0D0500
+--brand-surface:    #1A0A00
+--brand-surface-2:  #2D1200
+--brand-muted:      #C4A882
 ```
-
-The Tailwind config is defined in `index.html`.  
-Fallback CSS utility classes are included in `css/base.css` so the main brand colors remain available even if Tailwind CDN generation is delayed or cached.
 
 ## Video notes
 
 For reliable browser playback:
 
 ```txt
-use .mp4
-prefer H.264 video codec
-prefer AAC audio codec, even if muted
-keep videos compressed for GitHub Pages
-keep exact filenames and casing
-keep muted, loop, playsinline on background videos (the script manages autoplay)
+Use .mp4
+Prefer H.264 video codec
+Prefer AAC audio codec, even if muted
+Keep videos compressed for GitHub Pages
+Use exact filenames and casing
+Keep muted, loop, playsinline, and autoplay/data-autoplay-video behavior aligned with script.js
 ```
 
-Loading behavior:
+The hero video is chosen by JavaScript:
 
 ```txt
-hero loads eagerly and uses a per-device source: hero-loop.mp4 on desktop, hero-loop-mob.mp4 on mobile, swapped at the 768px breakpoint
-below-the-fold videos load and play only as they approach the viewport
-their posters are deferred (data-poster) so large poster images are not fetched off-screen
-the hero shows no poster while loading; the poster is only a fallback if playback fails
+desktop: data-src="assets/videos/hero-loop.mp4"
+mobile:  data-src-mobile="assets/videos/hero-loop-mob.mp4"
 ```
+
+If playback fails, `script.js` applies the configured poster/background fallback.
 
 ## Map embed
 
-The Kontakt section uses an OpenStreetMap iframe. It does not need an API key. The map is dark-filtered in CSS and uses `pointer-events: none` so it does not trap page scrolling.
-
-Current marker:
-
-```txt
-Wupperstraße 14, 40221 Düsseldorf
-51.2146420, 6.7579140
-```
-
-To move the map, update the `bbox` and `marker` values in the iframe `src` in `index.html`.
+The Kontakt section embeds an OpenStreetMap iframe, styled in CSS to match the dark theme and set to avoid trapping scroll. To adjust map position, edit the iframe `src` in `index.html`.
 
 ## Local testing
 
-Use a local server instead of opening the file directly:
+Recommended:
 
 ```txt
 VS Code → Live Server → right-click index.html → Open with Live Server
 ```
 
-A local server is more reliable for video behavior than `file://`.
+A local server is safer than opening the file via `file://`, especially for video behavior.
 
 ## GitHub Pages deployment
 
@@ -319,30 +339,24 @@ Typical workflow:
 
 ```txt
 1. Push project files to GitHub.
-2. Open repository Settings.
+2. Go to repository Settings.
 3. Open Pages.
 4. Select the main branch and root folder.
 5. Save.
 6. Wait until GitHub Pages publishes the site.
 ```
 
-## Cache-busting
+After updating files, hard refresh:
 
-The current HTML loads:
-
-```html
-<link rel="stylesheet" href="css/base.css?v=13">
-<link rel="stylesheet" href="css/layout.css?v=26">
-<link rel="stylesheet" href="css/components.css?v=41">
-<link rel="stylesheet" href="css/responsive.css?v=47">
-<script defer src="js/script.js?v=41"></script>
+```txt
+Ctrl + F5
 ```
 
-Only update cache versions when the corresponding CSS or JS file is changed and the user allows or requests it.
+or test in a private/incognito browser window.
 
 ## Common troubleshooting
 
-### Image does not appear
+### An image does not appear
 
 Check:
 
@@ -351,31 +365,20 @@ Check:
 2. Does the filename match exactly?
 3. Does the casing match exactly?
 4. Is the path in index.html or CSS correct?
+5. Was the file actually uploaded to GitHub?
 ```
 
-### Video does not play
+### A video does not play
 
 Check:
 
 ```txt
 1. Is the file inside assets/videos/?
-2. Does the filename match exactly?
+2. Is the filename exactly correct?
 3. Is the MP4 encoded as H.264?
 4. Is the file too large?
-5. Is the browser caching an old version?
-6. Is autoplay blocked despite muted/playsinline?
-```
-
-### Mobile hero video does not appear
-
-Check:
-
-```txt
-1. Confirm assets/videos/hero-loop-mob.mp4 exists (the mobile hero source).
-2. Confirm #heroVideo carries data-src and data-src-mobile in index.html.
-3. Confirm responsive.css keeps #heroVideo visible on mobile.
-4. Confirm the hero overlay opacity is not hiding the video.
-5. Hard refresh, or increment the js/script.js cache version, if the script changed.
+5. Did the browser cache an old version?
+6. Does script.js select the expected desktop/mobile source?
 ```
 
 ### Styles look wrong after upload
@@ -384,10 +387,10 @@ Check:
 
 ```txt
 1. Hard refresh with Ctrl + F5.
-2. Verify all CSS files are uploaded.
-3. Verify cache-busting query versions.
-4. Confirm css/base.css still contains brand fallback utilities.
-5. Check for duplicate selectors between components.css and responsive.css.
+2. Verify CSS files are uploaded.
+3. Increase only the changed file's cache-busting query version.
+4. Confirm css/base.css still contains the brand fallback utilities.
+5. Confirm responsive overrides are not duplicated elsewhere.
 ```
 
 ## Current production domain

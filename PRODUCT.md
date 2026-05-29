@@ -18,13 +18,13 @@ They commonly arrive through:
 
 ```txt
 Google search
-Google/Maps-style discovery
+map-style discovery
 a friend's recommendation
 direct domain visit
 nearby mobile browsing
 ```
 
-They are often on mobile and are scanning for:
+They are often on mobile and scan for:
 
 ```txt
 atmosphere
@@ -34,7 +34,7 @@ opening hours
 phone/order action
 ```
 
-The decision window is short. The website must answer “Does this feel good, and can I act now?” within seconds.
+The decision window is short. The website must answer: “Does this feel good, and can I act now?” within seconds.
 
 ## Product purpose
 
@@ -52,7 +52,7 @@ the user can find the location without friction
 
 ## Current product structure
 
-The website is organized as a single static page:
+The website is organized as one static page:
 
 ```txt
 Hero
@@ -62,7 +62,9 @@ Signature dish / Calzone
 Speisekarte
 Galerie
 Kontakt & Öffnungszeiten
-Legal modals
+Footer
+Impressum modal
+Datenschutz modal
 Desktop back-to-top button
 Mobile floating call button
 ```
@@ -71,14 +73,16 @@ Mobile floating call button
 
 ```txt
 navbar changes state after scroll
-mobile nav links appear after scroll
+mobile hamburger menu provides quick section access
 mobile call button appears after scroll and is hidden at the top
 Speisekarte uses tab switching
 mobile Speisekarte supports swipe between tabs
 gallery images use depth styling
 desktop back-to-top button scrolls to top
 Impressum and Datenschutz open as modals
-videos try autoplay and fall back to poster/background when blocked
+hero video selects desktop/mobile source by breakpoint
+below-the-fold videos lazy-load near the viewport
+videos try autoplay and fall back to poster/background on error
 ```
 
 ## Brand personality
@@ -115,6 +119,9 @@ Italian through craft, not cliché
 
 6. **Whole-project plausibility**  
    HTML, CSS, JS, documentation, and media references must stay consistent with each other.
+
+7. **No dead code**  
+   Replaced structures should be removed. Old selectors, inactive HTML, stale comments, and duplicate responsive rules should not remain in production files.
 
 ## Anti-references
 
@@ -158,11 +165,13 @@ Mobile is the priority context.
 Current mobile behavior:
 
 ```txt
-no hamburger menu
+hamburger menu with black dropdown
 centered top wordmark
-compact nav links after scroll
+menu links ordered Speisekarte, Kontakt, Über uns
 phone button hidden at page top and visible after scroll
-hero-loop.mp4 visible with reduced gradient overlay
+hero-loop-mob.mp4 used for mobile hero when available
+hero overlay reduced so the video remains visible
+mobile hero label and Speisekarte hero CTA hidden
 Calzone.mp4 sized for mobile
 fireplace video removed/hidden on mobile
 Speisekarte tabs arranged 2 columns × 3 rows
@@ -176,12 +185,37 @@ Desktop supports a more atmospheric presentation:
 
 ```txt
 full navigation row
-hero video background
+hero-loop.mp4 as hero video background
 desktop fireplace video in Speisekarte
 larger visual rhythm
 gallery depth effects
 map-led Kontakt layout
 desktop-only back-to-top button
+```
+
+## Media product behavior
+
+Hero media:
+
+```txt
+desktop: assets/videos/hero-loop.mp4
+mobile:  assets/videos/hero-loop-mob.mp4
+fallback: assets/images/hero-poster.jpg
+```
+
+Signature media:
+
+```txt
+video: assets/videos/Calzone.mp4
+fallback: assets/images/Calzone.png
+```
+
+Menu atmosphere:
+
+```txt
+desktop: assets/videos/Fireplace-dynamic5000px.mp4
+fallback: assets/images/Fireplace5000px.png
+mobile: hidden
 ```
 
 ## Accessibility and privacy
@@ -191,42 +225,57 @@ The project should remain usable without tracking or analytics.
 Accessibility priorities:
 
 ```txt
-high contrast over video/image backgrounds
-visible focus states
-large enough mobile touch targets
-reduced-motion support
-clear text hierarchy
-readable menu categories and prices
+strong contrast over video/image backgrounds
+clear focus states
+touch-friendly mobile call action
+readable menu prices
+modals closable by buttons, backdrop, and Escape
+no scroll-trapping map
 ```
 
 Privacy priorities:
 
 ```txt
-no analytics cookies
-no tracking scripts
-OpenStreetMap instead of Google Maps
-static deployment
+static site
+no analytics scripts
+no tracking cookies
+OpenStreetMap embed instead of Google Maps
+legal information accessible in modals
 ```
 
-## Non-goals
+## Technical product boundaries
 
-Do not turn this project into:
+The project should remain:
 
 ```txt
-a delivery marketplace
-a booking system
-a React/Vue app
-a multi-page CMS
-a heavy animation showcase
-a generic Italian restaurant template
+static
+single-page
+HTML/CSS/JS only
+GitHub Pages compatible
+case-sensitive path safe
+easy to update manually
 ```
 
-## Maintenance rules for future edits
+Avoid turning it into:
 
 ```txt
-Only change what was requested.
-Preserve filenames unless explicitly told otherwise.
-Check related files before editing.
-Remove obsolete code when replacing a structure.
-Keep README.md, DESIGN.md, and PRODUCT.md aligned with the actual code.
+a framework app
+a CMS
+a delivery platform clone
+a tracking-heavy marketing page
+a multi-page site unless explicitly requested
+```
+
+## Maintenance expectations
+
+Every future change should follow this order:
+
+```txt
+1. Use the newest project files as source of truth.
+2. Identify exactly which files are required for the requested change.
+3. Change only those files.
+4. Preserve filenames.
+5. Remove obsolete code if it is replaced.
+6. Check consistency between HTML, CSS, JS, and Markdown docs.
+7. Return only changed files.
 ```
