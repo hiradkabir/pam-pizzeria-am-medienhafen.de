@@ -38,9 +38,9 @@
   </script>
   <link rel="stylesheet" href="css/base.css?v=13">
   <link rel="stylesheet" href="css/layout.css?v=26">
-  <link rel="stylesheet" href="css/components.css?v=40">
-  <link rel="stylesheet" href="css/responsive.css?v=46">
-  <script defer src="js/script.js?v=39"></script>
+  <link rel="stylesheet" href="css/components.css?v=41">
+  <link rel="stylesheet" href="css/responsive.css?v=47">
+  <script defer src="js/script.js?v=40"></script>
 </head>
 <body class="bg-brand-dark text-brand-cream antialiased">
 
@@ -189,12 +189,11 @@
       <video
           class="site-video signature-video absolute inset-0 w-full h-full object-cover object-center"
           data-autoplay-video
-          poster="assets/images/Calzone.png"
-          autoplay
+          data-poster="assets/images/Calzone.png"
           muted
           loop
           playsinline
-          preload="metadata"
+          preload="none"
         >
         <source src="assets/videos/Calzone.mp4" type="video/mp4">
         Dein Browser unterstützt keine Videos.
@@ -229,8 +228,8 @@
     <video id="menuFireplaceVideo"
            class="site-video menu-fireplace-video w-full h-full object-cover"
            data-autoplay-video
-           autoplay loop muted playsinline preload="metadata"
-           poster="assets/images/Fireplace5000px.png">
+           loop muted playsinline preload="none"
+           data-poster="assets/images/Fireplace5000px.png">
       <source src="assets/videos/Fireplace-dynamic5000px.mp4" type="video/mp4">
     </video>
     <div class="menu-fire-overlay absolute inset-0"></div>

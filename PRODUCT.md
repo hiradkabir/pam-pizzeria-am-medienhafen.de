@@ -1,40 +1,232 @@
-# Product
+# Product — Pizzeria am Medienhafen
 
 ## Register
 
 brand
 
-## Users
+## Product type
 
-New visitors deciding where to eat in the Düsseldorf Medienhafen area. They arrive via Google, a friend's recommendation, or a map search while already nearby. They are on their phone more often than not, scanning for: atmosphere (does this look good?), menu and prices (is this for me?), and a way to act (call, find it, order). The decision is made in seconds. If the feeling isn't immediate, they leave.
+Static restaurant website for **Pizzeria am Medienhafen** in Düsseldorf.
 
-## Product Purpose
+The site is a first-impression and conversion surface, not a complex web app. Its purpose is to make a visitor feel the atmosphere, understand the food, find the location, and act quickly.
 
-A first-impression surface for a neighbourhood pizzeria that has been in the Medienhafen since 1998. The site exists to convert a curious passerby into a first-time guest. Success is: someone lands, feels the warmth of the place, finds the menu, and calls or comes in.
+## Primary users
 
-## Brand Personality
+New and returning visitors deciding where to eat in the Düsseldorf Medienhafen area.
 
-Warm · Authentic · Neighbourhood
+They commonly arrive through:
 
-The voice is that of a place that has been here longer than most of its neighbours and doesn't need to prove it. Pride without performance. Familiar without being casual. Italian in the way that counts — the oven, the ingredients, the time — not in the way that decorates.
+```txt
+Google search
+Google/Maps-style discovery
+a friend's recommendation
+direct domain visit
+nearby mobile browsing
+```
+
+They are often on mobile and are scanning for:
+
+```txt
+atmosphere
+menu and prices
+location
+opening hours
+phone/order action
+```
+
+The decision window is short. The website must answer “Does this feel good, and can I act now?” within seconds.
+
+## Product purpose
+
+Convert a curious visitor into a guest or caller.
+
+Success means:
+
+```txt
+the restaurant feels warm and authentic
+the user reaches the menu quickly
+prices and food categories are clear
+the user can call easily on mobile
+the user can find the location without friction
+```
+
+## Current product structure
+
+The website is organized as a single static page:
+
+```txt
+Hero
+Highlights bar
+Über uns
+Signature dish / Calzone
+Speisekarte
+Galerie
+Kontakt & Öffnungszeiten
+Legal modals
+Desktop back-to-top button
+Mobile floating call button
+```
+
+## Current main interactions
+
+```txt
+navbar changes state after scroll
+mobile nav links appear after scroll
+mobile call button appears after scroll and is hidden at the top
+Speisekarte uses tab switching
+mobile Speisekarte supports swipe between tabs
+gallery images use depth styling
+desktop back-to-top button scrolls to top
+Impressum and Datenschutz open as modals
+videos try autoplay and fall back to poster/background when blocked
+```
+
+## Brand personality
+
+Warm · Authentic · Neighbourhood · Established
+
+The restaurant should feel like a real local place with history, not like a generic delivery template.
+
+Voice:
+
+```txt
+confident but not loud
+traditional but not old-fashioned
+warm but not playful
+Italian through craft, not cliché
+```
+
+## Product principles
+
+1. **Atmosphere before information**  
+   The first screen should communicate warmth, fire, wood, dough, and evening ambience before the user reads details.
+
+2. **First visit, zero friction**  
+   Menu, location, opening hours, and call action must be easy to reach.
+
+3. **Mobile-first decision support**  
+   Mobile users should quickly see the hero, reach the menu, use the 2 × 3 category tabs, view compact gallery impressions, and call.
+
+4. **Real restaurant, real media**  
+   Use actual photos and videos. Avoid fake stock imagery, generic icons, and visual patterns that feel like a delivery marketplace.
+
+5. **Static and lightweight**  
+   The site should remain a static HTML/CSS/JS project. Avoid unnecessary dependencies, tracking scripts, or app-like complexity.
+
+6. **Whole-project plausibility**  
+   HTML, CSS, JS, documentation, and media references must stay consistent with each other.
 
 ## Anti-references
 
-- Generic Italian-flag clichés: red-white-green colour combinations, vine borders, clipart pizza graphics, anything that reads as "Italian restaurant template."
-- Delivery-app aesthetic: neon CTAs, star-rating counts, Uber Eats / Lieferando visual grammar, price-comparison layouts.
+Avoid:
 
-## Design Principles
+```txt
+Italian flag color schemes
+green-white-red decoration
+clipart pizza graphics
+neon delivery-app CTAs
+generic SaaS gradients
+excessive animation
+template-looking restaurant visuals
+unused/dead code
+unrequested file renaming
+```
 
-1. **Atmosphere before information.** The feeling of the place must land before the facts do. Someone should sense the warmth of the room — fire, wood, smell of dough — before they read a single word.
-2. **Neighbourhood confidence.** A place this established does not shout. Warmth comes through restraint. Nothing is designed to impress; everything is designed to feel right.
-3. **Honest craft.** Real photos, real food, real prices. No theatrical decoration the restaurant can't live up to in person. The site should feel like walking in.
-4. **First visit, zero friction.** Every new visitor needs the menu, the location, and a way to call or order — without hunting. Navigation decisions should feel obvious, not designed.
-5. **Italian through material, not symbol.** Heritage is expressed through warmth — fire, wood, gold, smoke, time — not through national flags, map outlines, or illustrated pasta.
+## Conversion model
 
-## Accessibility & Inclusion
+Primary conversion actions:
 
-WCAG AAA. Particular care on contrast over dark video/image backgrounds, focus visibility, and touch target sizing for mobile visitors in low-light contexts.
+```txt
+call the restaurant
+view Speisekarte
+find the location
+read opening hours
+```
 
-## Privacy
+Secondary conversion actions:
 
-Privacy is treated as part of hospitality, not legal boilerplate. The site is fully static and sets no analytics or tracking cookies. The location map is embedded from OpenStreetMap rather than Google, so a first-time visitor can find the place without being handed to a third-party advertising tracker.
+```txt
+view gallery
+read about the restaurant
+open legal information
+```
+
+## Mobile product behavior
+
+Mobile is the priority context.
+
+Current mobile behavior:
+
+```txt
+no hamburger menu
+centered top wordmark
+compact nav links after scroll
+phone button hidden at page top and visible after scroll
+hero-loop.mp4 visible with reduced gradient overlay
+Calzone.mp4 sized for mobile
+fireplace video removed/hidden on mobile
+Speisekarte tabs arranged 2 columns × 3 rows
+gallery arranged as compact 2-column grid
+Kontakt content collapses into a single-column flow
+```
+
+## Desktop product behavior
+
+Desktop supports a more atmospheric presentation:
+
+```txt
+full navigation row
+hero video background
+desktop fireplace video in Speisekarte
+larger visual rhythm
+gallery depth effects
+map-led Kontakt layout
+desktop-only back-to-top button
+```
+
+## Accessibility and privacy
+
+The project should remain usable without tracking or analytics.
+
+Accessibility priorities:
+
+```txt
+high contrast over video/image backgrounds
+visible focus states
+large enough mobile touch targets
+reduced-motion support
+clear text hierarchy
+readable menu categories and prices
+```
+
+Privacy priorities:
+
+```txt
+no analytics cookies
+no tracking scripts
+OpenStreetMap instead of Google Maps
+static deployment
+```
+
+## Non-goals
+
+Do not turn this project into:
+
+```txt
+a delivery marketplace
+a booking system
+a React/Vue app
+a multi-page CMS
+a heavy animation showcase
+a generic Italian restaurant template
+```
+
+## Maintenance rules for future edits
+
+```txt
+Only change what was requested.
+Preserve filenames unless explicitly told otherwise.
+Check related files before editing.
+Remove obsolete code when replacing a structure.
+Keep README.md, DESIGN.md, and PRODUCT.md aligned with the actual code.
+```

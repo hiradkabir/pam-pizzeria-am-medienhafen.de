@@ -1,246 +1,387 @@
 ---
-version: "1.1"
+version: "1.2"
 generated: "2026-05-29"
 project: "Pizzeria am Medienhafen"
 register: brand
-
-colors:
-  - name: Ember
-    hex: "#DC2626"
-    role: primary
-    usage: Primary CTA buttons, mobile FAB — the single activating red
-  - name: Crust
-    hex: "#C05E35"
-    role: accent
-    usage: Ghost button borders, scrollbar thumb, gold dividers, nav wordmark
-  - name: Amber
-    hex: "#D9895A"
-    role: accent
-    usage: Ghost button hover, price figures, secondary warm highlights
-  - name: Dough
-    hex: "#FEF2F2"
-    role: surface
-    usage: High-contrast body text and headings on dark backgrounds
-  - name: Linen
-    hex: "#F5E6D0"
-    role: surface
-    usage: Secondary text, warm tints, muted labels on dark surfaces
-  - name: Smoke
-    hex: "#0D0500"
-    role: text
-    usage: Deepest dark — page background, maximum-contrast base
-  - name: Char
-    hex: "#1A0A00"
-    role: surface
-    usage: Primary dark surface — hero overlays, scrolled nav background
-  - name: Soot
-    hex: "#2D1200"
-    role: surface
-    usage: Secondary dark surface — card fills, contact section panels
-  - name: Ash
-    hex: "#C4A882"
-    role: muted
-    usage: Menu descriptions, allergen codes, subdued secondary text
-
-typography:
-  scale:
-    - name: display-hero
-      size: "clamp(3.6rem, 9vw, 8rem)"
-      weight: 700
-      family: "Bodoni Moda"
-      style: italic
-      lineHeight: 1.0
-    - name: display-section
-      size: "clamp(2.4rem, 5vw, 4rem)"
-      weight: 600
-      family: "Bodoni Moda"
-      style: italic
-      lineHeight: 1.1
-    - name: label-caps
-      size: "0.6875rem"
-      weight: 500
-      family: "Jost"
-      letterSpacing: "0.15em"
-      textTransform: uppercase
-    - name: body
-      size: "1rem"
-      weight: 400
-      family: "Jost"
-      lineHeight: 1.6
-    - name: body-small
-      size: "0.875rem"
-      weight: 400
-      family: "Jost"
-      lineHeight: 1.5
-  body:
-    family: "Jost"
-    baseSize: "19px"
-    weights: [300, 400, 500, 600]
-    lineLength: "72ch"
-    lineHeight: 1.6
-
-rounded:
-  none: "0"
-  sm: "0.55rem"
-  full: "999px"
-  circle: "50%"
-
-spacing:
-  sectionY: "4rem"
-  sectionYDesktop: "6rem"
-  navHeight: "4rem"
-  galleryGap: "0.55rem"
-
-components:
-  - name: primary-cta
-    element: button
-    background: "#DC2626"
-    color: "#FEF2F2"
-    borderRadius: "0"
-    padding: "0.625rem 1.25rem"
-    fontSize: "0.6875rem"
-    fontWeight: 500
-    letterSpacing: "0.1em"
-    textTransform: uppercase
-  - name: ghost-button
-    element: button
-    background: transparent
-    color: "#D9895A"
-    border: "1px solid #C05E35"
-    borderRadius: "0"
-    padding: "0.625rem 1.25rem"
-    fontSize: "0.6875rem"
-    letterSpacing: "0.1em"
-    textTransform: uppercase
-  - name: menu-tab
-    element: button
-    background: transparent
-    color: "#C4A882"
-    borderBottom: "2px solid transparent"
-    fontSize: "0.6875rem"
-    fontWeight: 500
-    letterSpacing: "0.12em"
-    textTransform: uppercase
-  - name: gallery-card
-    element: figure
-    overflow: hidden
-    aspectRatio: "1 / 1"
-    perspective: "1400px"
-    hoverTransform: "translateY(-8px) rotateX(1.6deg) rotateY(-1.6deg) scale(1.014)"
-    transition: "0.7s cubic-bezier(.16,1,.3,1)"
-  - name: contact-map
-    element: figure
-    note: "OpenStreetMap embed; map-led Kontakt layout that replaced the former contact cards"
-    aspectRatio: "4 / 3"
-    borderRadius: "0.55rem"
-    filter: "invert(0.92) hue-rotate(180deg) brightness(0.96) contrast(0.92) saturate(0.72) sepia(0.16)"
-    interaction: "pointer-events: none (visual anchor); action via the address link"
-  - name: mobile-fab
-    element: button
-    background: "#DC2626"
-    borderRadius: "50%"
-    size: "60px"
-    boxShadow: "0 4px 24px rgba(220,38,38,0.45)"
-  - name: back-to-top
-    element: button
-    borderRadius: "999px"
-    backdropFilter: "blur(8px)"
-    border: "1px solid rgba(192,94,53,0.3)"
-  - name: opening-hours-row
-    element: div
-    borderRadius: "0.55rem"
-    padding: "0.5rem 1rem"
-    background: "rgba(45,18,0,0.6)"
+source_files:
+  - index.html
+  - css/base.css
+  - css/layout.css
+  - css/components.css
+  - css/responsive.css
+  - js/script.js
+  - README.md
+  - PRODUCT.md
 ---
 
 # Design System — Pizzeria am Medienhafen
 
-## Overview
+## Design intent
 
-**The Corner Table.** A regular's seat — candlelight on worn wood, the same faces returning. The site doesn't perform its warmth; it exists in it. Every decision serves the feeling of arriving somewhere already familiar, already good.
+The site should feel like a warm, established neighbourhood pizzeria in Düsseldorf's Medienhafen: dark, firelit, wood-influenced, authentic, and direct.
 
-The visual system is cinematic in depth, quietly alive in interaction, and material in language. Atmosphere before information; presence before persuasion. Nothing is decorated; everything is felt. A place that has been here since 1998 has nothing to prove, and the interface knows it.
+The visual system should suggest:
 
-Dark ground dominates. Fire, char, and amber surface as accent. Text is pale and warm, never clinical. Motion is slow and deliberate — ease-out-expo, no bounce, no spring.
+```txt
+wood oven
+warm restaurant light
+handmade food
+Mediterranean restraint
+local familiarity
+```
 
-## Colors
+It should not look like:
 
-The palette is drenched dark with a single activating accent. Smoke (#0D0500) is the ground; Char and Soot layer above it; Ember (#DC2626) is the one moment of heat. Crust and Amber form a secondary warm arc used for navigation, borders, and secondary emphasis.
+```txt
+a generic delivery app
+a SaaS landing page
+an Italian flag template
+a neon food startup
+```
 
-Light colors (Dough, Linen, Ash) appear as text or surface overlays on dark grounds only — never as page backgrounds. Ash is the muted workhorse: menu descriptions, allergen markers, supporting copy.
+## Current implementation summary
 
-**Palette relationships:**
-- Ember sits alone. It is never paired with Crust or Amber in the same element.
-- Crust borders pair with Amber text on hover — never the reverse.
-- Dough (#FEF2F2) is for maximum-contrast text; Linen (#F5E6D0) is for secondary or warm-tinted text.
-- Smoke, Char, Soot form a surface stack: Smoke as ground, Char as primary lifted surface, Soot as secondary card fill.
-- Ash never appears on light backgrounds.
+The design is implemented as a static single-page site.
 
-**What this palette is not:** No green. No Italian-flag red-white-green combinations. No neon. No cool greys anywhere.
+```txt
+index.html              content, section order, media references, modals
+css/base.css            brand variables, color fallbacks, browser defaults
+css/layout.css          structural helpers and section backgrounds
+css/components.css      reusable components, animation, cards, map, video presentation
+css/responsive.css      mobile/desktop overrides only
+js/script.js            interaction behavior and video fallback
+```
+
+`responsive.css` is intentionally lean and should contain breakpoint-specific overrides, not duplicated component code.
+
+## Palette
+
+The color system is defined in `:root` in `css/base.css` and mirrored in the Tailwind CDN config inside `index.html`.
+
+| Token | Hex | Role | Usage |
+|---|---:|---|---|
+| `--brand-red` | `#DC2626` | Primary action | Order/call CTAs, mobile FAB |
+| `--brand-gold` | `#C05E35` | Main accent | Wordmark, dividers, borders, tabs |
+| `--brand-gold-light` | `#D9895A` | Warm highlight | Hover states, selected details |
+| `--brand-cream` | `#FEF2F2` | Main text | Headings and high-contrast text |
+| `--brand-warm` | `#F5E6D0` | Soft warm tone | Tints and secondary warmth |
+| `--brand-dark` | `#0D0500` | Deep base | Page background and dark fades |
+| `--brand-surface` | `#1A0A00` | Primary surface | Menu and dark section surfaces |
+| `--brand-surface-2` | `#2D1200` | Secondary surface | Cards and signature section |
+| `--brand-muted` | `#C4A882` | Muted text | Descriptions, labels, supporting copy |
 
 ## Typography
 
-Two voices with clearly separated roles.
+Fonts are loaded from Google Fonts in `index.html`.
 
-**Bodoni Moda** carries atmosphere. Italic, weighted, large. It appears only in display headings — hero titles, section names — and only on dark surfaces. It should always feel like it belongs to the room, not to a page.
+```txt
+Display/headings: Bodoni Moda
+Body/navigation:  Jost
+Base html size:   19px
+```
 
-**Jost** handles information. In label-caps role (uppercase, tracked, 500 weight) for all navigation, CTAs, tabs, and labels. In body role (400, 19px base) for prose, menu descriptions, and supporting copy. Never use Jost italic decoratively.
+### Type hierarchy
 
-The roles do not swap. Do not use Bodoni Moda for body text. Do not use Jost for display headings.
+```txt
+Hero title:
+.hero-title-size → clamp(3.6rem, 9vw, 8rem)
 
-Base font size is 19px on `html`. Body line length caps at 72ch. Hero title scales fluidly between 3.6rem and 8rem via clamp — it is always the largest element on the page.
+Mobile hero title:
+responsive.css → clamp(3.42rem, 8.55vw, 7.6rem)
 
-## Elevation
+Section headings:
+Tailwind classes in index.html:
+text-4xl md:text-5xl with Bodoni Moda
 
-**Cinematic.** Depth is theatrical, not structural. The hero lives behind a dark overlay gradient that fades from transparent to near-opaque (#0D0500 at 98%). Gallery cards lift into perspective on hover. The contact section vignettes inward from a dark radial gradient with a warm wood background receding behind it.
+Labels:
+Jost, uppercase, tracked, small size
 
-**Shadow vocabulary:** Warm-tinted, multi-layer, always dark. Never cool-grey box-shadows. Ember CTA uses a red ambient glow. Back-to-top uses a gold rim glow with radial gradient. Gallery cards cast layered warm-dark shadows on hover.
+Body:
+Jost, muted warm text, relaxed line-height
+```
 
-**Backdrop blur** is purposeful: scrolled nav (`blur(12px)` on `rgba(13,5,0,0.96)`) and back-to-top button. Not elsewhere.
+Use Bodoni Moda for emotional emphasis and section identity.  
+Use Jost for functional navigation, labels, prices, and paragraph text.
 
-**Glow over stroke.** Depth is achieved through light bleeding (radial gradients, glow shadows) rather than visible borders. The exception: ghost buttons with Crust borders.
+## Layout principles
+
+```txt
+dark page base
+large atmospheric hero
+section rhythm with generous vertical padding
+compact mobile sections
+single-page anchor navigation
+map-led Kontakt section
+no separate mobile HTML
+```
+
+Desktop allows more atmosphere and hover detail.  
+Mobile prioritizes speed, reduced vertical space, visible CTAs, and readable interaction.
+
+## Section design
+
+### Hero
+
+Purpose: immediate atmosphere and identity.
+
+Current behavior:
+
+```txt
+hero-loop.mp4 as video background
+hero-poster.jpg as poster/fallback
+dark gradient overlay
+large Bodoni title
+primary CTA to Speisekarte
+secondary desktop CTA to Kontakt
+```
+
+Mobile:
+
+```txt
+wordmark centered at top
+mobile nav links appear after scroll
+hero video remains visible
+hero overlay is reduced so the video is not hidden
+hero title is slightly smaller
+```
+
+### Highlights bar
+
+Three compact trust signals:
+
+```txt
+Holzofen
+Frische Zutaten
+25+ Jahre
+```
+
+Mobile compresses them into a 3-column row and hides secondary subtitles on very small screens.
+
+### Über uns
+
+Two real images and a text block. Use the existing warm dark palette. Avoid new decorative clichés.
+
+### Signature dish
+
+Calzone video on one side and text on the other. On mobile, the video is scaled and contained by responsive rules.
+
+### Speisekarte
+
+Tabs are central to the interaction.
+
+Desktop:
+
+```txt
+one horizontal tab row
+fireplace video visible behind the menu
+soft fire overlay
+```
+
+Mobile:
+
+```txt
+tabs become 2 columns × 3 rows
+fireplace video and poster are hidden
+tab content min-height is removed
+```
+
+### Galerie
+
+Desktop:
+
+```txt
+grid layout
+larger lead image
+subtle 3D card hover
+warm shadows
+vignette treatment
+```
+
+Mobile:
+
+```txt
+compact 2-column grid
+all images square
+terasse.jpg visible
+no horizontal overflow carousel
+```
+
+Current gallery images:
+
+```txt
+IMG-20200109-WA0034_0.jpg
+IMG-20200105-WA0009.jpg
+am-ofen.jpg
+Calzone.png
+IMG-20200109-WA0015.jpg
+glazed.jpg
+terasse.jpg
+slide-1.png
+```
+
+### Kontakt
+
+Current layout is map-led.
+
+Desktop:
+
+```txt
+OpenStreetMap map on the left
+contact details and opening hours on the right
+CTA below
+```
+
+Mobile:
+
+```txt
+single-column layout
+full-width contact CTA
+Holzpalette.png rotated in background
+opening hours remain simple and readable
+```
 
 ## Components
 
-**Quietly alive.** Hover states deepen rather than pop. Nothing springs or bounces. Every transition uses `cubic-bezier(.16, 1, .3, 1)` (ease-out-expo) — fast initial movement, slow settle. Durations: 0.6–0.9s for spatial motion (3D cards), 0.25–0.35s for color/opacity changes.
+### Primary CTA
 
-**Scroll-reveal:** `.reveal` elements translate 36px down at opacity 0, transition to natural position over 0.75s. Stagger delays: 0.15s, 0.35s, 0.55s, 0.75s.
+```txt
+background: --brand-red
+text: --brand-cream / white
+shape: sharp, not pill
+style: direct and functional
+```
 
-**3D hover (gallery cards):** `perspective: 1400px` on parent. Hover applies `rotateX` + `rotateY` (1–1.6deg) + `scale` (1.006–1.014) + `translateY(-5px to -8px)`. Inner image scales to `scale(1.076) translateZ(14px)`. Never exceeds these values.
+Use red sparingly. It is the action color, not a decorative color.
 
-**Contact map:** the Kontakt section is map-led, not carded. An OpenStreetMap embed is inverted and warmed (`invert hue-rotate sepia`) so it sits in the dark ground, and `pointer-events: none` keeps it a visual anchor that never traps page scroll. The action lives in the "Auf Karte ansehen" link. Opening hours and phone sit alongside; address sits below the map. The former three contact cards (and their `.rounded-full` icon bubbles) are retired.
+### Ghost CTA
 
-**Entrance and ambient motion:** the hero video carries one signature beat, an ultra-slow Ken Burns drift (`scale 1.02 → 1.085`, ~42s, alternating, desktop only). Gold dividers draw in via `scaleX` (never width) as their `.reveal` block enters view. The highlights bar reveals its three pillars in a 0 / .12 / .24s stagger. Inline arrow links lead 4px on hover and focus. Every one of these is disabled under `prefers-reduced-motion`.
+```txt
+transparent background
+gold border
+gold text
+dark hover contrast
+```
 
-**Primary CTA (Ember):** Sharp corners (radius 0), all-caps Jost label-caps, red background. The button does not grow or scale on hover — it deepens in color only.
+### Mobile floating call button
 
-**Ghost button:** Crust border (1px), Amber text on hover, transparent background throughout. Used for secondary actions.
+```txt
+fixed circular button
+uses --brand-red
+hidden at top of page
+visible after navbar scroll state
+mobile only
+```
 
-**Menu tabs:** Underline indicator on active, not background fill. Ash text inactive, Amber text active. Transition the border-bottom color, not background.
+### Desktop back-to-top button
 
-**Mobile FAB:** 60px circle, Ember background, multi-layer red shadow. Appears only below 768px. Fixed position.
+```txt
+desktop only
+centered higher in viewport
+round warm glass-like treatment
+hidden on mobile
+```
 
-**`prefers-reduced-motion`:** All transforms are disabled; opacity transitions remain at their shortest functional duration.
+### Gallery cards
 
-## Do's and Don'ts
+```txt
+warm shadow
+small perspective
+restrained hover lift
+image scale on hover
+vignette overlay
+```
 
-**Do:**
-- Use Bodoni Moda italic for all display headings, always on dark surfaces
-- Use `cubic-bezier(.16, 1, .3, 1)` for every transition with spatial movement
-- Apply warm-tinted multi-layer shadows — no cool-grey box-shadows anywhere
-- Use Ember sparingly — one moment of heat per section at most
-- Apply perspective-based 3D hover to gallery cards; keep the Kontakt map flat (visual anchor, pointer-events off)
-- Layer dark overlay gradients over video and image backgrounds
-- Uppercase tracked Jost for every label, CTA, and tab
-- Respect `prefers-reduced-motion` by stripping transforms entirely
+Do not exaggerate 3D movement.
 
-**Don't:**
-- Apply `border-radius` to primary CTAs, tabs, or menu items — sharp edges only
-- Use red-white-green combinations or Italian-flag clichés
-- Use gradient text (`background-clip: text`) anywhere
-- Apply glassmorphism decoratively — blur only on nav and back-to-top
-- Animate layout properties (width, height, padding, margin)
-- Add hover states that animate faster than 200ms for spatial transforms
-- Use Bodoni Moda for body text or labels
-- Use cool-grey or neutral-tinted shadows
-- Pair Ember with Crust or Amber in the same component
+### Opening hours
+
+Opening hours should remain visually simple. The outer Kontakt card carries the visual weight. Inner rows should not feel like separate cards unless explicitly requested.
+
+## Motion rules
+
+Allowed:
+
+```txt
+subtle fade-up entrance
+scroll reveal
+slow gallery hover movement
+tab fade transitions
+desktop back-to-top movement
+```
+
+Avoid:
+
+```txt
+fast bouncing
+layout-shifting animation
+large mobile hover effects
+animation that hides content
+```
+
+Respect `prefers-reduced-motion`.
+
+## Media rules
+
+Use exact paths and casing.
+
+Images:
+
+```txt
+assets/images/pizzeria-am-medienhafen-logo.svg
+assets/images/hero-poster.jpg
+assets/images/am-ofen.jpg
+assets/images/IMG-20200109-WA0015.jpg
+assets/images/Calzone.png
+assets/images/Fireplace5000px.png
+assets/images/IMG-20200109-WA0034_0.jpg
+assets/images/IMG-20200105-WA0009.jpg
+assets/images/slide-1.png
+assets/images/Holzpalette.png
+assets/images/glazed.jpg
+assets/images/terasse.jpg
+```
+
+Videos:
+
+```txt
+assets/videos/hero-loop.mp4
+assets/videos/Calzone.mp4
+assets/videos/Fireplace-dynamic5000px.mp4
+```
+
+Mobile-specific media behavior:
+
+```txt
+hero-loop.mp4 still used on mobile
+Calzone.mp4 scaled in responsive.css
+Fireplace-dynamic5000px.mp4 hidden on mobile
+```
+
+## Anti-patterns
+
+Do not add:
+
+```txt
+Italian flag color schemes
+clipart food icons
+neon delivery-app styling
+generic gradient text
+cool-grey shadows
+unused CSS blocks
+duplicate mobile override blocks
+dead JS handlers
+separate mobile HTML files
+new files without being asked
+```
+
+## Editing rules for AI agents
+
+```txt
+Use the newest uploaded/current project files as source of truth.
+Only change what the user requested.
+Do not rename files.
+Do not edit README.md, DESIGN.md, or PRODUCT.md unless asked.
+Check project-wide plausibility before returning files.
+Remove obsolete code if a better implementation replaces it.
+Do not leave commented-out backup code in production files.
+```

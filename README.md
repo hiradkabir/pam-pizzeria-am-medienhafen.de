@@ -1,7 +1,9 @@
 # Pizzeria am Medienhafen — Website Project
 
 Static website for **Pizzeria am Medienhafen**.  
-The project is designed for deployment on GitHub Pages or any standard static web host.
+Designed for GitHub Pages or any standard static web host.
+
+This documentation reflects the current code structure. The `assets/` folder can be large and does not need to be sent with every edit, but every referenced media file must stay in the expected path with exact casing.
 
 ## Current project structure
 
@@ -11,6 +13,8 @@ Keep this structure exactly as it is:
 project/
 ├── index.html
 ├── README.md
+├── DESIGN.md
+├── PRODUCT.md
 ├── css/
 │   ├── base.css
 │   ├── layout.css
@@ -24,12 +28,35 @@ project/
     └── fonts/
 ```
 
-## Important file rule
+## Core editing rules
 
-Do **not** rename existing files unless the HTML/CSS references are changed at the same time.
+### Exact-scope rule
 
-File names are case-sensitive on GitHub Pages and most web servers.  
-For example, these are different files:
+Only change what was explicitly requested. Do not redesign, rename, refactor, restyle, reorder, or optimize unrelated parts.
+
+### Whole-project consistency rule
+
+Always check the full project context before changing a file. Every edit must remain plausible across:
+
+```txt
+index.html
+css/base.css
+css/layout.css
+css/components.css
+css/responsive.css
+js/script.js
+README.md
+DESIGN.md
+PRODUCT.md
+```
+
+If one file references a class, ID, media path, modal, button, script behavior, or CSS variable, check whether the related files still support it.
+
+### No unwanted filename changes
+
+Do **not** rename existing files unless the user explicitly asks for it and all references are changed at the same time.
+
+File names are case-sensitive on GitHub Pages and most web servers. These are different files:
 
 ```txt
 glazed.jpg
@@ -38,7 +65,11 @@ Calzone.mp4
 calzone.mp4
 ```
 
-The current project expects the exact paths listed below.
+### Dead-code rule
+
+Avoid dead code. If a new implementation replaces an old code structure, remove the obsolete structure instead of leaving unused selectors, duplicate logic, inactive classes, old media references, or stale comments behind.
+
+Do not keep “backup code” inside production files. Use version control for history.
 
 ## Required image files
 
@@ -48,7 +79,7 @@ Place these files in:
 assets/images/
 ```
 
-Required images:
+The current code expects:
 
 ```txt
 assets/images/pizzeria-am-medienhafen-logo.svg
@@ -73,58 +104,111 @@ Place these files in:
 assets/videos/
 ```
 
-Required videos:
+The current code expects:
 
 ```txt
-assets/videos/hero-loop.mp4               # hero video (desktop and mobile; mobile is scaled via CSS)
+assets/videos/hero-loop.mp4
 assets/videos/Calzone.mp4
 assets/videos/Fireplace-dynamic5000px.mp4
 ```
 
+Current behavior:
+
+```txt
+hero-loop.mp4                  desktop and mobile hero video
+Calzone.mp4                    signature dish video
+Fireplace-dynamic5000px.mp4    desktop menu background video; hidden on mobile
+```
+
 ## CSS file responsibilities
 
-```txt
-css/base.css
-```
+### `css/base.css`
 
-Global theme variables, brand colors, fallback utility classes, browser defaults.
+Global foundation:
 
 ```txt
-css/layout.css
+theme variables
+brand colors
+fallback utility classes
+browser defaults
+body/html defaults
+scrollbar styling
 ```
 
-Section-level layout, structural helpers, background sections, gallery/contact background setup.
+### `css/layout.css`
+
+Structural and section-level layout:
 
 ```txt
-css/components.css
+hero title size base
+aspect-ratio helpers
+signature media min-height
+menu background
+gallery background
+contact background and Holzpalette layer
+off-screen rendering hints
+menu tab content sizing
 ```
 
-Reusable components, entrance and ambient animations, navbar state, gallery 3D hover, the map-led Kontakt section, menu/fireplace styling, back-to-top button.
+### `css/components.css`
+
+Reusable visual components and interaction states:
 
 ```txt
-css/responsive.css
+hero overlay
+fade/reveal animations
+navbar scrolled state
+gold divider
+menu cards and tabs
+gallery 3D styling
+Kontakt map-led layout
+OpenStreetMap styling
+opening hours formatting
+fireplace desktop styling
+mobile floating call button base
+desktop back-to-top button
+video fallback presentation
+CTA styling
+modal styling
 ```
 
-Desktop and mobile overrides, mobile media sizing, mobile menu tab layout, mobile gallery behavior, mobile contact background adjustments.
+### `css/responsive.css`
 
-> Maintenance note: `responsive.css` currently begins with a stale copy of most of `components.css` (roughly its first 690 lines) and is loaded after it, so on any shared selector the duplicated copy wins. When you change a shared component rule, check both files. A future cleanup should delete the duplicated block from `responsive.css` and keep only the genuinely responsive rules.
+Responsive overrides only:
+
+```txt
+mobile navbar centering
+mobile nav links after scroll
+mobile call button visibility at top
+mobile hero title size
+mobile hero video sizing
+mobile Calzone sizing
+mobile fireplace hiding
+mobile Speisekarte 2 × 3 tabs
+mobile gallery compact 2-column grid
+mobile Kontakt/Holzpalette rotation
+mobile modal sizing
+small-phone corrections
+landscape corrections
+reduced-motion overrides
+```
+
+`responsive.css` should remain lean. Shared reusable component styling belongs in `components.css`; only breakpoint-specific overrides belong in `responsive.css`.
 
 ## JavaScript behavior
 
+`js/script.js` controls:
+
 ```txt
-js/script.js
+navbar scroll state
+desktop-only back-to-top button reveal and scroll animation
+scroll reveal animation
+Speisekarte tab switching
+mobile swipe between Speisekarte tabs
+smooth anchor scrolling
+Impressum and Datenschutz modals
+video autoplay/fallback handling
 ```
-
-Controls:
-
-- navbar scroll state
-- reveal animations
-- Speisekarte tab switching
-- mobile swipe between Speisekarte tabs
-- smooth anchor scrolling
-- Impressum/Datenschutz modals
-- video autoplay/fallback handling
-- desktop-only back-to-top button animation
 
 The mobile hamburger menu has intentionally been removed.
 
@@ -132,25 +216,38 @@ The mobile hamburger menu has intentionally been removed.
 
 ### Desktop
 
-- Full navigation is shown.
-- Desktop videos are enabled.
-- Speisekarte uses tab buttons in one horizontal row.
-- Back-to-top button appears only on desktop after scrolling.
-- Kontakt uses a two-column, map-led layout: map and address on the left, opening hours and phone on the right.
+```txt
+full desktop navigation
+desktop hero video enabled
+desktop fireplace video visible in Speisekarte section
+Speisekarte tabs in one horizontal row
+Galerie uses 3D hover depth
+Kontakt uses map-led two-column layout
+desktop-only back-to-top button appears after scrolling
+```
 
 ### Mobile
 
-- No hamburger menu.
-- Hero video is scaled and centered for mobile.
-- Calzone video is scaled and centered for mobile.
-- Galerie uses a compact mobile layout to reduce vertical space.
-- Speisekarte tabs use a centered **2 columns × 3 rows** layout.
-- `Holzpalette.png` is used in the Kontakt section and rotated on mobile for better visual fit.
-- Kontakt collapses the map-led layout to a single column, with the map on top.
+```txt
+no hamburger menu
+wordmark centered at top
+mobile nav links appear after scroll
+floating phone button hidden at top and visible after scroll
+hero-loop.mp4 remains visible with reduced overlay
+hero title is 5% smaller than the base title scale
+Calzone.mp4 is scaled for mobile
+Fireplace-dynamic5000px.mp4 and its poster are hidden
+Speisekarte tabs use centered 2 columns × 3 rows
+Galerie uses compact 2-column grid
+terasse.jpg remains visible in Galerie
+Holzpalette.png is rotated in Kontakt
+Kontakt CTA is full width
+modals become full-screen panels
+```
 
 ## Brand color system
 
-The project uses the following palette:
+The project uses this palette:
 
 ```txt
 brand-red:        #DC2626
@@ -164,39 +261,46 @@ brand-surface-2:  #2D1200
 brand-muted:      #C4A882
 ```
 
-The Tailwind config is defined inside `index.html`.  
-Fallback CSS utility classes are included in `css/base.css` so key colors still work if Tailwind CDN classes are cached or generated late.
+The Tailwind config is defined in `index.html`.  
+Fallback CSS utility classes are included in `css/base.css` so the main brand colors remain available even if Tailwind CDN generation is delayed or cached.
 
 ## Video notes
 
-- The hero video uses a single source, `hero-loop.mp4`. Mobile sizing is handled in CSS (the video is scaled and centered in `responsive.css`), not via a separate mobile video source.
-
 For reliable browser playback:
 
-- Use `.mp4`.
-- Prefer H.264 video codec.
-- Prefer AAC audio codec, even if the video is muted.
-- Keep videos compressed for GitHub Pages.
-- Use exact file names and casing.
-- Keep `muted`, `autoplay`, `loop`, and `playsinline` on background videos.
+```txt
+use .mp4
+prefer H.264 video codec
+prefer AAC audio codec, even if muted
+keep videos compressed for GitHub Pages
+keep exact filenames and casing
+keep muted, autoplay, loop, playsinline on background videos
+```
 
-If a video fails or is blocked by the browser, `script.js` applies the poster image as fallback.
+The JavaScript video fallback applies the poster image as a background when playback fails.
 
-## Map embed (Kontakt)
+## Map embed
 
-The Kontakt section embeds an **OpenStreetMap** map (no API key, no tracking cookies), dark-filtered in CSS to match the theme and set to `pointer-events: none` so it never traps page scroll. The marker is at `51.2146420, 6.7579140` (Wupperstraße 14). A short OpenStreetMap clause is included in the Datenschutz modal. To re-center the map, edit the `bbox` and `marker` values in the iframe `src` in `index.html`.
+The Kontakt section uses an OpenStreetMap iframe. It does not need an API key. The map is dark-filtered in CSS and uses `pointer-events: none` so it does not trap page scrolling.
+
+Current marker:
+
+```txt
+Wupperstraße 14, 40221 Düsseldorf
+51.2146420, 6.7579140
+```
+
+To move the map, update the `bbox` and `marker` values in the iframe `src` in `index.html`.
 
 ## Local testing
 
-Open the project locally by launching `index.html`.
-
-Recommended option:
+Use a local server instead of opening the file directly:
 
 ```txt
-VS Code → install Live Server extension → right-click index.html → Open with Live Server
+VS Code → Live Server → right-click index.html → Open with Live Server
 ```
 
-A local server is better than opening the file directly because browser media behavior can differ when using `file://`.
+A local server is more reliable for video behavior than `file://`.
 
 ## GitHub Pages deployment
 
@@ -204,64 +308,63 @@ Typical workflow:
 
 ```txt
 1. Push project files to GitHub.
-2. Go to repository Settings.
+2. Open repository Settings.
 3. Open Pages.
 4. Select the main branch and root folder.
 5. Save.
 6. Wait until GitHub Pages publishes the site.
 ```
 
-After updating files, use a hard refresh:
-
-```txt
-Ctrl + F5
-```
-
-or test in a private/incognito browser window.
-
 ## Cache-busting
 
-The HTML uses version numbers like:
+The current HTML loads:
 
 ```html
 <link rel="stylesheet" href="css/base.css?v=13">
 <link rel="stylesheet" href="css/layout.css?v=26">
-<link rel="stylesheet" href="css/components.css?v=40">
-<link rel="stylesheet" href="css/responsive.css?v=46">
+<link rel="stylesheet" href="css/components.css?v=41">
+<link rel="stylesheet" href="css/responsive.css?v=47">
 <script defer src="js/script.js?v=39"></script>
 ```
 
-When CSS or JS changes, increase the version number so browsers load the newest file.
-
-Example:
-
-```html
-css/responsive.css?v=42
-```
+Only update cache versions when the corresponding CSS or JS file is changed and the user allows or requests it.
 
 ## Common troubleshooting
 
-### An image does not appear
+### Image does not appear
 
 Check:
 
 ```txt
 1. Is the file inside assets/images/?
-2. Does the file name match exactly?
+2. Does the filename match exactly?
 3. Does the casing match exactly?
 4. Is the path in index.html or CSS correct?
 ```
 
-### A video does not play
+### Video does not play
 
 Check:
 
 ```txt
 1. Is the file inside assets/videos/?
-2. Is the filename exactly correct?
+2. Does the filename match exactly?
 3. Is the MP4 encoded as H.264?
-4. Is the file size too large?
-5. Did the browser cache an old version?
+4. Is the file too large?
+5. Is the browser caching an old version?
+6. Is autoplay blocked despite muted/playsinline?
+```
+
+### Mobile hero shows only gradient/poster
+
+Check:
+
+```txt
+1. Confirm assets/videos/hero-loop.mp4 exists.
+2. Confirm the video source in index.html points to hero-loop.mp4.
+3. Confirm responsive.css keeps #heroVideo visible on mobile.
+4. Confirm the hero overlay opacity is not hiding the video.
+5. Hard refresh or increment responsive.css cache version if the file was changed.
 ```
 
 ### Styles look wrong after upload
@@ -270,9 +373,10 @@ Check:
 
 ```txt
 1. Hard refresh with Ctrl + F5.
-2. Verify CSS files are uploaded.
-3. Increase cache-busting query versions in index.html.
-4. Confirm css/base.css still contains the brand fallback utilities.
+2. Verify all CSS files are uploaded.
+3. Verify cache-busting query versions.
+4. Confirm css/base.css still contains brand fallback utilities.
+5. Check for duplicate selectors between components.css and responsive.css.
 ```
 
 ## Current production domain

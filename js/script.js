@@ -198,14 +198,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape') { closeModal('modal-impressum'); closeModal('modal-datenschutz'); }
     });
 
-    /* === Responsive video autoplay and fallback handling === */
+    /* === Background video loading and fallback ===
+       Videos start only when they scroll near the viewport, so below-the-fold
+       and mobile-hidden (display:none) videos never download or decode. Their
+       poster is deferred via data-poster so large poster images are not fetched
+       off-screen. The hero keeps its eager poster/preload in the markup. */
     (function () {
       const videos = [...document.querySelectorAll('video[data-autoplay-video]')];
+      const started = new WeakSet();
 
       function prepareVideo(video) {
         video.muted = true;
         video.defaultMuted = true;
-        video.autoplay = true;
         video.loop = true;
         video.playsInline = true;
         video.setAttribute('muted', '');
@@ -215,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function showPosterFallback(video) {
         video.classList.add('is-video-fallback');
-        const poster = video.getAttribute('poster');
+        const poster = video.getAttribute('poster') || video.dataset.poster;
         const parent = video.parentElement;
         if (poster && parent) {
           parent.style.backgroundImage = `url("${poster}")`;
@@ -225,6 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       function startVideo(video) {
+        /* Attach the deferred poster on first play so it is not fetched off-screen. */
+        if (!video.getAttribute('poster') && video.dataset.poster) {
+          video.setAttribute('poster', video.dataset.poster);
+        }
         prepareVideo(video);
         const playPromise = video.play();
 
@@ -240,25 +248,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      const inView = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            started.add(entry.target);
+            startVideo(entry.target);
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+
       videos.forEach(video => {
         prepareVideo(video);
-        startVideo(video);
-        video.addEventListener('canplay', () => startVideo(video), { once: true });
+        inView.observe(video);
         video.addEventListener('error', () => showPosterFallback(video));
         video.addEventListener('pause', () => {
-          if (!document.hidden) startVideo(video);
+          if (!document.hidden && started.has(video)) startVideo(video);
         });
       });
 
+      /* A first user gesture and tab refocus resume only the videos already in view. */
       ['touchstart', 'click'].forEach(eventName => {
-        window.addEventListener(eventName, () => videos.forEach(startVideo), {
-          once: true,
-          passive: true
-        });
+        window.addEventListener(eventName, () => {
+          videos.forEach(video => { if (started.has(video)) startVideo(video); });
+        }, { once: true, passive: true });
       });
 
       document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) videos.forEach(startVideo);
+        if (!document.hidden) {
+          videos.forEach(video => { if (started.has(video)) startVideo(video); });
+        }
       });
     })();
 });
