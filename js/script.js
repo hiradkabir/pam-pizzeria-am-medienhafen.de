@@ -199,13 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* === Background video loading and fallback ===
-       Videos start only when they scroll near the viewport, so below-the-fold
-       and mobile-hidden (display:none) videos never download or decode. Their
-       poster is deferred via data-poster so large poster images are not fetched
-       off-screen. The hero keeps its eager poster/preload in the markup. */
+       Below-the-fold videos load only when scrolled near the viewport, and their
+       large poster is deferred (data-poster) so it is never fetched off-screen.
+       The hero is above the fold: it loads eagerly and picks one source per device
+       (data-src / data-src-mobile), so exactly one file ever downloads, swapping if
+       the viewport crosses the mobile breakpoint. No poster is shown while the hero
+       loads; data-poster is only a last-resort fallback if playback truly fails. */
     (function () {
       const videos = [...document.querySelectorAll('video[data-autoplay-video]')];
-      const started = new WeakSet();
+      const mobileQuery = window.matchMedia('(max-width: 767px)');
 
       function prepareVideo(video) {
         video.muted = true;
@@ -217,14 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
         video.setAttribute('webkit-playsinline', '');
       }
 
-      /* Pick a per-viewport source for videos that declare data-src / data-src-mobile.
-         Resolved once, the first time the video starts, so the right file loads and
-         the other never downloads. Videos using <source> children are left untouched. */
-      function applySource(video) {
-        if (!video.dataset.src || video.dataset.srcApplied) return;
-        const useMobile = window.matchMedia('(max-width: 767px)').matches && video.dataset.srcMobile;
-        video.src = useMobile ? video.dataset.srcMobile : video.dataset.src;
-        video.dataset.srcApplied = '1';
+      function play(video) {
+        const p = video.play();
+        if (p && typeof p.catch === 'function') {
+          /* A rejected play is just autoplay timing: the muted autoplay attribute and
+             the canplay handler retry it. A genuine failure fires the 'error' event. */
+          p.then(() => video.classList.remove('is-video-fallback')).catch(() => {});
+        }
       }
 
       function showPosterFallback(video) {
@@ -238,56 +239,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      function startVideo(video) {
-        /* Attach the deferred poster on first play so it is not fetched off-screen. */
+      /* --- Hero: one source per device, eager load, no poster while loading --- */
+      const responsiveVideos = videos.filter(v => v.dataset.src);
+
+      function applyResponsiveSource(video) {
+        const wanted = (mobileQuery.matches && video.dataset.srcMobile)
+          ? video.dataset.srcMobile
+          : video.dataset.src;
+        if (video.getAttribute('src') === wanted) { play(video); return; }
+        video.setAttribute('src', wanted);   /* only the matching file is ever requested */
+        prepareVideo(video);
+        video.load();
+        play(video);
+      }
+
+      responsiveVideos.forEach(video => {
+        prepareVideo(video);
+        video.addEventListener('canplay', () => play(video));
+        video.addEventListener('error', () => showPosterFallback(video));
+        applyResponsiveSource(video);
+      });
+
+      /* Crossing the mobile breakpoint swaps the source; the other file is dropped. */
+      const onBreakpointChange = () => responsiveVideos.forEach(applyResponsiveSource);
+      if (mobileQuery.addEventListener) mobileQuery.addEventListener('change', onBreakpointChange);
+      else mobileQuery.addListener(onBreakpointChange);
+
+      /* --- Below-the-fold videos: load and play only when near the viewport --- */
+      const lazyVideos = videos.filter(v => !v.dataset.src);
+      const started = new WeakSet();
+
+      function startLazyVideo(video) {
         if (!video.getAttribute('poster') && video.dataset.poster) {
           video.setAttribute('poster', video.dataset.poster);
         }
-        applySource(video);
         prepareVideo(video);
-        const playPromise = video.play();
-
-        if (playPromise && typeof playPromise.catch === 'function') {
-          playPromise
-            .then(() => video.classList.remove('is-video-fallback'))
-            .catch(() => {
-              video.load();
-              video.play()
-                .then(() => video.classList.remove('is-video-fallback'))
-                .catch(() => showPosterFallback(video));
-            });
-        }
+        play(video);
       }
 
       const inView = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             started.add(entry.target);
-            startVideo(entry.target);
+            startLazyVideo(entry.target);
           }
         });
       }, { rootMargin: '200px 0px' });
 
-      videos.forEach(video => {
+      lazyVideos.forEach(video => {
         prepareVideo(video);
         inView.observe(video);
         video.addEventListener('error', () => showPosterFallback(video));
         video.addEventListener('pause', () => {
-          if (!document.hidden && started.has(video)) startVideo(video);
+          if (!document.hidden && started.has(video)) startLazyVideo(video);
         });
       });
 
-      /* A first user gesture and tab refocus resume only the videos already in view. */
+      /* A first user gesture and tab refocus resume whatever is currently active. */
+      function resumeActive() {
+        responsiveVideos.forEach(play);
+        lazyVideos.forEach(video => { if (started.has(video)) startLazyVideo(video); });
+      }
       ['touchstart', 'click'].forEach(eventName => {
-        window.addEventListener(eventName, () => {
-          videos.forEach(video => { if (started.has(video)) startVideo(video); });
-        }, { once: true, passive: true });
+        window.addEventListener(eventName, resumeActive, { once: true, passive: true });
       });
-
       document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) {
-          videos.forEach(video => { if (started.has(video)) startVideo(video); });
-        }
+        if (!document.hidden) resumeActive();
       });
     })();
 });

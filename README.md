@@ -108,6 +108,7 @@ The current code expects:
 
 ```txt
 assets/videos/hero-loop.mp4
+assets/videos/hero-loop-mob.mp4
 assets/videos/Calzone.mp4
 assets/videos/Fireplace-dynamic5000px.mp4
 ```
@@ -115,7 +116,8 @@ assets/videos/Fireplace-dynamic5000px.mp4
 Current behavior:
 
 ```txt
-hero-loop.mp4                  desktop and mobile hero video
+hero-loop.mp4                  desktop hero video
+hero-loop-mob.mp4              mobile hero video (better fit for portrait phones)
 Calzone.mp4                    signature dish video
 Fireplace-dynamic5000px.mp4    desktop menu background video; hidden on mobile
 ```
@@ -207,7 +209,9 @@ Speisekarte tab switching
 mobile swipe between Speisekarte tabs
 smooth anchor scrolling
 Impressum and Datenschutz modals
-video autoplay/fallback handling
+hero video: per-device source (desktop/mobile), eager load, swapped at the 768px breakpoint
+below-the-fold videos: loaded and played only as they near the viewport
+video autoplay, with poster fallback only if playback fails
 ```
 
 The mobile hamburger menu has intentionally been removed.
@@ -233,7 +237,7 @@ no hamburger menu
 wordmark centered at top
 mobile nav links appear after scroll
 floating phone button hidden at top and visible after scroll
-hero-loop.mp4 remains visible with reduced overlay
+hero-loop-mob.mp4 plays as the hero video, with reduced overlay
 hero title is 5% smaller than the base title scale
 Calzone.mp4 is scaled for mobile
 Fireplace-dynamic5000px.mp4 and its poster are hidden
@@ -274,10 +278,17 @@ prefer H.264 video codec
 prefer AAC audio codec, even if muted
 keep videos compressed for GitHub Pages
 keep exact filenames and casing
-keep muted, autoplay, loop, playsinline on background videos
+keep muted, loop, playsinline on background videos (the script manages autoplay)
 ```
 
-The JavaScript video fallback applies the poster image as a background when playback fails.
+Loading behavior:
+
+```txt
+hero loads eagerly and uses a per-device source: hero-loop.mp4 on desktop, hero-loop-mob.mp4 on mobile, swapped at the 768px breakpoint
+below-the-fold videos load and play only as they approach the viewport
+their posters are deferred (data-poster) so large poster images are not fetched off-screen
+the hero shows no poster while loading; the poster is only a fallback if playback fails
+```
 
 ## Map embed
 
@@ -324,7 +335,7 @@ The current HTML loads:
 <link rel="stylesheet" href="css/layout.css?v=26">
 <link rel="stylesheet" href="css/components.css?v=41">
 <link rel="stylesheet" href="css/responsive.css?v=47">
-<script defer src="js/script.js?v=39"></script>
+<script defer src="js/script.js?v=41"></script>
 ```
 
 Only update cache versions when the corresponding CSS or JS file is changed and the user allows or requests it.
@@ -355,16 +366,16 @@ Check:
 6. Is autoplay blocked despite muted/playsinline?
 ```
 
-### Mobile hero shows only gradient/poster
+### Mobile hero video does not appear
 
 Check:
 
 ```txt
-1. Confirm assets/videos/hero-loop.mp4 exists.
-2. Confirm the video source in index.html points to hero-loop.mp4.
+1. Confirm assets/videos/hero-loop-mob.mp4 exists (the mobile hero source).
+2. Confirm #heroVideo carries data-src and data-src-mobile in index.html.
 3. Confirm responsive.css keeps #heroVideo visible on mobile.
 4. Confirm the hero overlay opacity is not hiding the video.
-5. Hard refresh or increment responsive.css cache version if the file was changed.
+5. Hard refresh, or increment the js/script.js cache version, if the script changed.
 ```
 
 ### Styles look wrong after upload
