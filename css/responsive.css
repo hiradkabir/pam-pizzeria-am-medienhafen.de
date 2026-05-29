@@ -37,19 +37,22 @@
     transform: translateY(110%) scale(0.98) !important;
   }
 
-  /* Mobile hero title: vw-fluid, clamped to a safe floor for very small screens.
-     Root is 19px, so the old 3.42rem min was 65px — always bigger than 8.55vw at
-     phone widths, so the clamp never engaged and the title overflowed the viewport.
-     The new 1.8rem floor is 34px, which yields to 10.2vw above ~335px. */
+  /* Mobile hero text layout */
   .hero-title-size {
-    font-size: clamp(1.8rem, 10.2vw, 7.6rem) !important;
+    display: none !important;
   }
 
-  /* Tighten the hero content container's side padding so the larger title
-     has comfortable room on both sides. */
   .hero-section .relative.z-10 {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
+  }
+
+  .hero-section .relative.z-10 > p {
+    margin-bottom: 0 !important;
+  }
+
+  .hero-section .relative.z-10 > .flex {
+    margin-top: 1.15rem !important;
   }
 
   /* Hero video */
