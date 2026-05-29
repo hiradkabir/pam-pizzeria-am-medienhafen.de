@@ -217,6 +217,16 @@ document.addEventListener('DOMContentLoaded', () => {
         video.setAttribute('webkit-playsinline', '');
       }
 
+      /* Pick a per-viewport source for videos that declare data-src / data-src-mobile.
+         Resolved once, the first time the video starts, so the right file loads and
+         the other never downloads. Videos using <source> children are left untouched. */
+      function applySource(video) {
+        if (!video.dataset.src || video.dataset.srcApplied) return;
+        const useMobile = window.matchMedia('(max-width: 767px)').matches && video.dataset.srcMobile;
+        video.src = useMobile ? video.dataset.srcMobile : video.dataset.src;
+        video.dataset.srcApplied = '1';
+      }
+
       function showPosterFallback(video) {
         video.classList.add('is-video-fallback');
         const poster = video.getAttribute('poster') || video.dataset.poster;
@@ -233,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!video.getAttribute('poster') && video.dataset.poster) {
           video.setAttribute('poster', video.dataset.poster);
         }
+        applySource(video);
         prepareVideo(video);
         const playPromise = video.play();
 
