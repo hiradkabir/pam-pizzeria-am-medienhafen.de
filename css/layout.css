@@ -110,6 +110,13 @@
   contain-intrinsic-block-size: 750px;
 }
 
+@media (min-width: 768px) {
+  #contact {
+    content-visibility: visible;
+    contain-intrinsic-block-size: auto;
+  }
+}
+
 /* Keep the fireplace frame stable while switching tabs. */
 #menu .tab-content:not(.hidden) {
   min-height: 1180px;

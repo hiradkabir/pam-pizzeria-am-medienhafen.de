@@ -6,7 +6,38 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
-    // Mobile hamburger navigation removed intentionally.
+    // Mobile hamburger navigation
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function closeMobileMenu() {
+      if (!navbar || !mobileMenuToggle) return;
+      navbar.classList.remove('mobile-menu-open');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenuToggle.setAttribute('aria-label', 'Menü öffnen');
+    }
+
+    function toggleMobileMenu() {
+      if (!navbar || !mobileMenuToggle) return;
+      const isOpen = navbar.classList.toggle('mobile-menu-open');
+      mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    }
+
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+      document.addEventListener('click', e => {
+        if (navbar?.classList.contains('mobile-menu-open') && !navbar.contains(e.target)) {
+          closeMobileMenu();
+        }
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) closeMobileMenu();
+      }, { passive: true });
+    }
 
 
     // Desktop-only back-to-top button
@@ -195,7 +226,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById(id + '-backdrop').addEventListener('click', () => closeModal(id));
     });
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { closeModal('modal-impressum'); closeModal('modal-datenschutz'); }
+      if (e.key === 'Escape') {
+        closeModal('modal-impressum');
+        closeModal('modal-datenschutz');
+        closeMobileMenu();
+      }
     });
 
     /* === Background video loading and fallback ===

@@ -36,10 +36,10 @@
     };
   </script>
   <link rel="stylesheet" href="css/base.css?v=13">
-  <link rel="stylesheet" href="css/layout.css?v=26">
+  <link rel="stylesheet" href="css/layout.css?v=27">
   <link rel="stylesheet" href="css/components.css?v=41">
-  <link rel="stylesheet" href="css/responsive.css?v=48">
-  <script defer src="js/script.js?v=41"></script>
+  <link rel="stylesheet" href="css/responsive.css?v=51">
+  <script defer src="js/script.js?v=42"></script>
 </head>
 <body class="bg-brand-dark text-brand-cream antialiased">
 
@@ -51,10 +51,21 @@
       <span class="font-display text-brand-cream text-[10px] tracking-[0.35em] mt-0.5">AM MEDIENHAFEN</span>
     </a>
 
-    <div class="mobile-nav-links" role="navigation" aria-label="Seitennavigation">
+    <button id="mobile-menu-toggle"
+            class="mobile-menu-toggle md:hidden"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Menü öffnen">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <div id="mobile-menu" class="mobile-nav-links" role="navigation" aria-label="Mobile Navigation">
       <a href="#menu" class="mobile-nav-link">Speisekarte</a>
-      <a href="#gallery" class="mobile-nav-link">Galerie</a>
       <a href="#contact" class="mobile-nav-link">Kontakt</a>
+      <a href="#about" class="mobile-nav-link">Über uns</a>
     </div>
 
     <ul class="hidden md:flex items-center gap-8 text-[11px] font-sans tracking-widest uppercase text-brand-muted">
