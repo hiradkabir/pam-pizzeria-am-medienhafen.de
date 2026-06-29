@@ -129,12 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateBackToTopButton();
     }
 
-    // Scroll reveal
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
     // Menu tabs
     let tabSwitchTimeout = null;
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -158,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
           targetTab.classList.remove('hidden', 'tab-entering');
           void targetTab.offsetWidth;
           targetTab.classList.add('tab-entering');
-          targetTab.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
         };
 
         if (currentTab) {
