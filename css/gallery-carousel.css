@@ -1,7 +1,9 @@
-/* ========================================================================== 
+/* ==========================================================================
    Gallery carousel
-   CSS-only: touch scrolling, mandatory snapping, native scroll buttons and
-   native scroll markers where supported. No JavaScript or carousel library.
+   Touch/trackpad scrolling, mandatory snapping and native CSS controls where
+   supported. A lightweight script continuously weights every card by its
+   distance from the carousel center so the focused image is larger and brighter.
+   No carousel library is used.
    ========================================================================== */
 
 #gallery {
@@ -38,6 +40,12 @@
 #gallery .gallery-mobile-carousel > .gallery-item.col-span-2,
 #gallery .gallery-mobile-carousel > .gallery-item.row-span-2,
 #gallery .gallery-mobile-carousel > .mobile-gallery-terasse {
+  --gallery-focus: 0;
+  --gallery-scale: calc(0.82 + (var(--gallery-focus) * 0.18));
+  --gallery-opacity: calc(0.52 + (var(--gallery-focus) * 0.48));
+  --gallery-brightness: calc(0.72 + (var(--gallery-focus) * 0.30));
+  --gallery-saturation: calc(0.76 + (var(--gallery-focus) * 0.34));
+
   position: relative !important;
   display: block !important;
   flex: 0 0 var(--gallery-card-width) !important;
@@ -50,23 +58,41 @@
   order: initial !important;
   aspect-ratio: 16 / 10 !important;
   overflow: hidden !important;
-  border: 1px solid rgba(192, 94, 53, 0.24) !important;
+  border: 1px solid rgba(192, 94, 53, calc(0.10 + (var(--gallery-focus) * 0.38))) !important;
   border-radius: 1rem !important;
   background: var(--brand-surface) !important;
-  box-shadow: 0 1.4rem 3.5rem rgba(0, 0, 0, 0.44), inset 0 1px 0 rgba(255, 240, 215, 0.08) !important;
+  box-shadow:
+    0 calc(0.55rem + (var(--gallery-focus) * 0.85rem))
+      calc(1.5rem + (var(--gallery-focus) * 2.5rem))
+      rgba(0, 0, 0, calc(0.24 + (var(--gallery-focus) * 0.26))),
+    inset 0 1px 0 rgba(255, 240, 215, calc(0.03 + (var(--gallery-focus) * 0.08))) !important;
+  opacity: var(--gallery-opacity);
   scroll-snap-align: center !important;
   scroll-snap-stop: always;
   isolation: isolate;
-  transform: none !important;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+  transform: scale(var(--gallery-scale)) !important;
+  transform-origin: center center;
+  transition:
+    border-color 0.14s linear,
+    box-shadow 0.14s linear,
+    opacity 0.14s linear,
+    transform 0.14s linear !important;
+  will-change: transform, opacity;
+}
+
+#gallery .gallery-mobile-carousel > .gallery-item.is-gallery-focus {
+  z-index: 5 !important;
+  border-color: rgba(239, 68, 68, 0.72) !important;
+  box-shadow:
+    0 1.65rem 4.4rem rgba(0, 0, 0, 0.56),
+    0 0 0 1px rgba(239, 68, 68, 0.18),
+    0 0 2.2rem rgba(185, 28, 28, 0.20),
+    inset 0 1px 0 rgba(255, 240, 215, 0.12) !important;
 }
 
 #gallery .gallery-mobile-carousel > .gallery-item:hover,
 #gallery .gallery-mobile-carousel > .gallery-item:focus-within {
-  z-index: auto !important;
-  border-color: rgba(217, 137, 90, 0.58) !important;
-  box-shadow: 0 1.7rem 4.4rem rgba(0, 0, 0, 0.54), 0 0 0 1px rgba(217, 137, 90, 0.12), inset 0 1px 0 rgba(255, 240, 215, 0.1) !important;
-  transform: none !important;
+  border-color: rgba(239, 68, 68, 0.74) !important;
 }
 
 #gallery .gallery-mobile-carousel .gallery-item img {
@@ -75,15 +101,19 @@
   height: 100% !important;
   object-fit: cover !important;
   object-position: center !important;
-  transform: scale(1.01) !important;
-  filter: contrast(1.035) saturate(1.04) brightness(0.98) !important;
-  transition: transform 0.65s cubic-bezier(.16, 1, .3, 1), filter 0.65s ease !important;
+  transform: scale(calc(1.015 + (var(--gallery-focus) * 0.035))) !important;
+  filter:
+    contrast(calc(0.94 + (var(--gallery-focus) * 0.12)))
+    saturate(var(--gallery-saturation))
+    brightness(var(--gallery-brightness)) !important;
+  transition:
+    transform 0.16s linear,
+    filter 0.16s linear !important;
 }
 
 #gallery .gallery-mobile-carousel .gallery-item:hover img,
 #gallery .gallery-mobile-carousel .gallery-item:focus-within img {
-  transform: scale(1.045) !important;
-  filter: contrast(1.05) saturate(1.06) brightness(1.01) !important;
+  transform: scale(calc(1.035 + (var(--gallery-focus) * 0.035))) !important;
 }
 
 #gallery .gallery-mobile-carousel .gallery-item::before {
@@ -92,13 +122,20 @@
   inset: 0 !important;
   z-index: 1 !important;
   pointer-events: none !important;
-  background: linear-gradient(180deg, rgba(13, 5, 0, 0.03) 35%, rgba(13, 5, 0, 0.62) 100%), linear-gradient(135deg, rgba(255, 235, 200, 0.11), transparent 34%) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13, 5, 0, calc(0.18 - (var(--gallery-focus) * 0.15))) 30%,
+      rgba(13, 5, 0, calc(0.74 - (var(--gallery-focus) * 0.34))) 100%
+    ),
+    linear-gradient(135deg, rgba(255, 235, 200, calc(0.03 + (var(--gallery-focus) * 0.10))), transparent 36%) !important;
   opacity: 1 !important;
   mix-blend-mode: normal !important;
 }
 
 #gallery .gallery-mobile-carousel .gallery-item::after {
-  box-shadow: inset 0 0 4rem 0.8rem rgba(13, 5, 0, 0.46) !important;
+  box-shadow:
+    inset 0 0 4rem 0.8rem rgba(13, 5, 0, calc(0.58 - (var(--gallery-focus) * 0.34))) !important;
 }
 
 #gallery .gallery-mobile-carousel::scroll-button(left),
@@ -221,6 +258,13 @@
 @media (prefers-reduced-motion: reduce) {
   #gallery .gallery-mobile-carousel {
     scroll-behavior: auto;
+  }
+
+  #gallery .gallery-mobile-carousel > .gallery-item {
+    --gallery-focus: 1 !important;
+    opacity: 1;
+    transform: none !important;
+    will-change: auto;
   }
 
   #gallery .gallery-mobile-carousel .gallery-item,
