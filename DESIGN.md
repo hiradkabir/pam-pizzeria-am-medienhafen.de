@@ -1,6 +1,6 @@
 ---
-version: "1.4"
-generated: "2026-05-29"
+version: "1.7"
+generated: "2026-06-29"
 project: "Pizzeria am Medienhafen"
 register: brand
 source_files:
@@ -9,8 +9,10 @@ source_files:
   - css/layout.css
   - css/components.css
   - css/responsive.css
+  - css/gallery-carousel.css
   - js/script.js
   - README.md
+  - DESIGN.md
   - PRODUCT.md
 ---
 
@@ -44,15 +46,16 @@ a neon food startup
 The design is implemented as a static single-page site.
 
 ```txt
-index.html              content, section order, media references, modals
-css/base.css            brand variables, color fallbacks, browser defaults
-css/layout.css          structural helpers and section backgrounds
-css/components.css      reusable components, animation, cards, map, video presentation
-css/responsive.css      mobile/desktop overrides only
-js/script.js            interaction behavior and video fallback
+index.html                 content, section order, media references, modals
+css/base.css               brand variables, color fallbacks, browser defaults
+css/layout.css             structural helpers and section backgrounds
+css/components.css         reusable components, CSS view reveals, cards, map and video presentation
+css/responsive.css         breakpoint-specific mobile/desktop overrides only
+css/gallery-carousel.css   scroll-snap gallery styling and distance-weighted focus presentation
+js/script.js               required interaction behavior and video fallback
 ```
 
-`responsive.css` should stay lean and should contain breakpoint-specific overrides only. Shared component styling belongs in `components.css`.
+`responsive.css` should stay lean and contain breakpoint-specific overrides only. Shared component styling belongs in `components.css`. Carousel behavior is isolated in `gallery-carousel.css` so it does not conflict with general gallery-image styling.
 
 ## Palette
 
@@ -197,24 +200,41 @@ tab content min-height is removed
 
 ### Galerie
 
-Gallery images should feel tactile and real.
+Gallery images should feel tactile and real while remaining easy to browse.
+
+The gallery is one horizontal scroll-snap carousel on mobile and desktop:
+
+```txt
+horizontal swipe / trackpad scrolling
+mandatory scroll snapping
+one centered card per stop
+part of the next card remains visible
+native CSS scroll buttons and markers where supported
+lightweight center-distance focus calculation
+no carousel library
+```
+
+The focused card is automatically brought forward at full scale, brightness and contrast. Cards become progressively smaller, darker and less prominent as their distance from the center increases.
 
 Desktop:
 
 ```txt
-3D depth treatment
-subtle rotation
-hover lift
-image vignette
+wide 16:10 cards
+larger centered viewport
+hover image zoom and warm border emphasis
+mouse, trackpad and horizontal scrolling
 ```
 
 Mobile:
 
 ```txt
-compact 2-column grid
-no horizontal carousel
-dense use of space
+portrait-oriented 4:5 cards
+touch swiping with momentum
+mandatory centered snapping
+compact spacing without a separate mobile grid
 ```
+
+Browsers without support for the new `::scroll-button()` and `::scroll-marker` pseudo-elements still retain a functional swipe-and-snap carousel.
 
 ### Kontakt
 
@@ -234,17 +254,24 @@ mobile single-column flow
 ### Primary CTA
 
 ```txt
-background: --brand-red
+default buttons: background --brand-red
+contact “Jetzt Bestellen”: animated deep-red corporate gradient
+contact CTA glow: soft, restrained and behind the button only
+contact CTA highlight: slow light sweep
 text: --brand-cream / white
 shape: rectangular, no rounded pill style
-tone: direct, not neon
+tone: direct, warm and not neon
 ```
+
+The animated corporate treatment is restricted to the contact “Jetzt Bestellen” button and the mobile telephone button. Other buttons remain static.
 
 ### Mobile floating call button
 
 ```txt
 fixed circular phone button
-brand red
+animated deep-red corporate gradient
+soft matching glow behind the button
+slow moving highlight sweep
 hidden at the page top
 shown after scroll
 large enough for touch
@@ -280,12 +307,15 @@ Motion should be warm and restrained.
 Allowed:
 
 ```txt
-fade-up entrance
-reveal on scroll
+initial fade-up entrance
+CSS view-timeline reveal as content enters the viewport
+CSS view-timeline divider drawing
 tab fade
-subtle gallery depth
+subtle carousel image zoom
 desktop back-to-top animation
 ```
+
+The general `.reveal` behavior is implemented in CSS with `animation-timeline: view()`. It does not use a JavaScript scroll observer and does not create a reading-progress bar. The reveal uses only opacity and a short vertical translation—never blur. Large menu, gallery, map, and contact containers are excluded so long mobile sections remain fully sharp and readable. Unsupported browsers use the visible-content fallback.
 
 Avoid:
 
@@ -294,9 +324,10 @@ bouncy UI
 large rotating elements
 aggressive hover effects
 motion that blocks reading
+scroll listeners used only for decorative entrance animation
 ```
 
-Honor `prefers-reduced-motion` where motion is decorative.
+Honor `prefers-reduced-motion` wherever motion is decorative.
 
 ## Media direction
 
@@ -326,7 +357,7 @@ centered wordmark
 menu links ordered Speisekarte, Kontakt, Über uns
 call button after scroll
 hero video visible
-compact gallery
+touch-driven gallery carousel with centered snapping
 Speisekarte tabs in 2 × 3 layout
 fireplace background hidden
 Kontakt readable in one column
@@ -343,6 +374,7 @@ neon delivery-app styling
 generic SaaS gradients
 unrequested redesigns
 duplicate responsive blocks
+duplicate carousel implementations
 dead selectors
 unused media references
 ```

@@ -77,13 +77,17 @@ mobile hamburger menu provides quick section access
 mobile call button appears after scroll and is hidden at the top
 Speisekarte uses tab switching
 mobile Speisekarte supports swipe between tabs
-gallery images use depth styling
+gallery uses a swipe-and-snap carousel with automatic center-weighted highlighting on mobile and desktop
+content reveals through CSS view timelines as it enters the viewport without blur
+the contact order button and mobile telephone button use a restrained deep-red gradient, glow and highlight sweep
 desktop back-to-top button scrolls to top
 Impressum and Datenschutz open as modals
 hero video selects desktop/mobile source by breakpoint
 below-the-fold videos lazy-load near the viewport
 videos try autoplay and fall back to poster/background on error
 ```
+
+The viewport reveal is decorative CSS behavior. It uses no JavaScript reveal observer and includes no reading-progress bar.
 
 ## Brand personality
 
@@ -134,6 +138,7 @@ clipart pizza graphics
 neon delivery-app CTAs
 generic SaaS gradients
 excessive animation
+JavaScript used only for decorative scroll reveals
 template-looking restaurant visuals
 unused/dead code
 unrequested file renaming
@@ -175,7 +180,7 @@ mobile hero label and Speisekarte hero CTA hidden
 Calzone.mp4 sized for mobile
 fireplace video removed/hidden on mobile
 Speisekarte tabs arranged 2 columns × 3 rows
-gallery arranged as compact 2-column grid
+gallery uses portrait cards with touch swiping, centered snapping and automatic focus scaling
 Kontakt content collapses into a single-column flow
 ```
 
@@ -188,7 +193,8 @@ full navigation row
 hero-loop.mp4 as hero video background
 desktop fireplace video in Speisekarte
 larger visual rhythm
-gallery depth effects
+wide gallery carousel with centered snapping and automatic focus scaling
+native CSS carousel controls where supported
 map-led Kontakt layout
 desktop-only back-to-top button
 ```
