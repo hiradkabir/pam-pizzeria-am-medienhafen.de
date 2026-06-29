@@ -129,6 +129,69 @@ document.addEventListener('DOMContentLoaded', () => {
       updateBackToTopButton();
     }
 
+
+    // Gallery focus weighting
+    // The centered image is highlighted automatically. Neighboring cards scale
+    // continuously according to their distance from the carousel center.
+    const galleryTrack = document.querySelector('#gallery .gallery-mobile-carousel');
+
+    if (galleryTrack) {
+      const galleryItems = [...galleryTrack.querySelectorAll(':scope > .gallery-item')];
+      let galleryFrame = 0;
+
+      function updateGalleryFocus() {
+        galleryFrame = 0;
+
+        const trackRect = galleryTrack.getBoundingClientRect();
+        const trackCenter = trackRect.left + (trackRect.width / 2);
+        const firstWidth = galleryItems[0]?.getBoundingClientRect().width || trackRect.width;
+        const influenceDistance = Math.max(firstWidth * 1.15, trackRect.width * 0.58);
+
+        let closestItem = null;
+        let closestDistance = Number.POSITIVE_INFINITY;
+
+        galleryItems.forEach(item => {
+          const rect = item.getBoundingClientRect();
+          const itemCenter = rect.left + (rect.width / 2);
+          const distance = Math.abs(itemCenter - trackCenter);
+          const linearFocus = Math.max(0, Math.min(1, 1 - (distance / influenceDistance)));
+          const smoothFocus = linearFocus * linearFocus * (3 - (2 * linearFocus));
+
+          item.style.setProperty('--gallery-focus', smoothFocus.toFixed(4));
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestItem = item;
+          }
+        });
+
+        galleryItems.forEach(item => {
+          item.classList.toggle('is-gallery-focus', item === closestItem);
+        });
+      }
+
+      function requestGalleryFocusUpdate() {
+        if (galleryFrame) return;
+        galleryFrame = window.requestAnimationFrame(updateGalleryFocus);
+      }
+
+      galleryTrack.addEventListener('scroll', requestGalleryFocusUpdate, { passive: true });
+      window.addEventListener('resize', requestGalleryFocusUpdate, { passive: true });
+      window.addEventListener('orientationchange', requestGalleryFocusUpdate, { passive: true });
+
+      if ('ResizeObserver' in window) {
+        const galleryResizeObserver = new ResizeObserver(requestGalleryFocusUpdate);
+        galleryResizeObserver.observe(galleryTrack);
+        galleryItems.forEach(item => galleryResizeObserver.observe(item));
+      }
+
+      galleryItems.forEach(item => {
+        item.querySelector('img')?.addEventListener('load', requestGalleryFocusUpdate, { once: true });
+      });
+
+      requestGalleryFocusUpdate();
+    }
+
     // Menu tabs
     let tabSwitchTimeout = null;
     document.querySelectorAll('.tab-btn').forEach(btn => {
