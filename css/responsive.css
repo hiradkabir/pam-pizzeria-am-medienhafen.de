@@ -173,47 +173,6 @@
     letter-spacing: 0.12em !important;
   }
 
-  /* Gallery: compact 2-column grid */
-  #gallery .gallery-mobile-carousel {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-auto-flow: dense !important;
-    gap: 0.55rem !important;
-    overflow: visible !important;
-    scroll-snap-type: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  #gallery .gallery-mobile-carousel > .gallery-item,
-  #gallery .gallery-mobile-carousel > .gallery-item:first-child,
-  #gallery .gallery-mobile-carousel > .gallery-item.col-span-2,
-  #gallery .gallery-mobile-carousel > .gallery-item.row-span-2 {
-    display: block !important;
-    flex: none !important;
-    width: auto !important;
-    min-width: 0 !important;
-    grid-column: auto !important;
-    grid-row: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    order: initial !important;
-    scroll-snap-align: none !important;
-  }
-
-  #gallery .gallery-mobile-carousel > .mobile-gallery-terasse {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  #gallery .gallery-mobile-carousel img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
   /* Contact section */
   .contact-section-bg::before {
     inset: -38% -82%;
