@@ -60,7 +60,9 @@
   overflow: hidden !important;
   border: 1px solid rgba(192, 94, 53, calc(0.10 + (var(--gallery-focus) * 0.38))) !important;
   border-radius: 1rem !important;
-  background: var(--brand-surface) !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(185, 28, 28, 0.12), transparent 54%),
+    var(--brand-surface) !important;
   box-shadow:
     0 calc(0.55rem + (var(--gallery-focus) * 0.85rem))
       calc(1.5rem + (var(--gallery-focus) * 2.5rem))
@@ -73,11 +75,19 @@
   transform: scale(var(--gallery-scale)) !important;
   transform-origin: center center;
   transition:
-    border-color 0.14s linear,
-    box-shadow 0.14s linear,
-    opacity 0.14s linear,
-    transform 0.14s linear !important;
+    border-color .28s ease-out,
+    box-shadow .32s ease-out,
+    opacity .30s ease-out,
+    transform .30s cubic-bezier(.22, 1, .36, 1) !important;
   will-change: transform, opacity;
+}
+
+/* Before the focus script has measured the track, keep the first card as a
+   stable visual anchor instead of briefly rendering every card small/dim. */
+#gallery .gallery-mobile-carousel:not(.is-gallery-focus-ready)
+  > .gallery-item:first-child {
+  --gallery-focus: 1;
+  z-index: 5 !important;
 }
 
 #gallery .gallery-mobile-carousel > .gallery-item.is-gallery-focus {
@@ -101,18 +111,29 @@
   height: 100% !important;
   object-fit: cover !important;
   object-position: center !important;
-  transform: scale(calc(1.015 + (var(--gallery-focus) * 0.035))) !important;
+  opacity: 0;
+  transform: scale(calc(1.075 + (var(--gallery-focus) * 0.025))) !important;
   filter:
     contrast(calc(0.94 + (var(--gallery-focus) * 0.12)))
     saturate(var(--gallery-saturation))
     brightness(var(--gallery-brightness)) !important;
   transition:
-    transform 0.16s linear,
-    filter 0.16s linear !important;
+    opacity .72s cubic-bezier(.22, 1, .36, 1),
+    transform .82s cubic-bezier(.22, 1, .36, 1),
+    filter .34s ease-out !important;
+  will-change: opacity, transform;
 }
 
-#gallery .gallery-mobile-carousel .gallery-item:hover img,
-#gallery .gallery-mobile-carousel .gallery-item:focus-within img {
+/* The class is added only after the image has loaded and decode() has settled.
+   This prevents the abrupt frame jump commonly visible with lazy-loaded images. */
+#gallery .gallery-mobile-carousel .gallery-item.is-image-ready img {
+  opacity: 1;
+  transform: scale(calc(1.015 + (var(--gallery-focus) * 0.035))) !important;
+  will-change: auto;
+}
+
+#gallery .gallery-mobile-carousel .gallery-item.is-image-ready:hover img,
+#gallery .gallery-mobile-carousel .gallery-item.is-image-ready:focus-within img {
   transform: scale(calc(1.035 + (var(--gallery-focus) * 0.035))) !important;
 }
 
@@ -262,6 +283,12 @@
 
   #gallery .gallery-mobile-carousel > .gallery-item {
     --gallery-focus: 1 !important;
+    opacity: 1;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  #gallery .gallery-mobile-carousel .gallery-item img {
     opacity: 1;
     transform: none !important;
     will-change: auto;

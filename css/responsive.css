@@ -24,18 +24,26 @@
   }
 
   .mobile-cta-fab {
+    opacity: 1;
+    visibility: visible;
     transition:
-      opacity .22s ease,
-      visibility .22s ease,
-      transform .22s ease,
-      box-shadow .18s ease !important;
+      opacity .78s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear 0s,
+      transform .78s cubic-bezier(.22, 1, .36, 1),
+      box-shadow .32s ease !important;
   }
 
-  #navbar:not(.scrolled) ~ .mobile-cta-fab {
+  #navbar:not(.scrolled) ~ .mobile-cta-fab,
+  .mobile-cta-fab.is-contact-cta-visible {
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    transform: translateY(110%) scale(0.98) !important;
+    transform: translateY(2rem) scale(0.88) !important;
+    transition:
+      opacity .78s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear .78s,
+      transform .78s cubic-bezier(.22, 1, .36, 1),
+      box-shadow .32s ease !important;
   }
 
   /* Mobile hero text layout */

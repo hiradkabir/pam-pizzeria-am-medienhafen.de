@@ -114,6 +114,7 @@ assets/images/EQFY1298.JPG
 assets/images/QHUS6537.JPG
 assets/images/WNIW6153.JPG
 assets/images/ETHG4100.JPG
+assets/images/6d9729dd-19ae-4371-9581-3d22fd0fbaf7.jpg
 ```
 
 ## Required video files

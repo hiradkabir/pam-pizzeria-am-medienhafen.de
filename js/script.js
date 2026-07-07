@@ -130,6 +130,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // Hide the floating telephone button when the full contact CTA is available.
+    const mobileCallButton = document.getElementById('mobile-cta-fab');
+    const contactOrderCta = document.querySelector('#contact .contact-order-cta');
+
+    if (mobileCallButton && contactOrderCta && 'IntersectionObserver' in window) {
+      const contactCtaObserver = new IntersectionObserver(entries => {
+        const contactCtaVisible = entries.some(entry =>
+          entry.isIntersecting && entry.intersectionRatio >= 0.12
+        );
+        mobileCallButton.classList.toggle('is-contact-cta-visible', contactCtaVisible);
+      }, {
+        threshold: [0, 0.12, 0.35],
+        rootMargin: '0px 0px -5% 0px'
+      });
+
+      contactCtaObserver.observe(contactOrderCta);
+    }
+
+
+
     // Gallery focus weighting
     // The centered image is highlighted automatically. Neighboring cards scale
     // continuously according to their distance from the carousel center.
@@ -138,6 +158,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (galleryTrack) {
       const galleryItems = [...galleryTrack.querySelectorAll(':scope > .gallery-item')];
       let galleryFrame = 0;
+      let galleryFocusInitialized = false;
+
+      function markGalleryImageReady(item, image) {
+        let finished = false;
+
+        const reveal = () => {
+          if (finished) return;
+          finished = true;
+
+          window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+              item.classList.add('is-image-ready');
+              requestGalleryFocusUpdate();
+            });
+          });
+        };
+
+        const decodeThenReveal = () => {
+          if (typeof image.decode === 'function') {
+            image.decode().then(reveal).catch(reveal);
+          } else {
+            reveal();
+          }
+        };
+
+        if (image.complete && image.naturalWidth > 0) {
+          decodeThenReveal();
+        } else {
+          image.addEventListener('load', decodeThenReveal, { once: true });
+          image.addEventListener('error', reveal, { once: true });
+        }
+      }
 
       function updateGalleryFocus() {
         galleryFrame = 0;
@@ -168,6 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryItems.forEach(item => {
           item.classList.toggle('is-gallery-focus', item === closestItem);
         });
+
+        if (!galleryFocusInitialized) {
+          galleryFocusInitialized = true;
+          galleryTrack.classList.add('is-gallery-focus-ready');
+        }
       }
 
       function requestGalleryFocusUpdate() {
@@ -186,7 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       galleryItems.forEach(item => {
-        item.querySelector('img')?.addEventListener('load', requestGalleryFocusUpdate, { once: true });
+        const image = item.querySelector('img');
+        if (image) markGalleryImageReady(item, image);
       });
 
       requestGalleryFocusUpdate();
