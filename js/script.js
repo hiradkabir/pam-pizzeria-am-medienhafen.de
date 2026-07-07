@@ -157,6 +157,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (galleryTrack) {
       const galleryItems = [...galleryTrack.querySelectorAll(':scope > .gallery-item')];
+      const galleryIndicator = document.querySelector('#gallery .gallery-scroll-indicator');
+      const galleryIndicatorDots = galleryIndicator && galleryItems.length > 1
+        ? galleryItems.map((_, index) => {
+            const dot = document.createElement('span');
+            dot.className = 'gallery-scroll-indicator__dot';
+            dot.dataset.galleryIndex = String(index);
+            galleryIndicator.appendChild(dot);
+            return dot;
+          })
+        : [];
       let galleryFrame = 0;
       let galleryFocusInitialized = false;
 
@@ -200,9 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const influenceDistance = Math.max(firstWidth * 1.15, trackRect.width * 0.58);
 
         let closestItem = null;
+        let closestIndex = 0;
         let closestDistance = Number.POSITIVE_INFINITY;
 
-        galleryItems.forEach(item => {
+        galleryItems.forEach((item, index) => {
           const rect = item.getBoundingClientRect();
           const itemCenter = rect.left + (rect.width / 2);
           const distance = Math.abs(itemCenter - trackCenter);
@@ -214,11 +225,16 @@ document.addEventListener('DOMContentLoaded', () => {
           if (distance < closestDistance) {
             closestDistance = distance;
             closestItem = item;
+            closestIndex = index;
           }
         });
 
         galleryItems.forEach(item => {
           item.classList.toggle('is-gallery-focus', item === closestItem);
+        });
+
+        galleryIndicatorDots.forEach((dot, index) => {
+          dot.classList.toggle('is-active', index === closestIndex);
         });
 
         if (!galleryFocusInitialized) {

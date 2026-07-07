@@ -441,6 +441,90 @@
 
 
 /* ==========================================================================
+   Desktop type tuning
+   Enlarges the small functional labels shown in the latest desktop review:
+   navigation, hero kicker/buttons and Kontakt details.
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  #navbar a[href="#"] span:first-child {
+    font-size: clamp(1.32rem, 1.38vw, 1.62rem) !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  #navbar a[href="#"] span:last-child {
+    font-size: clamp(0.62rem, 0.64vw, 0.76rem) !important;
+    letter-spacing: 0.38em !important;
+  }
+
+  #navbar ul {
+    gap: clamp(2rem, 2.65vw, 3rem) !important;
+    font-size: clamp(0.66rem, 0.64vw, 0.78rem) !important;
+  }
+
+  #navbar > div > a[href^="tel:"] {
+    gap: 0.65rem !important;
+    padding: 0.85rem 1.75rem !important;
+    font-size: clamp(0.68rem, 0.64vw, 0.78rem) !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  #navbar > div > a[href^="tel:"] svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .hero-section .relative.z-10 > p {
+    font-size: clamp(0.76rem, 0.78vw, 0.94rem) !important;
+    letter-spacing: 0.46em !important;
+  }
+
+  .hero-section .relative.z-10 > .flex a {
+    padding: 1.05rem 2.35rem !important;
+    font-size: clamp(0.72rem, 0.70vw, 0.84rem) !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  #contact .contact-info-col > div > p:first-child,
+  #contact .contact-map-col .mt-6 > p:first-child {
+    font-size: clamp(0.68rem, 0.66vw, 0.82rem) !important;
+    letter-spacing: 0.32em !important;
+    line-height: 1.35 !important;
+  }
+
+  #contact .contact-map-col .mt-6 > p:nth-of-type(2) {
+    font-size: clamp(0.86rem, 0.82vw, 1rem) !important;
+    line-height: 1.68 !important;
+  }
+
+  #contact .contact-map-col .mt-6 > a {
+    font-size: clamp(0.66rem, 0.64vw, 0.78rem) !important;
+    letter-spacing: 0.13em !important;
+  }
+
+  #contact .opening-hours-list {
+    gap: 0.56rem !important;
+  }
+
+  #contact .opening-day,
+  #contact .opening-time {
+    font-size: clamp(0.86rem, 0.84vw, 1rem) !important;
+    line-height: 1.62 !important;
+  }
+
+  #contact .contact-info-col a[href^="tel:"] {
+    font-size: clamp(1.55rem, 1.7vw, 2.15rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  #contact .contact-info-col a[href^="tel:"] + p {
+    font-size: clamp(0.86rem, 0.82vw, 1rem) !important;
+    line-height: 1.65 !important;
+  }
+}
+
+
+/* ==========================================================================
    Landscape orientation on mobile
    Reduces hero title to scale with viewport height, shortens hero padding.
    ========================================================================== */

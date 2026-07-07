@@ -232,6 +232,10 @@
   background: var(--brand-gold-light);
 }
 
+.gallery-scroll-indicator {
+  display: none;
+}
+
 @media (max-width: 767px) {
   #gallery {
     padding-left: 0 !important;
@@ -251,6 +255,38 @@
     --gallery-card-width: min(82vw, 25rem);
     --gallery-gap: 0.85rem;
     padding-bottom: 0.75rem !important;
+  }
+
+  .gallery-scroll-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.44rem;
+    min-height: 1rem;
+    margin: 0.15rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .gallery-scroll-indicator__dot {
+    display: block;
+    width: 0.44rem;
+    height: 0.44rem;
+    border-radius: 999px;
+    background: rgba(196, 168, 130, 0.36);
+    box-shadow: 0 0 0 1px rgba(254, 242, 242, 0.04);
+    transform: translateZ(0);
+    transition:
+      width 0.28s cubic-bezier(.22, 1, .36, 1),
+      background-color 0.28s ease,
+      opacity 0.28s ease,
+      transform 0.28s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .gallery-scroll-indicator__dot.is-active {
+    width: 1.45rem;
+    background: var(--brand-gold-light);
+    opacity: 1;
+    transform: translateZ(0) scaleY(1.04);
   }
 
   #gallery .gallery-mobile-carousel > .gallery-item,
@@ -296,6 +332,7 @@
 
   #gallery .gallery-mobile-carousel .gallery-item,
   #gallery .gallery-mobile-carousel .gallery-item img,
+  .gallery-scroll-indicator__dot,
   #gallery .gallery-mobile-carousel::scroll-button(left),
   #gallery .gallery-mobile-carousel::scroll-button(right),
   #gallery .gallery-mobile-carousel > .gallery-item::scroll-marker {
