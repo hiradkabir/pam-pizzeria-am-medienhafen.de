@@ -485,6 +485,146 @@
     letter-spacing: 0.12em !important;
   }
 
+  .highlights-bar-grid {
+    max-width: min(68rem, calc(100vw - 8rem)) !important;
+  }
+
+  .highlights-bar-grid > div {
+    gap: 1.15rem !important;
+  }
+
+  .highlights-bar-grid > div svg {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+  }
+
+  .highlights-bar-grid .font-display {
+    font-size: clamp(0.98rem, 0.96vw, 1.18rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .highlights-bar-grid .font-sans {
+    font-size: clamp(0.76rem, 0.74vw, 0.9rem) !important;
+    line-height: 1.42 !important;
+  }
+
+  #about .max-w-6xl > .reveal:nth-child(2) > p:first-child,
+  .signature-media-min-height + div > p:first-child,
+  #menu .text-center > p:first-child {
+    font-size: clamp(0.74rem, 0.74vw, 0.9rem) !important;
+    letter-spacing: 0.38em !important;
+    line-height: 1.35 !important;
+  }
+
+  #about h2,
+  .signature-media-min-height + div h2,
+  #menu h2 {
+    font-size: clamp(3.25rem, 4.15vw, 5rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  #about .max-w-6xl > .reveal:nth-child(2) > p.font-sans.text-brand-muted {
+    font-size: clamp(0.98rem, 0.96vw, 1.18rem) !important;
+    line-height: 1.85 !important;
+  }
+
+  #about .grid.grid-cols-3 > div > p:first-child {
+    font-size: clamp(2.45rem, 2.5vw, 3.1rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  #about .grid.grid-cols-3 > div > p:last-child {
+    font-size: clamp(0.68rem, 0.66vw, 0.8rem) !important;
+    letter-spacing: 0.14em !important;
+    line-height: 1.35 !important;
+  }
+
+  .signature-media-min-height + div > p.font-sans.text-brand-muted {
+    font-size: clamp(1rem, 1.02vw, 1.22rem) !important;
+    line-height: 1.82 !important;
+    max-width: 54rem !important;
+  }
+
+  .signature-media-min-height + div > p.font-sans.text-brand-gold.font-semibold {
+    font-size: clamp(1.55rem, 1.65vw, 2rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .signature-media-min-height + div > a {
+    font-size: clamp(0.68rem, 0.66vw, 0.8rem) !important;
+    letter-spacing: 0.13em !important;
+  }
+
+  #menu .overflow-x-auto:has(.tab-btn) {
+    margin-bottom: 3.5rem !important;
+  }
+
+  #menu .tab-btn {
+    padding: 1rem 1.65rem !important;
+    font-size: clamp(0.66rem, 0.66vw, 0.8rem) !important;
+    letter-spacing: 0.14em !important;
+    line-height: 1.2 !important;
+  }
+
+  #menu .tab-content > p:first-child {
+    font-size: clamp(0.76rem, 0.74vw, 0.9rem) !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 2.35rem !important;
+  }
+
+  #menu .tab-content > .grid {
+    gap: 0 clamp(2.25rem, 3vw, 3.5rem) !important;
+  }
+
+  #menu .tab-content > .grid [class*="border-b"] {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+  }
+
+  #menu .tab-content > .grid > div > div > span:first-child {
+    width: 2.15rem !important;
+    font-size: clamp(0.72rem, 0.7vw, 0.84rem) !important;
+    line-height: 1.35 !important;
+  }
+
+  #menu .tab-content > .grid p.font-serif {
+    font-size: clamp(1rem, 1vw, 1.2rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  #menu .tab-content > .grid p.font-sans {
+    font-size: clamp(0.76rem, 0.74vw, 0.9rem) !important;
+    line-height: 1.48 !important;
+  }
+
+  #menu .tab-content > .grid span.whitespace-nowrap {
+    font-size: clamp(0.78rem, 0.78vw, 0.94rem) !important;
+    line-height: 1.35 !important;
+  }
+
+  #menu .tab-content > .grid .mb-4 p.uppercase {
+    font-size: clamp(0.7rem, 0.68vw, 0.82rem) !important;
+    letter-spacing: 0.24em !important;
+  }
+
+  #menu .tab-content > .grid p.text-brand-cream\/80 {
+    font-size: clamp(0.86rem, 0.84vw, 1rem) !important;
+    line-height: 1.58 !important;
+  }
+
+  #menu .tab-content > .grid span.text-brand-muted\/60 {
+    font-size: clamp(0.72rem, 0.7vw, 0.84rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  #menu > .max-w-6xl > p:last-child {
+    font-size: clamp(0.72rem, 0.7vw, 0.84rem) !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.08em !important;
+  }
+
   #contact .contact-info-col > div > p:first-child,
   #contact .contact-map-col .mt-6 > p:first-child {
     font-size: clamp(0.68rem, 0.66vw, 0.82rem) !important;

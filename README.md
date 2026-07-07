@@ -80,7 +80,7 @@ Do not keep “backup code” inside production files. Use version control for h
 <link rel="stylesheet" href="css/base.css?v=13">
 <link rel="stylesheet" href="css/layout.css?v=27">
 <link rel="stylesheet" href="css/components.css?v=44">
-<link rel="stylesheet" href="css/responsive.css?v=54">
+<link rel="stylesheet" href="css/responsive.css?v=55">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=5">
 <script defer src="js/script.js?v=46"></script>
 ```
