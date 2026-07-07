@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Layout
+   Structural helpers and section-level sizing.
+   ========================================================================== */
+
+.hero-title-size {
+  font-size: clamp(3.6rem, 9vw, 8rem);
+}
+
+.text-italic-custom {
+  font-style: italic;
+}
+
+.aspect-3-4 {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-2-1 {
+  aspect-ratio: 2 / 1;
+}
+
+.signature-media-min-height {
+  min-height: 750px;
+}
+
+.menu-section-bg {
+  background-color: var(--brand-surface);
+}
+
+.gallery-section-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      var(--brand-dark) 0%,
+      rgba(13, 5, 0, 0.94) 18%,
+      rgba(26, 10, 0, 0.74) 48%,
+      rgba(13, 5, 0, 0.94) 84%,
+      var(--brand-dark) 100%),
+    radial-gradient(ellipse 58% 38% at 50% 42%, rgba(192, 94, 53, 0.10) 0%, rgba(13, 5, 0, 0) 68%),
+    var(--brand-surface);
+}
+
+.contact-section-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      var(--brand-dark) 0%,
+      rgba(13, 5, 0, 0.90) 16%,
+      rgba(26, 10, 0, 0.74) 50%,
+      rgba(13, 5, 0, 0.92) 86%,
+      var(--brand-dark) 100%),
+    radial-gradient(ellipse 62% 42% at 50% 50%, rgba(192, 94, 53, 0.12) 0%, rgba(13, 5, 0, 0) 70%),
+    var(--brand-surface);
+}
+
+/* Holzpalette is now only used in the Kontakt section. It is sized independently
+   and softly masked so its PNG edges do not form a hard rectangle. */
+.contact-section-bg::before {
+  content: '';
+  position: absolute;
+  inset: -4%;
+  background: url("../assets/images/Holzpalette.png") center center / min(2100px, 150vw) auto no-repeat;
+  opacity: 0.58;
+  filter: saturate(0.88) brightness(0.78) contrast(0.94);
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 13%, #000 87%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 13%, #000 87%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.contact-section-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, var(--brand-dark) 0%, rgba(13, 5, 0, 0) 22%, rgba(13, 5, 0, 0) 76%, var(--brand-dark) 100%),
+    linear-gradient(90deg, rgba(13, 5, 0, 0.76), rgba(13, 5, 0, 0.12) 48%, rgba(13, 5, 0, 0.76)),
+    rgba(26, 10, 0, 0.18);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-section-bg > .max-w-6xl {
+  position: relative;
+  z-index: 2;
+}
+
+/* Defer render of off-screen sections until they approach the viewport.
+   Only applied to gallery and contact — the two furthest from the fold.
+   contain-intrinsic-block-size is a rough estimate; browsers clamp layout. */
+#gallery {
+  content-visibility: auto;
+  contain-intrinsic-block-size: 900px;
+}
+
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-block-size: 750px;
+}
+
+@media (min-width: 768px) {
+  #contact {
+    content-visibility: visible;
+    contain-intrinsic-block-size: auto;
+  }
+}
+
+/* Keep the fireplace frame stable while switching tabs. */
+#menu .tab-content:not(.hidden) {
+  min-height: 1180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

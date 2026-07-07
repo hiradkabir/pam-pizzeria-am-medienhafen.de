@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Gallery carousel
+   Touch/trackpad scrolling, mandatory snapping and native CSS controls where
+   supported. A lightweight script continuously weights every card by its
+   distance from the carousel center so the focused image is larger and brighter.
+   No carousel library is used.
+   ========================================================================== */
+
+#gallery {
+  overflow: hidden;
+}
+
+#gallery .gallery-mobile-carousel {
+  --gallery-gap: clamp(0.75rem, 2vw, 1.15rem);
+  --gallery-card-width: min(72vw, 42rem);
+  display: flex !important;
+  grid-template-columns: none !important;
+  grid-auto-flow: initial !important;
+  gap: var(--gallery-gap) !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 max(0px, calc((100% - var(--gallery-card-width)) / 2)) 1rem !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-padding-inline: max(0px, calc((100% - var(--gallery-card-width)) / 2));
+  scroll-snap-type: x mandatory !important;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-marker-group: after;
+}
+
+#gallery .gallery-mobile-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+#gallery .gallery-mobile-carousel > .gallery-item,
+#gallery .gallery-mobile-carousel > .gallery-item:first-child,
+#gallery .gallery-mobile-carousel > .gallery-item.col-span-2,
+#gallery .gallery-mobile-carousel > .gallery-item.row-span-2,
+#gallery .gallery-mobile-carousel > .mobile-gallery-terasse {
+  --gallery-focus: 0;
+  --gallery-scale: calc(0.82 + (var(--gallery-focus) * 0.18));
+  --gallery-opacity: calc(0.52 + (var(--gallery-focus) * 0.48));
+  --gallery-brightness: calc(0.72 + (var(--gallery-focus) * 0.30));
+  --gallery-saturation: calc(0.76 + (var(--gallery-focus) * 0.34));
+
+  position: relative !important;
+  display: block !important;
+  flex: 0 0 var(--gallery-card-width) !important;
+  width: var(--gallery-card-width) !important;
+  min-width: var(--gallery-card-width) !important;
+  max-width: var(--gallery-card-width) !important;
+  height: auto !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  order: initial !important;
+  aspect-ratio: 16 / 10 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(192, 94, 53, calc(0.10 + (var(--gallery-focus) * 0.38))) !important;
+  border-radius: 1rem !important;
+  background: var(--brand-surface) !important;
+  box-shadow:
+    0 calc(0.55rem + (var(--gallery-focus) * 0.85rem))
+      calc(1.5rem + (var(--gallery-focus) * 2.5rem))
+      rgba(0, 0, 0, calc(0.24 + (var(--gallery-focus) * 0.26))),
+    inset 0 1px 0 rgba(255, 240, 215, calc(0.03 + (var(--gallery-focus) * 0.08))) !important;
+  opacity: var(--gallery-opacity);
+  scroll-snap-align: center !important;
+  scroll-snap-stop: always;
+  isolation: isolate;
+  transform: scale(var(--gallery-scale)) !important;
+  transform-origin: center center;
+  transition:
+    border-color 0.14s linear,
+    box-shadow 0.14s linear,
+    opacity 0.14s linear,
+    transform 0.14s linear !important;
+  will-change: transform, opacity;
+}
+
+#gallery .gallery-mobile-carousel > .gallery-item.is-gallery-focus {
+  z-index: 5 !important;
+  border-color: rgba(239, 68, 68, 0.72) !important;
+  box-shadow:
+    0 1.65rem 4.4rem rgba(0, 0, 0, 0.56),
+    0 0 0 1px rgba(239, 68, 68, 0.18),
+    0 0 2.2rem rgba(185, 28, 28, 0.20),
+    inset 0 1px 0 rgba(255, 240, 215, 0.12) !important;
+}
+
+#gallery .gallery-mobile-carousel > .gallery-item:hover,
+#gallery .gallery-mobile-carousel > .gallery-item:focus-within {
+  border-color: rgba(239, 68, 68, 0.74) !important;
+}
+
+#gallery .gallery-mobile-carousel .gallery-item img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: scale(calc(1.015 + (var(--gallery-focus) * 0.035))) !important;
+  filter:
+    contrast(calc(0.94 + (var(--gallery-focus) * 0.12)))
+    saturate(var(--gallery-saturation))
+    brightness(var(--gallery-brightness)) !important;
+  transition:
+    transform 0.16s linear,
+    filter 0.16s linear !important;
+}
+
+#gallery .gallery-mobile-carousel .gallery-item:hover img,
+#gallery .gallery-mobile-carousel .gallery-item:focus-within img {
+  transform: scale(calc(1.035 + (var(--gallery-focus) * 0.035))) !important;
+}
+
+#gallery .gallery-mobile-carousel .gallery-item::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13, 5, 0, calc(0.18 - (var(--gallery-focus) * 0.15))) 30%,
+      rgba(13, 5, 0, calc(0.74 - (var(--gallery-focus) * 0.34))) 100%
+    ),
+    linear-gradient(135deg, rgba(255, 235, 200, calc(0.03 + (var(--gallery-focus) * 0.10))), transparent 36%) !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+#gallery .gallery-mobile-carousel .gallery-item::after {
+  box-shadow:
+    inset 0 0 4rem 0.8rem rgba(13, 5, 0, calc(0.58 - (var(--gallery-focus) * 0.34))) !important;
+}
+
+#gallery .gallery-mobile-carousel::scroll-button(left),
+#gallery .gallery-mobile-carousel::scroll-button(right) {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  border: 1px solid rgba(254, 242, 242, 0.18);
+  border-radius: 999px;
+  background: rgba(13, 5, 0, 0.84);
+  color: var(--brand-cream);
+  box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.42);
+  font: 400 1.9rem/1 Jost, sans-serif;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  translate: 0 -50%;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+#gallery .gallery-mobile-carousel::scroll-button(left) {
+  content: '‹';
+  left: clamp(0.45rem, 2vw, 1.25rem);
+}
+
+#gallery .gallery-mobile-carousel::scroll-button(right) {
+  content: '›';
+  right: clamp(0.45rem, 2vw, 1.25rem);
+}
+
+#gallery .gallery-mobile-carousel::scroll-button(left):hover,
+#gallery .gallery-mobile-carousel::scroll-button(right):hover,
+#gallery .gallery-mobile-carousel::scroll-button(left):focus-visible,
+#gallery .gallery-mobile-carousel::scroll-button(right):focus-visible {
+  border-color: rgba(217, 137, 90, 0.72);
+  background: rgba(45, 18, 0, 0.94);
+  color: var(--brand-gold-light);
+  outline: none;
+  transform: scale(1.05);
+}
+
+#gallery .gallery-mobile-carousel::scroll-button(left):disabled,
+#gallery .gallery-mobile-carousel::scroll-button(right):disabled {
+  opacity: 0.32;
+  cursor: default;
+  transform: none;
+}
+
+#gallery .gallery-mobile-carousel::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 1rem;
+  margin-top: 0.75rem;
+}
+
+#gallery .gallery-mobile-carousel > .gallery-item::scroll-marker {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(196, 168, 130, 0.34);
+  cursor: pointer;
+  transition: width 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+#gallery .gallery-mobile-carousel > .gallery-item::scroll-marker:target-current {
+  width: 1.7rem;
+  background: var(--brand-gold-light);
+}
+
+@media (max-width: 767px) {
+  #gallery {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #gallery > .max-w-6xl {
+    max-width: none !important;
+  }
+
+  #gallery .text-center {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  #gallery .gallery-mobile-carousel {
+    --gallery-card-width: min(82vw, 25rem);
+    --gallery-gap: 0.85rem;
+    padding-bottom: 0.75rem !important;
+  }
+
+  #gallery .gallery-mobile-carousel > .gallery-item,
+  #gallery .gallery-mobile-carousel > .gallery-item:first-child,
+  #gallery .gallery-mobile-carousel > .gallery-item.col-span-2,
+  #gallery .gallery-mobile-carousel > .gallery-item.row-span-2,
+  #gallery .gallery-mobile-carousel > .mobile-gallery-terasse {
+    aspect-ratio: 4 / 5 !important;
+    border-radius: 0.9rem !important;
+  }
+
+  #gallery .gallery-mobile-carousel::scroll-button(left),
+  #gallery .gallery-mobile-carousel::scroll-button(right) {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gallery .gallery-mobile-carousel {
+    --gallery-card-width: min(58vw, 43rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #gallery .gallery-mobile-carousel {
+    scroll-behavior: auto;
+  }
+
+  #gallery .gallery-mobile-carousel > .gallery-item {
+    --gallery-focus: 1 !important;
+    opacity: 1;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  #gallery .gallery-mobile-carousel .gallery-item,
+  #gallery .gallery-mobile-carousel .gallery-item img,
+  #gallery .gallery-mobile-carousel::scroll-button(left),
+  #gallery .gallery-mobile-carousel::scroll-button(right),
+  #gallery .gallery-mobile-carousel > .gallery-item::scroll-marker {
+    transition: none !important;
+  }
+}

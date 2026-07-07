@@ -1,0 +1,238 @@
+{
+  "version": 2,
+  "generated": "2026-05-29",
+  "project": "Pizzeria am Medienhafen",
+  "northStar": "The Corner Table — a regular's seat, candlelight on worn wood. The site doesn't perform warmth; it exists in it.",
+
+  "colorMeta": {
+    "strategy": "drenched",
+    "narrative": "Dark-dominant, single activating accent. Smoke is the ground. Char and Soot layer above. Ember is the one moment of heat — used sparingly, always alone. Crust and Amber form a secondary warm arc for navigation and secondary emphasis. Light values appear only as text or overlays on dark surfaces.",
+    "tokens": {
+      "Ember": {
+        "hex": "#DC2626",
+        "oklch": "oklch(0.55 0.22 25)",
+        "cssVar": "--brand-red",
+        "role": "primary",
+        "ramp": {
+          "950": "oklch(0.20 0.08 25)",
+          "900": "oklch(0.30 0.13 25)",
+          "700": "oklch(0.45 0.19 25)",
+          "500": "oklch(0.55 0.22 25)",
+          "300": "oklch(0.68 0.15 25)",
+          "100": "oklch(0.92 0.04 25)"
+        }
+      },
+      "Crust": {
+        "hex": "#C05E35",
+        "oklch": "oklch(0.55 0.13 42)",
+        "cssVar": "--brand-gold",
+        "role": "accent",
+        "ramp": {
+          "950": "oklch(0.18 0.05 42)",
+          "900": "oklch(0.28 0.08 42)",
+          "700": "oklch(0.42 0.11 42)",
+          "500": "oklch(0.55 0.13 42)",
+          "300": "oklch(0.69 0.09 42)",
+          "100": "oklch(0.93 0.02 42)"
+        }
+      },
+      "Amber": {
+        "hex": "#D9895A",
+        "oklch": "oklch(0.67 0.11 45)",
+        "cssVar": "--brand-gold-light",
+        "role": "accent"
+      },
+      "Dough": {
+        "hex": "#FEF2F2",
+        "oklch": "oklch(0.98 0.01 20)",
+        "cssVar": "--brand-cream",
+        "role": "surface"
+      },
+      "Linen": {
+        "hex": "#F5E6D0",
+        "oklch": "oklch(0.93 0.03 55)",
+        "cssVar": "--brand-warm",
+        "role": "surface"
+      },
+      "Smoke": {
+        "hex": "#0D0500",
+        "oklch": "oklch(0.09 0.02 30)",
+        "cssVar": "--brand-dark",
+        "role": "text"
+      },
+      "Char": {
+        "hex": "#1A0A00",
+        "oklch": "oklch(0.14 0.03 35)",
+        "cssVar": "--brand-surface",
+        "role": "surface"
+      },
+      "Soot": {
+        "hex": "#2D1200",
+        "oklch": "oklch(0.19 0.04 35)",
+        "cssVar": "--brand-surface-2",
+        "role": "surface"
+      },
+      "Ash": {
+        "hex": "#C4A882",
+        "oklch": "oklch(0.72 0.05 65)",
+        "cssVar": "--brand-muted",
+        "role": "muted"
+      }
+    },
+    "pairings": [
+      { "text": "Dough", "surface": "Char", "note": "Primary text on dark — heading and body" },
+      { "text": "Dough", "surface": "Smoke", "note": "Maximum contrast — hero and nav text" },
+      { "text": "Linen", "surface": "Char", "note": "Secondary warm text on dark surface" },
+      { "text": "Ash", "surface": "Soot", "note": "Muted text on card backgrounds" },
+      { "text": "Dough", "surface": "Ember", "note": "CTA label on red button" },
+      { "text": "Amber", "surface": "transparent", "note": "Ghost button label (hover state)" }
+    ]
+  },
+
+  "typographyMeta": {
+    "narrative": "Two voices with separated roles. Bodoni Moda italic for atmosphere and display. Jost for information — all-caps tracked labels and readable body. The roles never swap.",
+    "display": {
+      "family": "Bodoni Moda",
+      "googleFontsSpec": "Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,600;1,6..96,700",
+      "roles": ["hero heading", "section heading"],
+      "style": "italic",
+      "weights": [400, 600, 700],
+      "opticalSizing": true,
+      "rule": "Only on dark surfaces. Never for body text, labels, or CTAs."
+    },
+    "sans": {
+      "family": "Jost",
+      "googleFontsSpec": "Jost:wght@300;400;500;600",
+      "roles": ["body", "label-caps", "CTA", "tab", "nav"],
+      "weights": [300, 400, 500, 600],
+      "labelCaps": {
+        "fontSize": "0.6875rem",
+        "fontWeight": 500,
+        "letterSpacing": "0.10em to 0.15em",
+        "textTransform": "uppercase"
+      }
+    },
+    "scale": {
+      "display-hero": {
+        "clamp": "clamp(3.6rem, 9vw, 8rem)",
+        "mobile": "clamp(3.42rem, 8.55vw, 7.6rem)",
+        "lineHeight": 1.0
+      },
+      "display-section": {
+        "clamp": "clamp(2.4rem, 5vw, 4rem)",
+        "lineHeight": 1.1
+      },
+      "label-caps": {
+        "size": "0.6875rem",
+        "letterSpacing": "0.15em"
+      },
+      "body": {
+        "size": "1rem",
+        "base": "19px",
+        "lineHeight": 1.6,
+        "maxWidth": "72ch"
+      },
+      "body-small": {
+        "size": "0.875rem",
+        "lineHeight": 1.5
+      }
+    }
+  },
+
+  "shadows": {
+    "narrative": "Warm-tinted, multi-layer. Never cool-grey. Glow over stroke for depth. Ambient shadows use Smoke-tinted rgba; glow layers use Ember or Crust at low opacity.",
+    "tokens": {
+      "ember-cta-glow": "0 4px 14px rgba(220,38,38,0.35), 0 2px 6px rgba(220,38,38,0.2)",
+      "fab-glow": "0 4px 24px rgba(220,38,38,0.45), 0 8px 32px rgba(220,38,38,0.25), inset 0 1px 0 rgba(255,255,255,0.1)",
+      "gallery-card-hover": "0 20px 60px rgba(13,5,0,0.7), 0 8px 24px rgba(13,5,0,0.5), 0 2px 8px rgba(192,94,53,0.12)",
+      "contact-card-hover": "0 12px 40px rgba(13,5,0,0.6), 0 4px 16px rgba(13,5,0,0.4)",
+      "back-to-top-rim": "0 0 0 1px rgba(192,94,53,0.3), 0 4px 20px rgba(13,5,0,0.5), inset 0 1px 0 rgba(192,94,53,0.2)"
+    }
+  },
+
+  "motion": {
+    "narrative": "Ease-out-expo universally. Slow settle, fast start. No bounce, no elastic, no spring. Spatial transforms: 0.6–0.9s. Color/opacity: 0.25–0.35s. Scroll reveal: 0.75s with stagger.",
+    "easing": {
+      "default": "cubic-bezier(.16, 1, .3, 1)",
+      "name": "ease-out-expo",
+      "usage": "All transitions with spatial movement (transforms, perspective, scale)"
+    },
+    "durations": {
+      "fast": "200ms",
+      "base": "350ms",
+      "slow": "700ms",
+      "reveal": "750ms",
+      "hero-fade": "900ms"
+    },
+    "keyframes": {
+      "fadeInUp": {
+        "from": { "opacity": "0", "transform": "translateY(32px)" },
+        "to": { "opacity": "1", "transform": "translateY(0)" },
+        "duration": "0.9s",
+        "easing": "cubic-bezier(.16, 1, .3, 1)",
+        "staggerDelays": ["0.15s", "0.35s", "0.55s", "0.75s"]
+      },
+      "reveal": {
+        "trigger": ".reveal.visible",
+        "from": { "opacity": "0", "transform": "translateY(36px)" },
+        "to": { "opacity": "1", "transform": "translateY(0)" },
+        "duration": "0.75s",
+        "easing": "cubic-bezier(.16, 1, .3, 1)"
+      }
+    },
+    "reducedMotion": "Strip all transforms. Retain opacity transitions at 200ms max."
+  },
+
+  "breakpoints": {
+    "mobile": "< 768px",
+    "tablet": "768px – 1024px",
+    "desktop": "> 1024px",
+    "notes": {
+      "mobile": "Stack layout. Hero title uses mobile clamp. Fireplace video hidden. Menu tabs 2-column grid. Gallery 2-column 1:1 grid. FAB visible. Section padding 4rem.",
+      "desktop": "Fireplace video visible. Gallery multi-column. FAB hidden. Section padding 6rem."
+    }
+  },
+
+  "components": {
+    "primary-cta": {
+      "description": "Primary call-to-action. Ember red, sharp corners, all-caps Jost. The site's strongest action signal.",
+      "html": "<button class=\"cta-primary\">Bestellen</button>",
+      "css": ".cta-primary {\n  background: #DC2626;\n  color: #FEF2F2;\n  border: none;\n  border-radius: 0;\n  padding: 0.625rem 1.25rem;\n  font-family: 'Jost', sans-serif;\n  font-size: 0.6875rem;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: background 250ms cubic-bezier(.16,1,.3,1);\n}\n.cta-primary:hover {\n  background: #b91c1c;\n}\n.cta-primary:focus-visible {\n  outline: 2px solid #D9895A;\n  outline-offset: 3px;\n}"
+    },
+    "ghost-button": {
+      "description": "Secondary action. Transparent with Crust border, Amber text on hover.",
+      "html": "<button class=\"cta-ghost\">Speisekarte</button>",
+      "css": ".cta-ghost {\n  background: transparent;\n  color: #C05E35;\n  border: 1px solid #C05E35;\n  border-radius: 0;\n  padding: 0.625rem 1.25rem;\n  font-family: 'Jost', sans-serif;\n  font-size: 0.6875rem;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: color 250ms cubic-bezier(.16,1,.3,1), border-color 250ms cubic-bezier(.16,1,.3,1);\n}\n.cta-ghost:hover {\n  color: #D9895A;\n  border-color: #D9895A;\n}\n.cta-ghost:focus-visible {\n  outline: 2px solid #D9895A;\n  outline-offset: 3px;\n}"
+    },
+    "menu-tab": {
+      "description": "Menu category tab. Underline indicator on active, never a background fill.",
+      "html": "<button class=\"menu-tab\" aria-selected=\"true\">Pizzen</button>",
+      "css": ".menu-tab {\n  background: transparent;\n  border: none;\n  border-bottom: 2px solid transparent;\n  color: #C4A882;\n  padding: 0.5rem 0;\n  font-family: 'Jost', sans-serif;\n  font-size: 0.6875rem;\n  font-weight: 500;\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: color 250ms cubic-bezier(.16,1,.3,1), border-color 250ms cubic-bezier(.16,1,.3,1);\n}\n.menu-tab[aria-selected=\"true\"],\n.menu-tab:hover {\n  color: #D9895A;\n  border-bottom-color: #D9895A;\n}\n.menu-tab:focus-visible {\n  outline: 2px solid #D9895A;\n  outline-offset: 3px;\n}"
+    },
+    "gallery-card": {
+      "description": "Gallery image card with 3D perspective hover. Perspective on parent container.",
+      "html": "<figure class=\"gallery-card\">\n  <img src=\"photo.jpg\" alt=\"\" loading=\"lazy\">\n</figure>",
+      "css": ".gallery-grid {\n  perspective: 1400px;\n}\n.gallery-card {\n  margin: 0;\n  overflow: hidden;\n  aspect-ratio: 1 / 1;\n  cursor: pointer;\n  transition: transform 0.7s cubic-bezier(.16,1,.3,1), box-shadow 0.7s cubic-bezier(.16,1,.3,1);\n  transform-style: preserve-3d;\n}\n.gallery-card:hover {\n  transform: translateY(-8px) rotateX(1.6deg) rotateY(-1.6deg) scale(1.014);\n  box-shadow: 0 20px 60px rgba(13,5,0,0.7), 0 8px 24px rgba(13,5,0,0.5);\n}\n.gallery-card img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  transition: transform 0.7s cubic-bezier(.16,1,.3,1);\n  transform: translateZ(0);\n}\n.gallery-card:hover img {\n  transform: scale(1.076) translateZ(14px);\n}\n@media (prefers-reduced-motion: reduce) {\n  .gallery-card:hover { transform: none; }\n  .gallery-card:hover img { transform: none; }\n}"
+    },
+    "contact-card": {
+      "description": "Contact info card with warm 3D hover lift.",
+      "html": "<div class=\"contact-card\">\n  <!-- content -->\n</div>",
+      "css": ".contact-card {\n  background: #2D1200;\n  padding: 1.5rem;\n  transition: transform 0.6s cubic-bezier(.16,1,.3,1), box-shadow 0.6s cubic-bezier(.16,1,.3,1);\n  transform-style: preserve-3d;\n}\n.contact-card:hover {\n  transform: translateY(-5px) rotateX(1deg) rotateY(-0.8deg) scale(1.006);\n  box-shadow: 0 12px 40px rgba(13,5,0,0.6), 0 4px 16px rgba(13,5,0,0.4);\n}\n@media (prefers-reduced-motion: reduce) {\n  .contact-card:hover { transform: none; }\n}"
+    },
+    "mobile-fab": {
+      "description": "Fixed mobile call-to-action button. Visible below 768px only.",
+      "html": "<button class=\"mobile-fab\" aria-label=\"Jetzt bestellen\">\n  <svg><!-- phone icon --></svg>\n</button>",
+      "css": ".mobile-fab {\n  position: fixed;\n  bottom: 1.5rem;\n  right: 1.5rem;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  background: #DC2626;\n  border: none;\n  color: #FEF2F2;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-shadow: 0 4px 24px rgba(220,38,38,0.45), 0 8px 32px rgba(220,38,38,0.25), inset 0 1px 0 rgba(255,255,255,0.1);\n  transition: transform 0.35s cubic-bezier(.16,1,.3,1), box-shadow 0.35s cubic-bezier(.16,1,.3,1);\n  z-index: 50;\n}\n.mobile-fab:hover {\n  transform: translateY(-2px) scale(1.04);\n}\n.mobile-fab:focus-visible {\n  outline: 2px solid #D9895A;\n  outline-offset: 3px;\n}\n@media (min-width: 768px) { .mobile-fab { display: none; } }"
+    },
+    "back-to-top": {
+      "description": "Scroll-to-top button with gold rim glow and backdrop blur.",
+      "html": "<button class=\"back-to-top\" aria-label=\"Zurück nach oben\">\n  <svg><!-- arrow icon --></svg>\n</button>",
+      "css": ".back-to-top {\n  border-radius: 999px;\n  background: radial-gradient(circle, rgba(192,94,53,0.15), transparent 70%);\n  border: 1px solid rgba(192,94,53,0.3);\n  backdrop-filter: blur(8px);\n  color: #D9895A;\n  cursor: pointer;\n  padding: 0.75rem;\n  box-shadow: 0 0 0 1px rgba(192,94,53,0.15), 0 4px 20px rgba(13,5,0,0.5), inset 0 1px 0 rgba(192,94,53,0.2);\n  transition: opacity 0.35s cubic-bezier(.16,1,.3,1), transform 0.35s cubic-bezier(.16,1,.3,1);\n}\n.back-to-top:focus-visible {\n  outline: 2px solid #D9895A;\n  outline-offset: 3px;\n}"
+    },
+    "opening-hours-row": {
+      "description": "Single row in the opening hours table. Rounded, warm-dark background.",
+      "html": "<div class=\"hours-row\">\n  <span class=\"hours-day\">Montag – Freitag</span>\n  <span class=\"hours-time\">12:00 – 22:00</span>\n</div>",
+      "css": ".hours-row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 0.55rem;\n  padding: 0.5rem 1rem;\n  background: rgba(45,18,0,0.6);\n  color: #F5E6D0;\n  font-family: 'Jost', sans-serif;\n  font-size: 0.875rem;\n}\n.hours-day {\n  color: #C4A882;\n}\n.hours-time {\n  color: #F5E6D0;\n  font-weight: 500;\n}"
+    }
+  }
+}
