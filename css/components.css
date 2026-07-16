@@ -13,6 +13,126 @@
   );
 }
 
+/* Static Google rating band. The score is maintained in the HTML; the entire
+   component links to Google so visitors can inspect the current details. */
+.google-rating-strip {
+  position: relative;
+  z-index: 1;
+  padding-block: 0;
+  background: var(--brand-surface);
+  border-block: 1px solid rgba(192, 94, 53, 0.24);
+}
+
+.google-rating-strip__link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 3.75rem);
+  width: min(100%, 68rem);
+  min-height: 5.5rem;
+  margin-inline: auto;
+  padding: 0.9rem 2rem;
+  color: var(--brand-cream);
+  text-decoration: none;
+  transition: background-color .25s ease;
+}
+
+.google-rating-strip__link:hover {
+  background: rgba(192, 94, 53, 0.055);
+}
+
+.google-rating-strip__link:focus-visible {
+  outline: 2px solid var(--brand-gold-light);
+  outline-offset: -4px;
+}
+
+.google-rating-strip__source {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  line-height: 1.1;
+}
+
+.google-rating-strip__eyebrow {
+  color: var(--brand-gold-light);
+  font-family: Jost, sans-serif;
+  font-size: 0.61rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.google-rating-strip__label {
+  color: var(--brand-muted);
+  font-family: Jost, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.google-rating-strip__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  white-space: nowrap;
+}
+
+.google-rating-strip__rating strong {
+  color: var(--brand-cream);
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(1.75rem, 2.1vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.google-rating-strip__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.14rem;
+  color: var(--brand-gold-light);
+}
+
+.google-rating-strip__stars svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
+.google-rating-strip__star-outline {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.google-rating-strip__out-of {
+  color: var(--brand-muted);
+  font-family: Jost, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+}
+
+.google-rating-strip__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0.6rem;
+  color: var(--brand-gold-light);
+  font-family: Jost, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.google-rating-strip__cta svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  transition: transform .25s ease;
+}
+
+.google-rating-strip__link:hover .google-rating-strip__cta svg {
+  transform: translateX(0.2rem);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

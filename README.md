@@ -90,8 +90,8 @@ Do not keep “backup code” inside production files. Use version control for h
 <link rel="stylesheet" href="css/tailwind.css?v=2">
 <link rel="stylesheet" href="css/base.css?v=14">
 <link rel="stylesheet" href="css/layout.css?v=28">
-<link rel="stylesheet" href="css/components.css?v=45">
-<link rel="stylesheet" href="css/responsive.css?v=60">
+<link rel="stylesheet" href="css/components.css?v=46">
+<link rel="stylesheet" href="css/responsive.css?v=61">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
 <script defer src="js/script.js?v=48"></script>
 ```
@@ -190,6 +190,7 @@ Reusable visual components and interaction states:
 
 ```txt
 hero overlay
+static Google rating strip with outbound Google Maps link
 initial fade-up animation
 CSS view-timeline reveal animation
 CSS view-timeline divider drawing
@@ -221,6 +222,7 @@ mobile hamburger menu with black dropdown
 mobile call button visibility at top
 visually hidden mobile hero heading for semantic continuity
 mobile hero video sizing
+compact mobile Google rating strip
 mobile Calzone video keeps its landscape aspect ratio so the complete dish remains visible
 mobile Calzone description starts directly below the media with compact spacing
 mobile fireplace hiding
@@ -283,6 +285,7 @@ The mobile hamburger menu is enabled on mobile and opens a black dropdown with S
 
 ```txt
 Hero
+Static Google rating strip (4,4 / 5, linked to Google)
 Highlights bar
 Signature dish / Calzone
 Speisekarte
