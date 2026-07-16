@@ -178,7 +178,7 @@ video: assets/videos/Calzone.mp4
 poster/fallback: assets/images/Calzone.jpg
 ```
 
-On mobile, responsive rules control the video size and crop.
+On mobile, the video remains full-bleed with `object-fit: cover` and no inset scaling, so it fills the complete media column.
 
 ### Speisekarte
 

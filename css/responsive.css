@@ -134,7 +134,7 @@
     visibility: visible !important;
     object-fit: cover !important;
     object-position: center center !important;
-    transform: scale(0.92) !important;
+    transform: none !important;
     transform-origin: center center !important;
     background-color: var(--brand-surface-2);
   }
@@ -262,10 +262,6 @@
 @media (max-width: 420px) {
   .signature-media-min-height {
     min-height: clamp(330px, 61vh, 540px) !important;
-  }
-
-  .signature-media-min-height .signature-video {
-    transform: scale(0.87) !important;
   }
 
   #menu .overflow-x-auto > .flex,
