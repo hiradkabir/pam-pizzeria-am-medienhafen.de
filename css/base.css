@@ -4,6 +4,7 @@
    ========================================================================== */
 
 :root {
+  color-scheme: dark;
   --brand-red: #DC2626;
   --brand-gold: #C05E35;
   --brand-gold-light: #D9895A;
@@ -99,4 +100,3 @@ body {
 .to-brand-surface-2 {
   --tw-gradient-to: var(--brand-surface-2) var(--tw-gradient-to-position);
 }
-

@@ -42,10 +42,6 @@
   animation-delay: .55s;
 }
 
-.delay-4 {
-  animation-delay: .75s;
-}
-
 /* Scroll-driven reveal.
    Fallback first: content remains fully visible in browsers that do not support
    CSS view timelines. The effect uses only opacity and translate; content is
@@ -83,7 +79,6 @@
     animation-range: entry 0% entry 18%;
   }
 
-  .menu-card.reveal,
   .gallery-item.reveal {
     animation-range: entry 0% entry 20%;
   }
@@ -127,20 +122,14 @@
   margin: 0 auto;
 }
 
-.menu-card {
-  border: 1px solid rgba(192, 94, 53, .12);
-  transition: border-color .25s, transform .25s, box-shadow .25s;
-}
-
-.menu-card:hover {
-  border-color: rgba(192, 94, 53, .45);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
-}
-
 .tab-btn.active {
   color: var(--brand-gold);
   border-bottom-color: var(--brand-gold);
+}
+
+.tab-btn:focus-visible {
+  outline: 2px solid var(--brand-gold-light);
+  outline-offset: -3px;
 }
 
 .tab-content {
@@ -167,6 +156,12 @@
 
 .tab-content.tab-entering {
   animation: tabFadeIn .9s cubic-bezier(.16, 1, .3, 1);
+}
+
+#modal-impressum-close:focus-visible,
+#modal-datenschutz-close:focus-visible {
+  outline: 2px solid var(--brand-gold-light);
+  outline-offset: 4px;
 }
 
 .gallery-item {
@@ -768,10 +763,8 @@
 }
 
 /* ==========================================================================
-   Motion pass (impeccable animate)
-   Additions only. New selectors that intentionally avoid the duplicated
-   component block in responsive.css (its first ~693 lines mirror this file).
-   Every addition is compositor-only and guarded for reduced motion below.
+   Motion refinements
+   Compositor-only additions guarded for reduced motion below.
    ========================================================================== */
 
 /* Cinematic hero: an ultra-slow Ken Burns drift, the page's single signature

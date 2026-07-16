@@ -65,7 +65,7 @@
   content: '';
   position: absolute;
   inset: -4%;
-  background: url("../assets/images/Holzpalette.png") center center / min(2100px, 150vw) auto no-repeat;
+  background: url("../assets/images/Holzpalette.jpg") center center / min(2100px, 150vw) auto no-repeat;
   opacity: 0.58;
   filter: saturate(0.88) brightness(0.78) contrast(0.94);
   pointer-events: none;

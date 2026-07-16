@@ -1,10 +1,13 @@
 ---
-version: "1.7"
-generated: "2026-06-29"
+version: "1.8"
+generated: "2026-07-16"
 project: "Pizzeria am Medienhafen"
 register: brand
 source_files:
   - index.html
+  - tailwind.config.js
+  - css/tailwind-input.css
+  - css/tailwind.css
   - css/base.css
   - css/layout.css
   - css/components.css
@@ -46,7 +49,9 @@ a neon food startup
 The design is implemented as a static single-page site.
 
 ```txt
-index.html                 content, section order, media references, modals
+index.html                 content, SEO/Restaurant metadata, section order, media references, modals
+tailwind.config.js         build-time utility theme and content scanning
+css/tailwind.css           generated, locally hosted Tailwind utilities
 css/base.css               brand variables, color fallbacks, browser defaults
 css/layout.css             structural helpers and section backgrounds
 css/components.css         reusable components, CSS view reveals, cards, map and video presentation
@@ -59,7 +64,7 @@ js/script.js               required interaction behavior and video fallback
 
 ## Palette
 
-The color system is defined in `:root` in `css/base.css` and mirrored in the Tailwind CDN config inside `index.html`.
+The color system is defined in `:root` in `css/base.css` and mirrored in `tailwind.config.js`. Tailwind is compiled locally; no runtime CDN is used.
 
 | Token | Hex | Role | Usage |
 |---|---:|---|---|
@@ -145,6 +150,7 @@ Mobile:
 ```txt
 wordmark centered at top
 hamburger menu opens a black dropdown
+mobile menu controls use a subtle warm brand border instead of a neutral grey frame
 menu links ordered Speisekarte, Kontakt, Über uns
 hero video remains visible
 hero overlay is reduced so the video is not hidden
@@ -173,7 +179,7 @@ Calzone video on one side and text on the other.
 
 ```txt
 video: assets/videos/Calzone.mp4
-poster/fallback: assets/images/Calzone.png
+poster/fallback: assets/images/Calzone.jpg
 ```
 
 On mobile, responsive rules control the video size and crop.
@@ -235,6 +241,7 @@ compact spacing without a separate mobile grid
 ```
 
 Browsers without support for the new `::scroll-button()` and `::scroll-marker` pseudo-elements still retain a functional swipe-and-snap carousel.
+The JavaScript dot row is a fallback only and is hidden when native scroll markers are supported.
 
 ### Kontakt
 
@@ -247,7 +254,7 @@ phone/order CTA
 mobile single-column flow
 ```
 
-`Holzpalette.png` is used as a warm background layer in the Kontakt section and is adjusted in `responsive.css` for mobile.
+`Holzpalette.jpg` is used as a warm background layer in the Kontakt section and is adjusted in `responsive.css` for mobile.
 
 ## Components
 
@@ -292,6 +299,8 @@ uses custom frame-by-frame scroll animation
 uppercase Jost
 muted default
 brand-gold active state
+ARIA tab/tabpanel semantics
+Arrow Left/Right, Home and End keyboard navigation
 desktop row
 mobile 2 × 3 grid
 ```

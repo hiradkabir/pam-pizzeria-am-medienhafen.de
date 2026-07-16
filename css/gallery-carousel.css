@@ -306,6 +306,14 @@
   }
 }
 
+/* Modern browsers render their own scroll markers. Keep the JavaScript dots
+   strictly as a fallback so visitors never see two indicator rows. */
+@supports selector(::scroll-marker) {
+  .gallery-scroll-indicator {
+    display: none !important;
+  }
+}
+
 @media (min-width: 1200px) {
   #gallery .gallery-mobile-carousel {
     --gallery-card-width: min(58vw, 43rem);

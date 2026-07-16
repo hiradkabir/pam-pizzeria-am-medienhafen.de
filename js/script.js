@@ -158,7 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (galleryTrack) {
       const galleryItems = [...galleryTrack.querySelectorAll(':scope > .gallery-item')];
       const galleryIndicator = document.querySelector('#gallery .gallery-scroll-indicator');
-      const galleryIndicatorDots = galleryIndicator && galleryItems.length > 1
+      const nativeGalleryMarkersSupported = typeof CSS !== 'undefined'
+        && typeof CSS.supports === 'function'
+        && CSS.supports('selector(::scroll-marker)');
+      const galleryIndicatorDots = !nativeGalleryMarkersSupported
+        && galleryIndicator
+        && galleryItems.length > 1
         ? galleryItems.map((_, index) => {
             const dot = document.createElement('span');
             dot.className = 'gallery-scroll-indicator__dot';
@@ -267,43 +272,79 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Menu tabs
+    const tabButtons = [...document.querySelectorAll('.tab-btn')];
+    const tabPanels = [...document.querySelectorAll('.tab-content')];
     let tabSwitchTimeout = null;
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetTab = document.getElementById('tab-' + btn.dataset.tab);
-        const currentTab = document.querySelector('.tab-content:not(.hidden)');
-        if (currentTab === targetTab) return;
 
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    function updateTabState(activeButton) {
+      tabButtons.forEach(button => {
+        const isActive = button === activeButton;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-selected', String(isActive));
+        button.tabIndex = isActive ? 0 : -1;
+      });
+    }
 
-        if (tabSwitchTimeout) clearTimeout(tabSwitchTimeout);
+    function activateTab(button, { focus = false } = {}) {
+      if (!button) return;
 
-        const showNext = () => {
-          document.querySelectorAll('.tab-content').forEach(c => {
-            if (c !== targetTab) {
-              c.classList.add('hidden');
-              c.classList.remove('tab-fading-out', 'tab-entering');
-            }
-          });
-          targetTab.classList.remove('hidden', 'tab-entering');
-          void targetTab.offsetWidth;
-          targetTab.classList.add('tab-entering');
-        };
+      const targetTab = document.getElementById('tab-' + button.dataset.tab);
+      const currentTab = tabPanels.find(panel => !panel.hidden);
+      if (!targetTab) return;
 
-        if (currentTab) {
-          currentTab.classList.add('tab-fading-out');
-          tabSwitchTimeout = setTimeout(showNext, 310);
-        } else {
-          showNext();
-        }
+      if (focus) button.focus();
+
+      if (currentTab === targetTab) {
+        updateTabState(button);
+        return;
+      }
+
+      if (tabSwitchTimeout) clearTimeout(tabSwitchTimeout);
+
+      const showNext = () => {
+        tabPanels.forEach(panel => {
+          if (panel !== targetTab) {
+            panel.hidden = true;
+            panel.classList.add('hidden');
+            panel.classList.remove('tab-fading-out', 'tab-entering');
+          }
+        });
+
+        targetTab.hidden = false;
+        targetTab.classList.remove('hidden', 'tab-entering');
+        void targetTab.offsetWidth;
+        targetTab.classList.add('tab-entering');
+        updateTabState(button);
+      };
+
+      if (currentTab) {
+        currentTab.classList.add('tab-fading-out');
+        tabSwitchTimeout = setTimeout(showNext, 310);
+      } else {
+        showNext();
+      }
+    }
+
+    tabButtons.forEach((button, index) => {
+      button.addEventListener('click', () => activateTab(button));
+      button.addEventListener('keydown', event => {
+        let nextIndex = null;
+
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabButtons.length;
+        if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+        if (event.key === 'Home') nextIndex = 0;
+        if (event.key === 'End') nextIndex = tabButtons.length - 1;
+        if (nextIndex === null) return;
+
+        event.preventDefault();
+        activateTab(tabButtons[nextIndex], { focus: true });
       });
     });
 
     // Menu tabs: Swipe-Geste links/rechts wechselt Tab
     const menuSection = document.getElementById('menu');
     if (menuSection) {
-      const tabOrder = [...document.querySelectorAll('.tab-btn')].map(b => b.dataset.tab);
+      const tabOrder = tabButtons.map(button => button.dataset.tab);
       let touchStartX = 0, touchStartY = 0, touchActive = false;
       menuSection.addEventListener('touchstart', (e) => {
         if (e.touches.length !== 1) return;
@@ -322,9 +363,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const i = tabOrder.indexOf(curr);
         const next = i + (dx < 0 ? 1 : -1);
         if (next < 0 || next >= tabOrder.length) return;
-        document.querySelector(`.tab-btn[data-tab="${tabOrder[next]}"]`)?.click();
+        activateTab(tabButtons[next]);
       }, { passive: true });
     }
+
+    document.querySelectorAll('[data-open-menu-tab]').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const targetButton = tabButtons.find(button => button.dataset.tab === trigger.dataset.openMenuTab);
+        activateTab(targetButton);
+        menuSection?.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
+      });
+    });
 
     // Smooth anchor scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -337,29 +389,106 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Modals
-    function openModal(id) {
-      const m = document.getElementById(id);
-      m.classList.remove('hidden');
-      m.classList.add('flex');
+    const modalIds = ['modal-impressum', 'modal-datenschutz'];
+    let activeModal = null;
+    let modalOpener = null;
+    let previousBodyOverflow = '';
+
+    function setPageInert(isInert) {
+      [...document.body.children].forEach(element => {
+        if (element.getAttribute('role') !== 'dialog') element.inert = isInert;
+      });
+    }
+
+    function getModalFocusables(modal) {
+      return [...modal.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )].filter(element => !element.hidden && element.getClientRects().length > 0);
+    }
+
+    function closeModal(id, { restoreFocus = true } = {}) {
+      const modal = document.getElementById(id);
+      if (!modal || modal.hidden) return;
+
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      modal.setAttribute('aria-hidden', 'true');
+      modal.hidden = true;
+
+      if (activeModal === modal) {
+        activeModal = null;
+        setPageInert(false);
+        document.body.style.overflow = previousBodyOverflow;
+
+        const opener = modalOpener;
+        modalOpener = null;
+        if (restoreFocus && opener instanceof HTMLElement) {
+          window.requestAnimationFrame(() => opener.focus());
+        }
+      }
+    }
+
+    function openModal(id, opener) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+
+      if (activeModal && activeModal !== modal) {
+        closeModal(activeModal.id, { restoreFocus: false });
+      }
+
+      modalOpener = opener || document.activeElement;
+      previousBodyOverflow = document.body.style.overflow;
+      activeModal = modal;
+      modal.hidden = false;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      setPageInert(true);
+
+      window.requestAnimationFrame(() => {
+        const focusTarget = getModalFocusables(modal)[0] || modal;
+        focusTarget.focus();
+      });
     }
-    function closeModal(id) {
-      const m = document.getElementById(id);
-      m.classList.add('hidden');
-      m.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('open-impressum').addEventListener('click', e => { e.preventDefault(); openModal('modal-impressum'); });
-    document.getElementById('open-datenschutz').addEventListener('click', e => { e.preventDefault(); openModal('modal-datenschutz'); });
-    ['modal-impressum','modal-datenschutz'].forEach(id => {
-      document.getElementById(id + '-close').addEventListener('click', () => closeModal(id));
-      document.getElementById(id + '-backdrop').addEventListener('click', () => closeModal(id));
+
+    document.getElementById('open-impressum')?.addEventListener('click', event => {
+      event.preventDefault();
+      openModal('modal-impressum', event.currentTarget);
     });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        closeModal('modal-impressum');
-        closeModal('modal-datenschutz');
+    document.getElementById('open-datenschutz')?.addEventListener('click', event => {
+      event.preventDefault();
+      openModal('modal-datenschutz', event.currentTarget);
+    });
+
+    modalIds.forEach(id => {
+      document.getElementById(id + '-close')?.addEventListener('click', () => closeModal(id));
+      document.getElementById(id + '-backdrop')?.addEventListener('click', () => closeModal(id));
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        if (activeModal) closeModal(activeModal.id);
         closeMobileMenu();
+        return;
+      }
+
+      if (event.key !== 'Tab' || !activeModal) return;
+      const focusables = getModalFocusables(activeModal);
+      if (!focusables.length) {
+        event.preventDefault();
+        activeModal.focus();
+        return;
+      }
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     });
 

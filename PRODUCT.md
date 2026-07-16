@@ -76,12 +76,14 @@ navbar changes state after scroll
 mobile hamburger menu provides quick section access
 mobile call button appears after scroll and is hidden at the top
 Speisekarte uses tab switching
+Speisekarte exposes accessible tab semantics and keyboard navigation
 mobile Speisekarte supports swipe between tabs
-gallery uses a swipe-and-snap carousel with automatic center-weighted highlighting on mobile and desktop
+gallery uses a swipe-and-snap carousel with automatic center-weighted highlighting and one progressive indicator system on mobile and desktop
 content reveals through CSS view timelines as it enters the viewport without blur
 the contact order button and mobile telephone button use a restrained deep-red gradient, glow and highlight sweep
 desktop back-to-top button scrolls to top
 Impressum and Datenschutz open as modals
+modals move focus inside, trap keyboard focus and return focus to their opener
 hero video selects desktop/mobile source by breakpoint
 below-the-fold videos lazy-load near the viewport
 videos try autoplay and fall back to poster/background on error
@@ -119,7 +121,7 @@ Italian through craft, not cliché
    Use actual photos and videos. Avoid fake stock imagery, generic icons, and visual patterns that feel like a delivery marketplace.
 
 5. **Static and lightweight**  
-   The site should remain a static HTML/CSS/JS project. Avoid unnecessary dependencies, tracking scripts, or app-like complexity.
+   The published site should remain static HTML/CSS/JS. Build-time tooling may compile local production CSS, but no framework or Tailwind runtime CDN is shipped.
 
 6. **Whole-project plausibility**  
    HTML, CSS, JS, documentation, and media references must stay consistent with each other.
@@ -213,14 +215,14 @@ Signature media:
 
 ```txt
 video: assets/videos/Calzone.mp4
-fallback: assets/images/Calzone.png
+fallback: assets/images/Calzone.jpg
 ```
 
 Menu atmosphere:
 
 ```txt
 desktop: assets/videos/Fireplace-dynamic5000px.mp4
-fallback: assets/images/Fireplace5000px.png
+fallback: assets/images/Fireplace5000px.jpg
 mobile: hidden
 ```
 
@@ -236,6 +238,8 @@ clear focus states
 touch-friendly mobile call action
 readable menu prices
 modals closable by buttons, backdrop, and Escape
+keyboard-operable Speisekarte tabs
+modal focus management and focus return
 no scroll-trapping map
 ```
 
@@ -256,7 +260,8 @@ The project should remain:
 ```txt
 static
 single-page
-HTML/CSS/JS only
+HTML/CSS/JS production output
+local build-time Tailwind compilation
 GitHub Pages compatible
 case-sensitive path safe
 easy to update manually
