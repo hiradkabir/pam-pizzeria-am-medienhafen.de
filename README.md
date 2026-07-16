@@ -91,7 +91,7 @@ Do not keep “backup code” inside production files. Use version control for h
 <link rel="stylesheet" href="css/base.css?v=14">
 <link rel="stylesheet" href="css/layout.css?v=28">
 <link rel="stylesheet" href="css/components.css?v=45">
-<link rel="stylesheet" href="css/responsive.css?v=58">
+<link rel="stylesheet" href="css/responsive.css?v=59">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
 <script defer src="js/script.js?v=47"></script>
 ```
@@ -221,7 +221,7 @@ mobile hamburger menu with black dropdown
 mobile call button visibility at top
 visually hidden mobile hero heading for semantic continuity
 mobile hero video sizing
-mobile Calzone sizing
+mobile Calzone video fills its complete media column without inset scaling
 mobile fireplace hiding
 mobile Speisekarte 2 × 3 tabs
 mobile Kontakt/Holzpalette rotation
@@ -319,7 +319,7 @@ phone button hidden at page top and visible after scroll
 hero-loop-mob.mp4 selected by JavaScript when available
 reduced hero gradient so video remains visible
 mobile hero label and Speisekarte hero CTA hidden
-Calzone.mp4 sized for mobile
+Calzone.mp4 fills the complete mobile media column
 fireplace video/poster hidden in Speisekarte
 Speisekarte tabs arranged 2 columns × 3 rows
 gallery uses portrait cards, touch swiping and centered snapping

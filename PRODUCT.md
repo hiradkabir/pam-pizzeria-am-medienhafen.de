@@ -177,7 +177,7 @@ phone button hidden at page top and visible after scroll
 hero-loop-mob.mp4 used for mobile hero when available
 hero overlay reduced so the video remains visible
 mobile hero label and Speisekarte hero CTA hidden
-Calzone.mp4 sized for mobile
+Calzone.mp4 fills the complete mobile media column without inset scaling
 fireplace video removed/hidden on mobile
 Speisekarte tabs arranged 2 columns × 3 rows
 gallery uses portrait cards with touch swiping, centered snapping and automatic focus scaling
