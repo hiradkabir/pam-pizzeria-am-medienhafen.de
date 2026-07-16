@@ -151,7 +151,7 @@ Mobile:
 wordmark centered at top
 hamburger menu opens a black dropdown
 mobile menu controls use a subtle warm brand border instead of a neutral grey frame
-menu links ordered Speisekarte, Kontakt, Über uns
+menu links ordered Speisekarte, Kontakt
 hero video remains visible
 hero overlay is reduced so the video is not hidden
 hero title, small label, and Speisekarte hero CTA are hidden
@@ -168,10 +168,6 @@ Frische Zutaten
 ```
 
 Mobile compresses the section so it does not dominate the screen.
-
-### Über uns
-
-Two real images and a text block. Use the existing warm dark palette. Avoid new decorative clichés.
 
 ### Signature dish
 
@@ -363,7 +359,7 @@ Mobile rules:
 ```txt
 hamburger menu with black dropdown
 centered wordmark
-menu links ordered Speisekarte, Kontakt, Über uns
+menu links ordered Speisekarte, Kontakt
 call button after scroll
 hero video visible
 touch-driven gallery carousel with centered snapping

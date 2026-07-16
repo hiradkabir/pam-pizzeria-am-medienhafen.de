@@ -57,7 +57,6 @@ The website is organized as one static page:
 ```txt
 Hero
 Highlights bar
-Über uns
 Signature dish / Calzone
 Speisekarte
 Galerie
@@ -161,7 +160,6 @@ Secondary conversion actions:
 
 ```txt
 view gallery
-read about the restaurant
 open legal information
 ```
 
@@ -174,7 +172,7 @@ Current mobile behavior:
 ```txt
 hamburger menu with black dropdown
 centered top wordmark
-menu links ordered Speisekarte, Kontakt, Über uns
+menu links ordered Speisekarte, Kontakt
 phone button hidden at page top and visible after scroll
 hero-loop-mob.mp4 used for mobile hero when available
 hero overlay reduced so the video remains visible

@@ -522,7 +522,6 @@
     line-height: 1.42 !important;
   }
 
-  #about .max-w-6xl > .reveal:nth-child(2) > p:first-child,
   .signature-media-min-height + div > p:first-child,
   #menu .text-center > p:first-child {
     font-size: clamp(0.74rem, 0.74vw, 0.9rem) !important;
@@ -530,27 +529,10 @@
     line-height: 1.35 !important;
   }
 
-  #about h2,
   .signature-media-min-height + div h2,
   #menu h2 {
     font-size: clamp(3.25rem, 4.15vw, 5rem) !important;
     line-height: 0.98 !important;
-  }
-
-  #about .max-w-6xl > .reveal:nth-child(2) > p.font-sans.text-brand-muted {
-    font-size: clamp(0.98rem, 0.96vw, 1.18rem) !important;
-    line-height: 1.85 !important;
-  }
-
-  #about .grid.grid-cols-3 > div > p:first-child {
-    font-size: clamp(2.45rem, 2.5vw, 3.1rem) !important;
-    line-height: 1.05 !important;
-  }
-
-  #about .grid.grid-cols-3 > div > p:last-child {
-    font-size: clamp(0.68rem, 0.66vw, 0.8rem) !important;
-    letter-spacing: 0.14em !important;
-    line-height: 1.35 !important;
   }
 
   .signature-media-min-height + div > p.font-sans.text-brand-muted {
