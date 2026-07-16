@@ -85,6 +85,8 @@ Impressum and Datenschutz open as modals
 modals move focus inside, trap keyboard focus and return focus to their opener
 hero video selects desktop/mobile source by breakpoint
 below-the-fold videos lazy-load near the viewport
+videos pause outside the viewport and while the browser tab is hidden
+only visible videos resume when the page becomes active again
 videos try autoplay and fall back to poster/background on error
 ```
 

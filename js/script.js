@@ -492,28 +492,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    /* === Background video loading and fallback ===
+    /* === Background video loading, visibility playback and fallback ===
        Below-the-fold videos load only when scrolled near the viewport, and their
        large poster is deferred (data-poster) so it is never fetched off-screen.
-       The hero is above the fold: it loads eagerly and picks one source per device
-       (data-src / data-src-mobile), so exactly one file ever downloads, swapping if
-       the viewport crosses the mobile breakpoint. No poster is shown while the hero
-       loads; data-poster is only a last-resort fallback if playback truly fails. */
+       Every video pauses outside the viewport or while the browser tab is hidden,
+       then resumes only when it is on-screen again. The hero loads eagerly and picks
+       one source per device (data-src / data-src-mobile), so exactly one file ever
+       downloads, swapping if the viewport crosses the mobile breakpoint. */
     (function () {
       const videos = [...document.querySelectorAll('video[data-autoplay-video]')];
       const mobileQuery = window.matchMedia('(max-width: 767px)');
+      const responsiveVideos = videos.filter(video => video.dataset.src);
+      const lazyVideos = videos.filter(video => !video.dataset.src);
+      const onscreenVideos = new Set();
+      const loadedLazyVideos = new WeakSet();
 
       function prepareVideo(video) {
+        video.autoplay = false;
         video.muted = true;
         video.defaultMuted = true;
         video.loop = true;
         video.playsInline = true;
+        video.removeAttribute('autoplay');
         video.setAttribute('muted', '');
         video.setAttribute('playsinline', '');
         video.setAttribute('webkit-playsinline', '');
       }
 
       function play(video) {
+        if (document.hidden || !onscreenVideos.has(video)) return;
         const p = video.play();
         if (p && typeof p.catch === 'function') {
           /* A rejected play is just autoplay timing: the muted autoplay attribute and
@@ -532,9 +539,6 @@ document.addEventListener('DOMContentLoaded', () => {
           parent.style.backgroundPosition = getComputedStyle(video).objectPosition || 'center center';
         }
       }
-
-      /* --- Hero: one source per device, eager load, no poster while loading --- */
-      const responsiveVideos = videos.filter(v => v.dataset.src);
 
       function applyResponsiveSource(video) {
         const wanted = (mobileQuery.matches && video.dataset.srcMobile)
@@ -559,46 +563,73 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mobileQuery.addEventListener) mobileQuery.addEventListener('change', onBreakpointChange);
       else mobileQuery.addListener(onBreakpointChange);
 
-      /* --- Below-the-fold videos: load and play only when near the viewport --- */
-      const lazyVideos = videos.filter(v => !v.dataset.src);
-      const started = new WeakSet();
-
-      function startLazyVideo(video) {
+      /* --- Below-the-fold videos: preload only when near the viewport --- */
+      function loadLazyVideo(video) {
+        if (loadedLazyVideos.has(video)) return;
+        loadedLazyVideos.add(video);
         if (!video.getAttribute('poster') && video.dataset.poster) {
           video.setAttribute('poster', video.dataset.poster);
         }
         prepareVideo(video);
-        play(video);
+        video.load();
       }
-
-      const inView = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            started.add(entry.target);
-            startLazyVideo(entry.target);
-          }
-        });
-      }, { rootMargin: '200px 0px' });
 
       lazyVideos.forEach(video => {
         prepareVideo(video);
-        inView.observe(video);
+        video.addEventListener('canplay', () => play(video));
         video.addEventListener('error', () => showPosterFallback(video));
-        video.addEventListener('pause', () => {
-          if (!document.hidden && started.has(video)) startLazyVideo(video);
-        });
       });
 
-      /* A first user gesture and tab refocus resume whatever is currently active. */
-      function resumeActive() {
-        responsiveVideos.forEach(play);
-        lazyVideos.forEach(video => { if (started.has(video)) startLazyVideo(video); });
+      if ('IntersectionObserver' in window) {
+        const preloadObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            loadLazyVideo(entry.target);
+            preloadObserver.unobserve(entry.target);
+          });
+        }, { rootMargin: '200px 0px' });
+
+        const playbackObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting && entry.intersectionRatio > 0) {
+              onscreenVideos.add(video);
+              if (lazyVideos.includes(video)) loadLazyVideo(video);
+              play(video);
+              return;
+            }
+
+            onscreenVideos.delete(video);
+            video.pause();
+          });
+        }, { threshold: 0.01 });
+
+        lazyVideos.forEach(video => preloadObserver.observe(video));
+        videos.forEach(video => playbackObserver.observe(video));
+      } else {
+        videos.forEach(video => onscreenVideos.add(video));
+        lazyVideos.forEach(loadLazyVideo);
       }
+
+      /* A first user gesture retries autoplay only for on-screen videos. */
+      function resumeOnscreen() {
+        videos.forEach(video => {
+          if (onscreenVideos.has(video)) play(video);
+        });
+      }
+
       ['touchstart', 'click'].forEach(eventName => {
-        window.addEventListener(eventName, resumeActive, { once: true, passive: true });
+        window.addEventListener(eventName, resumeOnscreen, { once: true, passive: true });
       });
+
       document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) resumeActive();
+        if (document.hidden) {
+          videos.forEach(video => video.pause());
+          return;
+        }
+        resumeOnscreen();
       });
+
+      resumeOnscreen();
     })();
 });
