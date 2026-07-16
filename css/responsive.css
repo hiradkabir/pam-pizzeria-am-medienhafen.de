@@ -396,6 +396,75 @@
 
 
 /* ==========================================================================
+   Google rating strip: compact trust signal between hero and highlights
+   ========================================================================== */
+
+@media (max-width: 639px) {
+  .google-rating-strip__link {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.7rem;
+    min-height: 4.75rem;
+    padding: 0.72rem 1rem;
+  }
+
+  .google-rating-strip__eyebrow {
+    font-size: 0.54rem;
+    letter-spacing: 0.22em;
+  }
+
+  .google-rating-strip__label {
+    font-size: 0.66rem;
+  }
+
+  .google-rating-strip__rating {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.1rem 0.45rem;
+  }
+
+  .google-rating-strip__rating strong {
+    grid-row: 1 / 3;
+    align-self: center;
+    font-size: 1.65rem;
+  }
+
+  .google-rating-strip__stars {
+    gap: 0.08rem;
+  }
+
+  .google-rating-strip__stars svg {
+    width: 0.68rem;
+    height: 0.68rem;
+  }
+
+  .google-rating-strip__out-of {
+    font-size: 0.53rem;
+  }
+
+  .google-rating-strip__cta {
+    gap: 0;
+  }
+
+  .google-rating-strip__cta span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .google-rating-strip__cta svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+}
+
+
+/* ==========================================================================
    Highlights bar: compact 3-column layout on small screens
    Default grid-cols-1 wastes vertical space; show all 3 horizontally.
    ========================================================================== */

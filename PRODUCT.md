@@ -56,6 +56,7 @@ The website is organized as one static page:
 
 ```txt
 Hero
+Static Google rating strip
 Highlights bar
 Signature dish / Calzone
 Speisekarte
@@ -73,6 +74,7 @@ Mobile floating call button
 ```txt
 navbar changes state after scroll
 mobile hamburger menu provides quick section access
+static 4,4-star Google rating strip links to the current Google result without loading an external widget
 mobile call button appears after scroll and is hidden at the top
 Speisekarte uses tab switching
 Speisekarte exposes accessible tab semantics and keyboard navigation

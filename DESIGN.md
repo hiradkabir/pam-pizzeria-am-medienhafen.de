@@ -1,5 +1,5 @@
 ---
-version: "1.8"
+version: "1.9"
 generated: "2026-07-16"
 project: "Pizzeria am Medienhafen"
 register: brand
@@ -156,6 +156,20 @@ hero video remains visible
 hero overlay is reduced so the video is not hidden
 hero title, small label, and Speisekarte hero CTA are hidden
 ```
+
+### Google rating strip
+
+A compact trust band sits directly between the Hero and the highlights bar.
+
+```txt
+static score: 4,4 out of 5
+four full stars and one 40% filled star
+no fixed review count that can become stale
+the full band links to the restaurant's current Google result
+no Google widget, API request, tracking script, or additional runtime dependency
+```
+
+The band uses the existing warm surface colors, Bodoni score and Jost labels. On mobile, the text CTA collapses to an arrow so the rating remains compact and readable.
 
 ### Highlights bar
 
