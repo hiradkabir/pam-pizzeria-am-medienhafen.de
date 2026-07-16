@@ -57,7 +57,7 @@ css/layout.css             structural helpers and section backgrounds
 css/components.css         reusable components, CSS view reveals, cards, map and video presentation
 css/responsive.css         breakpoint-specific mobile/desktop overrides only
 css/gallery-carousel.css   scroll-snap gallery styling and distance-weighted focus presentation
-js/script.js               required interaction behavior and video fallback
+js/script.js               required interaction behavior, visibility-based video playback and fallback
 ```
 
 `responsive.css` should stay lean and contain breakpoint-specific overrides only. Shared component styling belongs in `components.css`. Carousel behavior is isolated in `gallery-carousel.css` so it does not conflict with general gallery-image styling.
@@ -349,6 +349,8 @@ Holzpalette: background texture for Kontakt
 ```
 
 Assets are large and may not be included in every edit request, but the documented paths must remain stable.
+
+Videos outside the viewport pause automatically to avoid unnecessary decoding and rendering work. A hidden browser tab pauses every video; returning to the page resumes only the videos that are currently visible.
 
 ## Mobile design constraints
 

@@ -93,7 +93,7 @@ Do not keep “backup code” inside production files. Use version control for h
 <link rel="stylesheet" href="css/components.css?v=45">
 <link rel="stylesheet" href="css/responsive.css?v=59">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
-<script defer src="js/script.js?v=47"></script>
+<script defer src="js/script.js?v=48"></script>
 ```
 
 Increase only the version number of a file that was actually changed.
@@ -269,11 +269,12 @@ Impressum and Datenschutz modals with focus management and focus trapping
 hero video source selection using data-src and data-src-mobile
 below-the-fold lazy video loading
 video autoplay handling and poster fallback on error
-resume of active videos after user gesture or tab refocus
+automatic pause outside the viewport and while the browser tab is hidden
+resume only for videos that are visible again
 continuous gallery focus weighting based on distance from the carousel center
 ```
 
-Content reveal is no longer controlled by JavaScript. It is implemented in `css/components.css` with CSS view timelines. The remaining `IntersectionObserver` is used only to defer below-the-fold video loading.
+Content reveal is no longer controlled by JavaScript. It is implemented in `css/components.css` with CSS view timelines. JavaScript uses `IntersectionObserver` only for video preloading and visibility-based playback.
 
 The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte and Kontakt in that order. Navbar, toggle, and dropdown share one continuous brand-dark background; the toggle has no persistent frame.
 
@@ -376,7 +377,7 @@ Prefer H.264 video codec
 Prefer AAC audio codec, even if muted
 Keep videos compressed for GitHub Pages
 Use exact filenames and casing
-Keep muted, loop, playsinline, and autoplay/data-autoplay-video behavior aligned with script.js
+Keep muted, loop, playsinline, and data-autoplay-video behavior aligned with script.js
 ```
 
 The hero video is chosen by JavaScript:
