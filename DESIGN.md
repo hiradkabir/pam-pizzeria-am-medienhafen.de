@@ -150,7 +150,7 @@ Mobile:
 ```txt
 wordmark centered at top
 hamburger menu opens a black dropdown
-mobile menu controls use a subtle warm brand border instead of a neutral grey frame
+navbar, borderless menu toggle and dropdown share the same brand-dark background
 menu links ordered Speisekarte, Kontakt
 hero video remains visible
 hero overlay is reduced so the video is not hidden

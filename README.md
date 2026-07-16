@@ -91,7 +91,7 @@ Do not keep “backup code” inside production files. Use version control for h
 <link rel="stylesheet" href="css/base.css?v=14">
 <link rel="stylesheet" href="css/layout.css?v=28">
 <link rel="stylesheet" href="css/components.css?v=45">
-<link rel="stylesheet" href="css/responsive.css?v=57">
+<link rel="stylesheet" href="css/responsive.css?v=58">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
 <script defer src="js/script.js?v=47"></script>
 ```
@@ -275,7 +275,7 @@ continuous gallery focus weighting based on distance from the carousel center
 
 Content reveal is no longer controlled by JavaScript. It is implemented in `css/components.css` with CSS view timelines. The remaining `IntersectionObserver` is used only to defer below-the-fold video loading.
 
-The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte and Kontakt in that order.
+The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte and Kontakt in that order. Navbar, toggle, and dropdown share one continuous brand-dark background; the toggle has no persistent frame.
 
 ## Current page structure
 
