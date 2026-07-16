@@ -121,9 +121,15 @@
   }
 
   /* Calzone video */
+  .signature-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   .signature-media-min-height {
     display: block !important;
-    min-height: clamp(360px, 66vh, 620px) !important;
+    min-height: 0 !important;
+    aspect-ratio: 1280 / 714;
     overflow: hidden !important;
     background: var(--brand-surface-2);
   }
@@ -132,11 +138,16 @@
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    object-fit: cover !important;
-    object-position: center center !important;
+    object-fit: contain !important;
+    object-position: center top !important;
     transform: none !important;
-    transform-origin: center center !important;
+    transform-origin: center top !important;
     background-color: var(--brand-surface-2);
+  }
+
+  .signature-copy {
+    padding-top: clamp(2rem, 9vw, 2.5rem) !important;
+    padding-bottom: clamp(3rem, 13vw, 4rem) !important;
   }
 
   /* Hide fireplace media on mobile */
@@ -260,10 +271,6 @@
 
 /* Very small phones */
 @media (max-width: 420px) {
-  .signature-media-min-height {
-    min-height: clamp(330px, 61vh, 540px) !important;
-  }
-
   #menu .overflow-x-auto > .flex,
   #menu .overflow-x-auto > .flex:has(.tab-btn) {
     width: min(100%, 320px) !important;

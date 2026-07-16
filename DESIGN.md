@@ -178,7 +178,7 @@ video: assets/videos/Calzone.mp4
 poster/fallback: assets/images/Calzone.jpg
 ```
 
-On mobile, the video remains full-bleed with `object-fit: cover` and no inset scaling, so it fills the complete media column.
+On mobile, the media panel uses the video's landscape aspect ratio with `object-fit: contain` and top alignment so the complete dish stays visible. The section has no outer mobile padding, and the description follows with compact top spacing.
 
 ### Speisekarte
 
