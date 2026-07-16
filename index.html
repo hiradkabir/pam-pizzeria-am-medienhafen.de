@@ -3,44 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0D0500">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Authentische italienische Pizza, Pasta und Holzofengerichte seit 1998 im Düsseldorfer Medienhafen. Speisekarte, Öffnungszeiten, Adresse und telefonische Bestellung.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <title>Pizzeria am Medienhafen – Authentisch Italienisch</title>
+  <link rel="canonical" href="https://pam-pizzeria-am-medienhafen.de/">
   <link rel="icon" type="image/svg+xml" href="assets/images/pizzeria-am-medienhafen-logo.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Pizzeria am Medienhafen">
+  <meta property="og:title" content="Pizzeria am Medienhafen – Authentisch Italienisch">
+  <meta property="og:description" content="Pizza, Pasta und Holzofengerichte seit 1998 im Düsseldorfer Medienhafen. Speisekarte, Öffnungszeiten und telefonische Bestellung.">
+  <meta property="og:url" content="https://pam-pizzeria-am-medienhafen.de/">
+  <meta property="og:image" content="https://pam-pizzeria-am-medienhafen.de/assets/images/hero-poster.jpg">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1340">
+  <meta property="og:image:alt" content="Holzofen der Pizzeria am Medienhafen in Düsseldorf">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pizzeria am Medienhafen – Authentisch Italienisch">
+  <meta name="twitter:description" content="Pizza, Pasta und Holzofengerichte seit 1998 im Düsseldorfer Medienhafen.">
+  <meta name="twitter:image" content="https://pam-pizzeria-am-medienhafen.de/assets/images/hero-poster.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    /* Custom Tailwind theme — must be available for bg-brand-*, text-brand-* etc. */
-    window.tailwind = window.tailwind || {};
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'brand-red': '#DC2626',
-            'brand-gold': '#C05E35',
-            'brand-gold-light': '#D9895A',
-            'brand-cream': '#FEF2F2',
-            'brand-warm': '#F5E6D0',
-            'brand-dark': '#0D0500',
-            'brand-surface': '#1A0A00',
-            'brand-surface-2': '#2D1200',
-            'brand-muted': '#C4A882'
-          },
-          fontFamily: {
-            display: ['"Bodoni Moda"', 'serif'],
-            serif: ['"Bodoni Moda"', 'serif'],
-            sans: ['Jost', 'sans-serif']
-          }
+  <link rel="stylesheet" href="css/tailwind.css?v=2">
+  <link rel="stylesheet" href="css/base.css?v=14">
+  <link rel="stylesheet" href="css/layout.css?v=28">
+  <link rel="stylesheet" href="css/components.css?v=45">
+  <link rel="stylesheet" href="css/responsive.css?v=57">
+  <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
+  <script defer src="js/script.js?v=47"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "@id": "https://pam-pizzeria-am-medienhafen.de/#restaurant",
+      "name": "Pizzeria am Medienhafen",
+      "description": "Authentische italienische Pizza, Pasta und Holzofengerichte seit 1998 im Düsseldorfer Medienhafen.",
+      "url": "https://pam-pizzeria-am-medienhafen.de/",
+      "image": [
+        "https://pam-pizzeria-am-medienhafen.de/assets/images/hero-poster.jpg",
+        "https://pam-pizzeria-am-medienhafen.de/assets/images/am-ofen.jpg"
+      ],
+      "logo": "https://pam-pizzeria-am-medienhafen.de/assets/images/pizzeria-am-medienhafen-logo.svg",
+      "telephone": "+492113033852",
+      "priceRange": "€€",
+      "servesCuisine": ["Italienisch", "Pizza", "Pasta"],
+      "menu": "https://pam-pizzeria-am-medienhafen.de/#menu",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wupperstraße 14",
+        "postalCode": "40221",
+        "addressLocality": "Düsseldorf",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.214642,
+        "longitude": 6.757914
+      },
+      "hasMap": "https://www.openstreetmap.org/?mlat=51.214642&mlon=6.757914#map=17/51.214642/6.757914",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "11:30",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "17:30",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "16:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "14:00",
+          "closes": "21:30"
         }
-      }
-    };
+      ]
+    }
   </script>
-  <link rel="stylesheet" href="css/base.css?v=13">
-  <link rel="stylesheet" href="css/layout.css?v=27">
-  <link rel="stylesheet" href="css/components.css?v=44">
-  <link rel="stylesheet" href="css/responsive.css?v=55">
-  <link rel="stylesheet" href="css/gallery-carousel.css?v=5">
-  <script defer src="js/script.js?v=46"></script>
 </head>
 <body class="bg-brand-dark text-brand-cream antialiased">
 
@@ -66,11 +117,9 @@
     <div id="mobile-menu" class="mobile-nav-links" role="navigation" aria-label="Mobile Navigation">
       <a href="#menu" class="mobile-nav-link">Speisekarte</a>
       <a href="#contact" class="mobile-nav-link">Kontakt</a>
-      <a href="#about" class="mobile-nav-link">Über uns</a>
     </div>
 
     <ul class="hidden md:flex items-center gap-8 text-[11px] font-sans tracking-widest uppercase text-brand-muted">
-      <li><a href="#about"   class="hover:text-brand-gold transition-colors duration-200 cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Über uns</a></li>
       <li><a href="#menu"    class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Speisekarte</a></li>
       <li><a href="#gallery" class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Galerie</a></li>
       <li><a href="#contact" class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Kontakt</a></li>
@@ -155,44 +204,6 @@
   </div>
 </div>
 
-<!-- ═══════════════════════  ABOUT  ═══════════════════════ -->
-<section id="about" class="py-24 lg:py-32 px-6">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-    <div class="relative reveal">
-      <div class="grid grid-cols-2 gap-3">
-        <div class="gallery-item img-vignette rounded-sm overflow-hidden aspect-3-4">
-          <img src="assets/images/am-ofen.jpg"
-               alt="Restaurant Atmosphäre" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="gallery-item img-vignette rounded-sm overflow-hidden mt-8 aspect-3-4">
-          <img src="assets/images/IMG-20200109-WA0015.jpg"
-               alt="Pizzeria am Medienhafen" class="w-full h-full object-cover" loading="lazy">
-        </div>
-      </div>
-      <div class="absolute -bottom-5 -right-5 w-28 h-28 border-2 border-brand-gold/25 hidden lg:block pointer-events-none"></div>
-    </div>
-
-    <div class="reveal">
-      <p class="font-sans text-brand-gold tracking-[0.3em] uppercase text-xs mb-4">Geschichte</p>
-      <h2 class="font-display text-4xl md:text-5xl text-brand-cream mb-5 leading-tight">
-        Wo Leidenschaft auf<br><span class="text-brand-gold">Tradition</span> trifft
-      </h2>
-      <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold to-transparent mb-7 draw-line"></div>
-      <p class="font-sans text-brand-muted text-base leading-relaxed mb-4">
-        Seit 1998 verwöhnen wir unsere Gäste im Herzen des Düsseldorfer Medienhafens mit authentischer italienischer Küche. Was als kleiner Familienbetrieb begann, ist heute eines der beliebtesten Restaurants der Stadt.
-      </p>
-      <p class="font-sans text-brand-muted text-base leading-relaxed mb-8">
-        Unsere Pizzen werden noch immer im traditionellen Holzofen gebacken und unsere Pasta täglich frisch zubereitet.
-      </p>
-      <div class="grid grid-cols-3 gap-6 pt-8 border-t border-brand-gold/10">
-        <div><p class="font-display text-3xl text-brand-gold">25+</p><p class="font-sans text-brand-muted text-xs tracking-wider uppercase mt-1">Jahre Erfahrung</p></div>
-        <div><p class="font-display text-3xl text-brand-gold">40+</p><p class="font-sans text-brand-muted text-xs tracking-wider uppercase mt-1">Gerichte</p></div>
-        <div><p class="font-display text-3xl text-brand-gold">4,5★</p><p class="font-sans text-brand-muted text-xs tracking-wider uppercase mt-1">Bewertung</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════  SIGNATURE DISH  ═══════════════ -->
 <section class="relative overflow-hidden">
   <div class="grid grid-cols-1 md:grid-cols-2">
@@ -201,7 +212,7 @@
       <video
           class="site-video signature-video absolute inset-0 w-full h-full object-cover object-center"
           data-autoplay-video
-          data-poster="assets/images/Calzone.png"
+          data-poster="assets/images/Calzone.jpg"
           muted
           loop
           playsinline
@@ -241,7 +252,7 @@
            class="site-video menu-fireplace-video w-full h-full object-cover"
            data-autoplay-video
            loop muted playsinline preload="none"
-           data-poster="assets/images/Fireplace5000px.png">
+           data-poster="assets/images/Fireplace5000px.jpg">
       <source src="assets/videos/Fireplace-dynamic5000px.mp4" type="video/mp4">
     </video>
     <div class="menu-fire-overlay absolute inset-0"></div>
@@ -255,18 +266,18 @@
 
     <!-- Tabs -->
     <div class="flex justify-center mb-12 reveal overflow-x-auto pb-1">
-      <div class="flex border border-brand-gold/20 flex-shrink-0">
-        <button class="tab-btn active font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="pizzen">Pizzen</button>
-        <button class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="antipasti">Antipasti</button>
-        <button class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="insalate">Insalate</button>
-        <button class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="pasta">Pasta</button>
-        <button class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="getraenke">Getränke</button>
-        <button class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="allergene">Allergene</button>
+      <div class="flex border border-brand-gold/20 flex-shrink-0" role="tablist" aria-label="Speisekarten-Kategorien">
+        <button id="tab-button-pizzen" type="button" role="tab" aria-selected="true" aria-controls="tab-pizzen" tabindex="0" class="tab-btn active font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="pizzen">Pizzen</button>
+        <button id="tab-button-antipasti" type="button" role="tab" aria-selected="false" aria-controls="tab-antipasti" tabindex="-1" class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="antipasti">Antipasti</button>
+        <button id="tab-button-insalate" type="button" role="tab" aria-selected="false" aria-controls="tab-insalate" tabindex="-1" class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="insalate">Insalate</button>
+        <button id="tab-button-pasta" type="button" role="tab" aria-selected="false" aria-controls="tab-pasta" tabindex="-1" class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="pasta">Pasta</button>
+        <button id="tab-button-getraenke" type="button" role="tab" aria-selected="false" aria-controls="tab-getraenke" tabindex="-1" class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="getraenke">Getränke</button>
+        <button id="tab-button-allergene" type="button" role="tab" aria-selected="false" aria-controls="tab-allergene" tabindex="-1" class="tab-btn font-sans text-[11px] tracking-widest uppercase px-5 py-3 border-b-2 border-transparent text-brand-muted hover:text-brand-gold transition-all duration-200 cursor-pointer" data-tab="allergene">Allergene</button>
       </div>
     </div>
 
     <!-- PIZZEN – numbered list, 2-col -->
-    <div id="tab-pizzen" class="tab-content">
+    <div id="tab-pizzen" class="tab-content" role="tabpanel" aria-labelledby="tab-button-pizzen" tabindex="0">
       <p class="font-sans text-brand-muted/60 text-xs tracking-widest text-center uppercase mb-8 reveal">Holzofen · Ø 29 cm · Alle Pizzen mit Tomate, Käse und Oregano</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 reveal">
         <!-- Left col: 01–16 -->
@@ -318,7 +329,7 @@
     </div>
 
     <!-- PASTA – 4 subcategory columns -->
-    <div id="tab-pasta" class="tab-content hidden">
+    <div id="tab-pasta" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-button-pasta" tabindex="0" hidden>
       <p class="font-sans text-brand-muted/60 text-xs tracking-widest text-center uppercase mb-8 reveal">Spaghetti · Penne · Tagliatelle · Tortellini · Gnocchi</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 reveal">
         <!-- Left col: Spaghetti + Penne -->
@@ -365,7 +376,7 @@
     </div>
 
     <!-- ANTIPASTI -->
-    <div id="tab-antipasti" class="tab-content hidden">
+    <div id="tab-antipasti" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-button-antipasti" tabindex="0" hidden>
       <p class="font-sans text-brand-muted/60 text-xs tracking-widest text-center uppercase mb-8 reveal">Vorspeisen · Täglich frisch zubereitet</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 reveal">
         <div>
@@ -381,7 +392,7 @@
     </div>
 
     <!-- INSALATE -->
-    <div id="tab-insalate" class="tab-content hidden">
+    <div id="tab-insalate" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-button-insalate" tabindex="0" hidden>
       <p class="font-sans text-brand-muted/60 text-xs tracking-widest text-center uppercase mb-8 reveal">Salate · Täglich frisch zubereitet</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 reveal">
         <div>
@@ -396,7 +407,7 @@
     </div>
 
     <!-- ALLERGENE -->
-    <div id="tab-allergene" class="tab-content hidden">
+    <div id="tab-allergene" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-button-allergene" tabindex="0" hidden>
       <p class="font-sans text-brand-muted/60 text-xs tracking-widest text-center uppercase mb-8 reveal">Gemäß EU-Verordnung Nr. 1169/2011 · Kennzeichnungspflichtige Zutaten</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 reveal">
         <div>
@@ -434,7 +445,7 @@
     </div>
 
     <!-- GETRÄNKE -->
-    <div id="tab-getraenke" class="tab-content hidden">
+    <div id="tab-getraenke" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-button-getraenke" tabindex="0" hidden>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 reveal">
         <!-- Softdrinks -->
         <div>
@@ -462,7 +473,7 @@
     </div>
 
     <p class="text-center font-sans text-brand-muted/50 text-xs tracking-wider mt-12 reveal">
-      Alle Preise inkl. MwSt. &nbsp;·&nbsp; Allergene &amp; Zusatzstoffe siehe Tab <button onclick="document.querySelector('[data-tab=allergene]').click();document.getElementById('menu').scrollIntoView({behavior:'smooth'})" class="underline decoration-dotted text-brand-gold/50 hover:text-brand-gold cursor-pointer transition-colors">Allergene</button> &nbsp;·&nbsp; Mindestbestellwert Lieferservice 15 €
+      Alle Preise inkl. MwSt. &nbsp;·&nbsp; Allergene &amp; Zusatzstoffe siehe Tab <button type="button" data-open-menu-tab="allergene" class="underline decoration-dotted text-brand-gold/50 hover:text-brand-gold cursor-pointer transition-colors">Allergene</button> &nbsp;·&nbsp; Mindestbestellwert Lieferservice 15 €
     </p>
   </div>
 </section>
@@ -478,47 +489,47 @@
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal gallery-mobile-carousel">
       <div class="gallery-item col-span-2 row-span-2 rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/IMG-20200109-WA0034_0.jpg"
-             alt="Pizzeria am Medienhafen" class="w-full h-full object-cover" loading="lazy">
+             alt="Pizzeria am Medienhafen" width="768" height="1024" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/IMG-20200105-WA0009.jpg"
-             alt="Frisch aus dem Holzofen" class="w-full h-full object-cover" loading="lazy">
+             alt="Frisch aus dem Holzofen" width="1400" height="1050" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/IMG-20200109-WA0015.jpg"
-             alt="Atmosphäre" class="w-full h-full object-cover" loading="lazy">
+             alt="Atmosphäre" width="768" height="1024" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/glazed.jpg"
-             alt="Glasierte Details" class="w-full h-full object-cover" loading="lazy">
+             alt="Glasierte Details" width="1050" height="1400" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item mobile-gallery-terasse col-span-2 rounded-sm overflow-hidden aspect-2-1">
         <img src="assets/images/terasse.jpg"
-             alt="Terrasse der Pizzeria" class="w-full h-full object-cover" loading="lazy">
+             alt="Terrasse der Pizzeria" width="1050" height="1400" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/AHDB8748.JPG"
-             alt="Frischer Salat mit Ei, Oliven und Kartoffeln" class="w-full h-full object-cover" loading="lazy">
+             alt="Frischer Salat mit Ei, Oliven und Kartoffeln" width="1600" height="1305" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/EQFY1298.JPG"
-             alt="Eingang und Terrasse der Pizzeria am Medienhafen" class="w-full h-full object-cover" loading="lazy">
+             alt="Eingang und Terrasse der Pizzeria am Medienhafen" width="1200" height="1600" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/QHUS6537.JPG"
-             alt="Sitzplaetze auf der Terrasse" class="w-full h-full object-cover" loading="lazy">
+             alt="Sitzplätze auf der Terrasse" width="1200" height="1600" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/WNIW6153.JPG"
-             alt="Spaghetti mit Basilikum" class="w-full h-full object-cover" loading="lazy">
+             alt="Spaghetti mit Basilikum" width="1200" height="1600" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/ETHG4100.JPG"
-             alt="Rucola-Tomaten-Salat mit Parmesan" class="w-full h-full object-cover" loading="lazy">
+             alt="Rucola-Tomaten-Salat mit Parmesan" width="1200" height="1600" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="gallery-item rounded-sm overflow-hidden aspect-1-1">
         <img src="assets/images/6d9729dd-19ae-4371-9581-3d22fd0fbaf7.jpg"
-             alt="Tomate-Mozzarella-Salat mit Basilikum" class="w-full h-full object-cover" loading="lazy">
+             alt="Tomate-Mozzarella-Salat mit Basilikum" width="1200" height="1600" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
     </div>
     <div class="gallery-scroll-indicator" aria-hidden="true"></div>
@@ -609,7 +620,6 @@
 
       <nav aria-label="Footer Navigation">
         <ul class="flex flex-wrap justify-center gap-5 text-[11px] font-sans tracking-widest uppercase text-brand-muted">
-          <li><a href="#about"   class="hover:text-brand-gold transition-colors cursor-pointer">Über uns</a></li>
           <li><a href="#menu"    class="hover:text-brand-gold transition-colors cursor-pointer">Speisekarte</a></li>
           <li><a href="#gallery" class="hover:text-brand-gold transition-colors cursor-pointer">Galerie</a></li>
           <li><a href="#contact" class="hover:text-brand-gold transition-colors cursor-pointer">Kontakt</a></li>
@@ -629,10 +639,10 @@
 </footer>
 
 <!-- ═══════════  IMPRESSUM MODAL  ═══════════ -->
-<div id="modal-impressum" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-impressum-title">
+<div id="modal-impressum" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-impressum-title" tabindex="-1" hidden>
   <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm" id="modal-impressum-backdrop"></div>
   <div class="relative z-10 bg-brand-surface border border-brand-gold/20 max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 md:p-12">
-    <button id="modal-impressum-close" aria-label="Schließen" class="absolute top-4 right-4 text-brand-muted hover:text-brand-gold transition-colors cursor-pointer">
+    <button id="modal-impressum-close" type="button" aria-label="Schließen" class="absolute top-4 right-4 text-brand-muted hover:text-brand-gold transition-colors cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
     <p class="font-sans text-brand-gold tracking-[0.3em] uppercase text-xs mb-3">Rechtliches</p>
@@ -672,10 +682,10 @@
 </div>
 
 <!-- ═══════════  DATENSCHUTZ MODAL  ═══════════ -->
-<div id="modal-datenschutz" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-datenschutz-title">
+<div id="modal-datenschutz" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-datenschutz-title" tabindex="-1" hidden>
   <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm" id="modal-datenschutz-backdrop"></div>
   <div class="relative z-10 bg-brand-surface border border-brand-gold/20 max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 md:p-12">
-    <button id="modal-datenschutz-close" aria-label="Schließen" class="absolute top-4 right-4 text-brand-muted hover:text-brand-gold transition-colors cursor-pointer">
+    <button id="modal-datenschutz-close" type="button" aria-label="Schließen" class="absolute top-4 right-4 text-brand-muted hover:text-brand-gold transition-colors cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
     <p class="font-sans text-brand-gold tracking-[0.3em] uppercase text-xs mb-3">Rechtliches</p>

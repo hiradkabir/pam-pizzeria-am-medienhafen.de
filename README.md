@@ -1,7 +1,7 @@
 # Pizzeria am Medienhafen — Website Project
 
 Static website for **Pizzeria am Medienhafen**.  
-Designed for GitHub Pages or any standard static web host.
+Designed for GitHub Pages or any standard static web host. Tailwind is compiled locally at build time; the published website has no Tailwind runtime dependency.
 
 This documentation reflects the current code structure. The `assets/` folder can be large and does not need to be sent with every edit, but every referenced media file must stay in the expected path with exact casing.
 
@@ -15,7 +15,14 @@ project/
 ├── README.md
 ├── DESIGN.md
 ├── PRODUCT.md
+├── package.json
+├── package-lock.json
+├── tailwind.config.js
+├── robots.txt
+├── sitemap.xml
 ├── css/
+│   ├── tailwind-input.css
+│   ├── tailwind.css
 │   ├── base.css
 │   ├── layout.css
 │   ├── components.css
@@ -41,6 +48,9 @@ Before editing, check the full project context. Every edit must remain plausible
 
 ```txt
 index.html
+tailwind.config.js
+css/tailwind-input.css
+css/tailwind.css
 css/base.css
 css/layout.css
 css/components.css
@@ -77,12 +87,13 @@ Do not keep “backup code” inside production files. Use version control for h
 `index.html` currently loads:
 
 ```html
-<link rel="stylesheet" href="css/base.css?v=13">
-<link rel="stylesheet" href="css/layout.css?v=27">
-<link rel="stylesheet" href="css/components.css?v=44">
-<link rel="stylesheet" href="css/responsive.css?v=55">
-<link rel="stylesheet" href="css/gallery-carousel.css?v=5">
-<script defer src="js/script.js?v=46"></script>
+<link rel="stylesheet" href="css/tailwind.css?v=2">
+<link rel="stylesheet" href="css/base.css?v=14">
+<link rel="stylesheet" href="css/layout.css?v=28">
+<link rel="stylesheet" href="css/components.css?v=45">
+<link rel="stylesheet" href="css/responsive.css?v=57">
+<link rel="stylesheet" href="css/gallery-carousel.css?v=6">
+<script defer src="js/script.js?v=47"></script>
 ```
 
 Increase only the version number of a file that was actually changed.
@@ -102,11 +113,11 @@ assets/images/pizzeria-am-medienhafen-logo.svg
 assets/images/hero-poster.jpg
 assets/images/am-ofen.jpg
 assets/images/IMG-20200109-WA0015.jpg
-assets/images/Calzone.png
-assets/images/Fireplace5000px.png
+assets/images/Calzone.jpg
+assets/images/Fireplace5000px.jpg
 assets/images/IMG-20200109-WA0034_0.jpg
 assets/images/IMG-20200105-WA0009.jpg
-assets/images/Holzpalette.png
+assets/images/Holzpalette.jpg
 assets/images/glazed.jpg
 assets/images/terasse.jpg
 assets/images/AHDB8748.JPG
@@ -152,7 +163,7 @@ Global foundation:
 ```txt
 theme variables
 brand colors
-Tailwind fallback utility classes
+brand utility fallbacks
 browser defaults
 body/html defaults
 scrollbar styling
@@ -184,7 +195,7 @@ CSS view-timeline reveal animation
 CSS view-timeline divider drawing
 navbar scrolled state
 gold divider
-menu cards and tab states
+accessible menu tab states
 general gallery image presentation
 Kontakt map-led layout
 OpenStreetMap styling
@@ -208,7 +219,7 @@ Responsive overrides only:
 mobile navbar centering
 mobile hamburger menu with black dropdown
 mobile call button visibility at top
-mobile hero title sizing
+visually hidden mobile hero heading for semantic continuity
 mobile hero video sizing
 mobile Calzone sizing
 mobile fireplace hiding
@@ -233,6 +244,7 @@ desktop 16:10 cards
 touch and trackpad scrolling
 native ::scroll-button controls where supported
 native ::scroll-marker indicators where supported
+JavaScript indicator fallback only where native markers are unavailable
 continuous center-distance focus weighting
 focused card at full size, brightness and contrast
 neighboring cards progressively smaller and darker
@@ -250,9 +262,10 @@ navbar scroll state
 mobile hamburger menu open/close behavior
 desktop-only back-to-top button reveal and scroll animation
 Speisekarte tab switching
+keyboard navigation for tabs with Arrow keys, Home and End
 mobile swipe between Speisekarte tabs
 smooth anchor scrolling
-Impressum and Datenschutz modals
+Impressum and Datenschutz modals with focus management and focus trapping
 hero video source selection using data-src and data-src-mobile
 below-the-fold lazy video loading
 video autoplay handling and poster fallback on error
@@ -262,14 +275,13 @@ continuous gallery focus weighting based on distance from the carousel center
 
 Content reveal is no longer controlled by JavaScript. It is implemented in `css/components.css` with CSS view timelines. The remaining `IntersectionObserver` is used only to defer below-the-fold video loading.
 
-The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte, Kontakt, and Über uns in that order.
+The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte and Kontakt in that order.
 
 ## Current page structure
 
 ```txt
 Hero
 Highlights bar
-Über uns
 Signature dish / Calzone
 Speisekarte
 Galerie
@@ -302,7 +314,7 @@ desktop-only back-to-top button
 ```txt
 hamburger menu with black dropdown
 centered top wordmark
-menu links ordered Speisekarte, Kontakt, Über uns
+menu links ordered Speisekarte, Kontakt
 phone button hidden at page top and visible after scroll
 hero-loop-mob.mp4 selected by JavaScript when available
 reduced hero gradient so video remains visible
@@ -312,7 +324,7 @@ fireplace video/poster hidden in Speisekarte
 Speisekarte tabs arranged 2 columns × 3 rows
 gallery uses portrait cards, touch swiping and centered snapping
 Kontakt collapses into a single-column flow
-Holzpalette.png rotated/scaled for mobile background fit
+Holzpalette.jpg rotated/scaled for mobile background fit
 ```
 
 ## CSS feature compatibility
@@ -340,7 +352,7 @@ no JavaScript reveal fallback is required
 
 ## Brand color system
 
-The project uses these CSS variables in `css/base.css` and the same values in the Tailwind CDN config inside `index.html`:
+The project uses these CSS variables in `css/base.css` and the same values in `tailwind.config.js`:
 
 ```txt
 --brand-red:        #DC2626
@@ -380,6 +392,21 @@ If playback fails, `script.js` applies the configured poster/background fallback
 
 The Kontakt section embeds an OpenStreetMap iframe, styled in CSS to match the dark theme and set to avoid trapping scroll. To adjust map position, edit the iframe `src` in `index.html`.
 
+## SEO and structured data
+
+`index.html` contains canonical, description, robots, Open Graph and Twitter metadata plus Schema.org `Restaurant` JSON-LD. `robots.txt` points search engines to `sitemap.xml`. Keep the address, telephone number, opening hours and production URL aligned across HTML, JSON-LD and the sitemap.
+
+## Local CSS build
+
+Install dependencies once and rebuild the generated Tailwind file after changing utility classes or `tailwind.config.js`:
+
+```txt
+npm install
+npm run build
+```
+
+Commit `css/tailwind.css`; never commit `node_modules/`. The production page must not load `cdn.tailwindcss.com`.
+
 ## Local testing
 
 Recommended:
@@ -395,12 +422,13 @@ A local server is safer than opening the file via `file://`, especially for vide
 Typical workflow:
 
 ```txt
-1. Push project files to GitHub.
-2. Go to repository Settings.
-3. Open Pages.
-4. Select the main branch and root folder.
-5. Save.
-6. Wait until GitHub Pages publishes the site.
+1. Run `npm run build` after Tailwind-related changes.
+2. Push project files to GitHub.
+3. Go to repository Settings.
+4. Open Pages.
+5. Select the main branch and root folder.
+6. Save.
+7. Wait until GitHub Pages publishes the site.
 ```
 
 After updating files, hard refresh:
