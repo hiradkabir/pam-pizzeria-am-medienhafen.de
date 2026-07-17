@@ -404,56 +404,12 @@
   }
 }
 
-.menu-fire-overlay {
+.menu-atmosphere-overlay {
   background:
     linear-gradient(to bottom, var(--brand-surface) 0%, rgba(26, 10, 0, 0.78) 8%, rgba(26, 10, 0, 0.22) 24%, rgba(26, 10, 0, 0.22) 76%, rgba(26, 10, 0, 0.82) 92%, var(--brand-surface) 100%),
     linear-gradient(to right, var(--brand-surface) 0%, rgba(26, 10, 0, 0.74) 9%, rgba(26, 10, 0, 0.16) 26%, rgba(26, 10, 0, 0.16) 74%, rgba(26, 10, 0, 0.78) 91%, var(--brand-surface) 100%),
     radial-gradient(ellipse 72% 46% at 50% 48%, rgba(192, 94, 53, 0.20) 0%, rgba(148, 52, 6, 0.12) 40%, rgba(13, 5, 0, 0) 74%),
     rgba(13, 5, 0, 0.56);
-}
-
-@keyframes fireplaceReveal {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* Responsive fireplace video sizing.
-   The video is intentionally larger than the section so the soft masked edges
-   can fade into the background on every viewport instead of showing hard cuts. */
-#menu {
-  --fireplace-size: clamp(374px, 46.8vw, 902px);
-  --fireplace-x: 50%;
-  --fireplace-y: 50%;
-  --fireplace-opacity: 0.68;
-}
-
-#menuFireplaceVideo {
-  opacity: var(--fireplace-opacity);
-  mix-blend-mode: screen;
-  position: absolute;
-  left: var(--fireplace-x);
-  top: var(--fireplace-y);
-  width: var(--fireplace-size);
-  height: var(--fireplace-size);
-  max-width: none;
-  max-height: none;
-  object-fit: contain;
-  object-position: center center;
-  transform: translate(-50%, -50%);
-  transform-origin: center;
-  -webkit-mask-image: radial-gradient(ellipse 56% 54% at 50% 50%, #000 0%, #000 52%, rgba(0, 0, 0, 0.78) 68%, transparent 91%);
-  mask-image: radial-gradient(ellipse 56% 54% at 50% 50%, #000 0%, #000 52%, rgba(0, 0, 0, 0.78) 68%, transparent 91%);
-}
-
-@media (min-width: 1440px) {
-  #menu {
-    --fireplace-size: clamp(570px, 41.75vw, 996px);
-  }
 }
 
 @keyframes brand-cta-flow {
@@ -610,13 +566,10 @@
 
 .hero-video {
   object-position: center center;
+  background-color: transparent;
 }
 
 .signature-video {
-  object-position: center center;
-}
-
-.menu-fireplace-video {
   object-position: center center;
 }
 

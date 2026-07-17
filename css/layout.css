@@ -117,7 +117,7 @@
   }
 }
 
-/* Keep the fireplace frame stable while switching tabs. */
+/* Keep the menu frame stable while switching tabs. */
 #menu .tab-content:not(.hidden) {
   min-height: 1180px;
   display: flex;
