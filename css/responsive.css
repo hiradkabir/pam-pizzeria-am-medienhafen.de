@@ -150,15 +150,6 @@
     padding-bottom: clamp(3rem, 13vw, 4rem) !important;
   }
 
-  /* Hide fireplace media on mobile */
-  #menuFireplaceVideo,
-  #menuFireplaceVideo.is-video-fallback,
-  .menu-fireplace-video.is-video-fallback {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-  }
-
   #menu > .absolute.inset-0 {
     background-image: none !important;
     background-size: auto !important;
@@ -761,7 +752,6 @@
   }
 
   #heroVideo,
-  #menuFireplaceVideo,
   .signature-video {
     animation: none;
   }

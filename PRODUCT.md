@@ -183,7 +183,6 @@ hero overlay reduced so the video remains visible
 mobile hero label and Speisekarte hero CTA hidden
 Calzone.mp4 uses its landscape aspect ratio on mobile so the complete dish remains visible
 Calzone description follows directly below the media with compact spacing
-fireplace video removed/hidden on mobile
 Speisekarte tabs arranged 2 columns × 3 rows
 gallery uses portrait cards with touch swiping, centered snapping and automatic focus scaling
 Kontakt content collapses into a single-column flow
@@ -196,7 +195,7 @@ Desktop supports a more atmospheric presentation:
 ```txt
 full navigation row
 hero-loop.mp4 as hero video background
-desktop fireplace video in Speisekarte
+warm gradient atmosphere in Speisekarte
 larger visual rhythm
 wide gallery carousel with centered snapping and automatic focus scaling
 native CSS carousel controls where supported
@@ -211,7 +210,8 @@ Hero media:
 ```txt
 desktop: assets/videos/hero-loop.mp4
 mobile:  assets/videos/hero-loop-mob.mp4
-fallback: assets/images/hero-poster.jpg
+desktop fallback: assets/images/hero-poster.jpg
+mobile fallback:  assets/images/hero-poster-mob.jpg
 ```
 
 Signature media:
@@ -224,9 +224,7 @@ fallback: assets/images/Calzone.jpg
 Menu atmosphere:
 
 ```txt
-desktop: assets/videos/Fireplace-dynamic5000px.mp4
-fallback: assets/images/Fireplace5000px.jpg
-mobile: hidden
+CSS-based warm gradient overlay without additional media
 ```
 
 ## Accessibility and privacy

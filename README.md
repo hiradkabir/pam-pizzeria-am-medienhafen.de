@@ -88,12 +88,12 @@ Do not keep “backup code” inside production files. Use version control for h
 
 ```html
 <link rel="stylesheet" href="css/tailwind.css?v=2">
-<link rel="stylesheet" href="css/base.css?v=14">
-<link rel="stylesheet" href="css/layout.css?v=28">
-<link rel="stylesheet" href="css/components.css?v=46">
-<link rel="stylesheet" href="css/responsive.css?v=61">
+<link rel="stylesheet" href="css/base.css?v=15">
+<link rel="stylesheet" href="css/layout.css?v=29">
+<link rel="stylesheet" href="css/components.css?v=49">
+<link rel="stylesheet" href="css/responsive.css?v=63">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
-<script defer src="js/script.js?v=48"></script>
+<script defer src="js/script.js?v=49"></script>
 ```
 
 Increase only the version number of a file that was actually changed.
@@ -111,10 +111,10 @@ The current code expects:
 ```txt
 assets/images/pizzeria-am-medienhafen-logo.svg
 assets/images/hero-poster.jpg
+assets/images/hero-poster-mob.jpg
 assets/images/am-ofen.jpg
 assets/images/IMG-20200109-WA0015.jpg
 assets/images/Calzone.jpg
-assets/images/Fireplace5000px.jpg
 assets/images/IMG-20200109-WA0034_0.jpg
 assets/images/IMG-20200105-WA0009.jpg
 assets/images/Holzpalette.jpg
@@ -142,7 +142,6 @@ The current code expects:
 assets/videos/hero-loop.mp4
 assets/videos/hero-loop-mob.mp4
 assets/videos/Calzone.mp4
-assets/videos/Fireplace-dynamic5000px.mp4
 ```
 
 Current behavior:
@@ -150,8 +149,9 @@ Current behavior:
 ```txt
 hero-loop.mp4                  desktop hero video
 hero-loop-mob.mp4              mobile hero video
+hero-poster.jpg                desktop hero poster/fallback
+hero-poster-mob.jpg            mobile hero poster/fallback
 Calzone.mp4                    signature dish video
-Fireplace-dynamic5000px.mp4    desktop menu background video; hidden on mobile
 ```
 
 ## CSS file responsibilities
@@ -201,7 +201,6 @@ general gallery image presentation
 Kontakt map-led layout
 OpenStreetMap styling
 opening hours formatting
-fireplace desktop styling
 mobile floating call button with deep-red gradient/glow/highlight
 contact “Jetzt Bestellen” deep-red gradient/glow/highlight
 desktop back-to-top button
@@ -225,7 +224,6 @@ mobile hero video sizing
 compact mobile Google rating strip
 mobile Calzone video keeps its landscape aspect ratio so the complete dish remains visible
 mobile Calzone description starts directly below the media with compact spacing
-mobile fireplace hiding
 mobile Speisekarte 2 × 3 tabs
 mobile Kontakt/Holzpalette rotation
 mobile modal sizing
@@ -305,7 +303,7 @@ Mobile floating call button
 ```txt
 full desktop navigation
 desktop hero video enabled
-desktop fireplace video visible in Speisekarte
+warm gradient atmosphere in Speisekarte
 Speisekarte tabs in one horizontal row
 larger visual rhythm
 wide gallery carousel with centered snapping
@@ -325,7 +323,6 @@ hero-loop-mob.mp4 selected by JavaScript when available
 reduced hero gradient so video remains visible
 mobile hero label and Speisekarte hero CTA hidden
 Calzone.mp4 keeps its landscape aspect ratio on mobile so the complete dish remains visible
-fireplace video/poster hidden in Speisekarte
 Speisekarte tabs arranged 2 columns × 3 rows
 gallery uses portrait cards, touch swiping and centered snapping
 Kontakt collapses into a single-column flow

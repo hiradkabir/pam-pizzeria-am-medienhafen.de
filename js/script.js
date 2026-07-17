@@ -544,6 +544,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const wanted = (mobileQuery.matches && video.dataset.srcMobile)
           ? video.dataset.srcMobile
           : video.dataset.src;
+        const wantedPoster = (mobileQuery.matches && video.dataset.posterMobile)
+          ? video.dataset.posterMobile
+          : video.dataset.poster;
+        if (wantedPoster && video.getAttribute('poster') !== wantedPoster) {
+          video.setAttribute('poster', wantedPoster);
+        }
         if (video.getAttribute('src') === wanted) { play(video); return; }
         video.setAttribute('src', wanted);   /* only the matching file is ever requested */
         prepareVideo(video);

@@ -136,7 +136,8 @@ Current behavior:
 ```txt
 desktop hero video: hero-loop.mp4
 mobile hero video: hero-loop-mob.mp4
-hero poster/fallback: hero-poster.jpg
+desktop hero poster/fallback: hero-poster.jpg
+mobile hero poster/fallback: hero-poster-mob.jpg
 dark gradient overlay
 large Bodoni title
 primary CTA to Speisekarte on desktop
@@ -202,15 +203,13 @@ Desktop:
 
 ```txt
 one horizontal tab row
-fireplace video visible behind the menu
-soft fire overlay
+warm gradient atmosphere behind the menu
 ```
 
 Mobile:
 
 ```txt
 tabs become 2 columns × 3 rows
-fireplace video and poster are hidden
 tab content min-height is removed
 ```
 
@@ -357,7 +356,6 @@ Current media assumptions:
 ```txt
 hero video: oven/fire/food atmosphere
 Calzone video: signature dish
-fireplace video: desktop menu ambience
 gallery: actual restaurant and food images
 Holzpalette: background texture for Kontakt
 ```
@@ -380,7 +378,6 @@ call button after scroll
 hero video visible
 touch-driven gallery carousel with centered snapping
 Speisekarte tabs in 2 × 3 layout
-fireplace background hidden
 Kontakt readable in one column
 ```
 
