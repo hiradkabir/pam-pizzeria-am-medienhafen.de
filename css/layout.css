@@ -59,13 +59,13 @@
     var(--brand-surface);
 }
 
-/* Holzpalette is now only used in the Kontakt section. It is sized independently
+/* The wood texture is only used in the Kontakt section. It is sized independently
    and softly masked so its PNG edges do not form a hard rectangle. */
 .contact-section-bg::before {
   content: '';
   position: absolute;
   inset: -4%;
-  background: url("../assets/images/Holzpalette.jpg") center center / min(2100px, 150vw) auto no-repeat;
+  background: url("../assets/images/holzpalette-restaurant-medienhafen.webp") center center / min(2100px, 150vw) auto no-repeat;
   opacity: 0.58;
   filter: saturate(0.88) brightness(0.78) contrast(0.94);
   pointer-events: none;

@@ -12,6 +12,8 @@ Keep this structure exactly as it is:
 ```txt
 project/
 ├── index.html
+├── about/
+│   └── index.html
 ├── README.md
 ├── DESIGN.md
 ├── PRODUCT.md
@@ -30,6 +32,8 @@ project/
 │   └── gallery-carousel.css
 ├── js/
 │   └── script.js
+├── scripts/
+│   └── validate-seo.cjs
 └── assets/
     ├── images/
     ├── videos/
@@ -87,13 +91,13 @@ Do not keep “backup code” inside production files. Use version control for h
 `index.html` currently loads:
 
 ```html
-<link rel="stylesheet" href="css/tailwind.css?v=2">
+<link rel="stylesheet" href="css/tailwind.css?v=4">
 <link rel="stylesheet" href="css/base.css?v=15">
-<link rel="stylesheet" href="css/layout.css?v=29">
+<link rel="stylesheet" href="css/layout.css?v=30">
 <link rel="stylesheet" href="css/components.css?v=49">
-<link rel="stylesheet" href="css/responsive.css?v=63">
+<link rel="stylesheet" href="css/responsive.css?v=65">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
-<script defer src="js/script.js?v=49"></script>
+<script defer src="js/script.js?v=50"></script>
 ```
 
 Increase only the version number of a file that was actually changed.
@@ -110,22 +114,21 @@ The current code expects:
 
 ```txt
 assets/images/pizzeria-am-medienhafen-logo.svg
-assets/images/hero-poster.jpg
-assets/images/hero-poster-mob.jpg
-assets/images/am-ofen.jpg
-assets/images/IMG-20200109-WA0015.jpg
-assets/images/Calzone.jpg
-assets/images/IMG-20200109-WA0034_0.jpg
-assets/images/IMG-20200105-WA0009.jpg
-assets/images/Holzpalette.jpg
-assets/images/glazed.jpg
-assets/images/terasse.jpg
-assets/images/AHDB8748.JPG
-assets/images/EQFY1298.JPG
-assets/images/QHUS6537.JPG
-assets/images/WNIW6153.JPG
-assets/images/ETHG4100.JPG
-assets/images/6d9729dd-19ae-4371-9581-3d22fd0fbaf7.jpg
+assets/images/holzofen-pizzeria-duesseldorf-medienhafen.webp
+assets/images/holzofen-pizzeria-duesseldorf-medienhafen-mobil.webp
+assets/images/italienisches-restaurant-medienhafen-atmosphaere.webp
+assets/images/pizza-calzone-medienhafen.webp
+assets/images/pizzeria-am-medienhafen-duesseldorf.webp
+assets/images/holzofenpizza-frisch-gebacken-duesseldorf.webp
+assets/images/holzpalette-restaurant-medienhafen.webp
+assets/images/restaurant-medienhafen-detail.webp
+assets/images/terrasse-pizzeria-medienhafen.webp
+assets/images/italienischer-salat-nicoise-duesseldorf.webp
+assets/images/restaurant-medienhafen-aussen-terrasse.webp
+assets/images/terrasse-sitzplaetze-pizzeria-medienhafen.webp
+assets/images/spaghetti-basilikum-pasta-duesseldorf.webp
+assets/images/rucola-tomaten-salat-parmesan.webp
+assets/images/caprese-tomate-mozzarella-basilikum.webp
 ```
 
 ## Required video files
@@ -149,8 +152,10 @@ Current behavior:
 ```txt
 hero-loop.mp4                  desktop hero video
 hero-loop-mob.mp4              mobile hero video
-hero-poster.jpg                desktop hero poster/fallback
-hero-poster-mob.jpg            mobile hero poster/fallback
+holzofen-pizzeria-duesseldorf-medienhafen.webp
+                               desktop hero poster/fallback
+holzofen-pizzeria-duesseldorf-medienhafen-mobil.webp
+                               mobile hero poster/fallback
 Calzone.mp4                    signature dish video
 ```
 
@@ -179,7 +184,7 @@ aspect-ratio helpers
 signature media min-height
 menu background
 gallery background
-contact background and Holzpalette layer
+contact background and wood-texture layer
 off-screen rendering hints
 menu tab content sizing
 ```
@@ -225,7 +230,7 @@ compact mobile Google rating strip
 mobile Calzone video keeps its landscape aspect ratio so the complete dish remains visible
 mobile Calzone description starts directly below the media with compact spacing
 mobile Speisekarte 2 × 3 tabs
-mobile Kontakt/Holzpalette rotation
+mobile Kontakt wood-texture rotation
 mobile modal sizing
 small-phone corrections
 landscape corrections
@@ -277,9 +282,13 @@ continuous gallery focus weighting based on distance from the carousel center
 
 Content reveal is no longer controlled by JavaScript. It is implemented in `css/components.css` with CSS view timelines. JavaScript uses `IntersectionObserver` only for video preloading and visibility-based playback.
 
-The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte and Kontakt in that order. Navbar, toggle, and dropdown share one continuous brand-dark background; the toggle has no persistent frame.
+The mobile hamburger menu is enabled on mobile and opens a black dropdown with Speisekarte, Über uns and Kontakt in that order. Navbar, toggle, and dropdown share one continuous brand-dark background; the toggle has no persistent frame.
 
 ## Current page structure
+
+The project has a conversion-focused home page and one editorial SEO/GEO subpage.
+
+### Home page
 
 ```txt
 Hero
@@ -294,6 +303,18 @@ Impressum modal
 Datenschutz modal
 Desktop back-to-top button
 Mobile floating call button
+```
+
+### `/about/`
+
+```txt
+Breadcrumb and compact page heading
+History since 1998
+Location in Düsseldorf-Unterbilk and Medienhafen
+Kitchen and quality
+Visible FAQ
+Visit-planning CTA
+Footer
 ```
 
 ## Current responsive behavior
@@ -326,7 +347,7 @@ Calzone.mp4 keeps its landscape aspect ratio on mobile so the complete dish rema
 Speisekarte tabs arranged 2 columns × 3 rows
 gallery uses portrait cards, touch swiping and centered snapping
 Kontakt collapses into a single-column flow
-Holzpalette.jpg rotated/scaled for mobile background fit
+holzpalette-restaurant-medienhafen.webp rotated/scaled for mobile background fit
 ```
 
 ## CSS feature compatibility
@@ -396,7 +417,13 @@ The Kontakt section embeds an OpenStreetMap iframe, styled in CSS to match the d
 
 ## SEO and structured data
 
-`index.html` contains canonical, description, robots, Open Graph and Twitter metadata plus Schema.org `Restaurant` JSON-LD. `robots.txt` points search engines to `sitemap.xml`. Keep the address, telephone number, opening hours and production URL aligned across HTML, JSON-LD and the sitemap.
+Both HTML pages contain canonical, description, robots, Open Graph and Twitter metadata. The home page exposes a linked Schema.org graph for `WebSite`, `WebPage`, `Restaurant`, `Menu`, `MenuSection`, all 75 `MenuItem`/`Offer` pairs and `ImageObject` entries. `/about/` adds `AboutPage`, `BreadcrumbList` and visible, matching `FAQPage` data. `robots.txt` points search engines to `sitemap.xml`. Keep address, telephone number, opening hours and production URLs aligned across HTML, JSON-LD and the sitemap.
+
+Run the local SEO consistency check after content, price, schema or asset changes:
+
+```txt
+npm run validate:seo
+```
 
 ## Local CSS build
 
@@ -404,10 +431,11 @@ Install dependencies once and rebuild the generated Tailwind file after changing
 
 ```txt
 npm install
+npm run optimize:images
 npm run build
 ```
 
-Commit `css/tailwind.css`; never commit `node_modules/`. The production page must not load `cdn.tailwindcss.com`.
+`npm run optimize:images` regenerates production WebP files from the matching descriptive JPEG sources. Commit the generated WebP files and `css/tailwind.css`; never commit `node_modules/`. The production page must not load `cdn.tailwindcss.com`.
 
 ## Local testing
 

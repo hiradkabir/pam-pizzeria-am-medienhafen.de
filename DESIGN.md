@@ -46,10 +46,11 @@ a neon food startup
 
 ## Implementation summary
 
-The design is implemented as a static single-page site.
+The design is implemented as a static home page plus one editorial `/about/` subpage.
 
 ```txt
 index.html                 content, SEO/Restaurant metadata, section order, media references, modals
+about/index.html           history, local SEO/GEO content, FAQ, breadcrumb and visit CTA
 tailwind.config.js         build-time utility theme and content scanning
 css/tailwind.css           generated, locally hosted Tailwind utilities
 css/base.css               brand variables, color fallbacks, browser defaults
@@ -127,6 +128,10 @@ Mobile prioritizes speed, visible CTAs, reduced vertical space, and readable int
 
 ## Section design
 
+### About page
+
+The About page reuses the same dark surfaces, Bodoni/Jost typography, restrained red CTAs, gold dividers and responsive navigation. Its text-led sections intentionally add search context without introducing a separate visual system or competing with the home page's conversion flow.
+
 ### Hero
 
 Purpose: immediate atmosphere and identity.
@@ -136,8 +141,8 @@ Current behavior:
 ```txt
 desktop hero video: hero-loop.mp4
 mobile hero video: hero-loop-mob.mp4
-desktop hero poster/fallback: hero-poster.jpg
-mobile hero poster/fallback: hero-poster-mob.jpg
+desktop hero poster/fallback: holzofen-pizzeria-duesseldorf-medienhafen.webp
+mobile hero poster/fallback: holzofen-pizzeria-duesseldorf-medienhafen-mobil.webp
 dark gradient overlay
 large Bodoni title
 primary CTA to Speisekarte on desktop
@@ -190,7 +195,7 @@ Calzone video on one side and text on the other.
 
 ```txt
 video: assets/videos/Calzone.mp4
-poster/fallback: assets/images/Calzone.jpg
+poster/fallback: assets/images/pizza-calzone-medienhafen.webp
 ```
 
 On mobile, the media panel uses the video's landscape aspect ratio with `object-fit: contain` and top alignment so the complete dish stays visible. The section has no outer mobile padding, and the description follows with compact top spacing.
@@ -263,7 +268,7 @@ phone/order CTA
 mobile single-column flow
 ```
 
-`Holzpalette.jpg` is used as a warm background layer in the Kontakt section and is adjusted in `responsive.css` for mobile.
+`holzpalette-restaurant-medienhafen.webp` is used as a warm background layer in the Kontakt section and is adjusted in `responsive.css` for mobile.
 
 ## Components
 
@@ -357,7 +362,7 @@ Current media assumptions:
 hero video: oven/fire/food atmosphere
 Calzone video: signature dish
 gallery: actual restaurant and food images
-Holzpalette: background texture for Kontakt
+holzpalette-restaurant-medienhafen.webp: background texture for Kontakt
 ```
 
 Assets are large and may not be included in every edit request, but the documented paths must remain stable.
