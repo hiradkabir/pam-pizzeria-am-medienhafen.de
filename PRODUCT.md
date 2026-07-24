@@ -52,9 +52,10 @@ the user can find the location without friction
 
 ## Current product structure
 
-The website is organized as one static page:
+The website consists of a conversion-focused home page and one editorial SEO/GEO subpage.
 
 ```txt
+Home page:
 Hero
 Static Google rating strip
 Highlights bar
@@ -67,6 +68,13 @@ Impressum modal
 Datenschutz modal
 Desktop back-to-top button
 Mobile floating call button
+
+/about/:
+history since 1998
+location and local context
+kitchen and quality
+visible FAQ
+visit-planning CTA
 ```
 
 ## Current main interactions
@@ -210,15 +218,15 @@ Hero media:
 ```txt
 desktop: assets/videos/hero-loop.mp4
 mobile:  assets/videos/hero-loop-mob.mp4
-desktop fallback: assets/images/hero-poster.jpg
-mobile fallback:  assets/images/hero-poster-mob.jpg
+desktop fallback: assets/images/holzofen-pizzeria-duesseldorf-medienhafen.webp
+mobile fallback:  assets/images/holzofen-pizzeria-duesseldorf-medienhafen-mobil.webp
 ```
 
 Signature media:
 
 ```txt
 video: assets/videos/Calzone.mp4
-fallback: assets/images/Calzone.jpg
+fallback: assets/images/pizza-calzone-medienhafen.webp
 ```
 
 Menu atmosphere:
@@ -260,7 +268,7 @@ The project should remain:
 
 ```txt
 static
-single-page
+two-page structure (home page plus /about/)
 HTML/CSS/JS production output
 local build-time Tailwind compilation
 GitHub Pages compatible
@@ -275,7 +283,7 @@ a framework app
 a CMS
 a delivery platform clone
 a tracking-heavy marketing page
-a multi-page site unless explicitly requested
+additional subpages unless explicitly requested
 ```
 
 ## Maintenance expectations
