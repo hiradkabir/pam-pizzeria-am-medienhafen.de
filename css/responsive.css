@@ -526,6 +526,10 @@
    ========================================================================== */
 
 @media (min-width: 768px) {
+  .mobile-cta-fab {
+    display: none !important;
+  }
+
   #navbar a[href="#"] span:first-child {
     font-size: clamp(1.32rem, 1.38vw, 1.62rem) !important;
     letter-spacing: 0.15em !important;
