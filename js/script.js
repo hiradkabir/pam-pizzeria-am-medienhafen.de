@@ -461,6 +461,19 @@ document.addEventListener('DOMContentLoaded', () => {
       openModal('modal-datenschutz', event.currentTarget);
     });
 
+    // Legal links from subpages open the matching modal after returning home.
+    function openModalFromHash() {
+      const modalByHash = {
+        '#impressum': 'modal-impressum',
+        '#datenschutz': 'modal-datenschutz'
+      };
+      const modalId = modalByHash[window.location.hash.toLowerCase()];
+      if (modalId) openModal(modalId);
+    }
+
+    window.addEventListener('hashchange', openModalFromHash);
+    openModalFromHash();
+
     modalIds.forEach(id => {
       document.getElementById(id + '-close')?.addEventListener('click', () => closeModal(id));
       document.getElementById(id + '-backdrop')?.addEventListener('click', () => closeModal(id));
