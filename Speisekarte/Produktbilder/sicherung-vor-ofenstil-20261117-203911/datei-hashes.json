@@ -1,0 +1,586 @@
+﻿[
+    {
+        "path":  "originale\\01-margherita.png",
+        "hash":  "5C35F8329BD51B885EC59182E0F2296BC144911AFBDAB80648EC434468809506"
+    },
+    {
+        "path":  "originale\\02-salami.png",
+        "hash":  "A6AE7D1547A827C79171DD34ECE006DC6C36F17DB90402B67E5D9209916DCD15"
+    },
+    {
+        "path":  "originale\\03-fungi.png",
+        "hash":  "E52887AF066EE73896740DF4E24BA61CB5E6D41A07C7B73EB55B39EBADD3C1AC"
+    },
+    {
+        "path":  "originale\\04-pizza-carciofi.png",
+        "hash":  "6B4B4788DE25D4F9F30C8A8EC892ACB28FD8DA44EB1B2D4803302320FB5CDAE5"
+    },
+    {
+        "path":  "originale\\05-pizza-cipolla.png",
+        "hash":  "3EAFF81D0E9BA3DC96B72A153CB9F32E08B0CFA1AF9ECF428611D7F4FC3F1838"
+    },
+    {
+        "path":  "originale\\06-prosciutto.png",
+        "hash":  "926724844F3F1D155A25F515CB30CF7CBB22CEB98E7200C42C4D27761F6BA0BC"
+    },
+    {
+        "path":  "originale\\07-bolognese.png",
+        "hash":  "BC84F59F31F547D6111EAD07B8E9DD31E9F5DB07391EF436769C3D34EE59B891"
+    },
+    {
+        "path":  "originale\\08-brokkoli.png",
+        "hash":  "877325171184A349BB9AA7D8CBEC73ED7EEB176EEC2018B7453D8A5E2CAE9B54"
+    },
+    {
+        "path":  "originale\\09-spinaci.png",
+        "hash":  "04A544EB488D057E727F2A30A68B36681E3666F785590D8766D7FF9A66D9A175"
+    },
+    {
+        "path":  "originale\\10-europa.png",
+        "hash":  "D83E4A14CF550DEE1C01B3B312BCE0E300D45E5CC55A67FA2A4A723B5A2699CC"
+    },
+    {
+        "path":  "originale\\11-udo-s-pizza.png",
+        "hash":  "0ECF99E04C8953B512D25CCE19CB87F34EEACA0C44A82819E2EAD8F2F6C345A4"
+    },
+    {
+        "path":  "originale\\12-valentino.png",
+        "hash":  "E84D4132BC7C90CE7AAA42B9609EC7FD5ADA10B081A799B9A196EA4067D51225"
+    },
+    {
+        "path":  "originale\\13-calabrese.png",
+        "hash":  "5DB3726EAAA29C0B417FB12E34268CA94FBB7B022AE6AFF125952CD25DA529E4"
+    },
+    {
+        "path":  "originale\\14-tonno.png",
+        "hash":  "525C63D90FD1798AAE93437EA6E5FC48BFD806071EA3FEADB48F6EDB12D9DAC4"
+    },
+    {
+        "path":  "originale\\15-contadina.png",
+        "hash":  "122A691F193094EBDB23390EE768D78158811129FCE0F2AD4CF50BA1AC9792A7"
+    },
+    {
+        "path":  "originale\\16-4-stagioni.png",
+        "hash":  "0A3097C584988C358D6150709D014EBAF106D324389F871102AC6656A0DAF3A6"
+    },
+    {
+        "path":  "originale\\17-hawaii.png",
+        "hash":  "D53BC0614F355CACD852734F8F22D10526D0A81851157D162C5F6BDAF5C13185"
+    },
+    {
+        "path":  "originale\\18-mista.png",
+        "hash":  "04BD5C253B99F68BEE477C98FF4A1064D35601163950E7E1E5F13B473600B747"
+    },
+    {
+        "path":  "originale\\19-caprese.png",
+        "hash":  "9CAC41018FEBF8147735526CBDCCA309C8F0AF651DE73C11F64598A462FC39C3"
+    },
+    {
+        "path":  "originale\\20-4-formaggi.png",
+        "hash":  "E3F9E1A88358C1B0DF88025408D38F9A24A5B478DE8D128674BD56FEBDB39C9A"
+    },
+    {
+        "path":  "originale\\21-calzone.png",
+        "hash":  "CD10793E75E5C92255B76259766C3413DA9309FB004A73CA85F63977625EFE17"
+    },
+    {
+        "path":  "originale\\22-gamberetti.png",
+        "hash":  "3B8548B9BF232F39C0B99921E8F841A849558A1B76FF630FF97E28B48C9404AC"
+    },
+    {
+        "path":  "originale\\23-mari-e-monti.png",
+        "hash":  "895EE396DF50D909FFA6A5FF4F63C8F1C8472B6AACFC202DD8270340426ED95E"
+    },
+    {
+        "path":  "originale\\24-rucola.png",
+        "hash":  "4A5B37921F6492C678DD05933589B30085E623D48E667F2C75190FF5FBAE6C1E"
+    },
+    {
+        "path":  "originale\\25-frutti-di-mare.png",
+        "hash":  "73D1A8253EDDB0BF1DD2AFA9339E1195FC4F8DE226548D59E4FCA6537586BC66"
+    },
+    {
+        "path":  "originale\\26-capricciosa.png",
+        "hash":  "2A950A9BA799B004D3B439D7E1276F71F43779F58298FAC6B5E44E87D3A7840A"
+    },
+    {
+        "path":  "originale\\27-pizza-varano.png",
+        "hash":  "2BCBBAFAEEB9EF381276394124A5D382029006A8181C8F05ADA6E2B7E5089EEC"
+    },
+    {
+        "path":  "originale\\28-pizza-regata.png",
+        "hash":  "68A25F2121C6AE32B81A93A17E4CB57A9C8F5160F5C1114C36F1171CDDF1B0A1"
+    },
+    {
+        "path":  "originale\\29-pizza-pute.png",
+        "hash":  "E8D57D9F21020BFFC0D857DCD398C486D36A0AA3843B07A7C8E4E4C2A41809A8"
+    },
+    {
+        "path":  "originale\\30-pizza-montanara.png",
+        "hash":  "95F09B63DD53D5F187E999DA51DC79C6F1ABE961E5B9F6EADA1D67655A8E8861"
+    },
+    {
+        "path":  "originale\\31-pizza-italia.png",
+        "hash":  "3EF9E355D032B773421D1C47A9E489BA3B28952104DFE3E397D12E7B6BEF2B3A"
+    },
+    {
+        "path":  "originale\\32-pizza-patata.png",
+        "hash":  "33FF67ECADC5FB90053186A55514661BF921E932F8D8DC92545B938C55AAA642"
+    },
+    {
+        "path":  "originale\\33-pizzabroetchen-mit-knoblauch-kraeuterbutter.png",
+        "hash":  "FE06FFD72D30638B3646F0FCEF408DB0876AEF704B4365DAF01946F9F60A0FE9"
+    },
+    {
+        "path":  "originale\\33a-famiglia-ca-45-cm.png",
+        "hash":  "8ACF8D29626FD12F77D4EEA199B220163284E4D672930C53C8BC797D880266B9"
+    },
+    {
+        "path":  "originale\\34-focaccia-al-rosmarino.png",
+        "hash":  "CC4005016FA5DC143499C568C8D51742DAE74A25EEE30D649AB32D1B88D00CD0"
+    },
+    {
+        "path":  "originale\\35-melanzane-parmigiana.png",
+        "hash":  "812C2FAEE7467BC088530F0966F7C0A339ED358C424B49D63346967A07CDB9BA"
+    },
+    {
+        "path":  "originale\\36-rucolasalat.png",
+        "hash":  "DBE4B81C099FFF4AC7BE0856E736A8E2AF7A7C24A1AFF0A28C0DA85950A0483F"
+    },
+    {
+        "path":  "originale\\37-inslata-caprese.png",
+        "hash":  "178C24F622384EE81A57C945C81A4C0619C223028FC272B46957C1723DDB24F6"
+    },
+    {
+        "path":  "originale\\38-bruschetta.png",
+        "hash":  "22DCD029135BDB0A83EC6217642D077A733423F0C82D4CA94512069F431F85E5"
+    },
+    {
+        "path":  "originale\\39-insalata-mista.png",
+        "hash":  "A253DDDC7BA63520C54B4161E61C29D10039D772C301B08FD3EBAF5931FA8C7E"
+    },
+    {
+        "path":  "originale\\40-insalata-nicoise.png",
+        "hash":  "88E01ADC2CBCC2CA18A06DE0CAF6CD1C74DB54CF1988302C4F4436054CE2DFE8"
+    },
+    {
+        "path":  "originale\\41-capricciosa.png",
+        "hash":  "120FBD2DA76FF59CF3CE8D4022063D8C2018FAB297E50AF94A23B8405A3C488D"
+    },
+    {
+        "path":  "originale\\42-puten-salat.png",
+        "hash":  "D9ACABAE2423D0975E6E3CEDD16823D7B820C5D82E6F646D2D6A255E117F2C8E"
+    },
+    {
+        "path":  "originale\\43-spaghetti-napoli.png",
+        "hash":  "0CB99B38EED16E5BC531A90B30237A3228BB0F74436EEAF9868C0F64B1F2D4F6"
+    },
+    {
+        "path":  "originale\\44-spaghetti-bolognese.png",
+        "hash":  "52DC09A4CFFC99F286C512227D467B8FBD170944C404EF47602502442A26478F"
+    },
+    {
+        "path":  "originale\\45-spaghetti-a-matriciana.png",
+        "hash":  "CC7F15BEC5356CFC7DED84069370356EFCC3DFA9CCA6EF948B1D5AE9BDDC4A7F"
+    },
+    {
+        "path":  "originale\\46-spaghetti-frutti-di-mare.png",
+        "hash":  "69B9EFE56E75EBE44C748177B82A940A98F5D053E63A55A8D9633B8C053706C4"
+    },
+    {
+        "path":  "originale\\47-spaghetti-alla-puttanesca.png",
+        "hash":  "4F754623D61E6F0703C24A8A2C48CE860231B9B8557C0F1093850CC6FAB09F96"
+    },
+    {
+        "path":  "originale\\48-spaghetti-carbonara.png",
+        "hash":  "C37045CD566B22ED86EFA2231BA8F8F3BA4ED318B5D8D4C0169CDDEDC612D845"
+    },
+    {
+        "path":  "originale\\49-spaghetti-aglio-olio-e-peperocino.png",
+        "hash":  "C4F9926C971A1F7B3A76DA3CEADD043B17FD39B22CD90DAE056D2083DE2D8648"
+    },
+    {
+        "path":  "originale\\50-spaghetti-pesto.png",
+        "hash":  "0ED79CF65D0F481BBFFE2BA6A787DE051720CC2F8F96023198DDF0D0DB385F00"
+    },
+    {
+        "path":  "originale\\51-penne-all-arabbiata.png",
+        "hash":  "25D96386029D04F5E47C56D5BA09A8EB7DBA46326D4CB8299D10B0A64FCBC7DE"
+    },
+    {
+        "path":  "originale\\52-penne-all-ortolana.png",
+        "hash":  "2C9A7AC76552A04832FD59192B9D45A21D386399C4D91BCB38528A69BA82AF63"
+    },
+    {
+        "path":  "originale\\53-penne-pute.png",
+        "hash":  "4E8E56C03A836A6A37E46853A7138EB70E01E218955311874EE78192290A64D3"
+    },
+    {
+        "path":  "originale\\54-penne-al-forno.png",
+        "hash":  "BB28A57C919C63FF9604126F5A8F36B5F4C0B6D37B10DB36C1A55E4FA6CBA194"
+    },
+    {
+        "path":  "originale\\55-penne-4-formaggi.png",
+        "hash":  "56C0530F48098C1C7EFC1F42EAEEFA5438A420AA6A61F9FDC11CA020685E1DC6"
+    },
+    {
+        "path":  "originale\\56-penne-bolognese.png",
+        "hash":  "678F862A6581144594B3A73C40F588248662E61C75E4E768940ED278BF3E44B9"
+    },
+    {
+        "path":  "originale\\57-penne-napoli.png",
+        "hash":  "77DC8963991AF633E1AB8A1586CA04E37BF741E4C48D8403DC532062B6827FD7"
+    },
+    {
+        "path":  "originale\\58-tagliatelle-alfredo.png",
+        "hash":  "4271D8B4D7C438ED89AB67B2E5ADA5B25B2EC9298D4ADA7A381856FC03127A47"
+    },
+    {
+        "path":  "originale\\59-tagliatelle-al-salmone.png",
+        "hash":  "CA73470C6477DB64202200CF92511EB07CE5968726A809841F830E588CA6A350"
+    },
+    {
+        "path":  "originale\\60-tagliatelle-mari-e-monti.png",
+        "hash":  "EE8E31094B22C125FA5562FD68BD0A7EE77545E1FFA6F06DA0DDE90FF642C150"
+    },
+    {
+        "path":  "originale\\61-tagliatelle-bolognese.png",
+        "hash":  "97A1D965CF3DE642CCB47434743F2B946EC125237C5BB1322CC4D534DBC487CA"
+    },
+    {
+        "path":  "originale\\62-tagliatelle-napoli.png",
+        "hash":  "7F7CC67370F5D8C1107BAE5B912B7FFE350E22C497EB11C336D574CEDC55F12A"
+    },
+    {
+        "path":  "originale\\63-tortellini-al-forno.png",
+        "hash":  "0F7EC117A0E89412EC1E32BAA657CD79C8DFD682FFD023BC434C4AF43A13D886"
+    },
+    {
+        "path":  "originale\\64-tortellini-alla-panna.png",
+        "hash":  "401E1D676BB65EF18D5D4BF6E98B199DB8D83ABCE1CEC40D6C15C51D2C41B93F"
+    },
+    {
+        "path":  "originale\\65-tortellini-al-4-formaggi.png",
+        "hash":  "8707FB15F7CE3185B89416573076301187BCEFC7D84E92610E71FB55C72DF876"
+    },
+    {
+        "path":  "originale\\66-tortellini-alla-boscaiola.png",
+        "hash":  "239FFCABE7129CA5E7212051FA382A3ABEFA7A325F6593DC65DAE0CEDA436F5F"
+    },
+    {
+        "path":  "originale\\67-gnocchi-alla-gorgonzola.png",
+        "hash":  "94DF9D196ACFB0C5901B1E152502BF7AE2FD3E9707E542D0111AB490CF69A65E"
+    },
+    {
+        "path":  "originale\\68-gnocchi-alla-bolognese.png",
+        "hash":  "3A121115AD65D8E0F62BD624AA0D2E1AAEC1A7634E5E054C452AB0E8305F861C"
+    },
+    {
+        "path":  "originale\\69-gnocchi-alla-napoli.png",
+        "hash":  "DBC51E6809319D4E797077BA437A2B298E221BA19375433349B7B0B55C7AA914"
+    },
+    {
+        "path":  "originale\\70-gnocchi-alla-sorrentina.png",
+        "hash":  "FE9A56D5DE4949BED6CB7611107A6F92271EEFF11BF47C19EDFA8AE483A2F0B5"
+    },
+    {
+        "path":  "originale\\71-lasagne-traditionale.png",
+        "hash":  "4D7544B3D1363A7B26573EA1D574A140830177B3715EC67359BE6E7B27098BEF"
+    },
+    {
+        "path":  "originale\\72-pasticcio-al-forno-brooklin.png",
+        "hash":  "1B2158598F5BB19EC89088DA758711D9C4975A15DF2CA99411F3F5CF7F731181"
+    },
+    {
+        "path":  "512\\01-margherita.jpg",
+        "hash":  "8771341508D459031632D7759FE6680D08D0D6CA9BC6F6ED0E1C592177408ECA"
+    },
+    {
+        "path":  "512\\02-salami.jpg",
+        "hash":  "633DEE4339F6C7B99BCAF6A54BCBBA806ABB7EB5888D6550F962A947B5CC3CBC"
+    },
+    {
+        "path":  "512\\03-fungi.jpg",
+        "hash":  "ABBEC80295FC11E0284CD907809BF2E1DFCEEA8C0D745AA911041D059CEC428F"
+    },
+    {
+        "path":  "512\\04-pizza-carciofi.jpg",
+        "hash":  "45653586344B8F8588B16FB923749F1CF924759E850B93F1ADDD8D039AD177E5"
+    },
+    {
+        "path":  "512\\05-pizza-cipolla.jpg",
+        "hash":  "EE51A5ED939A6C445988A24AD2F3730BEA4065DF2D5DE611A5E978B9E15E0777"
+    },
+    {
+        "path":  "512\\06-prosciutto.jpg",
+        "hash":  "17F27EB48B50DC23712FD51839AA9A8430F42D1986A442BC0F7C66893F3FFD78"
+    },
+    {
+        "path":  "512\\07-bolognese.jpg",
+        "hash":  "FAA92C8CB460276BB9D70A6F8AFE8E195969933CAF20EF0AA5E007D5A0B76D12"
+    },
+    {
+        "path":  "512\\08-brokkoli.jpg",
+        "hash":  "94152387F2AFEED7410D6C50513F99CCADF2CB9FE1C7A8D4DC959ED17D2A4EE5"
+    },
+    {
+        "path":  "512\\09-spinaci.jpg",
+        "hash":  "47D6AB490080785B1EEB9C713BEE88C2C217BBE95153E021C98A6D73F11CF304"
+    },
+    {
+        "path":  "512\\10-europa.jpg",
+        "hash":  "0C26A403B18AA7DA91CC4E8CC39C61AD34D80C6AE845724D78B6EA50A093CBE2"
+    },
+    {
+        "path":  "512\\11-udo-s-pizza.jpg",
+        "hash":  "87AFD935A8D3E61AF3CC0695BC1D641BD06E7238E9924A3D448C5671C65E9E49"
+    },
+    {
+        "path":  "512\\12-valentino.jpg",
+        "hash":  "9E27113BFEA6D41457E9DFBC884C879741C78950C4554357A3B8502C366DD36A"
+    },
+    {
+        "path":  "512\\13-calabrese.jpg",
+        "hash":  "039590F575FB79AE1261C724BC6F89D42A1CBFE872C47916CCD2ECE18B89093B"
+    },
+    {
+        "path":  "512\\14-tonno.jpg",
+        "hash":  "3A6E3D9602BCF485124B43074E72F6C25B36AB52FBEDF6626352445B64515D46"
+    },
+    {
+        "path":  "512\\15-contadina.jpg",
+        "hash":  "80D46E4536CB54C8CAA67B6B16FCB88A057E1FFFB9BB890AC068E71F002D6E08"
+    },
+    {
+        "path":  "512\\16-4-stagioni.jpg",
+        "hash":  "2309A7FCE1630FFB2E3456F9A9E9A8F46E2B10DFA72C37C67B650B13AB448D32"
+    },
+    {
+        "path":  "512\\17-hawaii.jpg",
+        "hash":  "BD59040EDE2D6581BA6AE3E346598B1764BB1E9FAC72C17439B12C4C86BBE0F6"
+    },
+    {
+        "path":  "512\\18-mista.jpg",
+        "hash":  "7083B85B54BC691042099C14D8DFC2EB26FEFC2973F6AB059C7775804D3DEBE1"
+    },
+    {
+        "path":  "512\\19-caprese.jpg",
+        "hash":  "B45DAC5871FD38ADC692730BEC318A08EC6BBBB5D3D3B00B53619582DD38532E"
+    },
+    {
+        "path":  "512\\20-4-formaggi.jpg",
+        "hash":  "4AD3B788441E0751470066157BAA840AD559BA68AEE3786288ED1C8DA53DD5DF"
+    },
+    {
+        "path":  "512\\21-calzone.jpg",
+        "hash":  "F4FECD43940E9ABC0D8E5F231BF574C6985AF9944CD3B8103A9B4F82440A0394"
+    },
+    {
+        "path":  "512\\22-gamberetti.jpg",
+        "hash":  "B9D6C10C1AC948D610FFC0BB85B95A7BA80172AEBA0C198DB87E271959DDC8EF"
+    },
+    {
+        "path":  "512\\23-mari-e-monti.jpg",
+        "hash":  "34587BDDDF5C683BD31964AA219A61DFFA960445762F6BD2203A3553B3CA88CB"
+    },
+    {
+        "path":  "512\\24-rucola.jpg",
+        "hash":  "C41633A03905CD3263F3CC72CCDA1DE9A92F6DDF76AFE46ED02E0DDB05CE9611"
+    },
+    {
+        "path":  "512\\25-frutti-di-mare.jpg",
+        "hash":  "DA987E0F6DB645EA8458CAFDD7427527BC0CCE77248DE84A5910C8EDB70988A8"
+    },
+    {
+        "path":  "512\\26-capricciosa.jpg",
+        "hash":  "42CBF1C8BDA8CD27DBB43AF326AB241EE76AA759AA4EAD69A1D2E5B88AFC4732"
+    },
+    {
+        "path":  "512\\27-pizza-varano.jpg",
+        "hash":  "FE8AE2D260B2F1DCF500573CE2386ADD49A0BB60E07BA49CD24F2B9568DD9EB2"
+    },
+    {
+        "path":  "512\\28-pizza-regata.jpg",
+        "hash":  "054E5A3EA867C40DA3A5A7D226B66014D89DDDD5B51C03810A2AB48ED43D8477"
+    },
+    {
+        "path":  "512\\29-pizza-pute.jpg",
+        "hash":  "F1F610C336F83F3E1D190A8E5FC347983289D479101B0129E4C17D5EA0D64DD5"
+    },
+    {
+        "path":  "512\\30-pizza-montanara.jpg",
+        "hash":  "B2F1592179C636BB4FA6AE2FD5F824EE0CE0A7866106CA7CEACABFE5C5C32A6E"
+    },
+    {
+        "path":  "512\\31-pizza-italia.jpg",
+        "hash":  "4B7AA8396D459245D85A76EF2BE73A8C10AE1005ABF3184A603897456EF69AD0"
+    },
+    {
+        "path":  "512\\32-pizza-patata.jpg",
+        "hash":  "787EB448D227F83F3C5C42714C8ABFE535A0DEE9DC1E01A3D4837C060C0750AC"
+    },
+    {
+        "path":  "512\\33-pizzabroetchen-mit-knoblauch-kraeuterbutter.jpg",
+        "hash":  "A1B61A64E2A284B21227FCA2ABFEC6590C974C8196DE882A7A8C65952BF77287"
+    },
+    {
+        "path":  "512\\33a-famiglia-ca-45-cm.jpg",
+        "hash":  "5095E7933795230CA9727DFD61C463B1D4DD2C41DD63E144B7B6E6681A8C8332"
+    },
+    {
+        "path":  "512\\34-focaccia-al-rosmarino.jpg",
+        "hash":  "E7EA93CF34ADB9685566EB02D21B41E8191A5486B25445E22CA0AF374C6830C4"
+    },
+    {
+        "path":  "512\\35-melanzane-parmigiana.jpg",
+        "hash":  "5B14D75F575D010F026314EE81009A996F0A5838FFE580380EDD38048D7DF29A"
+    },
+    {
+        "path":  "512\\36-rucolasalat.jpg",
+        "hash":  "F48DE0AFC5E8267ECDDC03B925D0890006A0FCFD5868F7DBECF8045F36240040"
+    },
+    {
+        "path":  "512\\37-inslata-caprese.jpg",
+        "hash":  "AEE62F9F4BD53A05DBE4B33074B2AE24A73DEC3315750905B6B874FA068F1BA1"
+    },
+    {
+        "path":  "512\\38-bruschetta.jpg",
+        "hash":  "3943B5DE3E135C5F1CBF681C9602B6205B279667097654D8855C8DD959147F8D"
+    },
+    {
+        "path":  "512\\39-insalata-mista.jpg",
+        "hash":  "547A4B16870AF18AA1688715E9D15B4ACAEB94BDAC53679CC889047479C3E424"
+    },
+    {
+        "path":  "512\\40-insalata-nicoise.jpg",
+        "hash":  "E2A22A13DAB8D3B8E893FB63A9B06514B6C3EB602E91E2949B526D6030B91C66"
+    },
+    {
+        "path":  "512\\41-capricciosa.jpg",
+        "hash":  "E1423C79C32D10DF8B5BE3859A15AFF40D643E0BF621A4C6B6F6B4DCE82E8152"
+    },
+    {
+        "path":  "512\\42-puten-salat.jpg",
+        "hash":  "ED55B06F8FCEC526BF2570BF362306510BAB21770A9F990205C4FE48DFF56C7C"
+    },
+    {
+        "path":  "512\\43-spaghetti-napoli.jpg",
+        "hash":  "5E2ED019760E510C3FADD1E0235FB5D30ADA2369CC5F48750B380CE980C85DA0"
+    },
+    {
+        "path":  "512\\44-spaghetti-bolognese.jpg",
+        "hash":  "B79480620D1666757C5B70965109B609C94B00C1338AA4F6A91DED616C89A6B2"
+    },
+    {
+        "path":  "512\\45-spaghetti-a-matriciana.jpg",
+        "hash":  "100AA311A69DB360A8DEDC2B2A07673F653B2B9C7B3FF498676C55686ADFD589"
+    },
+    {
+        "path":  "512\\46-spaghetti-frutti-di-mare.jpg",
+        "hash":  "E0912773004A7EABFECF1D940E008986BB21AA52E90A8E1112FD60298CD5DC6A"
+    },
+    {
+        "path":  "512\\47-spaghetti-alla-puttanesca.jpg",
+        "hash":  "10B73966D086BCD4BE8186D8541A0D808269D59A50BB44A422B76EA8DB31D7E0"
+    },
+    {
+        "path":  "512\\48-spaghetti-carbonara.jpg",
+        "hash":  "FF4E6BA4932FB5B057F3F2EA65A97B56C4DE3309CFC1AF3455EFEE951300FD8C"
+    },
+    {
+        "path":  "512\\49-spaghetti-aglio-olio-e-peperocino.jpg",
+        "hash":  "7E5A7BA1C375AF30669AD090C2A6D54D3D34CBE754D0D7319C12ACD665DD8A5F"
+    },
+    {
+        "path":  "512\\50-spaghetti-pesto.jpg",
+        "hash":  "348358EB3F81A2CA64A185ADF7F196A34061F1162F4CDA5E1650770F66B2F6EE"
+    },
+    {
+        "path":  "512\\51-penne-all-arabbiata.jpg",
+        "hash":  "84001A25DDF59BB6FC24A69B518347AD122A5278B9FA686AEE97C042FA682849"
+    },
+    {
+        "path":  "512\\52-penne-all-ortolana.jpg",
+        "hash":  "9E56EE427F2973566DDAC0D193E34FEE98B64FD9262EA0D07CF9A102869D824F"
+    },
+    {
+        "path":  "512\\53-penne-pute.jpg",
+        "hash":  "A74353CA139678B736BB8E1D242A9CCA4FD6DAB78D556B6D8E3E9F9E0EABD222"
+    },
+    {
+        "path":  "512\\54-penne-al-forno.jpg",
+        "hash":  "FCFF2307AFC3EC914B05983AB8ABD17EC4F1CF833055439292438B57FC2FE511"
+    },
+    {
+        "path":  "512\\55-penne-4-formaggi.jpg",
+        "hash":  "1664E23B5CB97D46105C71120BCC3735CA4861384EAE5EAC3CA7744E89DB8A86"
+    },
+    {
+        "path":  "512\\56-penne-bolognese.jpg",
+        "hash":  "A97C58BC99FCE697D2256511B9C2E2D0A28AFB29598C331546D2B4456A4B8A5D"
+    },
+    {
+        "path":  "512\\57-penne-napoli.jpg",
+        "hash":  "D2D45396C0B226D6316D89E9EE169C18EA45B9614962D436A89E7711D3CDFD07"
+    },
+    {
+        "path":  "512\\58-tagliatelle-alfredo.jpg",
+        "hash":  "606290B4562CE33DF4CFE84279C6A60265531BF191844C53CDBFA4FE73FCE8D1"
+    },
+    {
+        "path":  "512\\59-tagliatelle-al-salmone.jpg",
+        "hash":  "ABED84902A07F45FFAE041589F723DEF13610F90BE6FDDD285E702F65A58EEB9"
+    },
+    {
+        "path":  "512\\60-tagliatelle-mari-e-monti.jpg",
+        "hash":  "E86C0404A840C1F98F88D8C0B2A849FC4C725983C3B935AC1B9BB743FFF6D868"
+    },
+    {
+        "path":  "512\\61-tagliatelle-bolognese.jpg",
+        "hash":  "6B151E0F7CB1E467DA884D76ADEEE1765432837F9755C2CD072DAF29EBFFF832"
+    },
+    {
+        "path":  "512\\62-tagliatelle-napoli.jpg",
+        "hash":  "254AF97FBEB149CCEE2C6BDBEACE2BAD785331A0B39165CAC2BCBCB80C049D0A"
+    },
+    {
+        "path":  "512\\63-tortellini-al-forno.jpg",
+        "hash":  "E958D741E7215EB60E14D9653FF352674FC44A7D854F050F17932EC4A3FF3526"
+    },
+    {
+        "path":  "512\\64-tortellini-alla-panna.jpg",
+        "hash":  "9375C3F894B14A02A78D8A6165B47306461F731F4B62C7DB2BF59A1B0068B635"
+    },
+    {
+        "path":  "512\\65-tortellini-al-4-formaggi.jpg",
+        "hash":  "1E7B701123091F0DE8723FA69521E57697D12FAFDC101A67887F16513DB331CF"
+    },
+    {
+        "path":  "512\\66-tortellini-alla-boscaiola.jpg",
+        "hash":  "7E7A309260A484B84EAE4B609211156E688AF9860011369D99844DBF5B8ACB68"
+    },
+    {
+        "path":  "512\\67-gnocchi-alla-gorgonzola.jpg",
+        "hash":  "EA802B7F6EFA745CD2BFB336BD08603C4C290A8A66635708977E1F8B6DE093B6"
+    },
+    {
+        "path":  "512\\68-gnocchi-alla-bolognese.jpg",
+        "hash":  "0A5CA9299AE82148840766A96EA2DE41DBDD14D67B5B675EA58988CD3A413A6E"
+    },
+    {
+        "path":  "512\\69-gnocchi-alla-napoli.jpg",
+        "hash":  "C6078BDF7AD732A19D7CEC58B6AB5DA87768DFFD427B5EF2C84194E152EF706D"
+    },
+    {
+        "path":  "512\\70-gnocchi-alla-sorrentina.jpg",
+        "hash":  "2D472C3C2DE9C291FC8B8AD21722EAD40298DFA67A1BC41E0348B940D14AE2FA"
+    },
+    {
+        "path":  "512\\71-lasagne-traditionale.jpg",
+        "hash":  "9C629ECC6E7147F731F0663D16EE1942324E4AE4B2093D7ADF3E4D4077E5372C"
+    },
+    {
+        "path":  "512\\72-pasticcio-al-forno-brooklin.jpg",
+        "hash":  "02E6C284B6097ED73D3E719E8E6FCFB28B5D9B8B8819041E986C1A021B48682B"
+    }
+]

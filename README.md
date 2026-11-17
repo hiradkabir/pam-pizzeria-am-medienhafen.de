@@ -94,10 +94,10 @@ Do not keep “backup code” inside production files. Use version control for h
 <link rel="stylesheet" href="css/tailwind.css?v=4">
 <link rel="stylesheet" href="css/base.css?v=15">
 <link rel="stylesheet" href="css/layout.css?v=30">
-<link rel="stylesheet" href="css/components.css?v=49">
-<link rel="stylesheet" href="css/responsive.css?v=65">
+<link rel="stylesheet" href="css/components.css?v=51">
+<link rel="stylesheet" href="css/responsive.css?v=67">
 <link rel="stylesheet" href="css/gallery-carousel.css?v=6">
-<script defer src="js/script.js?v=50"></script>
+<script defer src="js/script.js?v=51"></script>
 ```
 
 Increase only the version number of a file that was actually changed.
@@ -286,7 +286,7 @@ The mobile hamburger menu is enabled on mobile and opens a black dropdown with S
 
 ## Current page structure
 
-The project has a conversion-focused home page and one editorial SEO/GEO subpage.
+The project has a conversion-focused home page, a dedicated `/speisekarte/` page and one editorial SEO/GEO subpage.
 
 ### Home page
 
@@ -295,7 +295,7 @@ Hero
 Static Google rating strip (4,4 / 5, linked to Google)
 Highlights bar
 Signature dish / Calzone
-Speisekarte
+Speisekarte (mobile only; desktop links to /speisekarte/)
 Galerie
 Kontakt & Öffnungszeiten
 Footer
@@ -417,7 +417,7 @@ The Kontakt section embeds an OpenStreetMap iframe, styled in CSS to match the d
 
 ## SEO and structured data
 
-Both HTML pages contain canonical, description, robots, Open Graph and Twitter metadata. The home page exposes a linked Schema.org graph for `WebSite`, `WebPage`, `Restaurant`, `Menu`, `MenuSection`, all 75 `MenuItem`/`Offer` pairs and `ImageObject` entries. `/about/` adds `AboutPage`, `BreadcrumbList` and visible, matching `FAQPage` data. `robots.txt` points search engines to `sitemap.xml`. Keep address, telephone number, opening hours and production URLs aligned across HTML, JSON-LD and the sitemap.
+Both HTML pages contain canonical, description, robots, Open Graph and Twitter metadata. The home page exposes a linked Schema.org graph for `WebSite`, `WebPage`, `Restaurant` and `ImageObject` entries. The Restaurant links to `/speisekarte/#menu-schema`. The dedicated menu page contains `WebPage`, `BreadcrumbList`, `Menu`, `MenuSection`, all 75 `MenuItem`/`Offer` pairs and a `DigitalDocument` for the PDF download. `/about/` adds `AboutPage`, `BreadcrumbList` and visible, matching `FAQPage` data. `robots.txt` points search engines to `sitemap.xml`. Keep address, telephone number, opening hours and production URLs aligned across HTML, JSON-LD and the sitemap.
 
 Run the local SEO consistency check after content, price, schema or asset changes:
 
@@ -513,3 +513,14 @@ Check:
 ```txt
 pam-pizzeria-am-medienhafen.de
 ```
+
+## Dedicated menu route
+
+- Public route: `/speisekarte`, served by `speisekarte/index.html`. Static hosts normally redirect it to the canonical `/speisekarte/`.
+- At the existing desktop breakpoint (768px and above), the home menu section is hidden and menu links open the dedicated page. Mobile retains the home menu, category tabs and swipe interaction.
+- The dedicated page works at every width, without JavaScript: all 75 dishes, descriptions, prices and allergen information are HTML. Category links are native, shareable fragment links.
+- PDF: `assets/downloads/Sk_Aktuell.pdf`, linked with a download filename of `Sk_Aktuell.pdf`. This is an unchanged copy of the supplied `speisekarte/Speisekarte_Aktuell_Neu.pdf`. Replace the public PDF when the menu changes; keep HTML and JSON-LD prices aligned.
+- Existing desktop `#menu` links are forwarded by JavaScript to the new page. Mobile keeps scrolling to the home section.
+- Sitemap, canonical metadata, social metadata and Restaurant.hasMenu reference the dedicated route. No framework, rewrite rule, backend or deployment change is required.
+- Preserve the lowercase directory spelling `speisekarte` for case-sensitive hosting. The existing artwork and menu source files remain in that directory.
+- Validation includes all three public pages: `npm run build` and `npm run validate:seo` (on PowerShell with restricted script execution, use `npm.cmd`).

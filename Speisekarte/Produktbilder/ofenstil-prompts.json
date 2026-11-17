@@ -1,0 +1,386 @@
+[
+  {
+    "number": "1",
+    "name": "Margherita",
+    "description": "(1,2)",
+    "file": "01-margherita.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 1. Margherita. Exact toppings/filling: tomato sauce and melted cheese only. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "2",
+    "name": "Salami",
+    "description": "(1,2,3) Salami",
+    "file": "02-salami.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 2. Salami. Exact toppings/filling: Salami. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "3",
+    "name": "Fungi",
+    "description": "(1,2) Champignons",
+    "file": "03-fungi.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 3. Fungi. Exact toppings/filling: Champignons. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "4",
+    "name": "Pizza Carciofi",
+    "description": "(1,2) Artischocken",
+    "file": "04-pizza-carciofi.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 4. Pizza Carciofi. Exact toppings/filling: Artischocken. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "5",
+    "name": "Pizza Cipolla",
+    "description": "(1,2) Zwiebeln",
+    "file": "05-pizza-cipolla.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 5. Pizza Cipolla. Exact toppings/filling: Zwiebeln. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "6",
+    "name": "Prosciutto",
+    "description": "(1,2,3) Form-Vorderschinken",
+    "file": "06-prosciutto.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 6. Prosciutto. Exact toppings/filling: Form-Vorderschinken. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "7",
+    "name": "Bolognese",
+    "description": "(1,2) Bolognese",
+    "file": "07-bolognese.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 7. Bolognese. Exact toppings/filling: Bolognese. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "8",
+    "name": "Brokkoli",
+    "description": "(1,2) Brokkoli",
+    "file": "08-brokkoli.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 8. Brokkoli. Exact toppings/filling: Brokkoli. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "9",
+    "name": "Spinaci",
+    "description": "(1,2) Spinat",
+    "file": "09-spinaci.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 9. Spinaci. Exact toppings/filling: Spinat. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "10",
+    "name": "Europa",
+    "description": "(1,2) Champignons und Form-Vorderschinken",
+    "file": "10-europa.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 10. Europa. Exact toppings/filling: Champignons und Form-Vorderschinken. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "11",
+    "name": "Udo's Pizza",
+    "description": "(1,2) Rote Peperoni (Chili) und Sardellen",
+    "file": "11-udo-s-pizza.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 11. Udo's Pizza. Exact toppings/filling: Rote Peperoni (Chili) und Sardellen. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "12",
+    "name": "Valentino",
+    "description": "(1,2) Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln",
+    "file": "12-valentino.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 12. Valentino. Exact toppings/filling: Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "13",
+    "name": "Calabrese",
+    "description": "(1,2) Original italienische Salami, frische Tomaten, Mozzarella, Basilikum",
+    "file": "13-calabrese.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 13. Calabrese. Exact toppings/filling: Original italienische Salami, frische Tomaten, Mozzarella, Basilikum. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "14",
+    "name": "Tonno",
+    "description": "(1,2) Thunfisch",
+    "file": "14-tonno.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 14. Tonno. Exact toppings/filling: Thunfisch. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "15",
+    "name": "Contadina",
+    "description": "(1,2) Zucchini, Auberginen, Paprika, Peperoni",
+    "file": "15-contadina.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 15. Contadina. Exact toppings/filling: Zucchini, Auberginen, Paprika, Peperoni. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "16",
+    "name": "4 Stagioni",
+    "description": "(2,3,4) Form-Vorderschinken, Champignons, Thunfisch, Artischocken",
+    "file": "16-4-stagioni.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 16. 4 Stagioni. Exact toppings/filling: Form-Vorderschinken, Champignons, Thunfisch, Artischocken. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Arrange the four toppings in four distinct quarters. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "17",
+    "name": "Hawaii",
+    "description": "(2,3) Form-Vorderschinken, Ananas",
+    "file": "17-hawaii.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 17. Hawaii. Exact toppings/filling: Form-Vorderschinken, Ananas. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "18",
+    "name": "Mista",
+    "description": "(1,2) Thunfisch, Form-Vorderschinken, Champignons",
+    "file": "18-mista.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 18. Mista. Exact toppings/filling: Thunfisch, Form-Vorderschinken, Champignons. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "19",
+    "name": "Caprese",
+    "description": "(1,2) frische Tomaten, Mozzarella",
+    "file": "19-caprese.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 19. Caprese. Exact toppings/filling: frische Tomaten, Mozzarella. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "20",
+    "name": "4 Formaggi",
+    "description": "(1,2) 4 verschiedene Käsesorten",
+    "file": "20-4-formaggi.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 20. 4 Formaggi. Exact toppings/filling: 4 verschiedene Käsesorten. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Use a typical four-cheese mixture including a little blue cheese. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "21",
+    "name": "Calzone",
+    "description": "(1,2,3) Thunfisch, Form-Vorderschinken, Champignons",
+    "file": "21-calzone.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 21. Calzone. Exact toppings/filling: Thunfisch, Form-Vorderschinken, Champignons. One CLOSED folded half-moon calzone, with browned melted cheese on its top, like the template; filling stays inside. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "22",
+    "name": "Gamberetti",
+    "description": "(1,2) Shrimps",
+    "file": "22-gamberetti.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 22. Gamberetti. Exact toppings/filling: Shrimps. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "23",
+    "name": "Mari e Monti",
+    "description": "(1,2) Spinat, Shrimps",
+    "file": "23-mari-e-monti.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 23. Mari e Monti. Exact toppings/filling: Spinat, Shrimps. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "24",
+    "name": "Rucola",
+    "description": "(1,2) Parmaschinken, Rucola, Parmesan",
+    "file": "24-rucola.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 24. Rucola. Exact toppings/filling: Parmaschinken, Rucola, Parmesan. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "25",
+    "name": "Frutti di Mare",
+    "description": "(1,2) Meeresfrüchte",
+    "file": "25-frutti-di-mare.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 25. Frutti di Mare. Exact toppings/filling: Meeresfrüchte. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "26",
+    "name": "Capricciosa",
+    "description": "(1,2,3) Thunfisch, Form-Vorderschinken, Champignons, Salami",
+    "file": "26-capricciosa.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 26. Capricciosa. Exact toppings/filling: Thunfisch, Form-Vorderschinken, Champignons, Salami. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "27",
+    "name": "Pizza Varano",
+    "description": "(1,2) Spinat, Champignons, Zwiebeln, Paprika, Artischocken",
+    "file": "27-pizza-varano.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 27. Pizza Varano. Exact toppings/filling: Spinat, Champignons, Zwiebeln, Paprika, Artischocken. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "28",
+    "name": "Pizza Regata",
+    "description": "(1,2) Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons",
+    "file": "28-pizza-regata.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 28. Pizza Regata. Exact toppings/filling: Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "29",
+    "name": "Pizza Pute",
+    "description": "(1,2) Putenstreifen, Gemüse nach Wahl",
+    "file": "29-pizza-pute.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 29. Pizza Pute. Exact toppings/filling: Putenstreifen, Gemüse nach Wahl. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Use turkey strips, zucchini and red bell pepper for the vegetable choice. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "30",
+    "name": "Pizza Montanara",
+    "description": "(1,2,4) Oliven, Sardellen, Kapern",
+    "file": "30-pizza-montanara.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 30. Pizza Montanara. Exact toppings/filling: Oliven, Sardellen, Kapern. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "31",
+    "name": "Pizza Italia",
+    "description": "(1,2) Spinat, Zwiebeln, Paprika",
+    "file": "31-pizza-italia.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 31. Pizza Italia. Exact toppings/filling: Spinat, Zwiebeln, Paprika. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  },
+  {
+    "number": "32",
+    "name": "Pizza Patata",
+    "description": "(1,2) Spinat, Form-Vorderschinken, Kartoffeln",
+    "file": "32-pizza-patata.jpg",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "style": "ofen-schaufel-v1",
+    "status": "pending",
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 32. Pizza Patata. Exact toppings/filling: Spinat, Form-Vorderschinken, Kartoffeln. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo."
+  }
+]

@@ -256,6 +256,205 @@
   transition: opacity .3s ease, transform .3s ease;
 }
 
+/* Dedicated menu: all dishes stay visible, searchable and readable without JS. */
+.menu-page #navbar {
+  background-color: var(--brand-dark);
+}
+
+.menu-page-content {
+  padding-top: 8.5rem;
+  padding-bottom: 5rem;
+}
+
+.menu-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  color: var(--brand-muted);
+  font-size: 0.7rem;
+}
+
+.menu-page-heading {
+  margin-bottom: 2.5rem;
+}
+
+.menu-page :is(h1, h2, h3, h4, h5, h6) {
+  text-align: center;
+}
+
+.menu-page-hero-layout {
+  display: grid;
+  /* Hero media: 1.5 times the previous 28% column width. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 42%);
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu-page-intro {
+  max-width: 62ch;
+  color: var(--brand-cream);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.menu-page-location,
+.menu-page-note {
+  margin-top: 0.85rem;
+  color: var(--brand-muted);
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+
+.menu-page .menu-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  color: var(--brand-gold-light);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.menu-page .menu-subheading::before,
+.menu-page .menu-subheading::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background-color: rgb(192 94 53 / 25%);
+}
+
+.menu-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.menu-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: background-color 200ms ease;
+}
+
+.menu-page-note {
+  text-align: left;
+}
+
+.menu-download:hover {
+  background: var(--brand-gold-light);
+}
+
+.menu-download svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.menu-order {
+  padding-block: 0.6rem;
+  color: var(--brand-cream);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.menu-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-block: 1px solid rgb(192 94 53 / 30%);
+  margin-bottom: 3rem;
+}
+
+.menu-categories a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: var(--brand-cream);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.3rem;
+  transition: color 200ms ease, text-decoration-color 200ms ease;
+}
+
+.menu-categories a:hover {
+  color: var(--brand-gold-light);
+  text-decoration-color: currentColor;
+}
+
+.menu-page a:focus-visible {
+  outline: 2px solid var(--brand-gold-light);
+  outline-offset: 4px;
+}
+
+.menu-page #navbar a[aria-current="page"] {
+  color: var(--brand-gold-light);
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
+
+.menu-category {
+  margin-top: 3rem;
+  scroll-margin-top: 6rem;
+}
+
+.menu-page .text-brand-muted\/70,
+.menu-page .text-brand-muted\/50,
+.menu-page .text-brand-gold\/50,
+.menu-page .menu-category [class*="text-brand-muted/"],
+.menu-page .menu-category [class*="text-brand-gold/"] {
+  color: var(--brand-muted);
+}
+
+.menu-page .menu-category p.text-\[11px\] {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.menu-page .menu-category p.text-xs {
+  font-size: 0.85rem;
+}
+
+.menu-page .menu-category p.text-sm,
+.menu-page .menu-category span.text-xs {
+  font-size: 0.9rem;
+}
+
+@media print {
+  .menu-page #navbar,
+  .menu-page footer,
+  .menu-page [role="dialog"],
+  .menu-page .menu-page-actions,
+  .menu-page .menu-categories,
+  .menu-page .mobile-cta-fab,
+  .menu-page .back-to-top-btn {
+    display: none !important;
+  }
+
+  .menu-page-content {
+    padding-top: 0;
+  }
+
+  .menu-category {
+    break-inside: auto;
+  }
+}
+
 .tab-content.tab-fading-out {
   opacity: 0;
   transform: translateY(6px);

@@ -1,0 +1,982 @@
+[
+  {
+    "number": "1",
+    "category": "Pizza",
+    "name": "Margherita",
+    "description": "(1,2)",
+    "file": "01-margherita.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/neues_Produkt_template.jpg"
+    ],
+    "prompt": "Use case: style-transfer. Produce ONE square 1024x1024 photorealistic menu product image. Input image 1 is the definitive STYLE AND SETTING template, neues_Produkt_template.jpg. Adapt its oven scene to the following dish: 1. Margherita. Exact toppings/filling: tomato sauce and melted cheese only. One complete round, thin-crust pizza with low naturally browned rim, tomato sauce and melted pizza cheese. NOT a calzone. Match the reference's rustic stone pizza oven, glowing small fire at upper left, dark oven opening behind, warm amber firelight, worn metal pizza peel supporting the food, peel blade and handle extending toward and out of the LOWER RIGHT corner. Same restaurant oven setting for the whole series. The pizza is in the foreground by the oven mouth, camera oblique approximately 35 degrees above the food so toppings remain identifiable. Full food silhouette visible with breathing room, pizza occupies about 75 percent of image width; square composition, no letterboxing. Natural food texture, light browning, realistic cheese, restrained glossy highlights. Form-Vorderschinken means ordinary cooked ham; Parmaschinken means cured Parma ham. Keep the dish's listed ingredients and identity. Only calzone is folded; all other pizzas round and flat. No extra toppings or garnish; no basil unless explicitly listed. NO ceramic plate, NO granite countertop, NO table setting. No hands, people, text, logos, watermarks, collage, excessive flames or fake steam. Output one single square photo.",
+    "style": "ofen-schaufel-v1"
+  },
+  {
+    "number": "2",
+    "category": "Pizza",
+    "name": "Salami",
+    "description": "(1,2,3) Salami",
+    "file": "02-salami.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 2: Salami. Exact topping ingredients: Salami. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "3",
+    "category": "Pizza",
+    "name": "Fungi",
+    "description": "(1,2) Champignons",
+    "file": "03-fungi.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 3: Fungi. Exact topping ingredients: Champignons. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "4",
+    "category": "Pizza",
+    "name": "Pizza Carciofi",
+    "description": "(1,2) Artischocken",
+    "file": "04-pizza-carciofi.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 4: Pizza Carciofi. Exact topping ingredients: Artischocken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "5",
+    "category": "Pizza",
+    "name": "Pizza Cipolla",
+    "description": "(1,2) Zwiebeln",
+    "file": "05-pizza-cipolla.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 5: Pizza Cipolla. Exact topping ingredients: Zwiebeln. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "6",
+    "category": "Pizza",
+    "name": "Prosciutto",
+    "description": "(1,2,3) Form-Vorderschinken",
+    "file": "06-prosciutto.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 6: Prosciutto. Exact topping ingredients: Form-Vorderschinken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "7",
+    "category": "Pizza",
+    "name": "Bolognese",
+    "description": "(1,2) Bolognese",
+    "file": "07-bolognese.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 7: Bolognese. Exact topping ingredients: Bolognese. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "8",
+    "category": "Pizza",
+    "name": "Brokkoli",
+    "description": "(1,2) Brokkoli",
+    "file": "08-brokkoli.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 8: Brokkoli. Exact topping ingredients: Brokkoli. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "9",
+    "category": "Pizza",
+    "name": "Spinaci",
+    "description": "(1,2) Spinat",
+    "file": "09-spinaci.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 9: Spinaci. Exact topping ingredients: Spinat. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "10",
+    "category": "Pizza",
+    "name": "Europa",
+    "description": "(1,2) Champignons und Form-Vorderschinken",
+    "file": "10-europa.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 10: Europa. Exact topping ingredients: Champignons und Form-Vorderschinken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "11",
+    "category": "Pizza",
+    "name": "Udo's Pizza",
+    "description": "(1,2) Rote Peperoni (Chili) und Sardellen",
+    "file": "11-udo-s-pizza.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 11: Udo's Pizza. Exact topping ingredients: Rote Peperoni (Chili) und Sardellen. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "12",
+    "category": "Pizza",
+    "name": "Valentino",
+    "description": "(1,2) Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln",
+    "file": "12-valentino.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 12: Valentino. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "13",
+    "category": "Pizza",
+    "name": "Calabrese",
+    "description": "(1,2) Original italienische Salami, frische Tomaten, Mozzarella, Basilikum",
+    "file": "13-calabrese.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 13: Calabrese. Exact topping ingredients: Original italienische Salami, frische Tomaten, Mozzarella, Basilikum. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "14",
+    "category": "Pizza",
+    "name": "Tonno",
+    "description": "(1,2) Thunfisch",
+    "file": "14-tonno.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 14: Tonno. Exact topping ingredients: Thunfisch. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "15",
+    "category": "Pizza",
+    "name": "Contadina",
+    "description": "(1,2) Zucchini, Auberginen, Paprika, Peperoni",
+    "file": "15-contadina.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 15: Contadina. Exact topping ingredients: Zucchini, Auberginen, Paprika, Peperoni. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "16",
+    "category": "Pizza",
+    "name": "4 Stagioni",
+    "description": "(2,3,4) Form-Vorderschinken, Champignons, Thunfisch, Artischocken",
+    "file": "16-4-stagioni.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 16: 4 Stagioni. Exact topping ingredients: Form-Vorderschinken, Champignons, Thunfisch, Artischocken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.   Four toppings divided into four loose quarters.  Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "17",
+    "category": "Pizza",
+    "name": "Hawaii",
+    "description": "(2,3) Form-Vorderschinken, Ananas",
+    "file": "17-hawaii.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 17: Hawaii. Exact topping ingredients: Form-Vorderschinken, Ananas. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "18",
+    "category": "Pizza",
+    "name": "Mista",
+    "description": "(1,2) Thunfisch, Form-Vorderschinken, Champignons",
+    "file": "18-mista.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 18: Mista. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "19",
+    "category": "Pizza",
+    "name": "Caprese",
+    "description": "(1,2) frische Tomaten, Mozzarella",
+    "file": "19-caprese.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 19: Caprese. Exact topping ingredients: frische Tomaten, Mozzarella. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "20",
+    "category": "Pizza",
+    "name": "4 Formaggi",
+    "description": "(1,2) 4 verschiedene Käsesorten",
+    "file": "20-4-formaggi.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 20: 4 Formaggi. Exact topping ingredients: 4 verschiedene Käsesorten. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.    Four melted cheeses, small blue cheese flecks; no other toppings. Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "21",
+    "category": "Pizza",
+    "name": "Calzone",
+    "description": "(1,2,3) Thunfisch, Form-Vorderschinken, Champignons",
+    "file": "21-calzone.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 21: Calzone. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons. A closed half-moon calzone with domed dough and tomato and browned cheese on its outside exactly like image 1; listed tuna, ham and mushroom filling hidden inside.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "22",
+    "category": "Pizza",
+    "name": "Gamberetti",
+    "description": "(1,2) Shrimps",
+    "file": "22-gamberetti.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 22: Gamberetti. Exact topping ingredients: Shrimps. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "23",
+    "category": "Pizza",
+    "name": "Mari e Monti",
+    "description": "(1,2) Spinat, Shrimps",
+    "file": "23-mari-e-monti.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 23: Mari e Monti. Exact topping ingredients: Spinat, Shrimps. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "24",
+    "category": "Pizza",
+    "name": "Rucola",
+    "description": "(1,2) Parmaschinken, Rucola, Parmesan",
+    "file": "24-rucola.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 24: Rucola. Exact topping ingredients: Parmaschinken, Rucola, Parmesan. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "25",
+    "category": "Pizza",
+    "name": "Frutti di Mare",
+    "description": "(1,2) Meeresfrüchte",
+    "file": "25-frutti-di-mare.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 25: Frutti di Mare. Exact topping ingredients: Meeresfrüchte. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "26",
+    "category": "Pizza",
+    "name": "Capricciosa",
+    "description": "(1,2,3) Thunfisch, Form-Vorderschinken, Champignons, Salami",
+    "file": "26-capricciosa.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 26: Capricciosa. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons, Salami. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "27",
+    "category": "Pizza",
+    "name": "Pizza Varano",
+    "description": "(1,2) Spinat, Champignons, Zwiebeln, Paprika, Artischocken",
+    "file": "27-pizza-varano.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 27: Pizza Varano. Exact topping ingredients: Spinat, Champignons, Zwiebeln, Paprika, Artischocken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "28",
+    "category": "Pizza",
+    "name": "Pizza Regata",
+    "description": "(1,2) Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons",
+    "file": "28-pizza-regata.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 28: Pizza Regata. Exact topping ingredients: Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "29",
+    "category": "Pizza",
+    "name": "Pizza Pute",
+    "description": "(1,2) Putenstreifen, Gemüse nach Wahl",
+    "file": "29-pizza-pute.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 29: Pizza Pute. Exact topping ingredients: Putenstreifen, Gemüse nach Wahl. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.  Vegetable choice is zucchini and red bell pepper with cooked turkey breast strips.   Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "30",
+    "category": "Pizza",
+    "name": "Pizza Montanara",
+    "description": "(1,2,4) Oliven, Sardellen, Kapern",
+    "file": "30-pizza-montanara.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 30: Pizza Montanara. Exact topping ingredients: Oliven, Sardellen, Kapern. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "31",
+    "category": "Pizza",
+    "name": "Pizza Italia",
+    "description": "(1,2) Spinat, Zwiebeln, Paprika",
+    "file": "31-pizza-italia.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 31: Pizza Italia. Exact topping ingredients: Spinat, Zwiebeln, Paprika. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base. CRITICAL: toppings form THREE PARALLEL VERTICAL BANDS, the Italian flag as viewed by camera, GREEN LEFT with cooked spinach, WHITE MIDDLE with white onion and pale melted cheese, RED RIGHT with red bell pepper. Clearly distinct left-to-right GREEN WHITE RED thirds. No mixed scattering across thirds, no yellow pepper. Natural edible ingredients, not coloured dough.    Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "32",
+    "category": "Pizza",
+    "name": "Pizza Patata",
+    "description": "(1,2) Spinat, Form-Vorderschinken, Kartoffeln",
+    "file": "32-pizza-patata.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 32: Pizza Patata. Exact topping ingredients: Spinat, Form-Vorderschinken, Kartoffeln. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "33a",
+    "category": "Pizza",
+    "name": "Famiglia ca. 45 cm",
+    "description": "(1,2) je Belag 3,00€ extra",
+    "file": "33a-famiglia-ca-45-cm.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 33a, category Pizza: Famiglia ca. 45 cm. Exact menu ingredients:  je Belag 3,00€ extra. Single complete thin-crust round pizza with tomato sauce and melted pizza cheese, subtle dried oregano and ONLY the listed toppings. Match reference 1 dough thickness and low natural rim. Form-Vorderschinken means ordinary cooked ham, not cured prosciutto. Extra-large approximately 45 cm family Margherita pizza, just tomato and cheese; modest thin rim in proportion to broad diameter. A large dark blue serving platter. No extra toppings. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "33",
+    "category": "Pizza",
+    "name": "Pizzabrötchen mit Knoblauch Kräuterbutter",
+    "description": "(1,2)",
+    "file": "33-pizzabroetchen-mit-knoblauch-kraeuterbutter.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 33, category Pizza: Pizzabrötchen mit Knoblauch Kräuterbutter. Exact menu ingredients: . A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. A modest serving of six small irregular freshly baked pizza dough rolls with a small ramekin of garlic herb butter on the plate. No pizza and no sauce. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "34",
+    "category": "Antipasti",
+    "name": "Focaccia al Rosmarino",
+    "description": "(2) Hausgemachtes Brot mit Rosmarine",
+    "file": "34-focaccia-al-rosmarino.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 34, category Antipasti: Focaccia al Rosmarino. Exact menu ingredients:  Hausgemachtes Brot mit Rosmarine. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. A modest round thin rustic rosemary focaccia flatbread with rosemary, olive oil and coarse salt. No tomato or cheese. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "35",
+    "category": "Antipasti",
+    "name": "Melanzane Parmigiana",
+    "description": "(2) Überbackene Auberginen mit Tomaten und Mozzarella",
+    "file": "35-melanzane-parmigiana.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 35, category Antipasti: Melanzane Parmigiana. Exact menu ingredients:  Überbackene Auberginen mit Tomaten und Mozzarella. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. A small oven-baked aubergine parmigiana, layers of eggplant tomato and mozzarella, in a dark ceramic gratin dish. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "36",
+    "category": "Antipasti",
+    "name": "Rucolasalat",
+    "description": "mit Parmesanspänen",
+    "file": "36-rucolasalat.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 36, category Antipasti: Rucolasalat. Exact menu ingredients: mit Parmesanspänen. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Fresh arugula salad and irregular shaved Parmesan. Match the supplied actual salad plating. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "37",
+    "category": "Antipasti",
+    "name": "Inslata Caprese",
+    "description": "(2,4) Frische Tomatenscheiben, Mozzarella und Basilikum",
+    "file": "37-inslata-caprese.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 37, category Antipasti: Inslata Caprese. Exact menu ingredients:  Frische Tomatenscheiben, Mozzarella und Basilikum. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Use the actual caprese reference closely for tomato and mozzarella cuts and simple portion. No elaborate gourmet plating. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "38",
+    "category": "Antipasti",
+    "name": "Bruschetta",
+    "description": "(4) Frische Tomatenstücke, Basilikum, Zwiebeln, Olivenöl",
+    "file": "38-bruschetta.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 38, category Antipasti: Bruschetta. Exact menu ingredients:  Frische Tomatenstücke, Basilikum, Zwiebeln, Olivenöl. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Three rustic toasted bread slices topped with diced tomatoes, basil, onion and olive oil. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "39",
+    "category": "Insalate",
+    "name": "Insalata Mista",
+    "description": "(2) Gemischter Salat der Saison mit Italian Dressing",
+    "file": "39-insalata-mista.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/italienischer-salat-nicoise-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 39, category Insalate: Insalata Mista. Exact menu ingredients:  Gemischter Salat der Saison mit Italian Dressing. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Seasonal mixed lettuce, tomato, cucumber, a little carrot and Italian dressing. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "40",
+    "category": "Insalate",
+    "name": "Insalata Nicoise",
+    "description": "(2) Salat, Kartoffeln, Bohnen, Thunfisch, Ei, Käse",
+    "file": "40-insalata-nicoise.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/italienischer-salat-nicoise-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 40, category Insalate: Insalata Nicoise. Exact menu ingredients:  Salat, Kartoffeln, Bohnen, Thunfisch, Ei, Käse. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Include clearly visible green beans, potato slices, tuna, hard-boiled egg and cheese on lettuce. Actual Nicoise reference supplies plating and portion. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "41",
+    "category": "Insalate",
+    "name": "Capricciosa",
+    "description": "(2) Salat, Form-Vorderschinken, Thunfisch, Ei, Käse",
+    "file": "41-capricciosa.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/italienischer-salat-nicoise-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 41, category Insalate: Capricciosa. Exact menu ingredients:  Salat, Form-Vorderschinken, Thunfisch, Ei, Käse. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Salad, cooked ham strips, flaked tuna, hard-boiled egg, shredded cheese. Do not add potato or olives. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "42",
+    "category": "Insalate",
+    "name": "Puten Salat",
+    "description": "(2) Putenbruststreifen und Apfelspalten mit Honig",
+    "file": "42-puten-salat.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/italienischer-salat-nicoise-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 42, category Insalate: Puten Salat. Exact menu ingredients:  Putenbruststreifen und Apfelspalten mit Honig. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Leaf salad topped with cooked turkey breast strips and apple wedges, modest honey dressing. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "43",
+    "category": "Pasta",
+    "name": "Spaghetti Napoli",
+    "description": "(5) mit Tomatensoße und Basilikum",
+    "file": "43-spaghetti-napoli.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 43, category Pasta: Spaghetti Napoli. Exact menu ingredients:  mit Tomatensoße und Basilikum. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "44",
+    "category": "Pasta",
+    "name": "Spaghetti Bolognese",
+    "description": "(5) Bolognese",
+    "file": "44-spaghetti-bolognese.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 44, category Pasta: Spaghetti Bolognese. Exact menu ingredients:  Bolognese. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "45",
+    "category": "Pasta",
+    "name": "Spaghetti a Matriciana",
+    "description": "(2)Tomatensoße, Speck, Zwiebeln",
+    "file": "45-spaghetti-a-matriciana.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 45, category Pasta: Spaghetti a Matriciana. Exact menu ingredients: Tomatensoße, Speck, Zwiebeln. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "46",
+    "category": "Pasta",
+    "name": "Spaghetti Frutti di Mare",
+    "description": "(2) Tomatensoße, Knoblauch und Meeresfrüchten",
+    "file": "46-spaghetti-frutti-di-mare.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 46, category Pasta: Spaghetti Frutti di Mare. Exact menu ingredients:  Tomatensoße, Knoblauch und Meeresfrüchten. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "47",
+    "category": "Pasta",
+    "name": "Spaghetti alla Puttanesca",
+    "description": "(2,4) Oliven, Kapern, Zwiebeln und Sardellen in Tomatensoße",
+    "file": "47-spaghetti-alla-puttanesca.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 47, category Pasta: Spaghetti alla Puttanesca. Exact menu ingredients:  Oliven, Kapern, Zwiebeln und Sardellen in Tomatensoße. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "48",
+    "category": "Pasta",
+    "name": "Spaghetti Carbonara",
+    "description": "(1,2,3,5) Sahnesoße, Speck, Eier, Parmesan",
+    "file": "48-spaghetti-carbonara.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 48, category Pasta: Spaghetti Carbonara. Exact menu ingredients:  Sahnesoße, Speck, Eier, Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "49",
+    "category": "Pasta",
+    "name": "Spaghetti Aglio, Olio e Peperocino",
+    "description": "mit Knoblauch, Olivenöl, Peperoni scharf",
+    "file": "49-spaghetti-aglio-olio-e-peperocino.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 49, category Pasta: Spaghetti Aglio, Olio e Peperocino. Exact menu ingredients: mit Knoblauch, Olivenöl, Peperoni scharf. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "50",
+    "category": "Pasta",
+    "name": "Spaghetti Pesto",
+    "description": "mit Basilikum, Pinienkerne, Knoblauch, Kräutersoße",
+    "file": "50-spaghetti-pesto.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 50, category Pasta: Spaghetti Pesto. Exact menu ingredients: mit Basilikum, Pinienkerne, Knoblauch, Kräutersoße. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "51",
+    "category": "Penne",
+    "name": "Penne all' Arabbiata",
+    "description": "(2) scharfe Tomatensoße und Kräuter",
+    "file": "51-penne-all-arabbiata.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 51, category Penne: Penne all' Arabbiata. Exact menu ingredients:  scharfe Tomatensoße und Kräuter. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "52",
+    "category": "Penne",
+    "name": "Penne all' Ortolana",
+    "description": "(2) Tomatensoße und verschiedenes Gemüse",
+    "file": "52-penne-all-ortolana.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 52, category Penne: Penne all' Ortolana. Exact menu ingredients:  Tomatensoße und verschiedenes Gemüse. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Selected mixed vegetable variant: zucchini, red bell pepper and aubergine. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "53",
+    "category": "Penne",
+    "name": "Penne Pute",
+    "description": "(2)Tomaten-Sahnesoße, mit Putenstreifen und Gemüse nach Wahl",
+    "file": "53-penne-pute.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 53, category Penne: Penne Pute. Exact menu ingredients: Tomaten-Sahnesoße, mit Putenstreifen und Gemüse nach Wahl. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Selected vegetable variant: zucchini and red bell pepper, with cooked turkey breast strips in pink tomato cream sauce. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "54",
+    "category": "Penne",
+    "name": "Penne al Forno",
+    "description": "(2) Hackfleisch-Sahnesoße, Form-Vorderschinken, Käse überbacken",
+    "file": "54-penne-al-forno.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 54, category Penne: Penne al Forno. Exact menu ingredients:  Hackfleisch-Sahnesoße, Form-Vorderschinken, Käse überbacken. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "55",
+    "category": "Penne",
+    "name": "Penne 4 Formaggi",
+    "description": "(2) 4 verschiedene Käsesorten",
+    "file": "55-penne-4-formaggi.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 55, category Penne: Penne 4 Formaggi. Exact menu ingredients:  4 verschiedene Käsesorten. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "56",
+    "category": "Penne",
+    "name": "Penne Bolognese",
+    "description": "(2,5) Bolognese und Parmesan",
+    "file": "56-penne-bolognese.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 56, category Penne: Penne Bolognese. Exact menu ingredients:  Bolognese und Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "57",
+    "category": "Penne",
+    "name": "Penne Napoli",
+    "description": "(2) Tomatensoße, frisches Basilikum und Parmesan",
+    "file": "57-penne-napoli.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 57, category Penne: Penne Napoli. Exact menu ingredients:  Tomatensoße, frisches Basilikum und Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "58",
+    "category": "Tagliatelle",
+    "name": "Tagliatelle Alfredo",
+    "description": "(2) Sahnesoße, Form-Vorderschinken, Champignons",
+    "file": "58-tagliatelle-alfredo.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 58, category Tagliatelle: Tagliatelle Alfredo. Exact menu ingredients:  Sahnesoße, Form-Vorderschinken, Champignons. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "59",
+    "category": "Tagliatelle",
+    "name": "Tagliatelle al Salmone",
+    "description": "(2) Tomaten-Sahnesoße und Lachs",
+    "file": "59-tagliatelle-al-salmone.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 59, category Tagliatelle: Tagliatelle al Salmone. Exact menu ingredients:  Tomaten-Sahnesoße und Lachs. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Use exact current menu: salmon pieces in tomato-cream sauce, not a plain white sauce. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "60",
+    "category": "Tagliatelle",
+    "name": "Tagliatelle Mari e Monti",
+    "description": "(2) Tomaten-Sahnesoße, Scampi, Champignons",
+    "file": "60-tagliatelle-mari-e-monti.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 60, category Tagliatelle: Tagliatelle Mari e Monti. Exact menu ingredients:  Tomaten-Sahnesoße, Scampi, Champignons. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "61",
+    "category": "Tagliatelle",
+    "name": "Tagliatelle Bolognese",
+    "description": "(5) Bolognese und Parmesan",
+    "file": "61-tagliatelle-bolognese.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 61, category Tagliatelle: Tagliatelle Bolognese. Exact menu ingredients:  Bolognese und Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "62",
+    "category": "Tagliatelle",
+    "name": "Tagliatelle Napoli",
+    "description": "(2) Tomatensoße",
+    "file": "62-tagliatelle-napoli.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 62, category Tagliatelle: Tagliatelle Napoli. Exact menu ingredients:  Tomatensoße. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "63",
+    "category": "Tortellini",
+    "name": "Tortellini al Forno",
+    "description": "(2) Bolognese-Sahnesoße, Form-Vorderschinken und Käse überbacken",
+    "file": "63-tortellini-al-forno.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 63, category Tortellini: Tortellini al Forno. Exact menu ingredients:  Bolognese-Sahnesoße, Form-Vorderschinken und Käse überbacken. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "64",
+    "category": "Tortellini",
+    "name": "Tortellini alla Panna",
+    "description": "(2,5) Sahnesoße, Form-Vorderschinken und Parmesan",
+    "file": "64-tortellini-alla-panna.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 64, category Tortellini: Tortellini alla Panna. Exact menu ingredients:  Sahnesoße, Form-Vorderschinken und Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "65",
+    "category": "Tortellini",
+    "name": "Tortellini al 4 Formaggi",
+    "description": "(2) 4 verschiedene Käsesorten",
+    "file": "65-tortellini-al-4-formaggi.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 65, category Tortellini: Tortellini al 4 Formaggi. Exact menu ingredients:  4 verschiedene Käsesorten. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "66",
+    "category": "Tortellini",
+    "name": "Tortellini alla Boscaiola",
+    "description": "(2) Tomaten-Sahnesoße, Schinken, Champignons, Spinat",
+    "file": "66-tortellini-alla-boscaiola.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 66, category Tortellini: Tortellini alla Boscaiola. Exact menu ingredients:  Tomaten-Sahnesoße, Schinken, Champignons, Spinat. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Use exact current menu: tomato-cream sauce with cooked ham, mushrooms and spinach. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "67",
+    "category": "Gnocchi",
+    "name": "Gnocchi alla Gorgonzola",
+    "description": "(2) Gorgonzola in Sahnesoße, Käse überbacken",
+    "file": "67-gnocchi-alla-gorgonzola.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 67, category Gnocchi: Gnocchi alla Gorgonzola. Exact menu ingredients:  Gorgonzola in Sahnesoße, Käse überbacken. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "68",
+    "category": "Gnocchi",
+    "name": "Gnocchi alla Bolognese",
+    "description": "(2,5) Bolognese und Parmesan",
+    "file": "68-gnocchi-alla-bolognese.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 68, category Gnocchi: Gnocchi alla Bolognese. Exact menu ingredients:  Bolognese und Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "69",
+    "category": "Gnocchi",
+    "name": "Gnocchi alla Napoli",
+    "description": "(2,5) Tomatensoße und Parmesan",
+    "file": "69-gnocchi-alla-napoli.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 69, category Gnocchi: Gnocchi alla Napoli. Exact menu ingredients:  Tomatensoße und Parmesan. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "70",
+    "category": "Gnocchi",
+    "name": "Gnocchi alla Sorrentina",
+    "description": "(2) Tomatensoße, Mozzarella und Basilikum Pesto",
+    "file": "70-gnocchi-alla-sorrentina.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 70, category Gnocchi: Gnocchi alla Sorrentina. Exact menu ingredients:  Tomatensoße, Mozzarella und Basilikum Pesto. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers.  Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "71",
+    "category": "Gnocchi",
+    "name": "Lasagne Traditionale",
+    "description": "(2) Bolognese-Sahnesoße und Käse überbacken",
+    "file": "71-lasagne-traditionale.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 71, category Gnocchi: Lasagne Traditionale. Exact menu ingredients:  Bolognese-Sahnesoße und Käse überbacken. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. A single generous rectangular lasagne portion with visible pasta layers, bolognese cream sauce and baked cheese, dark ceramic baking dish. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  },
+  {
+    "number": "72",
+    "category": "Gnocchi",
+    "name": "Pasticcio al Forno “Brooklin”",
+    "description": "(2) Tomaten-Sahnesoße, Penne mit Brokkoli und Käse überbacken",
+    "file": "72-pasticcio-al-forno-brooklin.jpg",
+    "status": "pending",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/spaghetti-basilikum-pasta-duesseldorf.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/caprese-tomate-mozzarella-basilikum.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create ONE square standalone menu product photograph for Pizzeria am Medienhafen. Dish 72, category Gnocchi: Pasticcio al Forno “Brooklin”. Exact menu ingredients:  Tomaten-Sahnesoße, Penne mit Brokkoli und Käse überbacken. A single believable ordinary pizzeria serving on dark blue ceramic dinnerware. Follow the named pasta shape precisely. Natural casual plating and realistic portion, not fine-dining towers. Penne broccoli tomato-cream casserole with a browned baked-cheese topping, dark ceramic baking dish; some penne and broccoli visible. Input images are restaurant food / dinnerware / granite-counter references, not a request to copy their ingredients. Scene: same speckled beige-grey granite counter and dark blue glazed ceramic tableware as reference images. Whole dish and plate fully visible centered with breathing room; camera 55 degrees above, soft natural light upper left, warm-neutral colour balance. Match an honest local Italian pizzeria: naturally irregular cuts, real browned edges, modest sheen, restrained saturation, all food sharp enough to identify ingredients. No additional main ingredients or decorative garnish not listed. No props, utensils, hands, text, logos, watermarks, collage, CGI, excessive gloss or fake steam. One dish only. Square small product image."
+  }
+]

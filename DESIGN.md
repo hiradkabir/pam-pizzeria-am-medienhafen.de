@@ -46,7 +46,7 @@ a neon food startup
 
 ## Implementation summary
 
-The design is implemented as a static home page plus one editorial `/about/` subpage.
+The design is implemented as a static home page, a dedicated `/speisekarte/` page and an editorial `/about/` subpage.
 
 ```txt
 index.html                 content, SEO/Restaurant metadata, section order, media references, modals
@@ -118,7 +118,7 @@ dark page base
 large atmospheric hero
 section rhythm with generous vertical padding
 compact mobile sections
-single-page anchor navigation
+home section anchors plus dedicated menu navigation on desktop
 map-led Kontakt section
 no separate mobile HTML
 ```
@@ -403,3 +403,7 @@ unused media references
 ```
 
 All design edits must stay consistent with `README.md` and `PRODUCT.md`.
+
+## Dedicated menu page
+
+`/speisekarte/` preserves Bodoni Moda, Jost and the warm dark palette. Centered page, category and subcategory headings, location, a Calzone hero video and a prominent PDF download lead into native category links. The video uses `assets/videos/Calzone.mp4` with the existing autoplay/visibility handling, muted looping, native playback controls and a Calzone poster fallback. Its desktop column is 42% of the content width (1.5 times the former 28% image column), preserving the full video frame; on mobile the hero stacks into one column. All menu categories remain visible as HTML with larger dish descriptions and prices; there are no hidden tab panels on this page. The current menu navigation link uses `aria-current="page"`, color and an underline. Category anchors account for the fixed navbar. Only the desktop home section is hidden (768px+); the mobile home layout is retained.

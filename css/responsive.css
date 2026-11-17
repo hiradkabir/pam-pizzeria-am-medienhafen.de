@@ -746,6 +746,29 @@
 
 
 /* Reduced motion */
+/* The existing breakpoint also controls the full desktop navigation. */
+@media (min-width: 768px) {
+  .home-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-page-content {
+    padding-top: 7rem;
+  }
+
+  .menu-categories {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .menu-categories a {
+    padding: 0.6rem 0.35rem;
+    text-align: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .fade-up {

@@ -52,7 +52,7 @@ the user can find the location without friction
 
 ## Current product structure
 
-The website consists of a conversion-focused home page and one editorial SEO/GEO subpage.
+The website consists of a conversion-focused home page, a dedicated menu page and one editorial SEO/GEO subpage.
 
 ```txt
 Home page:
@@ -203,7 +203,7 @@ Desktop supports a more atmospheric presentation:
 ```txt
 full navigation row
 hero-loop.mp4 as hero video background
-warm gradient atmosphere in Speisekarte
+dedicated /speisekarte/ route with readable dishes, prices, category anchors and PDF download
 larger visual rhythm
 wide gallery carousel with centered snapping and automatic focus scaling
 native CSS carousel controls where supported
@@ -268,7 +268,7 @@ The project should remain:
 
 ```txt
 static
-two-page structure (home page plus /about/)
+three-page structure (home page, /speisekarte/ and /about/)
 HTML/CSS/JS production output
 local build-time Tailwind compilation
 GitHub Pages compatible
@@ -299,3 +299,7 @@ Every future change should follow this order:
 6. Check consistency between HTML, CSS, JS, and Markdown docs.
 7. Return only changed files.
 ```
+
+## Dedicated Speisekarte
+
+Desktop (768px+) uses `/speisekarte/`; the menu section remains on the home page for mobile only. The new route is accessible on all devices and exposes all categories without JavaScript. Its PDF download is `assets/downloads/Sk_Aktuell.pdf`. Menu JSON-LD lives on the dedicated page; the home Restaurant entity points to it. All work is local until the owner has reviewed and authorized publication.

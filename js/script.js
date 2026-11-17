@@ -1,5 +1,30 @@
 /* Seiteninteraktionen */
 document.addEventListener('DOMContentLoaded', () => {
+    // Desktop uses the dedicated menu route; mobile retains its existing home section.
+    const desktopMenuQuery = window.matchMedia('(min-width: 768px)');
+    document.querySelectorAll('[data-mobile-menu-href]').forEach(link => {
+      const desktopHref = link.getAttribute('href');
+      const updateMenuHref = () => {
+        link.setAttribute('href', desktopMenuQuery.matches ? desktopHref : link.dataset.mobileMenuHref);
+      };
+      updateMenuHref();
+      desktopMenuQuery.addEventListener('change', updateMenuHref);
+    });
+
+    // Old shared home links still reach the menu after the desktop move.
+    const homeMenu = document.querySelector('.home-menu');
+    function followLegacyMenuLink() {
+      if (!homeMenu || !desktopMenuQuery.matches) return;
+      const hash = window.location.hash;
+      if (hash !== '#menu' && !homeMenu.querySelector(`[id="${CSS.escape(hash.slice(1))}"]`)) return;
+      if (!hash) return;
+      const target = hash.startsWith('#tab-') ? hash.replace('#tab-', '#') : '';
+      window.location.replace(new URL('speisekarte/' + target, window.location.href).href);
+    }
+    followLegacyMenuLink();
+    window.addEventListener('hashchange', followLegacyMenuLink);
+    desktopMenuQuery.addEventListener('change', followLegacyMenuLink);
+
   // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -383,6 +408,8 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
         if (href === '#') return;
+        // Native anchors keep shareable category URLs on the standalone menu.
+        if (document.body.classList.contains('menu-page')) return;
         e.preventDefault();
         document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });

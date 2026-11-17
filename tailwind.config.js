@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './index.html',
     './about/**/*.html',
+    './speisekarte/index.html',
     './js/**/*.js'
   ],
   theme: {

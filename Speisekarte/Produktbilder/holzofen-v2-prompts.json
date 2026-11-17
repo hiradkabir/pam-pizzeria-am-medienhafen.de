@@ -1,0 +1,450 @@
+[
+  {
+    "number": "1",
+    "category": "Pizza",
+    "name": "Margherita",
+    "description": "(1,2)",
+    "file": "01-margherita.jpg",
+    "status": "reused",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 1: Margherita. Exact topping ingredients: tomato sauce and melted pizza cheese only. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "2",
+    "category": "Pizza",
+    "name": "Salami",
+    "description": "(1,2,3) Salami",
+    "file": "02-salami.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 2: Salami. Exact topping ingredients: Salami. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "3",
+    "category": "Pizza",
+    "name": "Fungi",
+    "description": "(1,2) Champignons",
+    "file": "03-fungi.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 3: Fungi. Exact topping ingredients: Champignons. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "4",
+    "category": "Pizza",
+    "name": "Pizza Carciofi",
+    "description": "(1,2) Artischocken",
+    "file": "04-pizza-carciofi.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 4: Pizza Carciofi. Exact topping ingredients: Artischocken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "5",
+    "category": "Pizza",
+    "name": "Pizza Cipolla",
+    "description": "(1,2) Zwiebeln",
+    "file": "05-pizza-cipolla.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 5: Pizza Cipolla. Exact topping ingredients: Zwiebeln. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "6",
+    "category": "Pizza",
+    "name": "Prosciutto",
+    "description": "(1,2,3) Form-Vorderschinken",
+    "file": "06-prosciutto.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 6: Prosciutto. Exact topping ingredients: Form-Vorderschinken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "7",
+    "category": "Pizza",
+    "name": "Bolognese",
+    "description": "(1,2) Bolognese",
+    "file": "07-bolognese.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 7: Bolognese. Exact topping ingredients: Bolognese. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "8",
+    "category": "Pizza",
+    "name": "Brokkoli",
+    "description": "(1,2) Brokkoli",
+    "file": "08-brokkoli.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 8: Brokkoli. Exact topping ingredients: Brokkoli. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "9",
+    "category": "Pizza",
+    "name": "Spinaci",
+    "description": "(1,2) Spinat",
+    "file": "09-spinaci.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 9: Spinaci. Exact topping ingredients: Spinat. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "10",
+    "category": "Pizza",
+    "name": "Europa",
+    "description": "(1,2) Champignons und Form-Vorderschinken",
+    "file": "10-europa.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 10: Europa. Exact topping ingredients: Champignons und Form-Vorderschinken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "11",
+    "category": "Pizza",
+    "name": "Udo's Pizza",
+    "description": "(1,2) Rote Peperoni (Chili) und Sardellen",
+    "file": "11-udo-s-pizza.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 11: Udo's Pizza. Exact topping ingredients: Rote Peperoni (Chili) und Sardellen. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "12",
+    "category": "Pizza",
+    "name": "Valentino",
+    "description": "(1,2) Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln",
+    "file": "12-valentino.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 12: Valentino. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "13",
+    "category": "Pizza",
+    "name": "Calabrese",
+    "description": "(1,2) Original italienische Salami, frische Tomaten, Mozzarella, Basilikum",
+    "file": "13-calabrese.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 13: Calabrese. Exact topping ingredients: Original italienische Salami, frische Tomaten, Mozzarella, Basilikum. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "14",
+    "category": "Pizza",
+    "name": "Tonno",
+    "description": "(1,2) Thunfisch",
+    "file": "14-tonno.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 14: Tonno. Exact topping ingredients: Thunfisch. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "15",
+    "category": "Pizza",
+    "name": "Contadina",
+    "description": "(1,2) Zucchini, Auberginen, Paprika, Peperoni",
+    "file": "15-contadina.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 15: Contadina. Exact topping ingredients: Zucchini, Auberginen, Paprika, Peperoni. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "16",
+    "category": "Pizza",
+    "name": "4 Stagioni",
+    "description": "(2,3,4) Form-Vorderschinken, Champignons, Thunfisch, Artischocken",
+    "file": "16-4-stagioni.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 16: 4 Stagioni. Exact topping ingredients: Form-Vorderschinken, Champignons, Thunfisch, Artischocken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.   Four toppings divided into four loose quarters.  Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "17",
+    "category": "Pizza",
+    "name": "Hawaii",
+    "description": "(2,3) Form-Vorderschinken, Ananas",
+    "file": "17-hawaii.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 17: Hawaii. Exact topping ingredients: Form-Vorderschinken, Ananas. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "18",
+    "category": "Pizza",
+    "name": "Mista",
+    "description": "(1,2) Thunfisch, Form-Vorderschinken, Champignons",
+    "file": "18-mista.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 18: Mista. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "19",
+    "category": "Pizza",
+    "name": "Caprese",
+    "description": "(1,2) frische Tomaten, Mozzarella",
+    "file": "19-caprese.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 19: Caprese. Exact topping ingredients: frische Tomaten, Mozzarella. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "20",
+    "category": "Pizza",
+    "name": "4 Formaggi",
+    "description": "(1,2) 4 verschiedene Käsesorten",
+    "file": "20-4-formaggi.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 20: 4 Formaggi. Exact topping ingredients: 4 verschiedene Käsesorten. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.    Four melted cheeses, small blue cheese flecks; no other toppings. Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "21",
+    "category": "Pizza",
+    "name": "Calzone",
+    "description": "(1,2,3) Thunfisch, Form-Vorderschinken, Champignons",
+    "file": "21-calzone.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 21: Calzone. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons. A closed half-moon calzone with domed dough and tomato and browned cheese on its outside exactly like image 1; listed tuna, ham and mushroom filling hidden inside.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "22",
+    "category": "Pizza",
+    "name": "Gamberetti",
+    "description": "(1,2) Shrimps",
+    "file": "22-gamberetti.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 22: Gamberetti. Exact topping ingredients: Shrimps. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "23",
+    "category": "Pizza",
+    "name": "Mari e Monti",
+    "description": "(1,2) Spinat, Shrimps",
+    "file": "23-mari-e-monti.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 23: Mari e Monti. Exact topping ingredients: Spinat, Shrimps. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "24",
+    "category": "Pizza",
+    "name": "Rucola",
+    "description": "(1,2) Parmaschinken, Rucola, Parmesan",
+    "file": "24-rucola.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 24: Rucola. Exact topping ingredients: Parmaschinken, Rucola, Parmesan. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "25",
+    "category": "Pizza",
+    "name": "Frutti di Mare",
+    "description": "(1,2) Meeresfrüchte",
+    "file": "25-frutti-di-mare.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 25: Frutti di Mare. Exact topping ingredients: Meeresfrüchte. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "26",
+    "category": "Pizza",
+    "name": "Capricciosa",
+    "description": "(1,2,3) Thunfisch, Form-Vorderschinken, Champignons, Salami",
+    "file": "26-capricciosa.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 26: Capricciosa. Exact topping ingredients: Thunfisch, Form-Vorderschinken, Champignons, Salami. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "27",
+    "category": "Pizza",
+    "name": "Pizza Varano",
+    "description": "(1,2) Spinat, Champignons, Zwiebeln, Paprika, Artischocken",
+    "file": "27-pizza-varano.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 27: Pizza Varano. Exact topping ingredients: Spinat, Champignons, Zwiebeln, Paprika, Artischocken. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "28",
+    "category": "Pizza",
+    "name": "Pizza Regata",
+    "description": "(1,2) Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons",
+    "file": "28-pizza-regata.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 28: Pizza Regata. Exact topping ingredients: Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "29",
+    "category": "Pizza",
+    "name": "Pizza Pute",
+    "description": "(1,2) Putenstreifen, Gemüse nach Wahl",
+    "file": "29-pizza-pute.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 29: Pizza Pute. Exact topping ingredients: Putenstreifen, Gemüse nach Wahl. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.  Vegetable choice is zucchini and red bell pepper with cooked turkey breast strips.   Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "30",
+    "category": "Pizza",
+    "name": "Pizza Montanara",
+    "description": "(1,2,4) Oliven, Sardellen, Kapern",
+    "file": "30-pizza-montanara.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 30: Pizza Montanara. Exact topping ingredients: Oliven, Sardellen, Kapern. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "31",
+    "category": "Pizza",
+    "name": "Pizza Italia",
+    "description": "(1,2) Spinat, Zwiebeln, Paprika",
+    "file": "31-pizza-italia.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 31: Pizza Italia. Exact topping ingredients: Spinat, Zwiebeln, Paprika. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base. CRITICAL: toppings form THREE PARALLEL VERTICAL BANDS, the Italian flag as viewed by camera, GREEN LEFT with cooked spinach, WHITE MIDDLE with white onion and pale melted cheese, RED RIGHT with red bell pepper. Clearly distinct left-to-right GREEN WHITE RED thirds. No mixed scattering across thirds, no yellow pepper. Natural edible ingredients, not coloured dough.    Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  },
+  {
+    "number": "32",
+    "category": "Pizza",
+    "name": "Pizza Patata",
+    "description": "(1,2) Spinat, Form-Vorderschinken, Kartoffeln",
+    "file": "32-pizza-patata.jpg",
+    "status": "generated",
+    "references": [
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/assets/images/pizza-calzone-medienhafen.jpg",
+      "C:/Users/cykna/Documents/Projekte/pam-pizzeria-am-medienhafen.de/Speisekarte/Produktbilder/originale/01-margherita.png"
+    ],
+    "prompt": "Use case: style-transfer. Create ONE square photorealistic pizza product photo matching the attached actual restaurant CALZONE OVEN photograph. Image 1 is the definitive environment, warm amber firelight, worn stone floor and natural baking texture reference, NOT a request to make every dish a calzone. Image 2 is the already approved Margherita framing reference for this series. Dish 32: Pizza Patata. Exact topping ingredients: Spinat, Form-Vorderschinken, Kartoffeln. A complete round thin-crust open pizza, low irregular browned rim, tomato sauce and melted cheese base.     Ordinary cooked ham for Form-Vorderschinken; cured Parma ham only for Parmaschinken. Keep all listed toppings identifiable, modest realistic quantities. Pizza on a worn metal peel just inside the same rustic stone oven as image 1, small blurred fire at upper left, darker warm masonry behind. Camera about 30 degrees above food, pizza fills 75-80 percent of square frame, full crust visible, tasteful warm natural light and truthful irregular textures. Same setting and scale as image 2. No ceramic plate, granite worktop, tabletop, props, hands, letters, logos, watermark, collage, dramatic smoke, fake steam or CGI plastic shine. No garnish or additional ingredients not listed. Preserve pizza identity, change presentation to the oven setting.",
+    "style": "holzofen-calzone-referenz-v2"
+  }
+]

@@ -31,9 +31,9 @@
   <link rel="stylesheet" href="../css/tailwind.css?v=4">
   <link rel="stylesheet" href="../css/base.css?v=15">
   <link rel="stylesheet" href="../css/layout.css?v=30">
-  <link rel="stylesheet" href="../css/components.css?v=49">
-  <link rel="stylesheet" href="../css/responsive.css?v=65">
-  <script defer src="../js/script.js?v=50"></script>
+  <link rel="stylesheet" href="../css/components.css?v=51">
+  <link rel="stylesheet" href="../css/responsive.css?v=67">
+  <script defer src="../js/script.js?v=51"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -124,6 +124,14 @@
                 "@type": "Answer",
                 "text": "Ja. Auf der Speisekarte stehen mehrere Gerichte ohne aufgeführte Fleisch- oder Fischzutaten, darunter verschiedene Pizzen, Pasta, Antipasti und Salate. Bei besonderen Ernährungsanforderungen oder Unverträglichkeiten sprechen Sie uns bitte direkt an."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Gibt es vegane Gerichte?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nein. Wir bieten keine veganen Gerichte an."
+              }
             }
           ]
         }
@@ -154,13 +162,13 @@
     </button>
 
     <div id="mobile-menu" class="mobile-nav-links" role="navigation" aria-label="Mobile Navigation">
-      <a href="../index.html#menu" class="mobile-nav-link">Speisekarte</a>
+      <a href="../speisekarte/" data-mobile-menu-href="../index.html#menu" class="mobile-nav-link">Speisekarte</a>
       <a href="index.html" class="mobile-nav-link" aria-current="page">Über uns</a>
       <a href="../index.html#contact" class="mobile-nav-link">Kontakt</a>
     </div>
 
     <ul class="hidden md:flex items-center gap-8 text-[11px] font-sans tracking-widest uppercase text-brand-muted">
-      <li><a href="../index.html#menu" class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Speisekarte</a></li>
+      <li><a href="../speisekarte/" data-mobile-menu-href="../index.html#menu" class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Speisekarte</a></li>
       <li><a href="index.html" class="text-brand-gold cursor-default" aria-current="page">Über uns</a></li>
       <li><a href="../index.html#gallery" class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Galerie</a></li>
       <li><a href="../index.html#contact" class="hover:text-brand-gold transition-colors duration-200 cursor-pointer">Kontakt</a></li>
@@ -319,7 +327,7 @@
             Die Allergen- und Zusatzstoffkennzeichnung ist in einem eigenen Bereich der Speisekarte erklärt. Sie dient der Orientierung, ersetzt bei einer Allergie oder starken Unverträglichkeit aber nicht das persönliche Gespräch. Rezepturen, einzelne Produkte oder Produktionsbedingungen können sich ändern. Bitte sprechen Sie uns deshalb vor der Bestellung an, wenn bestimmte Zutaten für Sie ausgeschlossen werden müssen.
           </p>
           <p>
-            Auch vegetarische Auswahl lässt sich anhand der aufgeführten Zutaten finden. Mehrere Pizzen, Pasta-Varianten, Antipasti und Salate werden ohne genannte Fleisch- oder Fischzutaten beschrieben. Weil Käse, Soßen und andere Bestandteile für unterschiedliche Ernährungsweisen relevant sein können, geben wir keine pauschale Eignung für vegan, glutenfrei oder laktosefrei an. Im Zweifel klären wir die aktuelle Zubereitung gern direkt.
+            Auch vegetarische Auswahl lässt sich anhand der aufgeführten Zutaten finden. Mehrere Pizzen, Pasta-Varianten, Antipasti und Salate werden ohne genannte Fleisch- oder Fischzutaten beschrieben. Wir bieten keine veganen Gerichte an. Weil Käse, Soßen und andere Bestandteile für unterschiedliche Ernährungsweisen relevant sein können, geben wir keine pauschale Eignung für glutenfrei oder laktosefrei an. Im Zweifel klären wir die aktuelle Zubereitung gern direkt.
           </p>
           <p>
             Diese Transparenz gehört zu unserem Qualitätsverständnis. Frische Zutaten und traditionelle Rezepte sind wichtig; ebenso wichtig ist, dass Gäste wissen, was sie bestellen. Die Verbindung aus sichtbarer Speisekarte, erreichbarer Telefonnummer und persönlicher Auskunft macht die Planung vor dem Besuch einfacher – ganz gleich, ob es um eine schnelle Pizza, ein Pastagericht oder ein gemeinsames italienisches Essen geht.
@@ -328,7 +336,7 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="../index.html#menu" class="inline-flex items-center gap-3 border-b border-brand-gold/50 hover:border-brand-gold text-brand-gold font-sans tracking-wider uppercase text-[11px] pb-1 transition-colors">
+        <a href="../speisekarte/" data-mobile-menu-href="../index.html#menu" class="inline-flex items-center gap-3 border-b border-brand-gold/50 hover:border-brand-gold text-brand-gold font-sans tracking-wider uppercase text-[11px] pb-1 transition-colors">
           Vollständige Speisekarte mit Preisen ansehen
           <span aria-hidden="true">→</span>
         </a>
@@ -399,6 +407,10 @@
           <h3 class="font-display text-xl text-brand-cream mb-3">Gibt es vegetarische Gerichte?</h3>
           <p class="font-sans text-brand-muted text-sm leading-relaxed">Ja. Auf der Speisekarte stehen mehrere Gerichte ohne aufgeführte Fleisch- oder Fischzutaten, darunter verschiedene Pizzen, Pasta, Antipasti und Salate. Bei besonderen Ernährungsanforderungen oder Unverträglichkeiten sprechen Sie uns bitte direkt an.</p>
         </article>
+        <article class="py-7">
+          <h3 class="font-display text-xl text-brand-cream mb-3">Gibt es vegane Gerichte?</h3>
+          <p class="font-sans text-brand-muted text-sm leading-relaxed">Nein. Wir bieten keine veganen Gerichte an.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -427,7 +439,7 @@
       </a>
       <nav aria-label="Footer Navigation">
         <ul class="flex flex-wrap justify-center gap-5 text-[11px] font-sans tracking-widest uppercase text-brand-muted">
-          <li><a href="../index.html#menu" class="hover:text-brand-gold transition-colors">Speisekarte</a></li>
+          <li><a href="../speisekarte/" data-mobile-menu-href="../index.html#menu" class="hover:text-brand-gold transition-colors">Speisekarte</a></li>
           <li><a href="../index.html#gallery" class="hover:text-brand-gold transition-colors">Galerie</a></li>
           <li><a href="../index.html#contact" class="hover:text-brand-gold transition-colors">Kontakt</a></li>
           <li><a href="../index.html#impressum" class="hover:text-brand-gold transition-colors">Impressum</a></li>

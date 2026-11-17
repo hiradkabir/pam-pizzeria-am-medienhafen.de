@@ -1,0 +1,440 @@
+[
+  {
+    "number": "1",
+    "file": "01-margherita.jpg",
+    "error": null,
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-156c91c2-3f14-4787-8afe-6cfb7508bd92.png"
+  },
+  {
+    "number": "2",
+    "file": "02-salami.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-051f9cdc-676c-4ed7-9d17-fe938039cf0e.png",
+    "error": null
+  },
+  {
+    "number": "3",
+    "file": "03-fungi.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-490f2270-87e4-4209-9204-84462a5a0d88.png",
+    "error": null
+  },
+  {
+    "number": "4",
+    "file": "04-pizza-carciofi.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-c6bb1ea3-7599-4db0-9f55-d4ef0ba59747.png",
+    "error": null
+  },
+  {
+    "number": "5",
+    "file": "05-pizza-cipolla.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-ca3757bb-4aba-473f-97a7-2c5c30297f49.png",
+    "error": null
+  },
+  {
+    "number": "6",
+    "file": "06-prosciutto.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-d1cd0dbb-802f-4b11-9f1d-192d10fea05f.png",
+    "error": null
+  },
+  {
+    "number": "7",
+    "file": "07-bolognese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-995cd9a0-1c8a-46cd-83cf-2ab5e5cb4caf.png",
+    "error": null
+  },
+  {
+    "number": "8",
+    "file": "08-brokkoli.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-2e4560ef-755a-4030-a5c9-49f5c7b1be24.png",
+    "error": null
+  },
+  {
+    "number": "9",
+    "file": "09-spinaci.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-9e46214f-2ce4-4bc5-aed2-582a3b250686.png",
+    "error": null
+  },
+  {
+    "number": "10",
+    "file": "10-europa.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-e4c2f112-b058-4ac7-9a78-b11430b55521.png",
+    "error": null
+  },
+  {
+    "number": "11",
+    "file": "11-udo-s-pizza.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-d898cbbe-9b0a-451e-b07e-7c1afedb5501.png",
+    "error": null
+  },
+  {
+    "number": "12",
+    "file": "12-valentino.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-f0c4e966-04c9-4dee-a1fb-e8053bf934fe.png",
+    "error": null
+  },
+  {
+    "number": "13",
+    "file": "13-calabrese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-1e20faa3-8ffe-48af-9abf-a5d009d6c483.png",
+    "error": null
+  },
+  {
+    "number": "14",
+    "file": "14-tonno.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-26b4fa6a-7805-47c2-a13b-b87267803f45.png",
+    "error": null
+  },
+  {
+    "number": "15",
+    "file": "15-contadina.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-3a226f1f-9169-4c4b-8db3-db5b1d1e7eaa.png",
+    "error": null
+  },
+  {
+    "number": "16",
+    "file": "16-4-stagioni.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-7838d988-5306-4a60-9533-4c27d331309c.png",
+    "error": null
+  },
+  {
+    "number": "17",
+    "file": "17-hawaii.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-2825f0bb-65a6-4af4-9035-ee8d74a358d8.png",
+    "error": null
+  },
+  {
+    "number": "18",
+    "file": "18-mista.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-a1e8d26b-58fc-4150-9886-7bddeb88213e.png",
+    "error": null
+  },
+  {
+    "number": "19",
+    "file": "19-caprese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-33594af2-3ecd-4e13-8286-7b1a22e89bba.png",
+    "error": null
+  },
+  {
+    "number": "20",
+    "file": "20-4-formaggi.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-3a3f1226-4ecf-4ed7-af49-9023b44740ba.png",
+    "error": null
+  },
+  {
+    "number": "21",
+    "file": "21-calzone.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-28033c22-5c4d-4b24-945b-910d22e15211.png",
+    "error": null
+  },
+  {
+    "number": "22",
+    "file": "22-gamberetti.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-f660c40e-2a59-4b14-a505-9631373c72d9.png",
+    "error": null
+  },
+  {
+    "number": "23",
+    "file": "23-mari-e-monti.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-57858251-4c31-4d11-b20c-f7c977be010f.png",
+    "error": null
+  },
+  {
+    "number": "24",
+    "file": "24-rucola.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-d077ce6c-9ffd-4c38-b5b2-150b383ab085.png",
+    "error": null
+  },
+  {
+    "number": "25",
+    "file": "25-frutti-di-mare.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-89bdbe9d-80fe-4079-accc-ed64be4760fc.png",
+    "error": null
+  },
+  {
+    "number": "26",
+    "file": "26-capricciosa.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-5e87e684-a0ba-4367-917a-ab92689c4c18.png",
+    "error": null
+  },
+  {
+    "number": "27",
+    "file": "27-pizza-varano.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-d984ebcc-3003-4b79-94ac-265b1a09f5e2.png",
+    "error": null
+  },
+  {
+    "number": "28",
+    "file": "28-pizza-regata.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-810cdd9a-5ee3-4f29-8943-13dd08b01598.png",
+    "error": null
+  },
+  {
+    "number": "29",
+    "file": "29-pizza-pute.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-8669e0de-83c5-44d0-ac8e-cc7a7d7d281c.png",
+    "error": null
+  },
+  {
+    "number": "30",
+    "file": "30-pizza-montanara.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-23c8628e-429b-4234-ba43-6fe6f8539feb.png",
+    "error": null
+  },
+  {
+    "number": "31",
+    "file": "31-pizza-italia.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-9edb06bb-d4bf-4284-8138-017d67cee74b.png",
+    "error": null
+  },
+  {
+    "number": "32",
+    "file": "32-pizza-patata.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-e96a26c6-9b9c-487d-9c2a-081f3e40446c.png",
+    "error": null
+  },
+  {
+    "number": "33a",
+    "file": "33a-famiglia-ca-45-cm.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-45188e20-bee1-427c-aad4-c0d3056e70f6.png",
+    "error": null
+  },
+  {
+    "number": "33",
+    "file": "33-pizzabroetchen-mit-knoblauch-kraeuterbutter.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-f023123c-5b8d-47e9-b5f2-1788a6402a23.png",
+    "error": null
+  },
+  {
+    "number": "34",
+    "file": "34-focaccia-al-rosmarino.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-d04710c9-94c7-4ebe-8df1-4a4d00204e2b.png",
+    "error": null
+  },
+  {
+    "number": "35",
+    "file": "35-melanzane-parmigiana.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-36e535b4-d31b-4064-ba50-3f39aee72d2e.png",
+    "error": null
+  },
+  {
+    "number": "36",
+    "file": "36-rucolasalat.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-ef91d83a-4c3d-4654-84c6-2a732eca03b1.png",
+    "error": null
+  },
+  {
+    "number": "37",
+    "file": "37-inslata-caprese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-b78a5d62-b85b-40ec-acf0-91c0c0142dff.png",
+    "error": null
+  },
+  {
+    "number": "38",
+    "file": "38-bruschetta.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-77b1be27-2ca1-4638-affa-89d328cdbcef.png",
+    "error": null
+  },
+  {
+    "number": "39",
+    "file": "39-insalata-mista.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-20614076-f0fc-48f7-920c-f5f83435f37a.png",
+    "error": null
+  },
+  {
+    "number": "40",
+    "file": "40-insalata-nicoise.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-73fd4178-6370-4e1a-8450-25822201450a.png",
+    "error": null
+  },
+  {
+    "number": "41",
+    "file": "41-capricciosa.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-29f9aec6-8325-43a9-98a8-fdc608233251.png",
+    "error": null
+  },
+  {
+    "number": "42",
+    "file": "42-puten-salat.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-22f8b199-d885-4b49-bbd9-6b19c48233db.png",
+    "error": null
+  },
+  {
+    "number": "43",
+    "file": "43-spaghetti-napoli.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-2ed8ea8f-04b8-4b68-b0bf-fbccb469c862.png",
+    "error": null
+  },
+  {
+    "number": "44",
+    "file": "44-spaghetti-bolognese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-010971cc-d7fa-4042-b861-42f03d47d5d1.png",
+    "error": null
+  },
+  {
+    "number": "45",
+    "file": "45-spaghetti-a-matriciana.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-662f5afd-936f-4e0d-aafe-c4c32f50be92.png",
+    "error": null
+  },
+  {
+    "number": "46",
+    "file": "46-spaghetti-frutti-di-mare.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-19e43040-24b4-45aa-a7e4-2deef013cda4.png",
+    "error": null
+  },
+  {
+    "number": "47",
+    "file": "47-spaghetti-alla-puttanesca.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-e69323e6-3a05-4e33-8236-2a8c17637405.png",
+    "error": null
+  },
+  {
+    "number": "48",
+    "file": "48-spaghetti-carbonara.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-ee9c806c-3842-47c1-b8b8-963150f36085.png",
+    "error": null
+  },
+  {
+    "number": "49",
+    "file": "49-spaghetti-aglio-olio-e-peperocino.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-47810fa4-2a4c-4924-ae5f-13dd9ae0b95b.png",
+    "error": null
+  },
+  {
+    "number": "50",
+    "file": "50-spaghetti-pesto.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-5bff660b-c3f7-4073-b128-3e5ea3a65eaa.png",
+    "error": null
+  },
+  {
+    "number": "51",
+    "file": "51-penne-all-arabbiata.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-275a6b1e-9ca2-470b-9e37-cd43e6bdaebd.png",
+    "error": null
+  },
+  {
+    "number": "52",
+    "file": "52-penne-all-ortolana.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-d7ebcf16-a77a-4967-bee4-434fcf7274a6.png",
+    "error": null
+  },
+  {
+    "number": "53",
+    "file": "53-penne-pute.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-cf366f39-3ad4-468f-83b5-3d09ed1deb62.png",
+    "error": null
+  },
+  {
+    "number": "54",
+    "file": "54-penne-al-forno.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-4cb794e1-da53-494d-8c2b-75f7b3f97acc.png",
+    "error": null
+  },
+  {
+    "number": "55",
+    "file": "55-penne-4-formaggi.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-de80d945-bdea-4a64-a691-94a68e66dd05.png",
+    "error": null
+  },
+  {
+    "number": "56",
+    "file": "56-penne-bolognese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-b023068a-44c1-4352-ae29-7e459b92e786.png",
+    "error": null
+  },
+  {
+    "number": "57",
+    "file": "57-penne-napoli.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-7cb4ab8e-32d3-47b7-8165-c07a86329c2d.png",
+    "error": null
+  },
+  {
+    "number": "58",
+    "file": "58-tagliatelle-alfredo.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-a03331dd-b8cf-49aa-a9cb-2d87cb980c69.png",
+    "error": null
+  },
+  {
+    "number": "59",
+    "file": "59-tagliatelle-al-salmone.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-3141e506-95e3-4113-9bcf-4e0cb5d5d24f.png",
+    "error": null
+  },
+  {
+    "number": "60",
+    "file": "60-tagliatelle-mari-e-monti.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-fbf1f021-fde9-44fd-8639-5c02f6e4c001.png",
+    "error": null
+  },
+  {
+    "number": "61",
+    "file": "61-tagliatelle-bolognese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-9e668757-569e-480f-a2d2-7dda275c3675.png",
+    "error": null
+  },
+  {
+    "number": "62",
+    "file": "62-tagliatelle-napoli.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-159e4215-1a47-4f33-9be3-104cb7b3e8cc.png",
+    "error": null
+  },
+  {
+    "number": "63",
+    "file": "63-tortellini-al-forno.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-b5b461a0-d6f1-4f56-b014-63345ddc3d68.png",
+    "error": null
+  },
+  {
+    "number": "64",
+    "file": "64-tortellini-alla-panna.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-f7847d2f-630a-48be-8c41-d061f37bf90b.png",
+    "error": null
+  },
+  {
+    "number": "65",
+    "file": "65-tortellini-al-4-formaggi.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-8e8b9074-7892-4a53-86f6-b3e79fc1228d.png",
+    "error": null
+  },
+  {
+    "number": "66",
+    "file": "66-tortellini-alla-boscaiola.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-de25d940-4b2e-44ad-9dbf-d034f1e4fe6c.png",
+    "error": null
+  },
+  {
+    "number": "67",
+    "file": "67-gnocchi-alla-gorgonzola.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-faaaec9f-7a87-4570-8bfc-edfce9481d2b.png",
+    "error": null
+  },
+  {
+    "number": "68",
+    "file": "68-gnocchi-alla-bolognese.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-9854f70f-a698-4dbf-91b5-eb4f61db0927.png",
+    "error": null
+  },
+  {
+    "number": "69",
+    "file": "69-gnocchi-alla-napoli.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-7c2c3bf8-45f1-4329-a746-327e255660b8.png",
+    "error": null
+  },
+  {
+    "number": "70",
+    "file": "70-gnocchi-alla-sorrentina.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-efa076a7-e34b-46b3-a12e-41d68d05562d.png",
+    "error": null
+  },
+  {
+    "number": "71",
+    "file": "71-lasagne-traditionale.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-1c3c9630-d5c1-4081-868b-5451d1c0acd3.png",
+    "error": null
+  },
+  {
+    "number": "72",
+    "file": "72-pasticcio-al-forno-brooklin.jpg",
+    "source": "C:\\Users\\cykna\\.codex\\generated_images\\01a1ea33-6b6f-7aa0-9f75-a986d3983632\\exec-f5c88e7e-881c-4b48-9c82-8cc7b6b421d8.png",
+    "error": null
+  }
+]

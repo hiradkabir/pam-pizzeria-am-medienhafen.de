@@ -25,6 +25,10 @@ const pages = [
   {
     file: 'about/index.html',
     canonical: 'https://pam-pizzeria-am-medienhafen.de/about/'
+  },
+  {
+    file: 'speisekarte/index.html',
+    canonical: 'https://pam-pizzeria-am-medienhafen.de/speisekarte/'
   }
 ];
 
@@ -79,13 +83,14 @@ const nodesOfType = type => allNodes.filter(node => {
 const expectedTypes = new Map([
   ['Restaurant', 1],
   ['WebSite', 1],
-  ['WebPage', 1],
+  ['WebPage', 2],
   ['AboutPage', 1],
   ['Menu', 1],
-  ['MenuItem', 75],
-  ['Offer', 75],
+  ['MenuItem', 76],
+  ['Offer', 76],
   ['FAQPage', 1],
-  ['BreadcrumbList', 1]
+  ['BreadcrumbList', 2],
+  ['DigitalDocument', 1]
 ]);
 
 for (const [type, expected] of expectedTypes) {
@@ -134,8 +139,8 @@ for (const page of pages) {
       fail(`${page.file}: missing local reference (${match[2]})`);
       continue;
     }
-    if (attribute === 'href' && fs.statSync(resolved).isDirectory()) {
-      fail(`${page.file}: local href must target an explicit file, not a directory (${match[2]})`);
+    if (attribute === 'href' && fs.statSync(resolved).isDirectory() && !fs.existsSync(path.join(resolved, 'index.html'))) {
+      fail(`${page.file}: local directory href has no index.html (${match[2]})`);
     }
   }
 }
@@ -160,6 +165,34 @@ for (const url of pages.map(page => page.canonical)) {
   if (sitemap.includes(`<loc>${url}</loc>`)) pass(`Sitemap contains ${url}`);
   else fail(`Sitemap is missing ${url}`);
 }
+
+// The dedicated menu is useful to guests and crawlers without executing JS.
+const menuHtml = read('speisekarte/index.html');
+const menuMain = menuHtml.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '';
+const menuVisibleText = normalizeText(menuMain);
+if (/role="tabpanel"|\shidden(?:[\s>]|=")|class="[^"]*\bhidden\b/.test(menuMain)) {
+  fail('Menu: dishes must not be hidden behind JavaScript tabs');
+} else pass('Menu: all categories are present without JavaScript');
+for (const item of nodesOfType('MenuItem')) {
+  const name = normalizeText(item.name);
+  const price = item.offers?.price == null
+    ? null
+    : Number(item.offers.price).toFixed(2).replace('.', ',') + ' €';
+  if (!menuVisibleText.includes(name)) fail(`Menu: structured dish is not visible (${name})`);
+  if (price && !menuMain.split('\n').some(line => normalizeText(line).includes(name) && normalizeText(line).includes(price))) {
+    fail(`Menu: structured price does not match the dish row (${name}: ${price})`);
+  }
+}
+if (!failures.some(message => message.startsWith('Menu: structured'))) pass('Menu: all 75 structured dishes and prices appear in HTML');
+const menuSchema = nodesOfType('Menu')[0];
+const restaurant = nodesOfType('Restaurant')[0];
+if (menuSchema?.url === pages[2].canonical && restaurant?.hasMenu?.['@id'] === menuSchema?.['@id']) {
+  pass('Menu: Restaurant points to the dedicated canonical menu entity');
+} else fail('Menu: Restaurant/menu canonical relationship is inconsistent');
+const pdf = fs.readFileSync(path.join(root, 'assets/downloads/Sk_Aktuell.pdf'));
+if (pdf.subarray(0, 5).toString() === '%PDF-' && menuHtml.includes('download="Sk_Aktuell.pdf"')) {
+  pass('Menu: linked PDF download exists and has a valid PDF header');
+} else fail('Menu: PDF download is missing or invalid');
 
 results.forEach(message => console.log(`PASS  ${message}`));
 

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Speisekarte</title>
+<style>
+    :root {
+      --ink: #333333;
+      --muted: #6c6c6c;
+      --bar: #242424;
+      --paper: #fffefa;
+      --fold: #d0d0d0;
+      --price: #234a8a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      background: #d4d1ca;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 18px;
+      overflow-x: auto;
+    }
+
+    .menu-sheet {
+      width: 297mm;
+      height: 210mm;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background:
+        radial-gradient(circle at 20% 18%, rgba(0,0,0,.025), transparent 28%),
+        linear-gradient(90deg, rgba(0,0,0,.012), transparent 10%, rgba(0,0,0,.008) 52%, transparent 88%),
+        var(--paper);
+      box-shadow: 0 14px 40px rgba(0,0,0,.22);
+      overflow: hidden;
+    }
+
+    .panel {
+      position: relative;
+      min-width: 0;
+      height: 100%;
+      padding: 4.7mm 4.2mm 4mm;
+      overflow: hidden;
+    }
+
+    .panel + .panel { border-left: .25mm solid var(--fold); }
+
+    .section-title {
+      height: 6.1mm;
+      margin: 0 0 1.15mm;
+      padding: .45mm 1.4mm .2mm;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background: linear-gradient(90deg, #151515 0%, #2c2c2c 58%, #414141 100%);
+      border-radius: 1.25mm;
+      font-size: 10.4pt;
+      font-weight: 700;
+      letter-spacing: -.18px;
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+
+    .panel:nth-child(2) .section-title,
+    .panel:nth-child(3) .section-title {
+      margin-top: 2.05mm;
+    }
+
+    .panel:nth-child(2) > .menu-item:first-child,
+    .panel:nth-child(3) > .menu-item:first-child { margin-top: .25mm; }
+
+    .menu-item {
+      margin: 0 0 .53mm;
+      font-size: 6.95pt;
+      line-height: 1.01;
+      break-inside: avoid;
+    }
+
+    .panel:nth-child(1) .menu-item { margin-bottom: 1.12mm; }
+    .panel:nth-child(2) .menu-item { margin-bottom: .76mm; }
+
+    .item-line {
+      display: flex;
+      align-items: baseline;
+      min-width: 0;
+      height: 3.05mm;
+      white-space: nowrap;
+    }
+
+    .item-title {
+      flex: 0 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: clip;
+      font-size: 7.35pt;
+      color: #373737;
+    }
+
+    .number { font-variant-numeric: tabular-nums; }
+
+    .leader {
+      flex: 1 1 auto;
+      min-width: 3mm;
+      margin: 0 1mm .55mm;
+      border-bottom: .35mm dotted #8e8e8e;
+      opacity: .92;
+    }
+
+    .amount {
+      margin-right: 1.1mm;
+      color: #666;
+      font-size: 6.7pt;
+    }
+
+    .price {
+      display: inline-block;
+      min-width: 12mm;
+      text-align: right;
+      color: #373737;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7.35pt;
+      font-weight: 400;
+      line-height: 1;
+      transform: none;
+      outline: none;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .price:focus {
+      background: rgba(35,74,138,.1);
+      border-radius: 1mm;
+    }
+
+    .allergens {
+      flex: 0 0 auto;
+      min-width: 9mm;
+      padding-left: 1.1mm;
+      color: #676767;
+      font-size: 6.45pt;
+      text-align: right;
+    }
+
+    .description {
+      max-width: 92%;
+      min-height: 2.15mm;
+      margin-top: -.25mm;
+      padding-left: 5.9mm;
+      color: #6b6b6b;
+      font-size: 5.6pt;
+      line-height: 1.04;
+      white-space: normal;
+    }
+
+    .handnote {
+      color: var(--price);
+      font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+      font-size: 10.5pt;
+      line-height: 1.05;
+      transform: rotate(-2deg);
+    }
+
+    .handnote span { float: right; padding-right: 5mm; }
+    .left-note { position: absolute; left: 5mm; right: 4mm; bottom: 2.5mm; }
+    .middle-note { position: absolute; left: 5mm; right: 4mm; bottom: 3.2mm; }
+    .wine-note { margin-top: 2.2mm; font-size: 11.6pt; transform: rotate(-1deg); }
+
+    @media (max-width: 1130px) {
+      body { padding: 10px; }
+      .menu-sheet { margin: 0; }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding: 8px;
+        overflow-x: hidden;
+      }
+
+      .menu-sheet {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+        overflow: visible;
+      }
+
+      .panel {
+        width: 100%;
+        height: auto;
+        padding: 12px 10px;
+        overflow: visible;
+      }
+
+      .panel + .panel {
+        border-left: 0;
+        border-top: 1px solid var(--fold);
+      }
+
+      .item-line {
+        display: grid;
+        grid-template-columns: minmax(0, auto) minmax(8px, 1fr) auto auto;
+        align-items: baseline;
+        width: 100%;
+        height: auto;
+      }
+
+      .item-title {
+        min-width: 0;
+        overflow: visible;
+        white-space: normal;
+      }
+
+      .leader {
+        min-width: 8px;
+      }
+
+      .price {
+        display: inline-block !important;
+        min-width: 48px;
+        visibility: visible !important;
+        opacity: 1 !important;
+        white-space: nowrap;
+        -webkit-text-fill-color: #373737;
+      }
+
+      .allergens {
+        min-width: 0;
+        padding-left: 4px;
+        white-space: nowrap;
+      }
+
+      .description {
+        max-width: 100%;
+      }
+
+      .left-note,
+      .middle-note {
+        position: static;
+        margin-top: 8px;
+      }
+    }
+
+    @page { size: A4 landscape; margin: 0; }
+
+    @media print {
+      html, body { width: 297mm; height: 210mm; background: #fff; }
+      body { padding: 0; }
+      .menu-sheet { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+<main aria-label="Speisekarte im dreispaltigen Original-Layout" class="menu-sheet">
+<section class="panel"><h2 class="section-title">Pizza (Alle Pizzen mit Tomatensoße und Käse)</h2><article class="menu-item" data-number="1">
+<div class="item-line">
+<span class="item-title"><span class="number">1.</span> Margherita</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="1">9,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2)</div>
+</article><article class="menu-item" data-number="2">
+<div class="item-line">
+<span class="item-title"><span class="number">2.</span> Salami</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="2">11,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2,3) Salami</div>
+</article><article class="menu-item" data-number="3">
+<div class="item-line">
+<span class="item-title"><span class="number">3.</span> Fungi</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="3">11,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Champignons</div>
+</article><article class="menu-item" data-number="4">
+<div class="item-line">
+<span class="item-title"><span class="number">4.</span> Pizza Carciofi</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="4">11,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Artischocken</div>
+</article><article class="menu-item" data-number="5">
+<div class="item-line">
+<span class="item-title"><span class="number">5.</span> Pizza Cipolla</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="5">11,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Zwiebeln</div>
+</article><article class="menu-item" data-number="6">
+<div class="item-line">
+<span class="item-title"><span class="number">6.</span> Prosciutto</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="6">12,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2,3) Form-Vorderschinken</div>
+</article><article class="menu-item" data-number="7">
+<div class="item-line">
+<span class="item-title"><span class="number">7.</span> Bolognese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="7">12,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Bolognese</div>
+</article><article class="menu-item" data-number="8">
+<div class="item-line">
+<span class="item-title"><span class="number">8.</span> Brokkoli</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="8">12,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Brokkoli</div>
+</article><article class="menu-item" data-number="9">
+<div class="item-line">
+<span class="item-title"><span class="number">9.</span> Spinaci</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="9">11,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Spinat</div>
+</article><article class="menu-item" data-number="10">
+<div class="item-line">
+<span class="item-title"><span class="number">10.</span> Europa</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="10">12,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Champignons und Form-Vorderschinken</div>
+</article><article class="menu-item" data-number="11">
+<div class="item-line">
+<span class="item-title"><span class="number">11.</span> Udo's Pizza</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="11">13,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Rote Peperoni (Chili) und Sardellen</div>
+</article><article class="menu-item" data-number="12">
+<div class="item-line">
+<span class="item-title"><span class="number">12.</span> Valentino</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="12">15,00€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(1,2) Thunfisch, Form-Vorderschinken, Champignons, Zwiebeln</div>
+</article><article class="menu-item" data-number="13">
+<div class="item-line">
+<span class="item-title"><span class="number">13.</span> Calabrese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="13">15,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Original italienische Salami, frische Tomaten, Mozzarella, Basilikum</div>
+</article><article class="menu-item" data-number="14">
+<div class="item-line">
+<span class="item-title"><span class="number">14.</span> Tonno</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="14">12,00€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(1,2) Thunfisch</div>
+</article><article class="menu-item" data-number="15">
+<div class="item-line">
+<span class="item-title"><span class="number">15.</span> Contadina</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="15">13,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Zucchini, Auberginen, Paprika, Peperoni</div>
+</article><article class="menu-item" data-number="16">
+<div class="item-line">
+<span class="item-title"><span class="number">16.</span> 4 Stagioni</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="16">13,50€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(2,3,4) Form-Vorderschinken, Champignons, Thunfisch, Artischocken</div>
+</article><article class="menu-item" data-number="17">
+<div class="item-line">
+<span class="item-title"><span class="number">17.</span> Hawaii</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="17">13,00€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(2,3) Form-Vorderschinken, Ananas</div>
+</article><article class="menu-item" data-number="18">
+<div class="item-line">
+<span class="item-title"><span class="number">18.</span> Mista</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="18">13,50€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(1,2) Thunfisch, Form-Vorderschinken, Champignons</div>
+</article><article class="menu-item" data-number="19">
+<div class="item-line">
+<span class="item-title"><span class="number">19.</span> Caprese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="19">13,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) frische Tomaten, Mozzarella</div>
+</article><article class="menu-item" data-number="20">
+<div class="item-line">
+<span class="item-title"><span class="number">20.</span> 4 Formaggi</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="20">14,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) 4 verschiedene Käsesorten</div>
+</article><article class="menu-item" data-number="21">
+<div class="item-line">
+<span class="item-title"><span class="number">21.</span> Calzone</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="21">15,00€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(1,2,3) Thunfisch, Form-Vorderschinken, Champignons</div>
+</article><article class="menu-item" data-number="22">
+<div class="item-line">
+<span class="item-title"><span class="number">22.</span> Gamberetti</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="22">13,50€</span><span class="allergens">(a,b,g)</span>
+</div>
+<div class="description">(1,2) Shrimps</div>
+</article><article class="menu-item" data-number="23">
+<div class="item-line">
+<span class="item-title"><span class="number">23.</span> Mari e Monti</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="23">14,50€</span><span class="allergens">(a,b,g)</span>
+</div>
+<div class="description">(1,2) Spinat, Shrimps</div>
+</article><article class="menu-item" data-number="24">
+<div class="item-line">
+<span class="item-title"><span class="number">24.</span> Rucola</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="24">15,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Parmaschinken, Rucola, Parmesan</div>
+</article><article class="menu-item" data-number="25">
+<div class="item-line">
+<span class="item-title"><span class="number">25.</span> Frutti di Mare</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="25">15,50€</span><span class="allergens">(a,b,g)</span>
+</div>
+<div class="description">(1,2) Meeresfrüchte</div>
+</article><article class="menu-item" data-number="26">
+<div class="item-line">
+<span class="item-title"><span class="number">26.</span> Capricciosa</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="26">15,00€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(1,2,3) Thunfisch, Form-Vorderschinken, Champignons, Salami</div>
+</article><article class="menu-item" data-number="27">
+<div class="item-line">
+<span class="item-title"><span class="number">27.</span> Pizza Varano</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="27">15,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Spinat, Champignons, Zwiebeln, Paprika, Artischocken</div>
+</article><article class="menu-item" data-number="28">
+<div class="item-line">
+<span class="item-title"><span class="number">28.</span> Pizza Regata</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="28">15,50€</span><span class="allergens">(a,b,d,g)</span>
+</div>
+<div class="description">(1,2) Spinat, Thunfisch, Form-Vorderschinken, Shrimps, Champignons</div>
+</article><article class="menu-item" data-number="29">
+<div class="item-line">
+<span class="item-title"><span class="number">29.</span> Pizza Pute</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="29">14,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Putenstreifen, Gemüse nach Wahl</div>
+</article></section>
+<section class="panel"><article class="menu-item" data-number="30">
+<div class="item-line">
+<span class="item-title"><span class="number">30.</span> Pizza Montanara</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="30">13,50€</span><span class="allergens">(a,d,g)</span>
+</div>
+<div class="description">(1,2,4) Oliven, Sardellen, Kapern</div>
+</article><article class="menu-item" data-number="31">
+<div class="item-line">
+<span class="item-title"><span class="number">31.</span> Pizza Italia</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="31">13,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Spinat, Zwiebeln, Paprika</div>
+</article><article class="menu-item" data-number="32">
+<div class="item-line">
+<span class="item-title"><span class="number">32.</span> Pizza Patata</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="32">14,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) Spinat, Form-Vorderschinken, Kartoffeln</div>
+</article><article class="menu-item" data-number="33a">
+<div class="item-line">
+<span class="item-title"><span class="number">33a.</span> Famiglia ca. 45 cm</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="33a">19,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2) je Belag 3,00€ extra</div>
+</article><article class="menu-item" data-number="33">
+<div class="item-line">
+<span class="item-title"><span class="number">33.</span> Pizzabrötchen mit Knoblauch Kräuterbutter</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="33">4,00€</span>
+</div>
+<div class="description">(1,2)</div>
+</article><h2 class="section-title">Antipasti</h2><article class="menu-item" data-number="34">
+<div class="item-line">
+<span class="item-title"><span class="number">34.</span> Focaccia al Rosmarino</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="34">4,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(2) Hausgemachtes Brot mit Rosmarine</div>
+</article><article class="menu-item" data-number="35">
+<div class="item-line">
+<span class="item-title"><span class="number">35.</span> Melanzane Parmigiana</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="35">12,00€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">(2) Überbackene Auberginen mit Tomaten und Mozzarella</div>
+</article><article class="menu-item" data-number="36">
+<div class="item-line">
+<span class="item-title"><span class="number">36.</span> Rucolasalat</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="36">9,00€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">mit Parmesanspänen</div>
+</article><article class="menu-item" data-number="37">
+<div class="item-line">
+<span class="item-title"><span class="number">37.</span> Inslata Caprese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="37">10,00€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">(2,4) Frische Tomatenscheiben, Mozzarella und Basilikum</div>
+</article><article class="menu-item" data-number="38">
+<div class="item-line">
+<span class="item-title"><span class="number">38.</span> Bruschetta</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="38">10,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(4) Frische Tomatenstücke, Basilikum, Zwiebeln, Olivenöl</div>
+</article><h2 class="section-title">Insalate</h2><article class="menu-item" data-number="39">
+<div class="item-line">
+<span class="item-title"><span class="number">39.</span> Insalata Mista</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="39">8,00€</span><span class="allergens">(j)</span>
+</div>
+<div class="description">(2) Gemischter Salat der Saison mit Italian Dressing</div>
+</article><article class="menu-item" data-number="40">
+<div class="item-line">
+<span class="item-title"><span class="number">40.</span> Insalata Nicoise</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="40">12,50€</span><span class="allergens">(a,d,j)</span>
+</div>
+<div class="description">(2) Salat, Kartoffeln, Bohnen, Thunfisch, Ei, Käse</div>
+</article><article class="menu-item" data-number="41">
+<div class="item-line">
+<span class="item-title"><span class="number">41.</span> Capricciosa</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="41">12,00€</span><span class="allergens">(a,d,g,j)</span>
+</div>
+<div class="description">(2) Salat, Form-Vorderschinken, Thunfisch, Ei, Käse</div>
+</article><article class="menu-item" data-number="42">
+<div class="item-line">
+<span class="item-title"><span class="number">42.</span> Puten Salat</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="42">13,00€</span><span class="allergens">(j)</span>
+</div>
+<div class="description">(2) Putenbruststreifen und Apfelspalten mit Honig</div>
+</article><h2 class="section-title">Pasta</h2><article class="menu-item" data-number="43">
+<div class="item-line">
+<span class="item-title"><span class="number">43.</span> Spaghetti Napoli</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="43">9,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(5) mit Tomatensoße und Basilikum</div>
+</article><article class="menu-item" data-number="44">
+<div class="item-line">
+<span class="item-title"><span class="number">44.</span> Spaghetti Bolognese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="44">12,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(5) Bolognese</div>
+</article><article class="menu-item" data-number="45">
+<div class="item-line">
+<span class="item-title"><span class="number">45.</span> Spaghetti a Matriciana</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="45">12,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(2)Tomatensoße, Speck, Zwiebeln </div>
+</article><article class="menu-item" data-number="46">
+<div class="item-line">
+<span class="item-title"><span class="number">46.</span> Spaghetti Frutti di Mare</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="46">14,50€</span><span class="allergens">(a,b)</span>
+</div>
+<div class="description">(2) Tomatensoße, Knoblauch und Meeresfrüchten</div>
+</article><article class="menu-item" data-number="47">
+<div class="item-line">
+<span class="item-title"><span class="number">47.</span> Spaghetti alla Puttanesca</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="47">12,00€</span><span class="allergens">(a,d)</span>
+</div>
+<div class="description">(2,4) Oliven, Kapern, Zwiebeln und Sardellen in Tomatensoße</div>
+</article><article class="menu-item" data-number="48">
+<div class="item-line">
+<span class="item-title"><span class="number">48.</span> Spaghetti Carbonara</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="48">12,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(1,2,3,5) Sahnesoße, Speck, Eier, Parmesan</div>
+</article><article class="menu-item" data-number="49">
+<div class="item-line">
+<span class="item-title"><span class="number">49.</span> Spaghetti Aglio, Olio e Peperocino</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="49">9,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">mit Knoblauch, Olivenöl, Peperoni scharf</div>
+</article><article class="menu-item" data-number="50">
+<div class="item-line">
+<span class="item-title"><span class="number">50.</span> Spaghetti Pesto</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="50">9,00€</span><span class="allergens">(a,e)</span>
+</div>
+<div class="description">mit Basilikum, Pinienkerne, Knoblauch, Kräutersoße</div>
+</article><h2 class="section-title">Penne</h2><article class="menu-item" data-number="51">
+<div class="item-line">
+<span class="item-title"><span class="number">51.</span> Penne all' Arabbiata</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="51">9,50€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(2) scharfe Tomatensoße und Kräuter</div>
+</article><article class="menu-item" data-number="52">
+<div class="item-line">
+<span class="item-title"><span class="number">52.</span> Penne all' Ortolana</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="52">13,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) Tomatensoße und verschiedenes Gemüse</div>
+</article><article class="menu-item" data-number="53">
+<div class="item-line">
+<span class="item-title"><span class="number">53.</span> Penne Pute</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="53">14,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2)Tomaten-Sahnesoße, mit Putenstreifen und Gemüse nach Wahl</div>
+</article><article class="menu-item" data-number="54">
+<div class="item-line">
+<span class="item-title"><span class="number">54.</span> Penne al Forno</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="54">13,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) Hackfleisch-Sahnesoße, Form-Vorderschinken, Käse überbacken</div>
+</article></section>
+<section class="panel"><article class="menu-item" data-number="55">
+<div class="item-line">
+<span class="item-title"><span class="number">55.</span> Penne 4 Formaggi</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="55">13,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) 4 verschiedene Käsesorten</div>
+</article><article class="menu-item" data-number="56">
+<div class="item-line">
+<span class="item-title"><span class="number">56.</span> Penne Bolognese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="56">12,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2,5) Bolognese und Parmesan</div>
+</article><article class="menu-item" data-number="57">
+<div class="item-line">
+<span class="item-title"><span class="number">57.</span> Penne Napoli</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="57">9,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) Tomatensoße, frisches Basilikum und Parmesan</div>
+</article><h2 class="section-title">Tagliatelle</h2><article class="menu-item" data-number="58">
+<div class="item-line">
+<span class="item-title"><span class="number">58.</span> Tagliatelle Alfredo</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="58">12,50€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(2) Sahnesoße, Form-Vorderschinken, Champignons</div>
+</article><article class="menu-item" data-number="59">
+<div class="item-line">
+<span class="item-title"><span class="number">59.</span> Tagliatelle al Salmone</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="59">15,50€</span><span class="allergens">(a,d)</span>
+</div>
+<div class="description">(2) Tomaten-Sahnesoße und Lachs</div>
+</article><article class="menu-item" data-number="60">
+<div class="item-line">
+<span class="item-title"><span class="number">60.</span> Tagliatelle Mari e Monti</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="60">14,00€</span><span class="allergens">(a,b)</span>
+</div>
+<div class="description">(2) Tomaten-Sahnesoße, Scampi, Champignons </div>
+</article><article class="menu-item" data-number="61">
+<div class="item-line">
+<span class="item-title"><span class="number">61.</span> Tagliatelle Bolognese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="61">13,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(5) Bolognese und Parmesan</div>
+</article><article class="menu-item" data-number="62">
+<div class="item-line">
+<span class="item-title"><span class="number">62.</span> Tagliatelle Napoli</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="62">10,00€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(2) Tomatensoße</div>
+</article><h2 class="section-title">Tortellini</h2><article class="menu-item" data-number="63">
+<div class="item-line">
+<span class="item-title"><span class="number">63.</span> Tortellini al Forno</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="63">14,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) Bolognese-Sahnesoße, Form-Vorderschinken und Käse überbacken</div>
+</article><article class="menu-item" data-number="64">
+<div class="item-line">
+<span class="item-title"><span class="number">64.</span> Tortellini alla Panna</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="64">13,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2,5) Sahnesoße, Form-Vorderschinken und Parmesan</div>
+</article><article class="menu-item" data-number="65">
+<div class="item-line">
+<span class="item-title"><span class="number">65.</span> Tortellini al 4 Formaggi</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="65">14,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) 4 verschiedene Käsesorten</div>
+</article><article class="menu-item" data-number="66">
+<div class="item-line">
+<span class="item-title"><span class="number">66.</span> Tortellini alla Boscaiola</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="66">13,50€</span><span class="allergens">(a)</span>
+</div>
+<div class="description">(2) Tomaten-Sahnesoße, Schinken, Champignons, Spinat</div>
+</article><h2 class="section-title">Gnocchi</h2><article class="menu-item" data-number="67">
+<div class="item-line">
+<span class="item-title"><span class="number">67.</span> Gnocchi alla Gorgonzola</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="67">12,00€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">(2) Gorgonzola in Sahnesoße, Käse überbacken</div>
+</article><article class="menu-item" data-number="68">
+<div class="item-line">
+<span class="item-title"><span class="number">68.</span> Gnocchi alla Bolognese</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="68">12,00€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">(2,5) Bolognese und Parmesan</div>
+</article><article class="menu-item" data-number="69">
+<div class="item-line">
+<span class="item-title"><span class="number">69.</span> Gnocchi alla Napoli</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="69">9,50€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">(2,5) Tomatensoße und Parmesan</div>
+</article><article class="menu-item" data-number="70">
+<div class="item-line">
+<span class="item-title"><span class="number">70.</span> Gnocchi alla Sorrentina</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="70">13,00€</span><span class="allergens">(g)</span>
+</div>
+<div class="description">(2) Tomatensoße, Mozzarella und Basilikum Pesto</div>
+</article><article class="menu-item" data-number="71">
+<div class="item-line">
+<span class="item-title"><span class="number">71.</span> Lasagne Traditionale</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="71">14,00€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) Bolognese-Sahnesoße und Käse überbacken</div>
+</article><article class="menu-item" data-number="72">
+<div class="item-line">
+<span class="item-title"><span class="number">72.</span> Pasticcio al Forno “Brooklin”</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="72">12,50€</span><span class="allergens">(a,g)</span>
+</div>
+<div class="description">(2) Tomaten-Sahnesoße, Penne mit Brokkoli und Käse überbacken</div>
+</article><h2 class="section-title">Getränke</h2><article class="menu-item" data-number="73">
+<div class="item-line">
+<span class="item-title"><span class="number">73.</span> Softdrinks/Bier/Alkoholfreies Bier</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="73">2,50€</span>
+</div>
+</article>
+<article class="menu-item" data-number="74">
+<div class="item-line">
+<span class="item-title"><span class="number">74.</span> Glas Wein (Rot, Weiß)</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="74">5,00€</span>
+</div>
+</article>
+<article class="menu-item" data-number="75">
+<div class="item-line">
+<span class="item-title"><span class="number">75.</span> Gösser Radler</span>
+<span aria-hidden="true" class="leader"></span>
+<span class="price" contenteditable="true" spellcheck="false" data-price-key="75">3,00€</span>
+</div>
+</article></section>
+</main>
+<script>
+  // =============================================================
+  // PREISE – NUR DIESEN BLOCK BEARBEITEN
+  // Format: "Speisekarten-Nummer": "Preis"
+  // =============================================================
+  const PREISE = {
+    "1": "9,00€", // Margherita
+    "2": "11,00€", // Salami
+    "3": "11,00€", // Fungi
+    "4": "11,00€", // Pizza Carciofi
+    "5": "11,00€", // Pizza Cipolla
+    "6": "12,00€", // Prosciutto
+    "7": "12,00€", // Bolognese
+    "8": "12,00€", // Brokkoli
+    "9": "11,00€", // Spinaci
+    "10": "12,50€", // Europa
+    "11": "13,00€", // Udo's Pizza
+    "12": "15,00€", // Valentino
+    "13": "15,50€", // Calabrese
+    "14": "12,00€", // Tonno
+    "15": "13,50€", // Contadina
+    "16": "13,50€", // 4 Stagioni
+    "17": "13,00€", // Hawaii
+    "18": "13,50€", // Mista
+    "19": "13,50€", // Caprese
+    "20": "14,00€", // 4 Formaggi
+    "21": "15,00€", // Calzone
+    "22": "13,50€", // Gamberetti
+    "23": "14,50€", // Mari e Monti
+    "24": "15,50€", // Rucola
+    "25": "15,50€", // Frutti di Mare
+    "26": "15,00€", // Capricciosa
+    "27": "15,00€", // Pizza Varano
+    "28": "15,50€", // Pizza Regata
+    "29": "14,00€", // Pizza Pute
+    "30": "13,50€", // Pizza Montanara
+    "31": "13,00€", // Pizza Italia
+    "32": "14,50€", // Pizza Patata
+    "33a": "19,00€", // Famiglia ca. 45 cm
+    "33": "4,00€", // Pizzabrötchen mit Knoblauch Kräuterbutter
+    "34": "4,00€", // Focaccia al Rosmarino
+    "35": "12,00€", // Melanzane Parmigiana
+    "36": "9,00€", // Rucolasalat
+    "37": "10,00€", // Inslata Caprese
+    "38": "10,00€", // Bruschetta
+    "39": "8,00€", // Insalata Mista
+    "40": "12,50€", // Insalata Nicoise
+    "41": "12,00€", // Capricciosa
+    "42": "13,00€", // Puten Salat
+    "43": "9,00€", // Spaghetti Napoli
+    "44": "12,00€", // Spaghetti Bolognese
+    "45": "12,00€", // Spaghetti a Matriciana
+    "46": "14,50€", // Spaghetti Frutti di Mare
+    "47": "12,00€", // Spaghetti alla Puttanesca
+    "48": "12,00€", // Spaghetti Carbonara
+    "49": "9,00€", // Spaghetti Aglio, Olio e Peperocino
+    "50": "9,00€", // Spaghetti Pesto
+    "51": "9,50€", // Penne all' Arabbiata
+    "52": "13,00€", // Penne all' Ortolana
+    "53": "14,00€", // Penne Pute
+    "54": "13,00€", // Penne al Forno
+    "55": "13,50€", // Penne 4 Formaggi
+    "56": "12,00€", // Penne Bolognese
+    "57": "9,50€", // Penne Napoli
+    "58": "12,50€", // Tagliatelle Alfredo
+    "59": "15,50€", // Tagliatelle al Salmone
+    "60": "14,00€", // Tagliatelle Mari e Monti
+    "61": "13,00€", // Tagliatelle Bolognese
+    "62": "10,00€", // Tagliatelle Napoli
+    "63": "14,00€", // Tortellini al Forno
+    "64": "13,00€", // Tortellini alla Panna
+    "65": "14,00€", // Tortellini al 4 Formaggi
+    "66": "13,50€", // Tortellini alla Boscaiola
+    "67": "12,00€", // Gnocchi alla Gorgonzola
+    "68": "12,00€", // Gnocchi alla Bolognese
+    "69": "9,50€", // Gnocchi alla Napoli
+    "70": "13,00€", // Gnocchi alla Sorrentina
+    "71": "14,00€", // Lasagne Traditionale
+    "72": "12,50€", // Pasticcio al Forno “Brooklin”
+    "73": "2,50€", // Softdrinks/ Bier/ Alkoholfreies Bier
+    "74": "5,00€", // Glas Wein (Rot, Weiß)
+    "75": "3,00€" // Gösser Radler
+  };
+
+  // Preise sind bereits statisch im HTML eingetragen.
+</script>
+</body>
+</html>
