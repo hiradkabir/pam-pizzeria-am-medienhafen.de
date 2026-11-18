@@ -192,6 +192,7 @@ mobile hero label and Speisekarte hero CTA hidden
 Calzone.mp4 uses its landscape aspect ratio on mobile so the complete dish remains visible
 Calzone description follows directly below the media with compact spacing
 Speisekarte tabs arranged 2 columns × 3 rows
+PDF download above the mobile Speisekarte tabs
 gallery uses portrait cards with touch swiping, centered snapping and automatic focus scaling
 Kontakt content collapses into a single-column flow
 ```
@@ -207,7 +208,7 @@ dedicated /speisekarte/ route with readable dishes, prices, category anchors and
 larger visual rhythm
 wide gallery carousel with centered snapping and automatic focus scaling
 native CSS carousel controls where supported
-map-led Kontakt layout
+Kontakt with restaurant photo and directions links
 desktop-only back-to-top button
 ```
 
@@ -249,7 +250,7 @@ readable menu prices
 modals closable by buttons, backdrop, and Escape
 keyboard-operable Speisekarte tabs
 modal focus management and focus return
-no scroll-trapping map
+directions links identify the external service
 ```
 
 Privacy priorities:
@@ -258,7 +259,8 @@ Privacy priorities:
 static site
 no analytics scripts
 no tracking cookies
-OpenStreetMap embed instead of Google Maps
+same-origin fonts and PDF
+external directions links opened on request
 legal information accessible in modals
 ```
 

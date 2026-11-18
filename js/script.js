@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        if (href === '#') return;
+        if (href === '#' || a.id === 'open-datenschutz') return;
         // Native anchors keep shareable category URLs on the standalone menu.
         if (document.body.classList.contains('menu-page')) return;
         e.preventDefault();
@@ -440,6 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       modal.setAttribute('aria-hidden', 'true');
+      modal.removeAttribute('aria-modal');
       modal.hidden = true;
 
       if (activeModal === modal) {
@@ -470,6 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       modal.setAttribute('aria-hidden', 'false');
+      modal.setAttribute('aria-modal', 'true');
       document.body.style.overflow = 'hidden';
       setPageInert(true);
 
@@ -492,7 +494,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function openModalFromHash() {
       const modalByHash = {
         '#impressum': 'modal-impressum',
-        '#datenschutz': 'modal-datenschutz'
+        '#datenschutz': 'modal-datenschutz',
+        '#modal-datenschutz': 'modal-datenschutz'
       };
       const modalId = modalByHash[window.location.hash.toLowerCase()];
       if (modalId) openModal(modalId);

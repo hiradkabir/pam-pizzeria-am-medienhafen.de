@@ -207,6 +207,12 @@
     transform-origin: center center;
   }
 
+  .contact-directions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
   #contact .opening-hours-list {
     gap: 0.42rem;
     max-width: 17.5rem;
@@ -228,12 +234,12 @@
 
   /* Mobile modals and general spacing */
   #modal-impressum,
-  #modal-datenschutz {
+  #modal-datenschutz.flex {
     padding: 0 !important;
   }
 
   #modal-impressum > div.relative,
-  #modal-datenschutz > div.relative {
+  #modal-datenschutz.flex > div.relative {
     max-width: 100% !important;
     width: 100% !important;
     max-height: 100vh !important;
@@ -691,20 +697,15 @@
   }
 
   #contact .contact-info-col > div > p:first-child,
-  #contact .contact-map-col .mt-6 > p:first-child {
+  #contact .contact-location-col .mt-6 > p:first-child {
     font-size: clamp(0.68rem, 0.66vw, 0.82rem) !important;
     letter-spacing: 0.32em !important;
     line-height: 1.35 !important;
   }
 
-  #contact .contact-map-col .mt-6 > p:nth-of-type(2) {
+  #contact .contact-location-col .mt-6 > p:nth-of-type(2) {
     font-size: clamp(0.86rem, 0.82vw, 1rem) !important;
     line-height: 1.68 !important;
-  }
-
-  #contact .contact-map-col .mt-6 > a {
-    font-size: clamp(0.66rem, 0.64vw, 0.78rem) !important;
-    letter-spacing: 0.13em !important;
   }
 
   #contact .opening-hours-list {

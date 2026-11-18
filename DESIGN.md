@@ -81,7 +81,7 @@ The color system is defined in `:root` in `css/base.css` and mirrored in `tailwi
 
 ## Typography
 
-Fonts are loaded from Google Fonts in `index.html`.
+Fonts are served locally from `assets/fonts/` via `css/fonts.css`.
 
 ```txt
 Display/headings: Bodoni Moda
@@ -119,7 +119,7 @@ large atmospheric hero
 section rhythm with generous vertical padding
 compact mobile sections
 home section anchors plus dedicated menu navigation on desktop
-map-led Kontakt section
+Kontakt section with restaurant photo and directions links
 no separate mobile HTML
 ```
 
@@ -214,6 +214,7 @@ warm gradient atmosphere behind the menu
 Mobile:
 
 ```txt
+PDF download above the category tabs
 tabs become 2 columns × 3 rows
 tab content min-height is removed
 ```
@@ -259,10 +260,10 @@ The JavaScript dot row is a fallback only and is hidden when native scroll marke
 
 ### Kontakt
 
-Kontakt is map-led rather than card-led.
+The Kontakt section combines a restaurant photo, address and opening hours.
 
 ```txt
-OpenStreetMap embed
+external links to OpenStreetMap and Apple Maps
 address and opening hours nearby
 phone/order CTA
 mobile single-column flow
@@ -338,7 +339,7 @@ subtle carousel image zoom
 desktop back-to-top animation
 ```
 
-The general `.reveal` behavior is implemented in CSS with `animation-timeline: view()`. It does not use a JavaScript scroll observer and does not create a reading-progress bar. The reveal uses only opacity and a short vertical translation—never blur. Large menu, gallery, map, and contact containers are excluded so long mobile sections remain fully sharp and readable. Unsupported browsers use the visible-content fallback.
+The general `.reveal` behavior is implemented in CSS with `animation-timeline: view()`. It does not use a JavaScript scroll observer and does not create a reading-progress bar. The reveal uses only opacity and a short vertical translation—never blur. Large menu, gallery, and contact containers are excluded so long mobile sections remain fully sharp and readable. Unsupported browsers use the visible-content fallback.
 
 Avoid:
 

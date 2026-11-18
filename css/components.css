@@ -216,7 +216,7 @@
      smaller headings, labels and CTAs still receive the reveal effect. */
   #menu .tab-content > .grid.reveal,
   #gallery .gallery-mobile-carousel.reveal,
-  #contact .contact-map-col.reveal,
+  #contact .contact-location-col.reveal,
   #contact .contact-info-col.reveal {
     opacity: 1;
     transform: none;
@@ -397,7 +397,8 @@
   text-decoration-color: currentColor;
 }
 
-.menu-page a:focus-visible {
+.menu-page a:focus-visible,
+.menu-download:focus-visible {
   outline: 2px solid var(--brand-gold-light);
   outline-offset: 4px;
 }
@@ -518,14 +519,14 @@
   pointer-events: none;
 }
 
-/* Contact: map-led layout (replaced the former three-card grid). */
+/* Contact location and opening hours. */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
 }
 
-.contact-map {
+.contact-location-photo {
   position: relative;
   margin: 0;
   border-radius: 0.55rem;
@@ -538,26 +539,55 @@
   background: var(--brand-surface);
 }
 
-/* OpenStreetMap renders light; invert and warm it so it belongs in the dark
-   section. pointer-events are disabled so the map reads as a visual anchor and
-   never traps page scroll; the address link carries the action. */
-.contact-map iframe {
-  position: absolute;
-  inset: 0;
+.contact-location-photo img {
   width: 100%;
   height: 100%;
-  border: 0;
-  pointer-events: none;
-  filter: invert(0.92) hue-rotate(180deg) brightness(0.96) contrast(0.92) saturate(0.72) sepia(0.16);
+  object-fit: cover;
 }
 
-.contact-map::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  box-shadow: inset 0 0 58px 16px rgba(13, 5, 0, 0.48);
-  background: radial-gradient(ellipse 84% 74% at 50% 46%, rgba(13, 5, 0, 0) 58%, rgba(13, 5, 0, 0.3) 100%);
+.contact-directions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.2rem;
+  margin-top: 0.75rem;
+}
+
+.contact-directions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--brand-gold-light);
+  font-size: 0.7rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-directions a:hover {
+  color: var(--brand-cream);
+}
+
+.contact-directions a:focus-visible {
+  outline: 2px solid var(--brand-gold-light);
+  outline-offset: 4px;
+}
+
+@media (scripting: none) {
+  #modal-datenschutz:target {
+    display: block;
+    position: static;
+    scroll-margin-top: 5rem;
+  }
+
+  #modal-datenschutz:target > .relative {
+    max-height: none;
+    margin-inline: auto;
+    overflow: visible;
+  }
+
+  #modal-datenschutz-backdrop,
+  #modal-datenschutz-close {
+    display: none;
+  }
 }
 
 .contact-info-col {

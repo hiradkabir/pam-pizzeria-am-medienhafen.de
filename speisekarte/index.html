@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0D0500">
   <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="Speisekarte der Pizzeria am Medienhafen in Düsseldorf-Unterbilk: Holzofenpizza, Pasta, Antipasti, Salate und Getränke mit Preisen, Allergenen und PDF-Download.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <title>Speisekarte mit Preisen | Pizzeria am Medienhafen Düsseldorf</title>
@@ -26,15 +27,13 @@
   <meta name="twitter:image" content="https://pam-pizzeria-am-medienhafen.de/assets/images/holzofen-pizzeria-duesseldorf-medienhafen.jpg">
   <meta name="twitter:image:alt" content="Holzofen der Pizzeria am Medienhafen in Düsseldorf">
   <link rel="preload" as="image" type="image/webp" href="../assets/images/pizza-calzone-medienhafen.webp" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/tailwind.css?v=4">
+  <link rel="stylesheet" href="../css/fonts.css?v=1">
+  <link rel="stylesheet" href="../css/tailwind.css?v=5">
   <link rel="stylesheet" href="../css/base.css?v=15">
   <link rel="stylesheet" href="../css/layout.css?v=30">
-  <link rel="stylesheet" href="../css/components.css?v=51">
-  <link rel="stylesheet" href="../css/responsive.css?v=67">
-  <script defer src="../js/script.js?v=51"></script>
+  <link rel="stylesheet" href="../css/components.css?v=52">
+  <link rel="stylesheet" href="../css/responsive.css?v=68">
+  <script defer src="../js/script.js?v=52"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1371,7 +1370,7 @@
           <li><a href="../#gallery" class="hover:text-brand-gold transition-colors cursor-pointer">Galerie</a></li>
           <li><a href="../#contact" class="hover:text-brand-gold transition-colors cursor-pointer">Kontakt</a></li>
           <li><a href="#" id="open-impressum"   class="hover:text-brand-gold transition-colors cursor-pointer">Impressum</a></li>
-          <li><a href="#" id="open-datenschutz" class="hover:text-brand-gold transition-colors cursor-pointer">Datenschutz</a></li>
+          <li><a href="#modal-datenschutz" id="open-datenschutz" class="hover:text-brand-gold transition-colors cursor-pointer">Datenschutz</a></li>
         </ul>
       </nav>
 
@@ -1421,7 +1420,7 @@
 </div>
 
 <!-- ═══════════  DATENSCHUTZ MODAL  ═══════════ -->
-<div id="modal-datenschutz" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-datenschutz-title" tabindex="-1" hidden>
+<div id="modal-datenschutz" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-labelledby="modal-datenschutz-title" tabindex="-1" hidden>
   <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm" id="modal-datenschutz-backdrop"></div>
   <div class="relative z-10 bg-brand-surface border border-brand-gold/20 max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 md:p-12">
     <button id="modal-datenschutz-close" type="button" aria-label="Schließen" class="absolute top-4 right-4 text-brand-muted hover:text-brand-gold transition-colors cursor-pointer">
@@ -1436,41 +1435,35 @@
         <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br><br>Reza Talebi<br>Pizzeria am Medienhafen<br>Wupperstraße 14<br>40219 Düsseldorf<br>Telefon: <a href="tel:+492113033852" class="text-brand-gold hover:text-brand-gold-light transition-colors">+49 (0) 211 · 30 33 852</a><br>E-Mail: <a href="mailto:rezatalebi44@yahoo.de" class="text-brand-gold hover:text-brand-gold-light transition-colors">rezatalebi44@yahoo.de</a></p>
       </div>
       <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">2. Allgemeine Hinweise</h3>
-        <p>Diese Website wird statisch bereitgestellt. Wir verwenden keine Kontakt- oder Bestellformulare, keine Analyse- oder Tracking-Dienste und treffen keine automatisierten Entscheidungen einschließlich Profiling. Durch uns werden keine Cookies gesetzt und keine Informationen im lokalen Speicher Ihres Browsers abgelegt. Personenbezogene Daten können jedoch beim Abruf der Website und der nachfolgend beschriebenen externen Inhalte technisch verarbeitet werden.</p>
+        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">2. Aufruf der Website und PDF-Download</h3>
+        <p>Sie können diese Website und die Speisekarte ohne Anmeldung nutzen. Wir verwenden auf diesen Seiten keine Analyse- oder Tracking-Dienste, setzen keine Cookies und speichern keine Informationen im lokalen Browserspeicher. Die Schriftdateien und die PDF-Speisekarte werden über dieselbe Domain ausgeliefert wie die Webseiten. Wir erfassen den Download nicht gesondert und treffen keine automatisierten Entscheidungen einschließlich Profiling.</p>
       </div>
       <div>
         <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">3. Hosting über GitHub Pages</h3>
-        <p>Diese Website wird über GitHub Pages bereitgestellt. Anbieter ist GitHub, Inc., USA. Beim Besuch einer GitHub-Pages-Website wird die IP-Adresse des Besuchers zu Sicherheitszwecken protokolliert und gespeichert. Darüber hinaus können technisch erforderliche Verbindungs- und Zugriffsdaten verarbeitet werden, insbesondere Datum und Uhrzeit des Abrufs, angeforderte Ressource, Referrer-URL sowie Angaben zu Browser, Betriebssystem und Endgerät.</p>
-        <p class="mt-2">Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren, stabilen und effizienten Bereitstellung dieser Website. Die Speicherdauer richtet sich nach den Sicherheits- und Betriebsanforderungen von GitHub; auf einzelne Serverprotokolle haben wir keinen Zugriff. Eine Verarbeitung in den USA und weiteren Drittländern ist möglich. GitHub verweist hierfür unter anderem auf das EU-US Data Privacy Framework und EU-Standardvertragsklauseln. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener" class="text-brand-gold hover:text-brand-gold-light transition-colors">Datenschutzerklärung von GitHub</a>.</p>
+        <p>Wir stellen diese Website über GitHub Pages bereit. Empfänger der beim Abruf übermittelten Daten ist GitHub (GitHub, Inc., USA, beziehungsweise GitHub B.V., Niederlande). Beim Aufruf einer Seite oder Datei erhält GitHub technisch erforderliche Verbindungsdaten, darunter die IP-Adresse, die angeforderte Ressource und Angaben zum Browser. GitHub protokolliert und speichert nach eigenen Angaben die IP-Adresse zu Sicherheitszwecken.</p>
+        <p class="mt-2">Rechtsgrundlage für die Bereitstellung durch uns ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse ist der sichere und zuverlässige Betrieb der Website. Für die Aufbewahrung der Protokolle nennt GitHub keine feste Frist für GitHub Pages. Laut GitHub richtet sich die Dauer nach dem Zweck der Verarbeitung sowie nach rechtlichen Pflichten. Wir haben keinen Zugriff auf diese Protokolle.</p>
+        <p class="mt-2">GitHub kann Daten in den USA und weiteren Ländern verarbeiten. GitHub nennt für Übermittlungen in die USA das EU–US Data Privacy Framework (Art. 45 DSGVO) und für Übermittlungen in Länder ohne Angemessenheitsbeschluss grundsätzlich die EU-Standardvertragsklauseln (Art. 46 DSGVO). Weitere Informationen finden Sie in den <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" target="_blank" rel="noreferrer" class="text-brand-gold hover:text-brand-gold-light transition-colors">Hinweise zu GitHub Pages</a> und in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#international-data-transfers" target="_blank" rel="noreferrer" class="text-brand-gold hover:text-brand-gold-light transition-colors">Datenschutzerklärung von GitHub</a>.</p>
       </div>
       <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">4. Google Fonts</h3>
-        <p>Zur einheitlichen Darstellung von Schriften lädt Ihr Browser beim Aufruf dieser Website Schriftdateien von Google Fonts. Anbieter für Nutzer im Europäischen Wirtschaftsraum ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Dabei werden insbesondere Ihre IP-Adresse, die angeforderte URL sowie technische Angaben wie Browserkennung und Referrer an Google übermittelt. Nach Angaben von Google setzt die Google Fonts API dabei keine Cookies.</p>
-        <p class="mt-2">Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in einer einheitlichen und ansprechenden Darstellung der Website. Eine Verarbeitung durch Google LLC in den USA ist möglich. Google verweist für Drittlandübermittlungen unter anderem auf das EU-US Data Privacy Framework. Weitere Informationen: <a href="https://fonts.google.com/knowledge/using_type/using_web_fonts#privacy_and_data_collection" target="_blank" rel="noopener" class="text-brand-gold hover:text-brand-gold-light transition-colors">Datenschutz bei Google Fonts</a> und <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-brand-gold hover:text-brand-gold-light transition-colors">Datenschutzerklärung von Google</a>.</p>
+        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">4. Kontakt per Telefon oder E-Mail</h3>
+        <p>Wenn Sie uns anrufen oder eine E-Mail schreiben, verarbeiten wir die von Ihnen mitgeteilten Angaben, etwa Namen, Kontaktdaten und Inhalt Ihrer Anfrage. Wir nutzen diese Daten, um Ihre Anfrage zu beantworten und gegebenenfalls Ihre Reservierung oder Bestellung zu bearbeiten. Für vertragliche und vorvertragliche Anfragen gilt Art. 6 Abs. 1 lit. b DSGVO. Bei sonstigen Anfragen ist die Bearbeitung auf Grundlage unseres berechtigten Interesses an der Kommunikation mit Ihnen nach Art. 6 Abs. 1 lit. f DSGVO zulässig.</p>
+        <p class="mt-2">E-Mails an die angegebene Adresse empfängt unser E-Mail-Anbieter Yahoo International Limited mit Sitz in Irland. Informationen zur Verarbeitung durch Yahoo und zu dessen internationalen Übermittlungen finden Sie in den <a href="https://legal.yahoo.com/ie/en/yahoo/privacy/" target="_blank" rel="noreferrer" class="text-brand-gold hover:text-brand-gold-light transition-colors">Datenschutzhinweise von Yahoo</a>. Ihre Angaben sind freiwillig. Für eine Antwort oder die Bearbeitung Ihrer Anfrage benötigen wir die dafür erforderlichen Kontakt- und Auftragsdaten.</p>
+        <p class="mt-2">Wir löschen Kontaktdaten und Nachrichten, wenn die Anfrage erledigt ist und die Daten für die Abwicklung oder zur Geltendmachung oder Abwehr von Ansprüchen nicht mehr erforderlich sind. Gesetzliche Aufbewahrungspflichten gehen vor (Art. 6 Abs. 1 lit. c DSGVO).</p>
       </div>
       <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">5. OpenStreetMap</h3>
-        <p>Im Kontaktbereich ist eine Karte von OpenStreetMap eingebunden. Anbieter ist die OpenStreetMap Foundation, St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, Vereinigtes Königreich. Sobald die Karte geladen wird, stellt Ihr Browser eine Verbindung zu Servern von OpenStreetMap her. Dabei können insbesondere IP-Adresse, Browser- und Gerätetyp, Betriebssystem, Referrer, Datum und Uhrzeit sowie die abgerufenen Karteninhalte verarbeitet werden. Kartenkacheln können über ein weltweites Netz von Zwischenspeicher-Servern ausgeliefert werden.</p>
-        <p class="mt-2">Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in einer leicht auffindbaren Darstellung unseres Standorts und der Anfahrt. Weitere Informationen: <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener" class="text-brand-gold hover:text-brand-gold-light transition-colors">Datenschutzerklärung der OpenStreetMap Foundation</a>.</p>
+        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">5. Externe Links</h3>
+        <p>Die Google-Bewertungen sowie die Kartenangebote sind als externe Links eingebunden. Beim Öffnen eines Links verarbeitet der jeweilige Anbieter Daten in eigener Verantwortung. Wir unterdrücken die Übermittlung der Adresse dieser Website als Referrer. Die Datenschutzhinweise finden Sie bei <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noreferrer" class="text-brand-gold hover:text-brand-gold-light transition-colors">Google</a>, <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noreferrer" class="text-brand-gold hover:text-brand-gold-light transition-colors">OpenStreetMap</a> und <a href="https://www.apple.com/de/legal/privacy/data/de/apple-maps/" target="_blank" rel="noreferrer" class="text-brand-gold hover:text-brand-gold-light transition-colors">Apple Karten</a>.</p>
       </div>
       <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">6. Externe Links</h3>
-        <p>Diese Website enthält Links zu Google-Bewertungen und Apple Karten. Erst wenn Sie einen solchen Link anklicken, wird eine Verbindung zum jeweiligen Anbieter hergestellt. Für die anschließende Datenverarbeitung gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
+        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">6. Ihre Rechte</h3>
+        <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO) und Datenübertragbarkeit (Art. 20 DSGVO). Zur Ausübung Ihrer Rechte genügt eine Nachricht an <a href="mailto:rezatalebi44@yahoo.de" class="text-brand-gold hover:text-brand-gold-light transition-colors">rezatalebi44@yahoo.de</a>.</p>
+        <p class="mt-2"><strong class="text-brand-cream">Widerspruchsrecht nach Art. 21 DSGVO.</strong> Sie können aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen eine Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO Widerspruch einlegen.</p>
       </div>
       <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">7. Speicherdauer</h3>
-        <p>Wir führen keine eigenen Besucherprofile und haben keinen Zugriff auf personenbezogene Serverprotokolle der genannten Anbieter. Soweit wir personenbezogene Daten ausnahmsweise selbst verarbeiten, speichern wir diese nur so lange, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Für die Speicherdauer bei GitHub, Google und OpenStreetMap gelten ergänzend die Angaben der jeweiligen Anbieter.</p>
-      </div>
-      <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">8. Ihre Rechte</h3>
-        <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) und Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO). Zur Ausübung Ihrer Rechte genügt eine Nachricht an <a href="mailto:rezatalebi44@yahoo.de" class="text-brand-gold hover:text-brand-gold-light transition-colors">rezatalebi44@yahoo.de</a>.</p>
-      </div>
-      <div>
-        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">9. Beschwerderecht</h3>
+        <h3 class="font-sans text-brand-cream text-[10px] tracking-widest uppercase mb-2">7. Beschwerderecht</h3>
         <p>Sie haben gemäß Art. 77 DSGVO das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Für Nordrhein-Westfalen:<br><br>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen<br>Kavalleriestraße 2–4<br>40213 Düsseldorf<br>E-Mail: <a href="mailto:poststelle@ldi.nrw.de" class="text-brand-gold hover:text-brand-gold-light transition-colors">poststelle@ldi.nrw.de</a><br><a href="https://www.ldi.nrw.de/" target="_blank" rel="noopener" class="text-brand-gold hover:text-brand-gold-light transition-colors">www.ldi.nrw.de</a></p>
       </div>
-      <p class="font-sans text-brand-muted text-xs">Stand: Juli 2026</p>
+      <p class="font-sans text-brand-muted text-xs">Stand November 2026</p>
     </div>
   </div>
 </div>

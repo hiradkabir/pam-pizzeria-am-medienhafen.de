@@ -203,7 +203,7 @@ navbar scrolled state
 gold divider
 accessible menu tab states
 general gallery image presentation
-Kontakt map-led layout
+Kontakt with restaurant photo and directions links
 OpenStreetMap styling
 opening hours formatting
 mobile floating call button with deep-red gradient/glow/highlight
@@ -329,7 +329,7 @@ Speisekarte tabs in one horizontal row
 larger visual rhythm
 wide gallery carousel with centered snapping
 native CSS carousel arrows and dots where supported
-map-led Kontakt layout
+Kontakt with restaurant photo and directions links
 desktop-only back-to-top button
 ```
 
@@ -411,9 +411,11 @@ mobile:  data-src-mobile="assets/videos/hero-loop-mob.mp4"
 
 If playback fails, `script.js` applies the configured poster/background fallback.
 
-## Map embed
+## Directions and local fonts
 
-The Kontakt section embeds an OpenStreetMap iframe, styled in CSS to match the dark theme and set to avoid trapping scroll. To adjust map position, edit the iframe `src` in `index.html`.
+The Kontakt section shows a local restaurant photo and links to OpenStreetMap and Apple Maps. To update the destination, edit the links in `index.html`.
+
+Bodoni Moda and Jost are served from `assets/fonts/` using `css/fonts.css`. The SIL Open Font Licenses are stored alongside the font files. The mobile home section and the dedicated menu page use the same PDF in `assets/downloads/Sk_Aktuell.pdf`.
 
 ## SEO and structured data
 
